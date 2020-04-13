@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# ignore unused .tex files in documentation
+*/Documentation/latex/
+
 # User-specific files
 *.rsuser
 *.suo
