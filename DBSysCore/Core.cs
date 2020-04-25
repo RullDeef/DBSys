@@ -197,6 +197,60 @@ namespace DBSysCore
             return result;
         }
 
+        public static StatusCode GetStaticTests(out List<TestStatic> testsList)
+        {
+            StatusCode result = StatusCode.Ok;
+            testsList = null;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    testsList = TestStatic.GetTests();
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.GetStaticTests", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
+        public static StatusCode GetDynamicTests(Challenge challenge, out List<TestDynamic> testsList)
+        {
+            StatusCode result = StatusCode.Ok;
+            testsList = null;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    testsList = TestDynamic.GetTests(challenge);
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.GetDynamicTests", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
         /**
          * Производит запись информации обо всех предоставленных
          * пользователях в пользовательский файл.
@@ -413,7 +467,6 @@ namespace DBSysCore
 
                     result = Session.SaveCurrentChallenge(dumpConnection);
                 }
-
             }
             catch (Exception e)
             {
@@ -499,18 +552,18 @@ namespace DBSysCore
                     // clear all data first
                     CmdProccess("sqlite3.exe", "DELETE FROM [methodology] WHERE 1");
                     CmdProccess("sqlite3.exe", "DELETE FROM [requirements] WHERE 1");
-                    CmdProccess("sqlite3.exe", "DELETE FROM [connection_interface] WHERE 1");
+                    CmdProccess("sqlite3.exe", "DELETE FROM [module] WHERE 1");
                     CmdProccess("sqlite3.exe", "DELETE FROM [test_static] WHERE 1");
 
                     List<Methodology> methodologies = new List<Methodology>();
                     List<Requirements> requirements = new List<Requirements>();
-                    List<ConnectionInterface> connectionInterfaces = new List<ConnectionInterface>();
+                    List<Module> modules = new List<Module>();
 
                     // load methodology and requirements
 
                     rows = tables["Requirements"].Rows;
 
-                    for (int i = 3; true; i++)
+                    for (int i = 3; i < rows.Count; i++)
                     {
                         try
                         {
@@ -530,7 +583,7 @@ namespace DBSysCore
                         }
                     }
 
-                    for (int i = 3; true; i++)
+                    for (int i = 3; i < rows.Count; i++)
                     {
                         try
                         {
@@ -550,17 +603,17 @@ namespace DBSysCore
                         }
                     }
 
-                    for (int i = 3; true; i++)
+                    for (int i = 3; i < rows.Count; i++)
                     {
                         try
                         {
                             object[] data = rows[i].ItemArray;
-                            ConnectionInterface connectionInterface = new ConnectionInterface()
+                            Module module = new Module()
                             {
                                 id = Convert.ToInt32((double)data[10]),
                                 name = (string)data[11]
                             };
-                            connectionInterfaces.Add(connectionInterface);
+                            modules.Add(module);
                         }
                         catch (Exception e)
                         {
@@ -572,7 +625,11 @@ namespace DBSysCore
                     // load static test here
                     rows = tables["Protocol"].Rows;
 
-                    for (int i = 4; true; i++)
+                    // show modules
+                    foreach (var m in modules)
+                        Console.WriteLine(m.id + "-" + m.name);
+
+                    for (int i = 4; i < rows.Count; i++)
                     {
                         try
                         {
@@ -582,12 +639,12 @@ namespace DBSysCore
                             string tsIndex = (string)data[1];
                             string description = (string)data[2];
                             string mode = (string)data[3];
-                            int connectionInterfaceId = Convert.ToInt32((double)data[4]);
+                            int moduleId = Convert.ToInt32((double)data[4]);
                             string unit = (string)data[5];
                             int req_id = Convert.ToInt32((string)data[6]);
                             int met_id = Convert.ToInt32((string)data[7]);
 
-                            ConnectionInterface connectionInterface = connectionInterfaces.Where(c => c.id == connectionInterfaceId).First();
+                            Module module = modules.Where(c => c.id == moduleId).First();
                             Methodology methodology = methodologies.Where(m => m.id == met_id).First();
                             Requirements requirements_ = requirements.Where(r => r.id == req_id).First();
 
@@ -596,7 +653,7 @@ namespace DBSysCore
                                 id = id,
                                 mode = mode,
                                 tsIndex = tsIndex,
-                                connectionInterface = connectionInterface,
+                                module = module,
                                 methodology = methodology,
                                 requirements = requirements_,
                                 unit = unit,
@@ -762,7 +819,13 @@ namespace DBSysCore
                         td = HtmlNode.CreateNode($"<td>{testDynamic.boundaryValue}</td>");
                         tr.AppendChild(td);
 
-                        for (int i = 0; i < 4; i++)
+                        td = HtmlNode.CreateNode($"<td>{testDynamic.actualValue}</td>");
+                        tr.AppendChild(td);
+
+                        td = HtmlNode.CreateNode($"<td>{challenge.beginTime.ToString("dd/MM/yyyy")}</td>");
+                        tr.AppendChild(td);
+
+                        for (int i = 0; i < 2; i++)
                             tr.AppendChild(HtmlNode.CreateNode("<td></td>"));
 
                         table.AppendChild(tr);

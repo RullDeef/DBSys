@@ -31,6 +31,12 @@ namespace DBSysReport
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -65,15 +71,37 @@ namespace DBSysReport
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.statisticDateInputPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.beginDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.showStatisticsButton = new System.Windows.Forms.Button();
+            this.testTypesCheckBoxes = new System.Windows.Forms.CheckedListBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.allTimeCheckBox = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.statTable_Comand = new System.Windows.Forms.TableLayoutPanel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.statTable_Product = new System.Windows.Forms.TableLayoutPanel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.statTable_Module = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.usersPanelBox = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -131,8 +159,14 @@ namespace DBSysReport
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.statisticDateInputPanel.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.statTable_Comand.SuspendLayout();
+            this.statTable_Product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
+            this.statTable_Module.SuspendLayout();
             this.usersPanelBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -452,7 +486,8 @@ namespace DBSysReport
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.chart1);
+            this.splitContainer3.Panel2.AutoScroll = true;
+            this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel9);
             this.splitContainer3.Size = new System.Drawing.Size(556, 291);
             this.splitContainer3.SplitterDistance = 119;
             this.splitContainer3.TabIndex = 0;
@@ -462,14 +497,16 @@ namespace DBSysReport
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button3, 0, 4);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.checkedListBox1, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label16, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.statisticDateInputPanel, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.showStatisticsButton, 0, 5);
+            this.tableLayoutPanel8.Controls.Add(this.testTypesCheckBoxes, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.label16, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.allTimeCheckBox, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 5;
+            this.tableLayoutPanel8.RowCount = 6;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -488,32 +525,22 @@ namespace DBSysReport
             this.label13.TabIndex = 0;
             this.label13.Text = "Период просмотра";
             // 
-            // button3
+            // statisticDateInputPanel
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(3, 265);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "показать статистику";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label15, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.dateTimePicker1, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.dateTimePicker2, 1, 1);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(113, 52);
-            this.tableLayoutPanel9.TabIndex = 2;
+            this.statisticDateInputPanel.ColumnCount = 2;
+            this.statisticDateInputPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.statisticDateInputPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statisticDateInputPanel.Controls.Add(this.label14, 0, 0);
+            this.statisticDateInputPanel.Controls.Add(this.label15, 0, 1);
+            this.statisticDateInputPanel.Controls.Add(this.beginDateTimePicker, 1, 0);
+            this.statisticDateInputPanel.Controls.Add(this.endDateTimePicker, 1, 1);
+            this.statisticDateInputPanel.Location = new System.Drawing.Point(3, 16);
+            this.statisticDateInputPanel.Name = "statisticDateInputPanel";
+            this.statisticDateInputPanel.RowCount = 2;
+            this.statisticDateInputPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.statisticDateInputPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.statisticDateInputPanel.Size = new System.Drawing.Size(113, 52);
+            this.statisticDateInputPanel.TabIndex = 2;
             // 
             // label14
             // 
@@ -535,27 +562,39 @@ namespace DBSysReport
             this.label15.TabIndex = 1;
             this.label15.Text = "по";
             // 
-            // dateTimePicker1
+            // beginDateTimePicker
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.beginDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.beginDateTimePicker.Location = new System.Drawing.Point(28, 3);
+            this.beginDateTimePicker.Name = "beginDateTimePicker";
+            this.beginDateTimePicker.Size = new System.Drawing.Size(82, 20);
+            this.beginDateTimePicker.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // endDateTimePicker
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.Location = new System.Drawing.Point(28, 29);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.endDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.endDateTimePicker.Location = new System.Drawing.Point(28, 29);
+            this.endDateTimePicker.Name = "endDateTimePicker";
+            this.endDateTimePicker.Size = new System.Drawing.Size(82, 20);
+            this.endDateTimePicker.TabIndex = 3;
             // 
-            // checkedListBox1
+            // showStatisticsButton
             // 
-            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.showStatisticsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.showStatisticsButton.Location = new System.Drawing.Point(3, 265);
+            this.showStatisticsButton.Name = "showStatisticsButton";
+            this.showStatisticsButton.Size = new System.Drawing.Size(113, 23);
+            this.showStatisticsButton.TabIndex = 1;
+            this.showStatisticsButton.Text = "показать статистику";
+            this.showStatisticsButton.UseVisualStyleBackColor = true;
+            this.showStatisticsButton.Click += new System.EventHandler(this.ShowStatistics);
+            // 
+            // testTypesCheckBoxes
+            // 
+            this.testTypesCheckBoxes.CheckOnClick = true;
+            this.testTypesCheckBoxes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testTypesCheckBoxes.FormattingEnabled = true;
+            this.testTypesCheckBoxes.Items.AddRange(new object[] {
             "БУ",
             "ПУ",
             "МБА",
@@ -564,37 +603,329 @@ namespace DBSysReport
             "МУ",
             "МВУ",
             "БЧЭ"});
-            this.checkedListBox1.Location = new System.Drawing.Point(3, 87);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(113, 172);
-            this.checkedListBox1.TabIndex = 3;
+            this.testTypesCheckBoxes.Location = new System.Drawing.Point(3, 110);
+            this.testTypesCheckBoxes.Name = "testTypesCheckBoxes";
+            this.testTypesCheckBoxes.Size = new System.Drawing.Size(113, 149);
+            this.testTypesCheckBoxes.TabIndex = 3;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(3, 71);
+            this.label16.Location = new System.Drawing.Point(3, 94);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(113, 13);
             this.label16.TabIndex = 4;
             this.label16.Text = "Категория проверок";
             // 
+            // allTimeCheckBox
+            // 
+            this.allTimeCheckBox.AutoSize = true;
+            this.allTimeCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allTimeCheckBox.Location = new System.Drawing.Point(3, 74);
+            this.allTimeCheckBox.Name = "allTimeCheckBox";
+            this.allTimeCheckBox.Size = new System.Drawing.Size(113, 17);
+            this.allTimeCheckBox.TabIndex = 5;
+            this.allTimeCheckBox.Text = "За весь период";
+            this.allTimeCheckBox.UseVisualStyleBackColor = true;
+            this.allTimeCheckBox.CheckedChanged += new System.EventHandler(this.allTimeCheckBox_CheckedChanged);
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.chart2, 0, 11);
+            this.tableLayoutPanel9.Controls.Add(this.statTable_Comand, 0, 10);
+            this.tableLayoutPanel9.Controls.Add(this.label20, 0, 5);
+            this.tableLayoutPanel9.Controls.Add(this.label19, 0, 4);
+            this.tableLayoutPanel9.Controls.Add(this.label17, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.label18, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.statTable_Product, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.chart1, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.label22, 0, 9);
+            this.tableLayoutPanel9.Controls.Add(this.label21, 0, 8);
+            this.tableLayoutPanel9.Controls.Add(this.chart, 0, 7);
+            this.tableLayoutPanel9.Controls.Add(this.statTable_Module, 0, 6);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 12;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(416, 1050);
+            this.tableLayoutPanel9.TabIndex = 1;
+            // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(3, 842);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(410, 205);
+            this.chart2.TabIndex = 14;
+            this.chart2.Text = "chart1";
+            // 
+            // statTable_Comand
+            // 
+            this.statTable_Comand.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.statTable_Comand.ColumnCount = 3;
+            this.statTable_Comand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.statTable_Comand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.statTable_Comand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.statTable_Comand.Controls.Add(this.label29, 2, 0);
+            this.statTable_Comand.Controls.Add(this.label30, 1, 0);
+            this.statTable_Comand.Controls.Add(this.label31, 0, 0);
+            this.statTable_Comand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statTable_Comand.Location = new System.Drawing.Point(3, 755);
+            this.statTable_Comand.Name = "statTable_Comand";
+            this.statTable_Comand.RowCount = 1;
+            this.statTable_Comand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statTable_Comand.Size = new System.Drawing.Size(410, 81);
+            this.statTable_Comand.TabIndex = 13;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(289, 34);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(110, 13);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Количество отказов";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(139, 34);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(45, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Модуль";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(13, 34);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(18, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "№";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 358);
+            this.label20.Name = "label20";
+            this.label20.Padding = new System.Windows.Forms.Padding(10);
+            this.label20.Size = new System.Drawing.Size(410, 46);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "В период с __.__.____ по __.__.____\r\nВ модуле __________";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(57, 318);
+            this.label19.Name = "label19";
+            this.label19.Padding = new System.Windows.Forms.Padding(10);
+            this.label19.Size = new System.Drawing.Size(301, 40);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Статистика отказов внутри модуля";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(81, 0);
+            this.label17.Name = "label17";
+            this.label17.Padding = new System.Windows.Forms.Padding(10);
+            this.label17.Size = new System.Drawing.Size(253, 40);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Статистика отказов изделия";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 40);
+            this.label18.Name = "label18";
+            this.label18.Padding = new System.Windows.Forms.Padding(10);
+            this.label18.Size = new System.Drawing.Size(410, 33);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "В период с __.__.____ по __.__.____";
+            // 
+            // statTable_Product
+            // 
+            this.statTable_Product.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.statTable_Product.ColumnCount = 3;
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.statTable_Product.Controls.Add(this.label26, 2, 0);
+            this.statTable_Product.Controls.Add(this.label25, 1, 0);
+            this.statTable_Product.Controls.Add(this.label24, 0, 0);
+            this.statTable_Product.Location = new System.Drawing.Point(3, 76);
+            this.statTable_Product.Name = "statTable_Product";
+            this.statTable_Product.RowCount = 1;
+            this.statTable_Product.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statTable_Product.Size = new System.Drawing.Size(410, 31);
+            this.statTable_Product.TabIndex = 9;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(289, 9);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(110, 13);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Количество отказов";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(139, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(45, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Модуль";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(13, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(18, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "№";
+            // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(3, 113);
             this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(410, 202);
+            this.chart1.TabIndex = 5;
+            this.chart1.Text = "chart1";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(3, 693);
+            this.label22.Name = "label22";
+            this.label22.Padding = new System.Windows.Forms.Padding(10);
+            this.label22.Size = new System.Drawing.Size(410, 59);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "В период с __.__.____ по __.__.____\r\nКоманды _________\r\nВ модуле _________";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(80, 653);
+            this.label21.Name = "label21";
+            this.label21.Padding = new System.Windows.Forms.Padding(10);
+            this.label21.Size = new System.Drawing.Size(256, 40);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Статистика отказов команды";
+            // 
+            // chart
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea3);
+            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.chart.Legends.Add(legend3);
+            this.chart.Location = new System.Drawing.Point(3, 448);
+            this.chart.Name = "chart";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(433, 291);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chart.Series.Add(series3);
+            this.chart.Size = new System.Drawing.Size(410, 202);
+            this.chart.TabIndex = 0;
+            this.chart.Text = "chart1";
+            // 
+            // statTable_Module
+            // 
+            this.statTable_Module.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.statTable_Module.ColumnCount = 3;
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.statTable_Module.Controls.Add(this.label23, 2, 0);
+            this.statTable_Module.Controls.Add(this.label27, 1, 0);
+            this.statTable_Module.Controls.Add(this.label28, 0, 0);
+            this.statTable_Module.Location = new System.Drawing.Point(3, 407);
+            this.statTable_Module.Name = "statTable_Module";
+            this.statTable_Module.RowCount = 1;
+            this.statTable_Module.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statTable_Module.Size = new System.Drawing.Size(410, 35);
+            this.statTable_Module.TabIndex = 12;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(289, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(110, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Количество отказов";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(135, 11);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(52, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Команда";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(13, 11);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(18, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "№";
             // 
             // usersPanelBox
             // 
@@ -1078,9 +1409,19 @@ namespace DBSysReport
             this.splitContainer3.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.statisticDateInputPanel.ResumeLayout(false);
+            this.statisticDateInputPanel.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.statTable_Comand.ResumeLayout(false);
+            this.statTable_Comand.PerformLayout();
+            this.statTable_Product.ResumeLayout(false);
+            this.statTable_Product.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+            this.statTable_Module.ResumeLayout(false);
+            this.statTable_Module.PerformLayout();
             this.usersPanelBox.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1176,15 +1517,37 @@ namespace DBSysReport
         private SplitContainer splitContainer3;
         private TableLayoutPanel tableLayoutPanel8;
         private Label label13;
-        private Button button3;
-        private TableLayoutPanel tableLayoutPanel9;
+        private Button showStatisticsButton;
+        private TableLayoutPanel statisticDateInputPanel;
         private Label label14;
         private Label label15;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker beginDateTimePicker;
+        private DateTimePicker endDateTimePicker;
         private AxAcroPDFLib.AxAcroPDF pdfViewer;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox testTypesCheckBoxes;
         private Label label16;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+        private CheckBox allTimeCheckBox;
+        private TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Label label17;
+        private Label label18;
+        private Label label21;
+        private Label label22;
+        private Label label20;
+        private Label label19;
+        private TableLayoutPanel statTable_Product;
+        private Label label26;
+        private Label label25;
+        private Label label24;
+        private TableLayoutPanel statTable_Comand;
+        private Label label29;
+        private Label label30;
+        private Label label31;
+        private TableLayoutPanel statTable_Module;
+        private Label label23;
+        private Label label27;
+        private Label label28;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }

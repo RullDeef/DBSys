@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
 using DBSysCore;
 using DBSysCore.Model;
 
@@ -92,6 +92,9 @@ namespace DBSysReport
 
             // setup report panel
             InitReportPanel();
+
+            // load available test types in statistics tab
+            InitTestTypes();
         }
 
         private void InitReportPanel()
@@ -110,6 +113,27 @@ namespace DBSysReport
                 default:
                 case StatusCode.Error:
                     MessageBox.Show($"При попытке инициализации панели генерации отчётов " +
+                        $"произошла ошибка.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    break;
+            }
+        }
+
+        private void InitTestTypes()
+        {
+            // walk through the first sequnce and gather all needed information
+            StatusCode status = Core.GetStaticTests(out List<TestStatic> tests);
+
+            switch (status)
+            {
+                case StatusCode.Ok:
+                    testTypesCheckBoxes.Items.Clear();
+                    foreach (TestStatic test in tests)
+                        testTypesCheckBoxes.Items.Add(test.description);
+                    break;
+
+                default:
+                case StatusCode.Error:
+                    MessageBox.Show($"При попытке инициализации панели выбора типов проверок " +
                         $"произошла ошибка.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
                     break;
             }
@@ -206,11 +230,12 @@ namespace DBSysReport
 
         private void selectDumpFileButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-
-            dialog.InitialDirectory = Directory.GetCurrentDirectory();
-            dialog.Filter = "dump files (*.db)|*.db";
-            dialog.RestoreDirectory = true;
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                InitialDirectory = Directory.GetCurrentDirectory(),
+                Filter = "dump files (*.db)|*.db",
+                RestoreDirectory = true
+            };
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -289,8 +314,7 @@ namespace DBSysReport
         private void createReportButton_Click(object sender, EventArgs e)
         {
             Challenge challenge = (Challenge)challengeDates.SelectedItem;
-            string fileName;
-            StatusCode status = Core.GenerateReport(challenge, out fileName);
+            StatusCode status = Core.GenerateReport(challenge, out string fileName);
 
             switch (status)
             {
@@ -303,6 +327,55 @@ namespace DBSysReport
                 case StatusCode.Error:
                     MessageBox.Show($"Произошла ошибка при попытке создать отчёт.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
                     break;
+            }
+        }
+
+        private void ShowStatistics(object sender, EventArgs e)
+        {
+            // get all data from graphing
+            DateTime beginDateTime = beginDateTimePicker.Value;
+            DateTime endDateTime = endDateTimePicker.Value;
+            long delta = (endDateTime - beginDateTime).Ticks;
+
+            int[] data = new int[10];
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+                data[i] = random.Next(0, 3);
+
+            chart.Series.Clear();
+            chart.Titles.Clear();
+            chart.Titles.Add("Статистика отказов в указанных модулях");
+
+            Series series = chart.Series.Add("кол-во отказов");
+            series.ChartType = SeriesChartType.Column;
+
+            Series seriesCumSum = chart.Series.Add("кол-во отказов\n(с накоплением)");
+            series.ChartType = SeriesChartType.Column;
+
+            int cumSum = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                DateTime time = beginDateTime + new TimeSpan(delta * i / 10);
+                string timeString = time.ToString("dd.MM.yy");
+                cumSum += data[i];
+
+                series.Points.AddXY(timeString, data[i]);
+                series.Points[i].AxisLabel = timeString;
+                seriesCumSum.Points.AddXY(timeString, cumSum);
+            }
+        }
+
+        private void allTimeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allTimeCheckBox.CheckState == CheckState.Checked)
+            {
+                beginDateTimePicker.Enabled = false;
+                endDateTimePicker.Enabled = false;
+            }
+            else
+            {
+                beginDateTimePicker.Enabled = true;
+                endDateTimePicker.Enabled = true;
             }
         }
     }

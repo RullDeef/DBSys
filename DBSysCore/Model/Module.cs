@@ -5,14 +5,14 @@ using System.Data.SQLite;
 namespace DBSysCore.Model
 {
     [Serializable]
-    public class ConnectionInterface
+    public class Module
     {
         public int id;
         public string name;
 
-        public ConnectionInterface() { }
+        public Module() { }
 
-        public ConnectionInterface(string name)
+        public Module(string name)
         {
             this.name = name;
 
@@ -20,9 +20,9 @@ namespace DBSysCore.Model
             SaveData(Core.dumpConnection);
         }
 
-        public ConnectionInterface(int id)
+        public Module(int id)
         {
-            string query = $"SELECT [id], [name] FROM [connection_interface] WHERE [id] = '{id}'";
+            string query = $"SELECT [id], [name] FROM [module] WHERE [id] = '{id}'";
             SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
 
             reader.Read();
@@ -41,14 +41,14 @@ namespace DBSysCore.Model
 
         public void SaveData(SQLiteConnection connection)
         {
-            string query = $"INSERT OR IGNORE INTO [connection_interface] ([id], [name]) VALUES ({id}, '{name}')";
+            string query = $"INSERT OR IGNORE INTO [module] ([id], [name]) VALUES ({id}, '{name}')";
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             cmd.ExecuteNonQuery();
         }
 
         public static bool Exists(string name)
         {
-            string query = $"SELECT * FROM [connection_interface] WHERE [name] = '{name}'";
+            string query = $"SELECT * FROM [module] WHERE [name] = '{name}'";
             SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
             bool res = reader.HasRows;
             reader.Close();

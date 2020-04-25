@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DBSysCmd": {
+      "commandName": "Project",
+      "commandLineArgs": "update-static"
+    }
+  }
+}
