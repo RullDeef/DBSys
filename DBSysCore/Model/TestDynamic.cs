@@ -88,8 +88,8 @@ namespace DBSysCore.Model
             
             string query = "REPLACE INTO [test_dynamic] ([id], [ts_index], [challenge], "
                 + "[begin_time], [end_time], [nominal], [actual_value], [delta], [boundary_value], [status]) VALUES "
-                + $"({id}, '{tsIndex}', {challenge.id}, '{beginTime.ToString("yyyy-MM-dd hh:mmm:ss")}', "
-                + $"'{endTime.ToString("yyyy-MM-dd hh:mmm:ss")}', '{nominal}', '{actualValue}', " +
+                + $"({id}, '{tsIndex}', {challenge.id}, '{beginTime:yyyy-MM-dd hh:mmm:ss}', "
+                + $"'{endTime:yyyy-MM-dd hh:mmm:ss}', '{nominal}', '{actualValue}', " +
                 $"'{delta}', '{boundaryValue}', '{status}')";
             Utils.ExecuteNonQuery(query, connection);
         }
@@ -106,14 +106,53 @@ namespace DBSysCore.Model
 
             while (reader.Read())
             {
-                TestDynamic test = new TestDynamic();
-                test.id = (int)reader[0];
-                test.tsIndex = (string)reader[1];
+                TestDynamic test = new TestDynamic
+                {
+                    id = (int)reader[0],
+                    tsIndex = (string)reader[1],
+                    // challenge = new Challenge((int)reader[2]),
+                    beginTime = DateTime.Parse((string)reader[3]),
+                    endTime = DateTime.Parse((string)reader[4]),
+                    actualValue = (decimal)reader[5],
+                    status = (bool)reader[6]
+                };
                 challengesId.Add((int)reader[2]);
-                test.beginTime = DateTime.Parse((string)reader[3]);
-                test.endTime = DateTime.Parse((string)reader[4]);
-                test.actualValue = (decimal)reader[5];
-                test.status = (bool)reader[6];
+
+                result.Add(test);
+            }
+
+            reader.Close();
+
+            for (int i = 0; i < result.Count; i++)
+                result[i].challenge = new Challenge(challengesId[i]);
+
+            return result;
+        }
+
+        public static List<TestDynamic> GetTests(DateTime beginDate, DateTime endDate)
+        {
+            List<TestDynamic> result = new List<TestDynamic>();
+            List<int> challengesId = new List<int>();
+
+            string query = "SELECT [id], [ts_index], [challenge], " +
+                "[begin_time], [end_time], [actual_value], [status] " +
+                $"FROM [test_dynamic] WHERE [begin_time] >= '{beginDate:yyyy-MM-dd hh:mmm:ss}' " +
+                $"AND [begin_time] <= '{endDate:yyyy-MM-dd hh:mmm:ss}'";
+            SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
+
+            while (reader.Read())
+            {
+                TestDynamic test = new TestDynamic
+                {
+                    id = (int)reader[0],
+                    tsIndex = (string)reader[1],
+                    // challenge = new Challenge((int)reader[2]),
+                    beginTime = DateTime.Parse((string)reader[3]),
+                    endTime = DateTime.Parse((string)reader[4]),
+                    actualValue = (decimal)reader[5],
+                    status = (bool)reader[6]
+                };
+                challengesId.Add((int)reader[2]);
 
                 result.Add(test);
             }

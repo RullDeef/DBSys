@@ -197,6 +197,33 @@ namespace DBSysCore
             return result;
         }
 
+        public static StatusCode GetModules(out List<Module> modulesList)
+        {
+            StatusCode result = StatusCode.Ok;
+            modulesList = null;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    modulesList = Module.GetModules();
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.GetModules", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
         public static StatusCode GetStaticTests(out List<TestStatic> testsList)
         {
             StatusCode result = StatusCode.Ok;
@@ -235,6 +262,33 @@ namespace DBSysCore
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     testsList = TestDynamic.GetTests(challenge);
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.GetDynamicTests", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
+        public static StatusCode GetDynamicTests(DateTime beginDate, DateTime endDate, out List<TestDynamic> testsList)
+        {
+            StatusCode result = StatusCode.Ok;
+            testsList = null;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    testsList = TestDynamic.GetTests(beginDate, endDate);
                 }
             }
             catch (Exception e)
@@ -768,7 +822,7 @@ namespace DBSysCore
 
         private static string GenerateReportFileName(Challenge challenge)
         {
-            string result = $"{challenge.beginTime.ToString("yyyy_MM_dd")}.pdf";
+            string result = $"{challenge.beginTime:yyyy_MM_dd}.pdf";
             return result;
         }
 
@@ -822,7 +876,7 @@ namespace DBSysCore
                         td = HtmlNode.CreateNode($"<td>{testDynamic.actualValue}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{challenge.beginTime.ToString("dd/MM/yyyy")}</td>");
+                        td = HtmlNode.CreateNode($"<td>{challenge.beginTime:dd/MM/yyyy}</td>");
                         tr.AppendChild(td);
 
                         for (int i = 0; i < 2; i++)

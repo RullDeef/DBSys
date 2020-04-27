@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 
 
@@ -53,6 +54,31 @@ namespace DBSysCore.Model
             bool res = reader.HasRows;
             reader.Close();
             return res;
+        }
+
+        public static List<Module> GetModules()
+        {
+            string query = $"SELECT [id], [name] FROM [module]";
+            SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
+            List<Module> result = new List<Module>();
+
+            while (reader.Read())
+            {
+                Module module = new Module
+                {
+                    id = (int)reader[0],
+                    name = (string)reader[1]
+                };
+                result.Add(module);
+            }
+
+            reader.Close();
+            return result;
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 }

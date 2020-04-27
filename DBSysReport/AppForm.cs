@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -94,7 +95,7 @@ namespace DBSysReport
             InitReportPanel();
 
             // load available test types in statistics tab
-            InitTestTypes();
+            InitModuleNames();
         }
 
         private void InitReportPanel()
@@ -118,22 +119,22 @@ namespace DBSysReport
             }
         }
 
-        private void InitTestTypes()
+        private void InitModuleNames()
         {
             // walk through the first sequnce and gather all needed information
-            StatusCode status = Core.GetStaticTests(out List<TestStatic> tests);
+            StatusCode status = Core.GetModules(out List<Module> modules);
 
             switch (status)
             {
                 case StatusCode.Ok:
-                    testTypesCheckBoxes.Items.Clear();
-                    foreach (TestStatic test in tests)
-                        testTypesCheckBoxes.Items.Add(test.description);
+                    moduleComboBox.Items.Clear();
+                    foreach (Module module in modules)
+                        moduleComboBox.Items.Add(module);
                     break;
 
                 default:
                 case StatusCode.Error:
-                    MessageBox.Show($"При попытке инициализации панели выбора типов проверок " +
+                    MessageBox.Show($"При попытке инициализации панели выбора модуля " +
                         $"произошла ошибка.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
                     break;
             }
@@ -332,37 +333,292 @@ namespace DBSysReport
 
         private void ShowStatistics(object sender, EventArgs e)
         {
-            // get all data from graphing
-            DateTime beginDateTime = beginDateTimePicker.Value;
-            DateTime endDateTime = endDateTimePicker.Value;
-            long delta = (endDateTime - beginDateTime).Ticks;
+            // setup labels
+            DateTime beginDate = beginDateTimePicker.Value;
+            DateTime endDate = endDateTimePicker.Value;
+            periodLabel1.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}";
+            periodLabel2.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
+                $"В модуле {moduleComboBox.SelectedItem}";
+            periodLabel3.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
+                $"Команды \"{commandComboBox.SelectedItem}\"\n" +
+                $"В модуле {moduleComboBox.SelectedItem}";
 
-            int[] data = new int[10];
-            Random random = new Random();
-            for (int i = 0; i < 10; i++)
-                data[i] = random.Next(0, 3);
+            // grab all nessesary data for tables and graphs
+            StatusCode status = Core.GetDynamicTests(beginDate, endDate, out List<TestDynamic> testsList);
 
-            chart.Series.Clear();
-            chart.Titles.Clear();
-            chart.Titles.Add("Статистика отказов в указанных модулях");
-
-            Series series = chart.Series.Add("кол-во отказов");
-            series.ChartType = SeriesChartType.Column;
-
-            Series seriesCumSum = chart.Series.Add("кол-во отказов\n(с накоплением)");
-            series.ChartType = SeriesChartType.Column;
-
-            int cumSum = 0;
-            for (int i = 0; i < 10; i++)
+            switch (status)
             {
-                DateTime time = beginDateTime + new TimeSpan(delta * i / 10);
-                string timeString = time.ToString("dd.MM.yy");
-                cumSum += data[i];
+                case StatusCode.Ok:
+                    break;
 
-                series.Points.AddXY(timeString, data[i]);
-                series.Points[i].AxisLabel = timeString;
-                seriesCumSum.Points.AddXY(timeString, cumSum);
+                default:
+                case StatusCode.Error:
+                    MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    return;
             }
+
+            List<int> modulesFailsStats = Enumerable.Repeat(0, moduleComboBox.Items.Count).ToList();
+            List<int> commandsFailsStats = Enumerable.Repeat(0, commandComboBox.Items.Count).ToList();
+
+            foreach (TestDynamic test in testsList)
+            {
+                if (test.status == false)
+                {
+                    TestStatic testStatic = test.GetTestStatic(); // не очень классная функция, надо заменить
+                    modulesFailsStats[testStatic.module.id] += 1;
+
+                    int cmdIndex = commandComboBox.Items.IndexOf(testStatic);
+                    commandsFailsStats[cmdIndex] += 1;
+                }
+            }
+
+            // FILL FAIL TESTS DATA WITH RANDOM NUMBERS JUST FOR TESTING PURPOSES
+            Random random = new Random();
+            for (int i = 0; i < modulesFailsStats.Count; i++)
+                modulesFailsStats[i] = random.Next(0, 10);
+            for (int i = 0; i < commandsFailsStats.Count; i++)
+                commandsFailsStats[i] = random.Next(0, 10);
+
+            // fill first table
+
+            statTable_Product.SuspendLayout();
+
+            statTable_Product.RowCount = 1 + moduleComboBox.Items.Count;
+            statTable_Product.RowStyles.Clear();
+            for (int i = 0; i < moduleComboBox.Items.Count; i++)
+                statTable_Product.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            for (int i = 3; i < statTable_Product.Controls.Count; i++)
+                statTable_Product.Controls.RemoveAt(3);
+    
+            for (int i = 0; i < moduleComboBox.Items.Count; i++)
+            {
+                Label indexLabel = new Label()
+                {
+                    Text = (i + 1).ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                Label moduleName = new Label()
+                {
+                    Text = moduleComboBox.Items[i].ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                Label failsAmountLabel = new Label()
+                {
+                    Text = modulesFailsStats[i].ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                statTable_Product.Controls.Add(indexLabel, 0, i + 1);
+                statTable_Product.Controls.Add(moduleName, 1, i + 1);
+                statTable_Product.Controls.Add(failsAmountLabel, 2, i + 1);
+            }
+
+            statTable_Product.ResumeLayout();
+
+            // setup product stats chart
+
+            productStatsChart.SuspendLayout();
+
+            productStatsChart.Series.Clear();
+            productStatsChart.Titles.Clear();
+            productStatsChart.Titles.Add("Статистика отказов во всех модулях");
+
+            Series series = productStatsChart.Series.Add("кол-во отказов");
+            series.ChartType = SeriesChartType.Column;
+
+            for (int i = 0; i < moduleComboBox.Items.Count; i++)
+            {
+                string labelString = moduleComboBox.Items[i].ToString();
+                series.Points.AddXY(labelString, modulesFailsStats[i]);
+                series.Points[i].AxisLabel = labelString;
+            }
+
+            productStatsChart.ResumeLayout();
+
+            // fill second table
+
+            statTable_Module.SuspendLayout();
+
+            statTable_Module.RowCount = 1 + commandComboBox.Items.Count;
+            statTable_Module.RowStyles.Clear();
+            for (int i = 0; i < commandComboBox.Items.Count; i++)
+                statTable_Module.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            while (statTable_Module.Controls.Count > 4)
+                statTable_Module.Controls.RemoveAt(4);
+
+            for (int i = 0; i < commandComboBox.Items.Count; i++)
+            {
+                Label indexLabel = new Label()
+                {
+                    Text = (i + 1).ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                Label commandName = new Label()
+                {
+                    Text = commandComboBox.Items[i].ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                Label modeName = new Label()
+                {
+                    Text = ((TestStatic)commandComboBox.Items[i]).mode,
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                Label failsAmountLabel = new Label()
+                {
+                    Text = commandsFailsStats[i].ToString(),
+                    AutoSize = true,
+                    Anchor = AnchorStyles.None
+                };
+
+                statTable_Module.Controls.Add(indexLabel, 0, i + 1);
+                statTable_Module.Controls.Add(commandName, 1, i + 1);
+                statTable_Module.Controls.Add(modeName, 2, i + 1);
+                statTable_Module.Controls.Add(failsAmountLabel, 3, i + 1);
+            }
+
+            statTable_Module.ResumeLayout();
+
+            // setup product stats chart
+
+            moduleStatsChart.SuspendLayout();
+
+            moduleStatsChart.Series.Clear();
+            moduleStatsChart.Titles.Clear();
+            moduleStatsChart.Titles.Add("Статистика отказов в указанном модуле");
+
+            List<string> modes = modeComboBox.Items.Cast<string>().ToList();
+            string selectedMode = (string)modeComboBox.SelectedItem;
+            if (selectedMode == "Все режимы")
+            {
+                foreach (string mode in modes)
+                {
+                    if (mode == "Все режимы")
+                        continue;
+
+                    series = moduleStatsChart.Series.Add($"кол-во отказов в режиме \"{mode}\"");
+                    series.ChartType = SeriesChartType.Column;
+
+                    for (int i = 0; i < commandComboBox.Items.Count; i++)
+                    {
+                        TestStatic test = (TestStatic)commandComboBox.Items[i];
+                        if (test.mode == mode)
+                        {
+                            string labelString = test.ToString();
+                            series.Points.AddXY(labelString, commandsFailsStats[i]);
+                            series.Points[series.Points.Count - 1].AxisLabel = labelString;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                series = moduleStatsChart.Series.Add($"кол-во отказов в режиме \"{selectedMode}\"");
+                series.ChartType = SeriesChartType.Column;
+
+                for (int i = 0; i < commandComboBox.Items.Count; i++)
+                {
+                    string labelString = commandComboBox.Items[i].ToString();
+                    series.Points.AddXY(labelString, commandsFailsStats[i]);
+                    series.Points[i].AxisLabel = labelString;
+                }
+            }
+
+
+            moduleStatsChart.ResumeLayout();
+
+            // the last table
+
+            statTable_Command.SuspendLayout();
+
+            statTable_Command.RowCount = 1;
+            statTable_Command.RowStyles.Clear();
+
+            while (statTable_Command.Controls.Count > 7)
+                statTable_Command.Controls.RemoveAt(7);
+
+            int testIndex = 1;
+            foreach (TestDynamic test in testsList)
+            {
+                if (commandComboBox.Items.Contains(test.GetTestStatic()))
+                {
+                    Label indexLabel = new Label()
+                    {
+                        Text = testIndex.ToString(),
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label dateLabel = new Label()
+                    {
+                        Text = test.beginTime.ToString("dd.MM.yyyy"),
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label serialNumberLabel = new Label()
+                    {
+                        Text = test.challenge.controllObject.serialNumber,
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label nominalLabel = new Label()
+                    {
+                        Text = test.nominal != null ? test.nominal.ToString() : "-",
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label boundaryLabel = new Label()
+                    {
+                        Text = test.boundaryValue != null ? test.boundaryValue.ToString() : "-",
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label valueLabel = new Label()
+                    {
+                        Text = test.actualValue != null ? test.actualValue.ToString() : "-",
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    Label statusLabel = new Label()
+                    {
+                        Text = test.status ? "Годен" : "Не годен",
+                        AutoSize = true,
+                        Anchor = AnchorStyles.None
+                    };
+
+                    statTable_Command.RowCount++;
+                    statTable_Command.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+                    statTable_Command.Controls.Add(indexLabel, 0, testIndex);
+                    statTable_Command.Controls.Add(dateLabel, 1, testIndex);
+                    statTable_Command.Controls.Add(serialNumberLabel, 2, testIndex);
+                    statTable_Command.Controls.Add(nominalLabel, 3, testIndex);
+                    statTable_Command.Controls.Add(boundaryLabel, 4, testIndex);
+                    statTable_Command.Controls.Add(valueLabel, 5, testIndex);
+                    statTable_Command.Controls.Add(statusLabel, 6, testIndex);
+
+                    testIndex++;
+                }
+            }
+
+            statTable_Command.ResumeLayout();
         }
 
         private void allTimeCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -377,6 +633,74 @@ namespace DBSysReport
                 beginDateTimePicker.Enabled = true;
                 endDateTimePicker.Enabled = true;
             }
+        }
+
+        private void moduleComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // load modes available for selected module
+
+            // first disable "show" button
+            showStatisticsButton.Enabled = false;
+            commandComboBox.Enabled = false;
+
+            // get selected module
+            int moduleId = ((Module)moduleComboBox.SelectedItem).id;
+
+            StatusCode status = Core.GetStaticTests(out List<TestStatic> testsList);
+
+            switch (status)
+            {
+                case StatusCode.Ok:
+                    modeComboBox.Enabled = true;
+                    modeComboBox.Items.Clear();
+                    modeComboBox.Items.Add("Все режимы");
+                    foreach (TestStatic test in testsList)
+                        if (test.module.id == moduleId && !modeComboBox.Items.Contains(test.mode))
+                            modeComboBox.Items.Add(test.mode);
+                    break;
+
+                default:
+                case StatusCode.Error:
+                    MessageBox.Show($"Произошла ошибка при попытке загрузить список доступных режимов.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    break;
+            }
+        }
+
+        private void modeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // load command names from here
+
+            // first disable "show" button
+            showStatisticsButton.Enabled = false;
+
+            // get selected module
+            int moduleId = ((Module)moduleComboBox.SelectedItem).id;
+
+            // get selected mode
+            string mode = (string)modeComboBox.SelectedItem;
+
+            StatusCode status = Core.GetStaticTests(out List<TestStatic> testsList);
+
+            switch (status)
+            {
+                case StatusCode.Ok:
+                    commandComboBox.Enabled = true;
+                    commandComboBox.Items.Clear();
+                    foreach (TestStatic test in testsList)
+                        if (test.module.id == moduleId && (mode == "Все режимы" || test.mode == mode))
+                            commandComboBox.Items.Add(test);
+                    break;
+
+                default:
+                case StatusCode.Error:
+                    MessageBox.Show($"Произошла ошибка при попытке загрузить названия команд.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    break;
+            }
+        }
+
+        private void commandComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showStatisticsButton.Enabled = true;
         }
     }
 }

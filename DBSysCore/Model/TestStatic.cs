@@ -122,5 +122,10 @@ namespace DBSysCore.Model
                 + $"'{unit}', '{description}')";
             Utils.ExecuteNonQuery(query, connection);
         }
+
+        public override string ToString()
+        {
+            return description;
+        }
     }
 }
