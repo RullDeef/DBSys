@@ -209,7 +209,7 @@ namespace DBSysReport
             if (selectedStaff == newStaff)
             {
                 selectedStaff.login = loginInput.Text;
-                selectedStaff.password = passwordInput.Text;
+                selectedStaff.password = Utils.GetHash(passwordInput.Text);
             }
             else if (passwordInput.Text.Length != 0)
             {
@@ -344,7 +344,13 @@ namespace DBSysReport
                 $"В модуле {moduleComboBox.SelectedItem}";
 
             // grab all nessesary data for tables and graphs
-            StatusCode status = Core.GetDynamicTests(beginDate, endDate, out List<TestDynamic> testsList);
+            List<TestDynamic> testsList;
+            StatusCode status;
+
+            if (allTimeCheckBox.Checked)
+                status = Core.GetDynamicTests(out testsList);
+            else
+                status = Core.GetDynamicTests(beginDate, endDate, out testsList);
 
             switch (status)
             {
@@ -577,21 +583,21 @@ namespace DBSysReport
 
                     Label nominalLabel = new Label()
                     {
-                        Text = test.nominal != null ? test.nominal.ToString() : "-",
+                        Text = test.nominal.HasValue ? test.nominal.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label boundaryLabel = new Label()
                     {
-                        Text = test.boundaryValue != null ? test.boundaryValue.ToString() : "-",
+                        Text = test.boundaryValue.HasValue ? test.boundaryValue.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label valueLabel = new Label()
                     {
-                        Text = test.actualValue != null ? test.actualValue.ToString() : "-",
+                        Text = test.actualValue.HasValue ? test.actualValue.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
@@ -600,6 +606,7 @@ namespace DBSysReport
                     {
                         Text = test.status ? "Годен" : "Не годен",
                         AutoSize = true,
+                        ForeColor = test.status ? System.Drawing.Color.DarkGreen : System.Drawing.Color.DarkRed,
                         Anchor = AnchorStyles.None
                     };
 

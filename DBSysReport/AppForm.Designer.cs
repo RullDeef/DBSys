@@ -30,7 +30,6 @@ namespace DBSysReport
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,6 +39,7 @@ namespace DBSysReport
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
             this.appMenu = new System.Windows.Forms.MenuStrip();
             this.exitMenuOption = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +66,6 @@ namespace DBSysReport
             this.label11 = new System.Windows.Forms.Label();
             this.reportTypeComboBox = new System.Windows.Forms.ComboBox();
             this.challengeDates = new System.Windows.Forms.ListBox();
-            this.pdfViewer = new AxAcroPDFLib.AxAcroPDF();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -149,6 +148,7 @@ namespace DBSysReport
             this.sourceDumpFileInput = new System.Windows.Forms.TextBox();
             this.mergeButton = new System.Windows.Forms.Button();
             this.selectSourceButton = new System.Windows.Forms.Button();
+            this.pdfViewer = new AxAcroPDFLib.AxAcroPDF();
             this.appMenu.SuspendLayout();
             this.adminPanel.SuspendLayout();
             this.sqlPanelBox.SuspendLayout();
@@ -161,7 +161,6 @@ namespace DBSysReport
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pdfViewer)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -190,6 +189,7 @@ namespace DBSysReport
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfViewer)).BeginInit();
             this.SuspendLayout();
             // 
             // appMenu
@@ -461,16 +461,6 @@ namespace DBSysReport
             this.challengeDates.Size = new System.Drawing.Size(113, 203);
             this.challengeDates.TabIndex = 4;
             this.challengeDates.SelectedIndexChanged += new System.EventHandler(this.challengeDates_SelectedIndexChanged);
-            // 
-            // pdfViewer
-            // 
-            this.pdfViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer.Enabled = true;
-            this.pdfViewer.Location = new System.Drawing.Point(0, 0);
-            this.pdfViewer.Name = "pdfViewer";
-            this.pdfViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfViewer.OcxState")));
-            this.pdfViewer.Size = new System.Drawing.Size(433, 291);
-            this.pdfViewer.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -1517,6 +1507,16 @@ namespace DBSysReport
             this.selectSourceButton.Text = "выбрать...";
             this.selectSourceButton.UseVisualStyleBackColor = true;
             // 
+            // pdfViewer
+            // 
+            this.pdfViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer.Enabled = true;
+            this.pdfViewer.Location = new System.Drawing.Point(0, 0);
+            this.pdfViewer.Name = "pdfViewer";
+            this.pdfViewer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfViewer.OcxState")));
+            this.pdfViewer.Size = new System.Drawing.Size(433, 291);
+            this.pdfViewer.TabIndex = 0;
+            // 
             // AppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1544,7 +1544,6 @@ namespace DBSysReport
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pdfViewer)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -1586,6 +1585,7 @@ namespace DBSysReport
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfViewer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

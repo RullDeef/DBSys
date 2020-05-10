@@ -10,7 +10,6 @@ using OpenHtmlToPdf;
 using HtmlAgilityPack;
 
 using DBSysCore.Model;
-using System.Globalization;
 
 namespace DBSysCore
 {
@@ -240,6 +239,33 @@ namespace DBSysCore
             catch (Exception e)
             {
                 Logger.Error("Core.GetStaticTests", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
+        public static StatusCode GetDynamicTests(out List<TestDynamic> testsList)
+        {
+            StatusCode result = StatusCode.Ok;
+            testsList = null;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    testsList = TestDynamic.GetTests();
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.GetDynamicTests", e.ToString());
                 result = StatusCode.Error;
             }
             finally
@@ -539,7 +565,8 @@ namespace DBSysCore
         /**
          * Иниализирует новый тест. (test_dynamic)
          */
-        public static StatusCode Test(string tsIndex, bool status, decimal nominal = 0, decimal actualValue = 0, decimal delta = 0, decimal boundaryValue = 0)
+        public static StatusCode Test(string tsIndex, bool status, decimal nominal,
+            decimal actualValue, decimal delta, decimal boundaryValue)
         {
             StatusCode result = StatusCode.Ok;
             try
@@ -559,6 +586,47 @@ namespace DBSysCore
                         actualValue = actualValue,
                         delta = delta,
                         boundaryValue = boundaryValue,
+                        status = status
+                    };
+                    test.GenerateId();
+
+                    // add constructed test to test list
+                    Session.sessionData.activeTests.Add(test);
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.BeginTest", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                Session.Close();
+            }
+
+            return result;
+        }
+
+        public static StatusCode Test(string tsIndex, bool status)
+        {
+            StatusCode result = StatusCode.Ok;
+            try
+            {
+                if (!Session.RequireGrants(UserGrants.Tester))
+                    result = StatusCode.GrantsInproper;
+                else if (Session.sessionData.programState != ProgramState.Testing)
+                    result = StatusCode.ProgramStateInvalid;
+                else
+                {
+                    TestDynamic test = new TestDynamic()
+                    {
+                        tsIndex = tsIndex,
+                        challenge = Session.sessionData.activeChallenge,
+                        beginTime = DateTime.Now,
+                        nominal = null,
+                        actualValue = null,
+                        delta = null,
+                        boundaryValue = null,
                         status = status
                     };
                     test.GenerateId();
@@ -604,10 +672,10 @@ namespace DBSysCore
                     DataRowCollection rows;
 
                     // clear all data first
-                    CmdProccess("sqlite3.exe", "DELETE FROM [methodology] WHERE 1");
-                    CmdProccess("sqlite3.exe", "DELETE FROM [requirements] WHERE 1");
-                    CmdProccess("sqlite3.exe", "DELETE FROM [module] WHERE 1");
-                    CmdProccess("sqlite3.exe", "DELETE FROM [test_static] WHERE 1");
+                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [methodology] WHERE 1\"");
+                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [requirements] WHERE 1\"");
+                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [module] WHERE 1\"");
+                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [test_static] WHERE 1\"");
 
                     List<Methodology> methodologies = new List<Methodology>();
                     List<Requirements> requirements = new List<Requirements>();
