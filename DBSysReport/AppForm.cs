@@ -251,17 +251,27 @@ namespace DBSysReport
 
         private void LoadStaticTests(object sender, EventArgs e)
         {
-            StatusCode status = Core.LoadStaticTests();
-            if (status != StatusCode.Ok)
+            if (MessageBox.Show("Загрузка данных может занять некоротое время (около 1 минуты). " +
+                "В это время приложение не будет реагировать на Ваши действия. Продолжить?",
+                "Внимание!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Не удалось загрузить тестовые данные!\n" +
-                    "Проверьте наличие файла статических тестов и его корректность.\n\n" +
-                    $"Код ошибки: {status}",
-                    "Ошибка загрузки", MessageBoxButtons.OK);
+                StatusCode status = Core.LoadStaticTests();
+                if (status == StatusCode.Ok)
+                {
+                    MessageBox.Show("Загрузка данных прошла успешно!",
+                        "Завершение загрузки", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось загрузить тестовые данные!\n" +
+                        "Проверьте наличие файла статических тестов и его корректность.\n\n" +
+                        $"Код ошибки: {status}",
+                        "Ошибка загрузки", MessageBoxButtons.OK);
+                }
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void InputSQLCommand(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -359,7 +369,8 @@ namespace DBSysReport
 
                 default:
                 case StatusCode.Error:
-                    MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\n" +
+                        $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
                     return;
             }
 

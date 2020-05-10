@@ -672,10 +672,16 @@ namespace DBSysCore
                     DataRowCollection rows;
 
                     // clear all data first
+                    ExecSQL("DELETE FROM [methodology] WHERE 1");
+                    ExecSQL("DELETE FROM [requirements] WHERE 1");
+                    ExecSQL("DELETE FROM [module] WHERE 1");
+                    ExecSQL("DELETE FROM [test_static] WHERE 1");
+                    /*
                     CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [methodology] WHERE 1\"");
                     CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [requirements] WHERE 1\"");
                     CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [module] WHERE 1\"");
                     CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [test_static] WHERE 1\"");
+                    */
 
                     List<Methodology> methodologies = new List<Methodology>();
                     List<Requirements> requirements = new List<Requirements>();
@@ -1078,7 +1084,11 @@ namespace DBSysCore
                 if (!Session.RequireGrants(UserGrants.Admin))
                     result = StatusCode.GrantsInproper;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
-                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"{query}\"", true);
+                {
+                    SQLiteCommand cmd = new SQLiteCommand(query, dumpConnection);
+                    cmd.ExecuteNonQuery();
+                    // CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"{query}\"", true);
+                }
             }
             catch (Exception e)
             {
@@ -1207,5 +1217,7 @@ namespace DBSysCore
 
             process.WaitForExit();
         }
+
+
     }
 }
