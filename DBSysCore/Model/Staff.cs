@@ -1,7 +1,8 @@
-﻿using System;
+﻿// #define DEBUG_STAFF
+
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
 
 namespace DBSysCore.Model
 {
@@ -28,6 +29,9 @@ namespace DBSysCore.Model
             this.department = department;
             this.login = login;
             this.password = password;
+
+            if (this.password.Length != 64)
+                this.password = Utils.GetHash(this.password);
 
             GenerateId();
             SaveData(Core.dumpConnection);
@@ -69,6 +73,9 @@ namespace DBSysCore.Model
             string query = "REPLACE INTO [staff] ([id], [surname], [first_name], [patronymic_name], [post], [department], [login], [password]) "
                 + $"VALUES ({id}, '{surname}', '{firstName}', '{patronymicName}', '{post}', '{department}', '{login}', '{password}')";
             Utils.ExecuteNonQuery(query, connection);
+#if DEBUG_STAFF
+            Console.WriteLine($"Staff.SaveData: {surname} saved into {connection.DataSource}");
+#endif
         }
 
         public static bool Exists(string surname, string firstName, string patronymicName)
@@ -84,6 +91,11 @@ namespace DBSysCore.Model
         public static List<Staff> ExtractAll(SQLiteConnection connection)
         {
             List<Staff> result = new List<Staff>();
+
+#if DEBUG_STAFF
+            Console.WriteLine("Staff.ExtractAll: Preparing for extraction");
+            Console.WriteLine($"Staff.ExtractAll: connection: {connection.DataSource}");
+#endif
 
             string query = $"SELECT [id], [surname], [first_name], [patronymic_name], [post], [department], [login], [password] FROM [staff]";
             SQLiteDataReader reader = Utils.ExecuteReader(query, connection);

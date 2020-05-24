@@ -32,6 +32,7 @@ namespace DBSysCore.Model
             string query = $"REPLACE INTO [methodology] ([id], [name], [doc_number]) VALUES ({id}, '{name}', '{docNumber}')";
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             cmd.ExecuteNonQuery();
+            cmd.Dispose();
         }
 
         public static bool Exists(string name)

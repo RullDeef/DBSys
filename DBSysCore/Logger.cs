@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 
 namespace DBSysCore
 {
@@ -12,37 +11,19 @@ namespace DBSysCore
         private static StreamWriter file = null;
 
         /**
-         * Создаёт название для текущего файла логгирования.
-         * 
-         * Изначально все файлы логгирования создаются в log/ директории.
-         */
-        static public string GenerateFileName()
-        {
-            return "log/" + DateTime.Now.ToString("yyyy_MM_dd") + ".txt";
-        }
-
-        /**
          * Открывает текущий файл логирования.
          * 
-         * Создаёт директорию log/ если она не существует.
+         * Изначально все файлы логгирования создаются в log/ директории.
+         * Создаёт директорию log\ если она не существует.
          */
-        public static void Open()
-        {
-            string filename = GenerateFileName();
-
-            if (!Directory.Exists("log"))
-                Directory.CreateDirectory("log");
-
-            file = new StreamWriter(filename, true);
-        }
-
         private static void EnsureOpen()
         {
             if (file == null)
             {
                 try
                 {
-                    Open();
+                    string filename = $"{Paths.logDirectory}\\{DateTime.Now:yyyy_MM_dd}.txt";
+                    file = new StreamWriter(filename, true);
                 }
                 catch (Exception e)
                 {
@@ -63,10 +44,11 @@ namespace DBSysCore
             // unsure that logging file opened successfully
             EnsureOpen();
 
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            string dump = Session.GetCurrentWorkingDumpFileName();
             string userName = Session.GetUserName();
 
-            string time = DateTime.Now.ToString("HH:mm:ss");
-            string meta = $"[{time}|{Session.sessionData.filename}|{userName}] ";
+            string meta = $"[{time}|{dump}|{userName}] ";
 
             if (data.EndsWith("\n"))
                 data = data.Substring(0, data.Length - 1);
@@ -74,7 +56,7 @@ namespace DBSysCore
             file.WriteLine(meta + data);
 
             // WARNING: bad solution. Find out more efficient one
-            Logger.Close();
+            Close();
         }
 
         /**
@@ -88,30 +70,36 @@ namespace DBSysCore
             // unsure that logging file opened successfully
             EnsureOpen();
 
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            string dump = Session.GetCurrentWorkingDumpFileName();
             string userName = Session.GetUserName();
 
-            string time = DateTime.Now.ToString("HH:mm:ss");
-            string meta = $"[{time}|{Session.sessionData.filename}|{userName}] ";
+            string meta = $"[{time}|{dump}|{userName}] ";
 
             file.WriteLine($"{meta} Error in {where}: {what}");
 
             // WARNING: bad solution. Find out more efficient one
-            Logger.Close();
+            Close();
         }
 
         /**
          * Закрывает текущий файл логирования.
          */
-        public static void Close()
+        private static void Close()
         {
             try
             {
-                file.Dispose();
-                file.Close();
+                if (file != null)
+                {
+                    // WARNING: comented line may cause some issues
+                    // file.Dispose();
+                    file.Close();
+                    file = null;
+                }
             }
-            catch
+            catch(Exception e)
             {
-                Console.WriteLine("Error happened while closing logger!");
+                Console.WriteLine($"Error happened while closing logger! {e.Message}");
             }
         }
     }

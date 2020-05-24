@@ -99,6 +99,10 @@ namespace DBSysCmd
                 {
                     switch (Core.Login(login.Value, pass.Value))
                     {
+                        case StatusCode.Ok:
+                            Console.WriteLine("Successfully authorized!");
+                            break;
+
                         case StatusCode.LoginAlreadyAuthorized:
                             Console.WriteLine("You can't login again. First logout.");
                             break;

@@ -66,6 +66,7 @@ namespace DBSysCore.Model
                 + $"'{serialNumber}', '{decimalNumber}', '{version}', '{parent}', '{product}')";
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             cmd.ExecuteNonQuery();
+            cmd.Dispose();
         }
     }
 }

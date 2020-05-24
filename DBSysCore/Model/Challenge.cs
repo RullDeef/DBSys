@@ -54,8 +54,10 @@ namespace DBSysCore.Model
             int challengeTypeId = (int)reader[2];
             int staffId = (int)reader[3];
             int locationId = (int)reader[4];
-            beginTime = DateTime.Parse((string)reader[5]);
-            endTime = DateTime.Parse((string)reader[6]);
+            // beginTime = DateTime.Parse((string)reader[5]);
+            // endTime = DateTime.Parse((string)reader[6]);
+            beginTime = (DateTime)reader[5];
+            endTime = (DateTime)reader[6];
             description = (string)reader[7];
 
             reader.Close();

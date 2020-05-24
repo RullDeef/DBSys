@@ -52,7 +52,7 @@ namespace DBSysReport
             usersList.Items.Clear();
 
             // select all users from db
-            allStaff = Core.GetAllUsers();
+            Core.GetAllUsers(out allStaff);
             // option for creating new user
             GenerateNewStaff();
             usersList.Items.Add(newStaff);

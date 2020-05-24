@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBSysCmd", "DBSysCmd\DBSysC
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{5B73F8DE-55EA-4906-9EB2-B42B5C0C693A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{CDD8B211-2309-489D-AE7F-3B368635C84F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B73F8DE-55EA-4906-9EB2-B42B5C0C693A}.Debug|Any CPU.Build.0 = Debug
 		{5B73F8DE-55EA-4906-9EB2-B42B5C0C693A}.Release|Any CPU.ActiveCfg = Release
 		{5B73F8DE-55EA-4906-9EB2-B42B5C0C693A}.Release|Any CPU.Build.0 = Release
+		{CDD8B211-2309-489D-AE7F-3B368635C84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD8B211-2309-489D-AE7F-3B368635C84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD8B211-2309-489D-AE7F-3B368635C84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD8B211-2309-489D-AE7F-3B368635C84F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

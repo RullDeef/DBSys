@@ -1,4 +1,6 @@
-﻿using System;
+﻿// #define DEBUG_SESSION
+
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
@@ -6,6 +8,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 
 using DBSysCore.Model;
+
 
 namespace DBSysCore
 {
@@ -67,16 +70,23 @@ namespace DBSysCore
     public static class Session
     {
         /**
-         * Название файла сессии.
-         */
-        private const string filename = ".session";
-
-        /**
          * Данные текущей сессии.
          */
         public static SessionData sessionData;
 
         private static bool opened = false;
+
+        public static Staff virtualAdmin = new Staff()
+        {
+            id = 461672399,
+            surname = "DSPLAB",
+            firstName = "Admin",
+            patronymicName = "",
+            post = "admin",
+            department = "",
+            login = "admin",
+            password = "dsplab"
+        };
 
         /**
          * Считывает данные последней сессии из файла сессии.
@@ -91,41 +101,73 @@ namespace DBSysCore
          */
         public static void Open()
         {
-            // if there is no session file - begin clear session
-            if (File.Exists(filename))
+            if (opened)
             {
+#if DEBUG_SESSION
+                Console.WriteLine("Session.Open: Session is already opened");
+#endif
+                return;
+            }
+
+#if DEBUG_SESSION
+            Console.WriteLine("Session.Open: Openning sesison...");
+#endif
+
+            // if there is no session file - begin clear session
+            if (File.Exists(Paths.sessionFilename))
+            {
+                Stream stream = null;
                 try
                 {
-                    Stream stream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read);
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Open: Trying to read from existing file...");
+# endif
+                    stream = new FileStream(Paths.sessionFilename, FileMode.Open, FileAccess.Read, FileShare.Read);
                     sessionData = (SessionData)new BinaryFormatter().Deserialize(stream);
-                    stream.Dispose();
-                    stream.Close();
-                    opened = true;
                 }
                 catch
                 {
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Open: Failed! Using Default data");
+# endif
                     sessionData = GenerateDefaultSessionData();
+                }
+                finally
+                {
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Open: Succeed!");
+# endif
+                    if (stream != null)
+                    {
+                        stream.Dispose();
+                        stream.Close();
+                    }
                 }
             }
             else
             {
+                // FileStream stream = File.Create(filename);
+                // stream.Dispose();
+                // stream.Close();
+#if DEBUG_SESSION
+                Console.WriteLine("Session.Open: No session file found. Use default data");
+# endif
                 sessionData = GenerateDefaultSessionData();
             }
 
+            opened = true;
 
             // initialize new dump file from model.sql definition if there is no such
-            if (!File.Exists(sessionData.filename))
-                Core.CmdProccess("sqlite3.exe", $"{sessionData.filename} \".read model.sql\"", false);
+            // if (!File.Exists(sessionData.filename))
+            //    Core.CmdProccess("sqlite3.exe", $"{sessionData.filename} \".read model.sql\"", false);
         }
 
-        private static void EnsureOpen()
+        public static string GetCurrentWorkingDumpFileName()
         {
-            if (!opened)
-            {
-                Open();
-                if (!opened)
-                    Console.WriteLine("Session file is still not opened!!");
-            }
+            string fname = sessionData.filename;
+            int i = fname.LastIndexOf('\\');
+            fname = fname.Substring(i + 1, fname.Length - i - 4);
+            return fname;
         }
 
         /**
@@ -137,7 +179,7 @@ namespace DBSysCore
          */
         public static string GetUserName()
         {
-            EnsureOpen();
+            Open();
 
             if (sessionData.staff == null)
                 return "unauthorized";
@@ -161,7 +203,7 @@ namespace DBSysCore
             {
                 staff = null,
                 programState = ProgramState.Idle,
-                filename = "dump.db",
+                filename = $"{Paths.dumpsDirectory}\\dump.db",
                 activeChallenge = null,
                 activeTests = new List<TestDynamic>()
             };
@@ -173,9 +215,16 @@ namespace DBSysCore
          */
         public static bool IsLoggedIn()
         {
-            EnsureOpen();
+            Open();
 
             return sessionData.staff != null;
+        }
+
+        public static bool IsLoggedInAsVirtualAdmin()
+        {
+            Open();
+
+            return sessionData.staff.id == virtualAdmin.id;
         }
 
         /**
@@ -184,7 +233,7 @@ namespace DBSysCore
          */
         public static UserGrants GetGrants()
         {
-            EnsureOpen();
+            Open();
 
             if (sessionData.staff == null)
                 return UserGrants.None;
@@ -237,7 +286,7 @@ namespace DBSysCore
          */
         public static bool RequireGrants(UserGrants grants)
         {
-            EnsureOpen();
+            Open();
 
             if (!IsLoggedIn())
             {
@@ -272,7 +321,11 @@ namespace DBSysCore
         {
             Staff staff;
 
-            EnsureOpen();
+            Open();
+
+#if DEBUG_SESSION
+            Console.WriteLine($"Session.Auth: passed \"{login}\" \"{password}\"");
+# endif
 
             // WARNING: may be unsafe with some types of commands
 
@@ -282,7 +335,9 @@ namespace DBSysCore
                 Console.WriteLine("Initialized virtual admin!");
                 Console.WriteLine("Please, use it only for adding other users!");
 
-                staff = new Staff()
+                staff = virtualAdmin;
+                /*
+                new Staff()
                 {
                     surname = "DSPLAB",
                     firstName = "Admin",
@@ -293,24 +348,46 @@ namespace DBSysCore
                     password = password
                 };
                 staff.GenerateId();
+                */
             }
             else // find real user by login
             {
+#if DEBUG_SESSION
+                Console.WriteLine("Session.Auth: Searching for real user...");
+# endif
                 List<Staff> staffList = Staff.ExtractAll(Core.usersConnection);
 
                 if (staffList.Count == 0)
+                {
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Auth: no registered users!");
+# endif
                     return StatusCode.LoginNoRegisteredUsers;
+                }
 
                 if (staffList.Where(s => s.login == login).Count() == 0)
+                {
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Auth: invalid login!");
+# endif
                     return StatusCode.LoginInvalidLogin;
+                }
 
                 staff = staffList.Where(s => s.login == login).First();
 
                 if (!Utils.VerifyHash(password, staff.password))
+                {
+#if DEBUG_SESSION
+                    Console.WriteLine("Session.Auth: Invalid password!");
+# endif
                     return StatusCode.LoginInvalidPass;
+                }
             }
 
             // ok.
+#if DEBUG_SESSION
+            Console.WriteLine("Session.Auth: Success!");
+# endif
             sessionData.staff = staff;
             sessionData.programState = ProgramState.Working;
             return StatusCode.Ok;
@@ -328,6 +405,14 @@ namespace DBSysCore
             sessionData.programState = ProgramState.Idle;
             sessionData.activeChallenge = null;
             sessionData.activeTests.Clear();
+#if DEBUG_SESSION
+            Console.WriteLine("Session.Logout: state cleared!");
+# endif
+        }
+
+        public static void SwitchDumpFile(string filename)
+        {
+            sessionData.filename = $"{Paths.dumpsDirectory}\\{filename}.db";
         }
 
         /**
@@ -341,7 +426,7 @@ namespace DBSysCore
          */
         public static StatusCode SaveCurrentChallenge(SQLiteConnection connection)
         {
-            EnsureOpen();
+            Open();
 
             StatusCode result = StatusCode.Ok;
             try
@@ -354,8 +439,6 @@ namespace DBSysCore
 
                 for (int i = 0; i < sessionData.activeTests.Count; i++)
                 {
-                    Console.WriteLine(i);
-
                     TestDynamic test = sessionData.activeTests[i];
 
                     if (i + 1 == sessionData.activeTests.Count)
@@ -364,6 +447,9 @@ namespace DBSysCore
                         test.endTime = sessionData.activeTests[i + 1].beginTime;
 
                     test.SaveData(connection);
+#if DEBUG_SESSION
+                    Console.WriteLine($"Session.SaveCurrentChallenge: saved test #{i} with id = {test.id}");
+# endif
                 }
 
                 challenge.staff.SaveData(connection);
@@ -389,14 +475,15 @@ namespace DBSysCore
          */
         public static void Close()
         {
-            Stream stream = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.None);
-            new BinaryFormatter().Serialize(stream, sessionData);
-            stream.Dispose();
-            stream.Close();
+            if (opened)
+            {
+                Stream stream = new FileStream(Paths.sessionFilename, FileMode.Create, FileAccess.Write, FileShare.None);
+                new BinaryFormatter().Serialize(stream, sessionData);
+                stream.Dispose();
+                stream.Close();
 
-            opened = false;
-
-            Logger.Close();
+                opened = false;
+            }
         }
     }
 }

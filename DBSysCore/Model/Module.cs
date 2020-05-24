@@ -45,6 +45,7 @@ namespace DBSysCore.Model
             string query = $"INSERT OR IGNORE INTO [module] ([id], [name]) VALUES ({id}, '{name}')";
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             cmd.ExecuteNonQuery();
+            cmd.Dispose();
         }
 
         public static bool Exists(string name)

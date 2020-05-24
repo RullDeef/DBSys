@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_037538FE85E54F29B7310B2451A0FAC5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_037A01253A274AB384B3AFB011D14A64"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -153,6 +159,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1A717945741246BDB9CCD17426435B6F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1BBC5D204C781A5FE11C66B88FE666F2"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -233,6 +245,12 @@
         {
         "MsmKey" = "8:_3161487EFEF94A8300197C2B6D4A0B12"
         "OwnerKey" = "8:_EB77ADC30950D11F586E464A932C6F6C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3A6D84DE7D31498CB84057E5A210FB96"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -339,6 +357,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_551A5BF2B0E14C478E35F80A62C846B0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_575A262CFC1B482EA37206CDB8D97BA4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -413,6 +437,12 @@
         {
         "MsmKey" = "8:_677533AC68653985AA71984CB1513BBD"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_69C774DE3A0E4124A9B5CAECAEBEC940"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -639,12 +669,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_985F1248A3C340698418F9B178E9FAF0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9A503D213C252A298B8D027E854AC7DB"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -677,12 +701,6 @@
         {
         "MsmKey" = "8:_A7ECEAD3CF4E84A3BDE4B994646E72D8"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A87B8FDEC6C34EEDBE60B140E655F59A"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -729,12 +747,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B7062F8646A94940A8DD73E9DD87F605"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B85C7FB1E08AD950FAA83FB415CA79C0"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -743,6 +755,12 @@
         {
         "MsmKey" = "8:_BA8943386A430979C6DFB18395A22C79"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BB1BCCDC13584EDE9A018C2D121445C5"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -777,8 +795,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C85192BC80FF42EA87396CAA91828317"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C8B27D0B83E40D1813BC90AAECA7F386"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C9D4A1F6B78F48BFADDCA90B0F6BBC02"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CD438F0AB86648679CF6C6213F3D1C1B"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -797,6 +833,12 @@
         {
         "MsmKey" = "8:_D63C6E9FCDA9D43A3627E3E157097A99"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D6C2B761CA4048EEABCA9D3DC78D2FCA"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -825,6 +867,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E28055637D63407A8049EECB6C474610"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E4CD6708593CF49BDFC009D1921DE5FD"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -845,6 +893,12 @@
         {
         "MsmKey" = "8:_E85F974F0AF6383FDCE7C76999C9FC4E"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E88E969EBE2B4EF6808008BDDAA1EF86"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -941,6 +995,12 @@
         {
         "MsmKey" = "8:_F9F4F618B7F36552C63A87D534293C7C"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB945171A2564F69AF0A07130BE7CDD8"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1955,6 +2015,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_037538FE85E54F29B7310B2451A0FAC5"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\dbsys_save_logout.vi"
+            "TargetName" = "8:dbsys_save_logout.vi"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_037A01253A274AB384B3AFB011D14A64"
             {
             "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\report\\report_1.pdf"
@@ -2409,6 +2489,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1A717945741246BDB9CCD17426435B6F"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\dbsys_login_init.vi"
+            "TargetName" = "8:dbsys_login_init.vi"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1BBC5D204C781A5FE11C66B88FE666F2"
             {
             "AssemblyRegister" = "3:1"
@@ -2748,6 +2848,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A6D84DE7D31498CB84057E5A210FB96"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_03_24.txt"
+            "TargetName" = "8:2020_03_24.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3AC02C275CBDD5E2D28BAF3AC225C37F"
@@ -3246,6 +3366,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_551A5BF2B0E14C478E35F80A62C846B0"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_03_29.txt"
+            "TargetName" = "8:2020_03_29.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_575A262CFC1B482EA37206CDB8D97BA4"
             {
             "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\report\\templates\\universal_template.html"
@@ -3605,6 +3745,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69C774DE3A0E4124A9B5CAECAEBEC940"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_04_03.txt"
+            "TargetName" = "8:2020_04_03.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6AAA800EAAC232A4C79424F26B0D50BD"
@@ -4526,26 +4686,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_985F1248A3C340698418F9B178E9FAF0"
-            {
-            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\static.xls"
-            "TargetName" = "8:static.xls"
-            "Tag" = "8:"
-            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9A503D213C252A298B8D027E854AC7DB"
             {
             "AssemblyRegister" = "3:1"
@@ -4699,26 +4839,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A87B8FDEC6C34EEDBE60B140E655F59A"
-            {
-            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\model.sql"
-            "TargetName" = "8:model.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A96B98706B507C28536C4D442112D443"
@@ -4907,26 +5027,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7062F8646A94940A8DD73E9DD87F605"
-            {
-            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\users.sql"
-            "TargetName" = "8:users.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B85C7FB1E08AD950FAA83FB415CA79C0"
             {
             "AssemblyRegister" = "3:1"
@@ -4987,6 +5087,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BB1BCCDC13584EDE9A018C2D121445C5"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\static.xls"
+            "TargetName" = "8:static.xls"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BD1D0A921CCF196E5C69281A5EE0B0B2"
@@ -5144,6 +5264,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C85192BC80FF42EA87396CAA91828317"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\model.sql"
+            "TargetName" = "8:model.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8B27D0B83E40D1813BC90AAECA7F386"
             {
             "AssemblyRegister" = "3:1"
@@ -5173,6 +5313,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C9D4A1F6B78F48BFADDCA90B0F6BBC02"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\dbsys_test.vi"
+            "TargetName" = "8:dbsys_test.vi"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CD438F0AB86648679CF6C6213F3D1C1B"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\users.sql"
+            "TargetName" = "8:users.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CEFB35810B839DB54C7D23E3916CD9D1"
@@ -5266,6 +5446,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D6C2B761CA4048EEABCA9D3DC78D2FCA"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_04_25.txt"
+            "TargetName" = "8:2020_04_25.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8253491B5BB13E637AB7831F6701B21"
@@ -5367,6 +5567,26 @@
             "TargetName" = "8:2020_04_03.pdf"
             "Tag" = "8:"
             "Folder" = "8:_7864F71002B84988A1D7D5FB50217304"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E28055637D63407A8049EECB6C474610"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_03_30.txt"
+            "TargetName" = "8:2020_03_30.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -5492,6 +5712,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E88E969EBE2B4EF6808008BDDAA1EF86"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\dbsys_status.vi"
+            "TargetName" = "8:dbsys_status.vi"
+            "Tag" = "8:"
+            "Folder" = "8:_519D45C433E0467FABDE5D6AADB8CCB4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EA17EE07529328690D7771D4A9F7535F"
@@ -5897,6 +6137,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FB945171A2564F69AF0A07130BE7CDD8"
+            {
+            "SourcePath" = "8:..\\DBSysReport\\bin\\Debug\\log\\2020_04_13.txt"
+            "TargetName" = "8:2020_04_13.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1D7168FDF82C4F3C92A21B84002F851F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FDC073B4F7C1A24763E607EFA96C63C5"
             {
             "AssemblyRegister" = "3:1"
@@ -5986,6 +6246,17 @@
                         {
                         }
                     }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_1D7168FDF82C4F3C92A21B84002F851F"
+                    {
+                    "Name" = "8:log"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_36EC776A7CE44DD492FB3ABB0E782DCE"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_7864F71002B84988A1D7D5FB50217304"
                     {
                     "Name" = "8:report"
@@ -6049,7 +6320,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DBSysReport"
         "ProductCode" = "8:{C0E122A4-2C4B-42B9-B545-A50654CD84D7}"
-        "PackageCode" = "8:{61BCAB17-8AEB-4475-8095-A60BF425EA1A}"
+        "PackageCode" = "8:{81BEC59C-30E7-4D85-894B-5FD81FD8CDD7}"
         "UpgradeCode" = "8:{2925EFBE-99BD-4951-8623-78A3079EB85A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

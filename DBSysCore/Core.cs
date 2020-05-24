@@ -18,19 +18,7 @@ namespace DBSysCore
      */
     public static class Core
     {
-        /**
-         * Название файла, используемого для хранения данных
-         * о пользователях независимо от обычных файлов дампов.
-         * 
-         * В дальнейшем - пользовательский файл.
-         */
-        private const string usersfilename = ".users";
-
-        private const string staticDataTable = "static.xls";
-
-        private const string reportDirectory = "report";
-
-        private const string reportTemplateDirectory = "report\\templates";
+        
 
         /**
          * Соединение для пользовательского файла.
@@ -56,11 +44,30 @@ namespace DBSysCore
                 string fname = Session.sessionData.filename;
                 string queryString = $"URI=file:{fname}";
 
-                dumpConnection = new SQLiteConnection(queryString);
-                if (dumpConnection == null)
-                    throw new Exception("Could not create connection.");
+                bool fileExists = File.Exists(fname);
 
-                dumpConnection.Open();
+                if (dumpConnection == null)
+                {
+                    dumpConnection = new SQLiteConnection(queryString);
+                    if (dumpConnection == null)
+                        throw new Exception("Could not create connection.");
+                }
+                
+                if (dumpConnection.State != ConnectionState.Open)
+                {
+                    Console.Write("Core.InitializeConnection: Trying to open... ");
+                    dumpConnection.Open();
+                    if (dumpConnection.State == ConnectionState.Open)
+                        Console.WriteLine("Success!");
+                    else
+                        Console.WriteLine("Fail!");
+                }
+
+                if (!fileExists) // load model.sql
+                {
+                    string modelString = File.ReadAllText(Paths.dumpModelFilename);
+                    Utils.ExecuteNonQuery(modelString, dumpConnection);
+                }
             }
             catch (InvalidOperationException e)
             {
@@ -90,27 +97,41 @@ namespace DBSysCore
          */
         private static void InitializeUserDataConnection()
         {
+            if (usersConnection != null && usersConnection.State == ConnectionState.Open)
+                return;
+
             // Build Connection String
-            string queryString = $"Data Source={usersfilename}";
+            string queryString = $"Data Source={Paths.usersFilename}";
+
+            bool fileExists = File.Exists(Paths.usersFilename);
+            if (!fileExists)
+                ;// File.Create(Paths.usersFilename).Close();
+
+            usersConnection = new SQLiteConnection(queryString);
+            usersConnection.Open();
+
+            Console.WriteLine($"Core.InitializeUserDataConnection: state = {usersConnection.State}");
 
             // if there is no such file - create new one
-            if (!File.Exists(Directory.GetCurrentDirectory() + "\\" + usersfilename))
+            if (!fileExists)
             {
-                FileStream fs = File.Create($"{usersfilename}");
-                fs.Close();
+                // FileStream fs = File.Create($"{usersfilename}");
+                // fs.Close();
 
-                // initialize created file with tables schemas
-                CmdProccess("sqlite3.exe", $"{usersfilename} \".read users.sql\"", false);
-
-                usersConnection = new SQLiteConnection(queryString);
-                RetrieveAllUsers();
+                // try
+                // {
+                    // initialize created file with tables schemas
+                    string modelString = File.ReadAllText(Paths.usersModelFilename);
+                    Utils.ExecuteNonQuery(modelString, usersConnection);
+                // }
+                // catch(Exception e)
+                // {
+                    //Logger.Error("Core.InitializeUserDataConnection", e.ToString());
+                    //Environment.Exit(-228);
+                // }
             }
-            else
-            {
-                usersConnection = new SQLiteConnection(queryString);
-            }
 
-            usersConnection.Open();
+            RetrieveAllUsers();
         }
 
         /**
@@ -119,18 +140,35 @@ namespace DBSysCore
          */
         private static void RetrieveAllUsers()
         {
-            string[] dumps = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.db");
+            string[] dumps = Directory.GetFiles(Paths.dumpsDirectory, "*.db");
+
+            Console.WriteLine("Core.RetrieveAllUsers: dump file = " + Session.sessionData.filename);
+            Console.WriteLine("Core.RetrieveAllUsers: dumps founded = " + dumps.Length);
 
             foreach (string filename in dumps)
             {
-                string fname = filename.Substring(filename.LastIndexOf("\\") + 1);
-                string connstr = $"Data Source={fname}";
-                SQLiteConnection tempConnection = new SQLiteConnection(connstr);
+                // ERROR: если имя файла совпадает с открытым дампом - могут быть проблемы
+                List<Staff> staffList;
 
-                // extract all employers data from file
-                tempConnection.Open();
-                List<Staff> staffList = Staff.ExtractAll(tempConnection);
-                tempConnection.Close();
+                Console.WriteLine("Core.RetrieveAllUsers: loading file: " + filename);
+
+                if (filename == Session.sessionData.filename &&
+                        dumpConnection != null &&
+                        dumpConnection.State == ConnectionState.Open)
+                {
+                    // extract all employers data from file
+                    staffList = Staff.ExtractAll(dumpConnection);
+                }
+                else
+                {
+                    string connstr = $"Data Source={filename}";
+                    SQLiteConnection tempConnection = new SQLiteConnection(connstr);
+
+                    // extract all employers data from file
+                    tempConnection.Open();
+                    staffList = Staff.ExtractAll(tempConnection);
+                    tempConnection.Close();
+                }
 
                 // and push them into .users database...
                 SaveAllStaff(staffList);
@@ -141,11 +179,28 @@ namespace DBSysCore
          * Выделяет всех сохранённых пользователей
          * из пользовательской базы данных.
          */
-        public static List<Staff> GetAllUsers()
+        public static StatusCode GetAllUsers(out List<Staff> staffList)
         {
-            InitializeUserDataConnection();
-            List<Staff> result = Staff.ExtractAll(usersConnection);
-            CloseConnections();
+            StatusCode result = StatusCode.Ok;
+            staffList = new List<Staff>();
+
+            try
+            {
+                InitializeUserDataConnection();
+                staffList = Staff.ExtractAll(usersConnection);
+            }
+            catch(Exception e)
+            {
+                Logger.Error("Core.GetAllUsers", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Console.WriteLine($"Core.GetAllUsers: Connection is " +
+                    $"{(usersConnection == null ? "null" : usersConnection.State.ToString())}");
+            }
+
             return result;
         }
 
@@ -153,6 +208,8 @@ namespace DBSysCore
         {
             StatusCode result = StatusCode.Ok;
             challengeList = new List<Challenge>();
+            SQLiteDataReader reader = null;
+
             try
             {
                 if (!Session.RequireGrants(UserGrants.Operator))
@@ -162,7 +219,7 @@ namespace DBSysCore
                     InitializeUserDataConnection();
 
                     string query = "SELECT [id] FROM [challenge]";
-                    SQLiteDataReader reader = Utils.ExecuteReader(query, dumpConnection);
+                    reader = Utils.ExecuteReader(query, dumpConnection);
 
                     List<int> challengeIdList = new List<int>();
 
@@ -173,6 +230,7 @@ namespace DBSysCore
                     }
 
                     reader.Close();
+                    reader = null;
 
                     foreach (int id in challengeIdList)
                     {
@@ -189,6 +247,8 @@ namespace DBSysCore
             }
             finally
             {
+                if (reader != null)
+                    reader.Close();
                 CloseConnections();
                 Session.Close();
             }
@@ -337,7 +397,13 @@ namespace DBSysCore
          */
         private static void SaveAllStaff(List<Staff> staffList)
         {
-            usersConnection.Open();
+            // bool wasOpened = usersConnection != null &&
+            //    usersConnection.State == ConnectionState.Open;
+            // if (!wasOpened)
+            // {
+            //    InitializeUserDataConnection();
+            //    //usersConnection.Open();
+            // }
 
             foreach (Staff staff in staffList)
             {
@@ -351,7 +417,11 @@ namespace DBSysCore
                 */
             }
 
-            usersConnection.Close();
+            // if (!wasOpened)
+            // {
+            //    usersConnection.Close();
+            //    usersConnection = null;
+            // }
         }
 
         /**
@@ -360,10 +430,16 @@ namespace DBSysCore
         private static void CloseConnections()
         {
             if (usersConnection != null)
+            {
                 usersConnection.Close();
+                usersConnection = null;
+            }
 
             if (dumpConnection != null)
+            {
                 dumpConnection.Close();
+                dumpConnection = null;
+            }
         }
 
         /**
@@ -383,7 +459,7 @@ namespace DBSysCore
                 else
                     status += "  Unauthorized.\n";
 
-                status += $"  Current working database file: \"{Session.sessionData.filename}\"\n";
+                status += $"  Current working database file: \"{Session.GetCurrentWorkingDumpFileName()}\"\n";
 
                 switch (Session.sessionData.programState)
                 {
@@ -418,13 +494,32 @@ namespace DBSysCore
          */
         public static StatusCode Login(string login, string password)
         {
+            if (File.Exists(Paths.usersFilename))
+            {
+                try
+                {
+                    File.OpenRead(Paths.usersFilename).Close();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Core.Login: .users FILE IS LOCKED");
+                    Console.WriteLine(e.ToString());
+                }
+            }
+            else
+                Console.WriteLine("Core.Login: .users not found");
+
             StatusCode result;
             try
             {
+                Session.Open();
                 InitializeUserDataConnection();
 
                 if (Session.IsLoggedIn())
+                {
+                    Console.WriteLine("Core.Login: Already authorized!");
                     result = StatusCode.LoginAlreadyAuthorized;
+                }
                 else
                     result = Session.Auth(login, password);
             }
@@ -439,6 +534,23 @@ namespace DBSysCore
                 Session.Close();
             }
 
+            if (File.Exists(Paths.usersFilename))
+            {
+                try
+                {
+                    File.OpenRead(Paths.usersFilename).Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Core.Login: .users FILE IS LOCKED");
+                    Console.WriteLine(e.ToString());
+                }
+            }
+            else
+                Console.WriteLine("Core.Login: .users not found");
+            
+            Console.WriteLine($"Core.Login: usersConnection = {(usersConnection == null ? "null" : usersConnection.State.ToString())}");
+            Console.WriteLine($"Error code: {result}");
             return result;
         }
 
@@ -453,8 +565,9 @@ namespace DBSysCore
                 Session.Open();
                 Session.Logout();
             }
-            catch
+            catch(Exception e)
             {
+                Logger.Error("Core.Logout", e.ToString());
                 result = StatusCode.Error;
             }
             finally
@@ -477,13 +590,15 @@ namespace DBSysCore
             {
                 if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
+                else if (Session.IsLoggedInAsVirtualAdmin())
+                    result = StatusCode.GrantsVirtualAdminNotAllowed;
                 else if (Session.sessionData.programState != ProgramState.Working)
                     result = StatusCode.ProgramStateInvalid;
                 else
                 {
                     // open new challenge
                     Session.sessionData.programState = ProgramState.Testing;
-
+                    
                     ControllObject controllObject = new ControllObject()
                     {
                         name = coName,
@@ -521,6 +636,8 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
+                Console.WriteLine($"Core.BeginChallenge: program state bef closing session = {Session.sessionData.programState}");
                 Session.Close();
             }
 
@@ -574,7 +691,10 @@ namespace DBSysCore
                 if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Testing)
+                {
+                    Console.WriteLine($"Core.Test: Program state = {Session.sessionData.programState}");
                     result = StatusCode.ProgramStateInvalid;
+                }
                 else
                 {
                     TestDynamic test = new TestDynamic()
@@ -592,6 +712,8 @@ namespace DBSysCore
 
                     // add constructed test to test list
                     Session.sessionData.activeTests.Add(test);
+
+                    Console.WriteLine("Core.Test: Nominal test added!");
                 }
             }
             catch (Exception e)
@@ -601,6 +723,7 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
                 Session.Close();
             }
 
@@ -615,7 +738,10 @@ namespace DBSysCore
                 if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Testing)
+                {
+                    Console.WriteLine($"Core.Test: state = {Session.sessionData.programState}");
                     result = StatusCode.ProgramStateInvalid;
+                }
                 else
                 {
                     TestDynamic test = new TestDynamic()
@@ -623,16 +749,18 @@ namespace DBSysCore
                         tsIndex = tsIndex,
                         challenge = Session.sessionData.activeChallenge,
                         beginTime = DateTime.Now,
-                        nominal = null,
-                        actualValue = null,
-                        delta = null,
-                        boundaryValue = null,
+                        nominal = 0, // null,
+                        actualValue = 0, // null,
+                        delta = 0, // null,
+                        boundaryValue = 0, // null,
                         status = status
                     };
                     test.GenerateId();
 
                     // add constructed test to test list
                     Session.sessionData.activeTests.Add(test);
+
+                    Console.WriteLine("Core.Test: Status test added!");
                 }
             }
             catch (Exception e)
@@ -642,6 +770,7 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
                 Session.Close();
             }
 
@@ -664,24 +793,20 @@ namespace DBSysCore
                 {
                     System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
-                    FileStream stream = File.Open(staticDataTable, FileMode.Open, FileAccess.Read);
+                    FileStream stream = File.Open(Paths.staticDataTable, FileMode.Open, FileAccess.Read);
                     IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
 
                     DataTableCollection tables = reader.AsDataSet().Tables;
 
                     DataRowCollection rows;
 
+                    // Console.WriteLine($"Core.LoadStaticTests: conn = {dumpConnection}");
+
                     // clear all data first
-                    ExecSQL("DELETE FROM [methodology] WHERE 1");
-                    ExecSQL("DELETE FROM [requirements] WHERE 1");
-                    ExecSQL("DELETE FROM [module] WHERE 1");
-                    ExecSQL("DELETE FROM [test_static] WHERE 1");
-                    /*
-                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [methodology] WHERE 1\"");
-                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [requirements] WHERE 1\"");
-                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [module] WHERE 1\"");
-                    CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"DELETE FROM [test_static] WHERE 1\"");
-                    */
+                    _ExecSQL("DELETE FROM [methodology] WHERE 1");
+                    _ExecSQL("DELETE FROM [requirements] WHERE 1");
+                    _ExecSQL("DELETE FROM [module] WHERE 1");
+                    _ExecSQL("DELETE FROM [test_static] WHERE 1");
 
                     List<Methodology> methodologies = new List<Methodology>();
                     List<Requirements> requirements = new List<Requirements>();
@@ -810,6 +935,7 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
                 Session.Close();
             }
 
@@ -824,16 +950,21 @@ namespace DBSysCore
             StatusCode result = StatusCode.Ok;
             try
             {
-                // TODO: add Unathorized error for same code blocks!
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
                 if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
                 else
                 {
+                    /*
                     if (!File.Exists($"{filename}"))
                         // create new one from scratch...
                         CmdProccess("sqlite3.exe", $"{filename} \".read model.sql\"");
+                    */
 
-                    Session.sessionData.filename = filename;
+                    CloseConnections();
+                    Session.SwitchDumpFile(filename);
+                    result = InitializeConnection();
                 }
             }
             catch (Exception e)
@@ -843,6 +974,7 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
                 Session.Close();
             }
 
@@ -888,6 +1020,7 @@ namespace DBSysCore
             }
             finally
             {
+                CloseConnections();
                 Session.Close();
             }
 
@@ -912,7 +1045,7 @@ namespace DBSysCore
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     HtmlDocument doc = new HtmlDocument();
-                    doc.Load($"{reportTemplateDirectory}\\universal_template.html");
+                    doc.Load($"{Paths.reportTemplateDirectory}\\universal_template.html");
 
                     // change encoding here!
                     doc.LoadHtml(Utils.StdEncToUTF8(doc.DocumentNode.OuterHtml));
@@ -962,7 +1095,7 @@ namespace DBSysCore
                     string htmlString = doc.DocumentNode.OuterHtml;
 
                     string reportFileName = GenerateReportFileName(challenge);
-                    resultFileName = $"{Directory.GetCurrentDirectory()}\\{reportDirectory}\\{reportFileName}";
+                    resultFileName = Paths.reportDirectory + reportFileName;
 
                     IPdfDocument pdf = Pdf.From(htmlString).EncodedWith("UTF-8");
                     File.WriteAllBytes(resultFileName, pdf.Content());
@@ -992,6 +1125,8 @@ namespace DBSysCore
             string postName, string departmentName, string login, string password)
         {
             StatusCode result = StatusCode.Ok;
+            SQLiteDataReader reader = null;
+
             try
             {
                 if (!Session.RequireGrants(UserGrants.Admin))
@@ -1008,7 +1143,7 @@ namespace DBSysCore
                     // check if staff exists
                     string query = $"SELECT * FROM [staff] WHERE [surname] = \"{surname}\" AND " +
                         $"[first_name] = \"{firstName}\" AND [patronymic_name] = \"{patronymicName}\"";
-                    SQLiteDataReader reader = Utils.ExecuteReader(query, dumpConnection);
+                    reader = Utils.ExecuteReader(query, dumpConnection);
 
                     if (reader.HasRows)
                     {
@@ -1016,17 +1151,14 @@ namespace DBSysCore
                         query = $"UPDATE [staff] SET [post] = \"{postName}\", [department] = " +
                             $"\"{departmentName}\", [login] = \"{login}\", [password] = \"{password}\"";
                         Utils.ExecuteNonQuery(query, dumpConnection);
+                        Console.WriteLine($"Core.AddStaff: staff updated! {dumpConnection.DataSource}");
                     }
                     else
                     {
                         // create new staff
-                        query = $"INSERT INTO [staff] ([surname], [first_name], [patronymic_name], [post], " +
-                            $"[department], [login], [password]) VALUES (\"{surname}\", \"{firstName}\", " +
-                            $"\"{patronymicName}\", \"{postName}\", \"{departmentName}\", \"{login}\", \"{password}\")";
-                        Utils.ExecuteNonQuery(query, dumpConnection);
+                        Staff staff = new Staff(surname, firstName, patronymicName,
+                            postName, departmentName, login, password);
                     }
-
-                    reader.Close();
                 }
             }
             catch (Exception e)
@@ -1036,6 +1168,8 @@ namespace DBSysCore
             }
             finally
             {
+                if (reader != null)
+                    reader.Close();
                 CloseConnections();
                 Session.Close();
             }
@@ -1076,6 +1210,13 @@ namespace DBSysCore
             return result;
         }
 
+        private static void _ExecSQL(string query)
+        {
+            SQLiteCommand cmd = new SQLiteCommand(query, dumpConnection);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+
         public static StatusCode ExecSQL(string query)
         {
             StatusCode result = StatusCode.Ok;
@@ -1087,6 +1228,7 @@ namespace DBSysCore
                 {
                     SQLiteCommand cmd = new SQLiteCommand(query, dumpConnection);
                     cmd.ExecuteNonQuery();
+                    cmd.Dispose();
                     // CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"{query}\"", true);
                 }
             }

@@ -84,7 +84,9 @@ namespace DBSysCore
         public static int ExecuteNonQuery(string query, SQLiteConnection connection)
         {
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
-            return cmd.ExecuteNonQuery();
+            int result = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            return result;
         }
 
         /**
@@ -97,7 +99,9 @@ namespace DBSysCore
         public static SQLiteDataReader ExecuteReader(string query, SQLiteConnection connection)
         {
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
-            return cmd.ExecuteReader();
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            cmd.Dispose();
+            return reader;
         }
     }
 }

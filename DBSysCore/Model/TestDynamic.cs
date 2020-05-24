@@ -77,7 +77,7 @@ namespace DBSysCore.Model
 
         public int GenerateId()
         {
-            id = Utils.Hash(beginTime.ToString());
+            id = Utils.Hash(tsIndex + beginTime.ToString() + endTime.ToString());
             return id;
         }
 
@@ -133,8 +133,10 @@ namespace DBSysCore.Model
                     id = (int)reader[0],
                     tsIndex = (string)reader[1],
                     // challenge = new Challenge((int)reader[2]),
-                    beginTime = DateTime.Parse((string)reader[3]),
-                    endTime = DateTime.Parse((string)reader[4]),
+                    // beginTime = DateTime.Parse((string)reader[3]),
+                    //endTime = DateTime.Parse((string)reader[4]),
+                    beginTime = (DateTime)reader[3],
+                    endTime = (DateTime)reader[4],
                     actualValue = reader.IsDBNull(5) ? null : (decimal?)reader[5],
                     delta = reader.IsDBNull(6) ? null : (decimal?)reader[6],
                     boundaryValue = reader.IsDBNull(7) ? null : (decimal?)reader[7],

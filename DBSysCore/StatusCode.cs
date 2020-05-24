@@ -11,6 +11,7 @@
 
         GrantsUnathorized,
         GrantsInproper,
+        GrantsVirtualAdminNotAllowed,
 
         LoginNoRegisteredUsers,
         LoginAlreadyAuthorized,
