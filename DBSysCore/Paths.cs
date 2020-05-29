@@ -7,8 +7,11 @@ namespace DBSysCore
     {
         private static string GetBaseFolder()
         {
-            // Console.WriteLine($"Path.GetBaseFolder: {Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}");
+#if DEBUG
+            return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\DSPLAB\\DBSys_DEBUG";
+#else
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\DSPLAB\\DBSys";
+#endif
         }
 
         public static string appFolder

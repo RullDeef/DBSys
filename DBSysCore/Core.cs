@@ -37,12 +37,15 @@ namespace DBSysCore
          */
         private static StatusCode InitializeConnection()
         {
+            
+            Logger.Func("Core.InitializeConnection");
+
             StatusCode result = StatusCode.Ok;
             try
             {
                 // Build Connection String
                 string fname = Session.sessionData.filename;
-                string queryString = $"URI=file:{fname}";
+                string queryString = $"URI=file:{fname};datetimekind=Utc;";
 
                 bool fileExists = File.Exists(fname);
 
@@ -55,12 +58,14 @@ namespace DBSysCore
                 
                 if (dumpConnection.State != ConnectionState.Open)
                 {
-                    Console.Write("Core.InitializeConnection: Trying to open... ");
                     dumpConnection.Open();
+#if DEBUG
+                    Console.Write("Core.InitializeConnection: Trying to open... ");
                     if (dumpConnection.State == ConnectionState.Open)
                         Console.WriteLine("Success!");
                     else
                         Console.WriteLine("Fail!");
+#endif
                 }
 
                 if (!fileExists) // load model.sql
@@ -68,6 +73,11 @@ namespace DBSysCore
                     string modelString = File.ReadAllText(Paths.dumpModelFilename);
                     Utils.ExecuteNonQuery(modelString, dumpConnection);
                 }
+            }
+            catch (FileNotFoundException e)
+            {
+                Logger.Error("Core.InitializeConnection", e.ToString());
+                result = StatusCode.ConnectionDumpModelNotFound;
             }
             catch (InvalidOperationException e)
             {
@@ -95,66 +105,76 @@ namespace DBSysCore
          * при этом собирает данные обо всех пользователях из всех возможных
          * источников - файлов дампов, находящихся в папке с программой.
          */
-        private static void InitializeUserDataConnection()
+        private static StatusCode InitializeUserDataConnection()
         {
-            if (usersConnection != null && usersConnection.State == ConnectionState.Open)
-                return;
+            
+            Logger.Func("Core.InitializeUserDataConnection");
 
-            // Build Connection String
-            string queryString = $"Data Source={Paths.usersFilename}";
-
-            bool fileExists = File.Exists(Paths.usersFilename);
-            if (!fileExists)
-                ;// File.Create(Paths.usersFilename).Close();
-
-            usersConnection = new SQLiteConnection(queryString);
-            usersConnection.Open();
-
-            Console.WriteLine($"Core.InitializeUserDataConnection: state = {usersConnection.State}");
-
-            // if there is no such file - create new one
-            if (!fileExists)
+            StatusCode result = StatusCode.Ok;
+            try
             {
-                // FileStream fs = File.Create($"{usersfilename}");
-                // fs.Close();
+                if (usersConnection != null && usersConnection.State == ConnectionState.Open)
+                    return result;
 
-                // try
-                // {
-                    // initialize created file with tables schemas
+                // Build Connection String
+                string queryString = $"Data Source={Paths.usersFilename}";
+
+                bool fileExists = File.Exists(Paths.usersFilename);
+
+                usersConnection = new SQLiteConnection(queryString);
+                usersConnection.Open();
+
+                // if there was no such file initialize it with tables schemas
+                if (!fileExists)
+                {
                     string modelString = File.ReadAllText(Paths.usersModelFilename);
                     Utils.ExecuteNonQuery(modelString, usersConnection);
-                // }
-                // catch(Exception e)
-                // {
-                    //Logger.Error("Core.InitializeUserDataConnection", e.ToString());
-                    //Environment.Exit(-228);
-                // }
+                }
+
+                RetrieveAllUsers();
+            }
+            catch (FileNotFoundException e)
+            {
+                Logger.Error("Core.InitializeUserDataConnection", e.ToString());
+                result = StatusCode.ConnectionUsersModelNotFound;
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.InitializeUserDataConnection", e.ToString());
+                result = StatusCode.Error;
             }
 
-            RetrieveAllUsers();
+            return result;
         }
 
         /**
          * Метод для сбора данных обо всех пользователях
-         * из всех файлов дампов в папке с программой.
+         * из всех файлов дампов в [папке с программой?].
          */
         private static void RetrieveAllUsers()
         {
+            
+            Logger.Func("Core.RetrieveAllUsers");
+
             string[] dumps = Directory.GetFiles(Paths.dumpsDirectory, "*.db");
 
+#if DEBUG
             Console.WriteLine("Core.RetrieveAllUsers: dump file = " + Session.sessionData.filename);
             Console.WriteLine("Core.RetrieveAllUsers: dumps founded = " + dumps.Length);
+#endif
 
             foreach (string filename in dumps)
             {
                 // ERROR: если имя файла совпадает с открытым дампом - могут быть проблемы
                 List<Staff> staffList;
 
+#if DEBUG
                 Console.WriteLine("Core.RetrieveAllUsers: loading file: " + filename);
+#endif
 
                 if (filename == Session.sessionData.filename &&
-                        dumpConnection != null &&
-                        dumpConnection.State == ConnectionState.Open)
+                    dumpConnection != null &&
+                    dumpConnection.State == ConnectionState.Open)
                 {
                     // extract all employers data from file
                     staffList = Staff.ExtractAll(dumpConnection);
@@ -177,17 +197,30 @@ namespace DBSysCore
 
         /**
          * Выделяет всех сохранённых пользователей
-         * из пользовательской базы данных.
+         * из [пользовательской?] базы данных.
          */
         public static StatusCode GetAllUsers(out List<Staff> staffList)
         {
+            
+            Logger.Func("Core.GetAllUsers");
+
             StatusCode result = StatusCode.Ok;
             staffList = new List<Staff>();
 
             try
             {
-                InitializeUserDataConnection();
-                staffList = Staff.ExtractAll(usersConnection);
+                // if (!Session.IsLoggedIn())
+                //     result = StatusCode.GrantsUnathorized;
+                // else if (!Session.RequireGrants(UserGrants.Admin))
+                //     result = StatusCode.GrantsInproper;
+                // else if (Session.sessionData.programState != ProgramState.Working)
+                //     result = StatusCode.ProgramStateInvalid;
+                // else
+                if ((result = InitializeConnection()) == StatusCode.Ok &&
+                    (result = InitializeUserDataConnection()) == StatusCode.Ok)
+                {
+                    staffList = Staff.ExtractAll(usersConnection);
+                }
             }
             catch(Exception e)
             {
@@ -197,8 +230,7 @@ namespace DBSysCore
             finally
             {
                 CloseConnections();
-                Console.WriteLine($"Core.GetAllUsers: Connection is " +
-                    $"{(usersConnection == null ? "null" : usersConnection.State.ToString())}");
+                Session.Close();
             }
 
             return result;
@@ -206,39 +238,22 @@ namespace DBSysCore
 
         public static StatusCode GetAllChallenges(out List<Challenge> challengeList)
         {
-            StatusCode result = StatusCode.Ok;
-            challengeList = new List<Challenge>();
-            SQLiteDataReader reader = null;
+            
+            Logger.Func("Core.GetAllChallenges");
 
+            StatusCode result = StatusCode.Ok;
+            challengeList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
-                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                else if ((result = InitializeConnection()) == StatusCode.Ok &&
+                    (result = InitializeUserDataConnection()) == StatusCode.Ok)
                 {
-                    InitializeUserDataConnection();
-
-                    string query = "SELECT [id] FROM [challenge]";
-                    reader = Utils.ExecuteReader(query, dumpConnection);
-
-                    List<int> challengeIdList = new List<int>();
-
-                    while (reader.Read())
-                    {
-                        int id = (int)reader[0];
-                        challengeIdList.Add(id);
-                    }
-
-                    reader.Close();
-                    reader = null;
-
-                    foreach (int id in challengeIdList)
-                    {
-                        Challenge challenge = new Challenge(id);
-                        challengeList.Add(challenge);
-                    }
+                    challengeList = Challenge.GetChallenges();
                 }
-
             }
             catch (Exception e)
             {
@@ -247,8 +262,6 @@ namespace DBSysCore
             }
             finally
             {
-                if (reader != null)
-                    reader.Close();
                 CloseConnections();
                 Session.Close();
             }
@@ -258,12 +271,19 @@ namespace DBSysCore
 
         public static StatusCode GetModules(out List<Module> modulesList)
         {
+            
+            Logger.Func("Core.GetModules");
+
             StatusCode result = StatusCode.Ok;
             modulesList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     modulesList = Module.GetModules();
@@ -285,12 +305,19 @@ namespace DBSysCore
 
         public static StatusCode GetStaticTests(out List<TestStatic> testsList)
         {
+            
+            Logger.Func("Core.GetStaticTests");
+
             StatusCode result = StatusCode.Ok;
             testsList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     testsList = TestStatic.GetTests();
@@ -312,13 +339,20 @@ namespace DBSysCore
 
         public static StatusCode GetDynamicTests(out List<TestDynamic> testsList)
         {
+            
+            Logger.Func("Core.GetDynamicTests");
+
             StatusCode result = StatusCode.Ok;
             testsList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
-                else if ((result = InitializeConnection()) == StatusCode.Ok)
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
+                else if ((result = InitializeConnection()) == StatusCode.Ok && (result = InitializeUserDataConnection()) == StatusCode.Ok)
                 {
                     testsList = TestDynamic.GetTests();
                 }
@@ -339,12 +373,19 @@ namespace DBSysCore
 
         public static StatusCode GetDynamicTests(Challenge challenge, out List<TestDynamic> testsList)
         {
+            
+            Logger.Func("Core.GetDynamicTests");
+
             StatusCode result = StatusCode.Ok;
             testsList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     testsList = TestDynamic.GetTests(challenge);
@@ -366,12 +407,22 @@ namespace DBSysCore
 
         public static StatusCode GetDynamicTests(DateTime beginDate, DateTime endDate, out List<TestDynamic> testsList)
         {
+            
+            Logger.Func("Core.GetDynamicTests");
+
+#if DEBUG
+            Debug.Assert(beginDate <= endDate, "beginDate must be earlier than endDate");
+#endif
             StatusCode result = StatusCode.Ok;
             testsList = null;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     testsList = TestDynamic.GetTests(beginDate, endDate);
@@ -391,12 +442,48 @@ namespace DBSysCore
             return result;
         }
 
+        public static StatusCode MapStaticTests(List<TestDynamic> testsDynamicList, out List<TestStatic> testsStaticList)
+        {
+            
+            Logger.Func("Core.MapStaticTests");
+
+            StatusCode result = StatusCode.Ok;
+            testsStaticList = new List<TestStatic>();
+            try
+            {
+                if ((result = InitializeConnection()) == StatusCode.Ok)
+                {
+                    foreach (TestDynamic testDynamic in testsDynamicList)
+                        testsStaticList.Add(testDynamic.GetTestStatic());
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.MapStaticTests", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                CloseConnections();
+                Session.Close();
+            }
+
+            return result;
+        }
+
         /**
          * Производит запись информации обо всех предоставленных
          * пользователях в пользовательский файл.
          */
         private static void SaveAllStaff(List<Staff> staffList)
         {
+            
+            Logger.Func("Core.SaveAllStaff");
+
+#if DEBUG
+            Debug.Assert(usersConnection.State == ConnectionState.Open,
+                "users connection must be opened");
+#endif
             // bool wasOpened = usersConnection != null &&
             //    usersConnection.State == ConnectionState.Open;
             // if (!wasOpened)
@@ -429,6 +516,9 @@ namespace DBSysCore
          */
         private static void CloseConnections()
         {
+            
+            Logger.Func("Core.CloseConnections");
+
             if (usersConnection != null)
             {
                 usersConnection.Close();
@@ -447,6 +537,9 @@ namespace DBSysCore
          */
         public static StatusCode Status(out string status)
         {
+            
+            Logger.Func("Core.Status");
+
             StatusCode result = StatusCode.Ok;
             status = "";
             try
@@ -494,11 +587,16 @@ namespace DBSysCore
          */
         public static StatusCode Login(string login, string password)
         {
+            
+            Logger.Func("Core.Login");
+
+#if DEBUG
             if (File.Exists(Paths.usersFilename))
             {
                 try
                 {
                     File.OpenRead(Paths.usersFilename).Close();
+                    Console.WriteLine("Core.Login: .users available");
                 }
                 catch(Exception e)
                 {
@@ -508,20 +606,23 @@ namespace DBSysCore
             }
             else
                 Console.WriteLine("Core.Login: .users not found");
+#endif
 
-            StatusCode result;
+            StatusCode result = StatusCode.Ok;
             try
             {
-                Session.Open();
-                InitializeUserDataConnection();
-
-                if (Session.IsLoggedIn())
+                if ((result = InitializeUserDataConnection()) == StatusCode.Ok)
                 {
-                    Console.WriteLine("Core.Login: Already authorized!");
-                    result = StatusCode.LoginAlreadyAuthorized;
+                    if (Session.IsLoggedIn())
+                    {
+#if DEBUG
+                        Console.WriteLine("Core.Login: Already authorized!");
+#endif
+                        result = StatusCode.LoginAlreadyAuthorized;
+                    }
+                    else
+                        result = Session.Auth(login, password);
                 }
-                else
-                    result = Session.Auth(login, password);
             }
             catch (Exception e)
             {
@@ -534,6 +635,7 @@ namespace DBSysCore
                 Session.Close();
             }
 
+#if DEBUG
             if (File.Exists(Paths.usersFilename))
             {
                 try
@@ -548,9 +650,11 @@ namespace DBSysCore
             }
             else
                 Console.WriteLine("Core.Login: .users not found");
-            
+
             Console.WriteLine($"Core.Login: usersConnection = {(usersConnection == null ? "null" : usersConnection.State.ToString())}");
             Console.WriteLine($"Error code: {result}");
+#endif
+
             return result;
         }
 
@@ -559,6 +663,9 @@ namespace DBSysCore
          */
         public static StatusCode Logout()
         {
+            
+            Logger.Func("Core.Logout");
+
             StatusCode result = StatusCode.Ok;
             try
             {
@@ -578,55 +685,93 @@ namespace DBSysCore
             return result;
         }
 
+        private static StatusCode HasOTKStaff(int id, out bool flag)
+        {
+            
+            Logger.Func("Core.HasOTKStaff");
+
+            StatusCode result = StatusCode.Ok;
+            flag = false;
+
+            try
+            {
+                if ((result = GetAllUsers(out List<Staff> staffList)) == StatusCode.Ok)
+                    flag = staffList.Exists(staff => staff.id == id);
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Core.HasOTKStaff", e.ToString());
+                result = StatusCode.Error;
+            }
+
+            return result;
+        }
+
         /**
          * Иниализирует новое испытание.
          */
         public static StatusCode BeginChallenge(string productName, string coName,
-            string coSerialNumber, string coDecNumber, string coVersion, string coParent,
+            string coSerialNumber, string coDecNumber, int staffOTKId, string coParent,
             string challengeTypeName, string locationName, string description = "")
         {
+            
+            Logger.Func("Core.BeginChallenge");
+
             StatusCode result = StatusCode.Ok;
+            bool flag = false;
+
             try
             {
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
                 if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.IsLoggedInAsVirtualAdmin())
                     result = StatusCode.GrantsVirtualAdminNotAllowed;
                 else if (Session.sessionData.programState != ProgramState.Working)
                     result = StatusCode.ProgramStateInvalid;
-                else
+                else if ((result = HasOTKStaff(staffOTKId, out flag)) == StatusCode.Ok)
                 {
-                    // open new challenge
-                    Session.sessionData.programState = ProgramState.Testing;
-                    
-                    ControllObject controllObject = new ControllObject()
+                    if (!flag)
+                        result = StatusCode.BeginChallengeInvalidOTKStaffId;
+                    else if ((result = InitializeUserDataConnection()) == StatusCode.Ok)
                     {
-                        name = coName,
-                        serialNumber = coSerialNumber,
-                        decimalNumber = coDecNumber,
-                        version = coVersion,
-                        parent = coParent,
-                        product = productName
-                    };
-                    controllObject.GenerateId();
+                        // open new challenge
+                        ControllObject controllObject = new ControllObject()
+                        {
+                            name = coName,
+                            serialNumber = coSerialNumber,
+                            decimalNumber = coDecNumber,
+                            version = "null",
+                            parent = coParent,
+                            product = productName
+                        };
+                        controllObject.GenerateId();
 
-                    ChallengeType challengeType = new ChallengeType() { name = challengeTypeName };
-                    challengeType.GenerateId();
+                        ChallengeType challengeType = new ChallengeType() { name = challengeTypeName };
+                        challengeType.GenerateId();
 
-                    Staff staff = Session.sessionData.staff;
+                        Staff staff = Session.sessionData.staff;
+                        Staff staffOTK = new Staff(staffOTKId);
 
-                    Location location = new Location() { name = locationName };
-                    location.GenerateId();
+                        Location location = new Location() { name = locationName };
+                        location.GenerateId();
 
-                    Session.sessionData.activeChallenge = new Challenge()
-                    {
-                        controllObject = controllObject,
-                        challengeType = challengeType,
-                        staff = staff,
-                        location = location,
-                        beginTime = DateTime.Now,
-                        description = description
-                    };
+                        Session.Open();
+                        Session.sessionData.programState = ProgramState.Testing;
+                        Session.sessionData.activeChallenge = new Challenge()
+                        {
+                            controllObject = controllObject,
+                            challengeType = challengeType,
+                            staff = staff,
+                            staffOTK = staffOTK,
+                            location = location,
+                            beginTime = DateTime.Now,
+                            description = description
+                        };
+
+                        Session.Close();
+                    }
                 }
             }
             catch (Exception e)
@@ -637,7 +782,6 @@ namespace DBSysCore
             finally
             {
                 CloseConnections();
-                Console.WriteLine($"Core.BeginChallenge: program state bef closing session = {Session.sessionData.programState}");
                 Session.Close();
             }
 
@@ -649,10 +793,15 @@ namespace DBSysCore
          */
         public static StatusCode EndChallenge()
         {
+            
+            Logger.Func("Core.EndChallenge");
+
             StatusCode result = StatusCode.Ok;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Tester))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Testing)
                     result = StatusCode.ProgramStateInvalid;
@@ -660,6 +809,7 @@ namespace DBSysCore
                 {
                     // save active challenge
                     Session.sessionData.programState = ProgramState.Working;
+                    Debug.Assert(Session.sessionData.activeChallenge != null);
                     Session.sessionData.activeChallenge.GenerateId();
 
                     result = Session.SaveCurrentChallenge(dumpConnection);
@@ -685,14 +835,21 @@ namespace DBSysCore
         public static StatusCode Test(string tsIndex, bool status, decimal nominal,
             decimal actualValue, decimal delta, decimal boundaryValue)
         {
+            
+            Logger.Func("Core.Test");
+
             StatusCode result = StatusCode.Ok;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Tester))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Testing)
                 {
+#if DEBUG
                     Console.WriteLine($"Core.Test: Program state = {Session.sessionData.programState}");
+#endif
                     result = StatusCode.ProgramStateInvalid;
                 }
                 else
@@ -712,8 +869,9 @@ namespace DBSysCore
 
                     // add constructed test to test list
                     Session.sessionData.activeTests.Add(test);
-
+#if DEBUG
                     Console.WriteLine("Core.Test: Nominal test added!");
+#endif
                 }
             }
             catch (Exception e)
@@ -727,19 +885,30 @@ namespace DBSysCore
                 Session.Close();
             }
 
+#if DEBUG
+            Session.Close();
+#endif
+
             return result;
         }
 
         public static StatusCode Test(string tsIndex, bool status)
         {
+            
+            Logger.Func("Core.Test");
+
             StatusCode result = StatusCode.Ok;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Tester))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Tester))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Testing)
                 {
+#if DEBUG
                     Console.WriteLine($"Core.Test: state = {Session.sessionData.programState}");
+#endif
                     result = StatusCode.ProgramStateInvalid;
                 }
                 else
@@ -759,8 +928,9 @@ namespace DBSysCore
 
                     // add constructed test to test list
                     Session.sessionData.activeTests.Add(test);
-
+#if DEBUG
                     Console.WriteLine("Core.Test: Status test added!");
+#endif
                 }
             }
             catch (Exception e)
@@ -774,6 +944,10 @@ namespace DBSysCore
                 Session.Close();
             }
 
+#if DEBUG
+            Session.Close();
+#endif
+
             return result;
         }
 
@@ -782,13 +956,20 @@ namespace DBSysCore
          */
         public static StatusCode LoadStaticTests()
         {
+            
+            Logger.Func("Core.LoadStaticTests");
+
             StatusCode result = StatusCode.Ok;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Operator))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
                 else if (Session.sessionData.programState != ProgramState.Working)
                     result = StatusCode.ProgramStateInvalid;
+                else if (!File.Exists(Paths.staticDataTable))
+                    result = StatusCode.LoadStaticTestsStaticTableNotFound;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
@@ -813,7 +994,6 @@ namespace DBSysCore
                     List<Module> modules = new List<Module>();
 
                     // load methodology and requirements
-
                     rows = tables["Requirements"].Rows;
 
                     for (int i = 3; i < rows.Count; i++)
@@ -875,12 +1055,14 @@ namespace DBSysCore
                         }
                     }
 
-                    // load static test here
-                    rows = tables["Protocol"].Rows;
-
+#if DEBUG
                     // show modules
                     foreach (var m in modules)
-                        Console.WriteLine(m.id + "-" + m.name);
+                        Console.WriteLine($"Core.LoadStaticTests: module loaded: {m.id} - {m.name}");
+#endif
+
+                    // load static test here
+                    rows = tables["Protocol"].Rows;
 
                     for (int i = 4; i < rows.Count; i++)
                     {
@@ -922,9 +1104,10 @@ namespace DBSysCore
                         }
                     }
 
-                    reader.Dispose();
+                    // WARNING: may be it is important to dispose manually, who knows...
+                    // reader.Dispose();
                     reader.Close();
-                    stream.Dispose();
+                    // stream.Dispose();
                     stream.Close();
                 }
             }
@@ -947,13 +1130,17 @@ namespace DBSysCore
          */
         public static StatusCode DumpUse(string filename)
         {
+            Logger.Func("Core.DumpUse");
+
             StatusCode result = StatusCode.Ok;
             try
             {
                 if (!Session.IsLoggedIn())
                     result = StatusCode.GrantsUnathorized;
-                if (!Session.RequireGrants(UserGrants.Operator))
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
+                else if (filename.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
+                    result = StatusCode.DumpUseInvalidFilename;
                 else
                 {
                     /*
@@ -986,19 +1173,23 @@ namespace DBSysCore
          */
         public static StatusCode DumpMerge(string dest, string[] src)
         {
+            
+            Logger.Func("Core.DumpMerge");
+
             StatusCode result = StatusCode.Ok;
             try
             {
+                // filter out invalid filenames
                 src = src.Where(filename => File.Exists(filename)).ToArray();
 
                 if (src.Length == 0)
                     result = StatusCode.DumpMergeNoFiles;
+                else if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
+                    result = StatusCode.GrantsInproper;
                 // WARNING: are we really need to open dump connection here ?
-                else if ((result = InitializeConnection()) != StatusCode.Ok)
-                {
-                    // pass
-                }
-                else
+                else // if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     string connectionString = $"Data Source=\"{dest}\"";
                     SQLiteConnection connection = new SQLiteConnection(connectionString);
@@ -1035,12 +1226,18 @@ namespace DBSysCore
 
         public static StatusCode GenerateReport(Challenge challenge, out string resultFileName)
         {
+            
+            Logger.Func("Core.GenerateReport");
+
             StatusCode result = StatusCode.Ok;
             resultFileName = "";
             try
             {
-                CloseConnections();
-                if (!Session.RequireGrants(UserGrants.Operator))
+                // WARNING: dont really need to close them here...
+                // CloseConnections();
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
@@ -1049,6 +1246,20 @@ namespace DBSysCore
 
                     // change encoding here!
                     doc.LoadHtml(Utils.StdEncToUTF8(doc.DocumentNode.OuterHtml));
+
+                    // doc.DocumentNode.SelectNodes("//*[@name='pnum']").First().InnerHtml = "1000"; // reportNumber;
+
+                    foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='module']"))
+                        node.InnerHtml = challenge.controllObject.name;
+
+                    foreach(HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='serial']"))
+                        node.InnerHtml = challenge.controllObject.serialNumber;
+
+                    doc.DocumentNode.SelectNodes("//*[@id='product']").First().InnerHtml = challenge.controllObject.product;
+                    doc.DocumentNode.SelectNodes("//*[@id='operator']").First().InnerHtml =
+                        $"{challenge.staff.surname} {challenge.staff.firstName[0]}. {challenge.staff.patronymicName[0]}.";
+                    doc.DocumentNode.SelectNodes("//*[@id='OTK']").First().InnerHtml =
+                        $"{challenge.staffOTK.surname} {challenge.staffOTK.firstName[0]}. {challenge.staffOTK.patronymicName[0]}.";
 
                     HtmlNode table = doc.DocumentNode.SelectNodes("//table")[0];
 
@@ -1062,7 +1273,10 @@ namespace DBSysCore
                         td = HtmlNode.CreateNode($"<td>{testStatic.description}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{testStatic.unit}</td>");
+                        if (testStatic.unit == "null")
+                            td = HtmlNode.CreateNode($"<td></td>");
+                        else
+                            td = HtmlNode.CreateNode($"<td>{testStatic.unit}</td>");
                         tr.AppendChild(td);
 
                         td = HtmlNode.CreateNode($"<td>{testStatic.requirements.docNumber}</td>");
@@ -1071,13 +1285,22 @@ namespace DBSysCore
                         td = HtmlNode.CreateNode($"<td>{testStatic.methodology.docNumber}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{testDynamic.nominal}</td>");
+                        if (testStatic.unit == "null")
+                            td = HtmlNode.CreateNode("<td></td>");
+                        else
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.nominal}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{testDynamic.delta}</td>");
+                        if (testStatic.unit == "null")
+                            td = HtmlNode.CreateNode("<td></td>");
+                        else
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.delta}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{testDynamic.boundaryValue}</td>");
+                        if (testStatic.unit == "null")
+                            td = HtmlNode.CreateNode("<td></td>");
+                        else
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.boundaryValue}</td>");
                         tr.AppendChild(td);
 
                         td = HtmlNode.CreateNode($"<td>{testDynamic.actualValue}</td>");
@@ -1086,8 +1309,12 @@ namespace DBSysCore
                         td = HtmlNode.CreateNode($"<td>{challenge.beginTime:dd/MM/yyyy}</td>");
                         tr.AppendChild(td);
 
-                        for (int i = 0; i < 2; i++)
-                            tr.AppendChild(HtmlNode.CreateNode("<td></td>"));
+                        tr.AppendChild(HtmlNode.CreateNode("<td></td>"));
+
+                        if (testDynamic.status == true)
+                            tr.AppendChild(HtmlNode.CreateNode("<td style=\"color:green\">Годен</td>"));
+                        else
+                            tr.AppendChild(HtmlNode.CreateNode("<td style=\"color:red\">Не годен</td>"));
 
                         table.AppendChild(tr);
                     }
@@ -1095,7 +1322,7 @@ namespace DBSysCore
                     string htmlString = doc.DocumentNode.OuterHtml;
 
                     string reportFileName = GenerateReportFileName(challenge);
-                    resultFileName = Paths.reportDirectory + reportFileName;
+                    resultFileName = $"{Paths.reportDirectory}\\{reportFileName}";
 
                     IPdfDocument pdf = Pdf.From(htmlString).EncodedWith("UTF-8");
                     File.WriteAllBytes(resultFileName, pdf.Content());
@@ -1124,40 +1351,43 @@ namespace DBSysCore
         public static StatusCode AddStaff(string surname, string firstName, string patronymicName,
             string postName, string departmentName, string login, string password)
         {
-            StatusCode result = StatusCode.Ok;
-            SQLiteDataReader reader = null;
+            
+            Logger.Func("Core.AddStaff");
 
+            StatusCode result = StatusCode.Ok;
             try
             {
-                if (!Session.RequireGrants(UserGrants.Admin))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Admin))
                     result = StatusCode.GrantsInproper;
-                else if ((result = InitializeConnection()) != StatusCode.Ok)
-                {
-                    // do nothing
-                }
-                else
+                else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
                     // raplce password with corresponding hash
                     password = Utils.GetHash(password);
 
                     // check if staff exists
-                    string query = $"SELECT * FROM [staff] WHERE [surname] = \"{surname}\" AND " +
-                        $"[first_name] = \"{firstName}\" AND [patronymic_name] = \"{patronymicName}\"";
-                    reader = Utils.ExecuteReader(query, dumpConnection);
-
-                    if (reader.HasRows)
+                    Staff staff = Staff.Get(surname, firstName, patronymicName);
+                    if (staff != null)
                     {
                         // update if exists
-                        query = $"UPDATE [staff] SET [post] = \"{postName}\", [department] = " +
-                            $"\"{departmentName}\", [login] = \"{login}\", [password] = \"{password}\"";
-                        Utils.ExecuteNonQuery(query, dumpConnection);
+                        staff.post = postName;
+                        staff.department = departmentName;
+                        staff.login = login;
+                        staff.password = password;
+                        staff.SaveData(dumpConnection);
+#if DEBUG
                         Console.WriteLine($"Core.AddStaff: staff updated! {dumpConnection.DataSource}");
+#endif
                     }
                     else
                     {
                         // create new staff
-                        Staff staff = new Staff(surname, firstName, patronymicName,
+                        staff = new Staff(surname, firstName, patronymicName,
                             postName, departmentName, login, password);
+#if DEBUG
+                        Console.WriteLine("Core.AddStaff: staff created!");
+#endif
                     }
                 }
             }
@@ -1168,8 +1398,6 @@ namespace DBSysCore
             }
             finally
             {
-                if (reader != null)
-                    reader.Close();
                 CloseConnections();
                 Session.Close();
             }
@@ -1179,16 +1407,20 @@ namespace DBSysCore
 
         public static StatusCode UpdateStaff(Staff staff)
         {
+            
+            Logger.Func("Core.UpdateStaff");
+
             StatusCode result = StatusCode.Ok;
             try
             {
-                Session.Open();
-
-                if (!Session.RequireGrants(UserGrants.Admin))
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
+                else if (!Session.RequireGrants(UserGrants.Admin))
                     result = StatusCode.GrantsInproper;
-                else
+                else if (Session.sessionData.programState != ProgramState.Working)
+                    result = StatusCode.ProgramStateInvalid;
+                else if ((result = InitializeUserDataConnection()) == StatusCode.Ok)
                 {
-                    InitializeUserDataConnection();
                     staff.SaveData(usersConnection);
                     CloseConnections();
 
@@ -1212,47 +1444,29 @@ namespace DBSysCore
 
         private static void _ExecSQL(string query)
         {
+            
+            Logger.Func("Core._ExecSQL");
+
+#if DEBUG
+            Debug.Assert(dumpConnection.State == ConnectionState.Open,
+                "dump connection must be opened");
+#endif
             SQLiteCommand cmd = new SQLiteCommand(query, dumpConnection);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
 
-        public static StatusCode ExecSQL(string query)
+        public static StatusCode ExecSQL(string query /*, out string output */)
         {
+            
+            Logger.Func("Core.ExecSQL");
+
             StatusCode result = StatusCode.Ok;
+            // output = "";
             try
             {
-                if (!Session.RequireGrants(UserGrants.Admin))
-                    result = StatusCode.GrantsInproper;
-                else if ((result = InitializeConnection()) == StatusCode.Ok)
-                {
-                    SQLiteCommand cmd = new SQLiteCommand(query, dumpConnection);
-                    cmd.ExecuteNonQuery();
-                    cmd.Dispose();
-                    // CmdProccess("sqlite3.exe", $"{Session.sessionData.filename} \"{query}\"", true);
-                }
-            }
-            catch (Exception e)
-            {
-                Logger.Error("Core.ExecSQL", e.ToString());
-                result = StatusCode.Error;
-            }
-            finally
-            {
-                CloseConnections();
-                Session.Close();
-            }
-
-            return result;
-        }
-
-        public static StatusCode ExecSQLout(string query, out string output)
-        {
-            StatusCode result = StatusCode.Ok;
-            try
-            {
-                output = "";
-                
+                if (!Session.IsLoggedIn())
+                    result = StatusCode.GrantsUnathorized;
                 if (!Session.RequireGrants(UserGrants.Admin))
                     result = StatusCode.GrantsInproper;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
@@ -1271,11 +1485,13 @@ namespace DBSysCore
 
                     process.Start();
 
+                    /*
                     while (!process.StandardOutput.EndOfStream)
                     {
                         string line = process.StandardOutput.ReadLine();
                         output += line;
                     }
+                    */
 
                     process.WaitForExit();
                 }
@@ -1284,7 +1500,7 @@ namespace DBSysCore
             {
                 Logger.Error("Core.ExecSQL", e.ToString());
                 result = StatusCode.Error;
-                output = "[Internal error]\n";
+                // output = "[Internal error]\n";
             }
             finally
             {
@@ -1300,18 +1516,25 @@ namespace DBSysCore
          */
         private static void MergeFiles(SQLiteConnection connection, string source)
         {
+            
+            Logger.Func("Core.MergeFiles");
+
+#if DEBUG
+            Debug.Assert(connection.State == ConnectionState.Open,
+                "connection must be opened");
+#endif
             string[] tables = new string[]
             {
-                "challenge",
+                "requirements",
+                "methodology",
+                "module",
+                "test_static",
+                "location",
+                "staff",
                 "challenge_type",
                 "controll_object",
-                "location",
-                "methodology",
-                "product",
-                "requirements",
-                "staff",
-                "test_dynamic",
-                "test_static"
+                "challenge",
+                "test_dynamic"
             };
 
             string query = $"ATTACH \"{source}\" AS [temp_db]";
@@ -1319,7 +1542,8 @@ namespace DBSysCore
 
             foreach (string table in tables)
             {
-                query = $"INSERT OR IGNORE INTO [{table}] SELECT * FROM [temp_db].[{table}]";
+                query = $"INSERT OR IGNORE INTO [{table}]" +
+                    $"SELECT * FROM [temp_db].[{table}]";
                 Utils.ExecuteNonQuery(query, connection);
             }
 
@@ -1327,39 +1551,45 @@ namespace DBSysCore
             Utils.ExecuteNonQuery(query, connection);
         }
 
-        /**
-         * Метод для выполнения сторонних процессов с переданными аргументами.
-         */
-        public static void CmdProccess(string app, string args, bool logConsole = false, bool logLogger = false)
+        public static StatusCode GetFPGAVersion(Challenge challenge, out string version)
         {
-            Process process = new Process
+            StatusCode result = StatusCode.Ok;
+            Logger.Func("Core.GetFPGAVersion");
+            SQLiteDataReader reader = null;
+            version = "";
+
+            try
             {
-                StartInfo = new ProcessStartInfo
+                if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
-                    FileName = app,
-                    Arguments = args,
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true
+                    string query = $"SELECT [actual_value] FROM [test_dynamic] WHERE [ts_index] = " +
+                        $"(SELECT [ts_index] FROM [test_static] WHERE instr([description], 'ПЛИС') > 0 " +
+                        $"AND instr([description], 'верси') > 0) AND [challenge] = {challenge.id}";
+                    reader = Utils.ExecuteReader(query, dumpConnection);
+
+                    if (reader.Read())
+                        version = Convert.ToString((decimal)reader[0]);
+                    else
+                    {
+                        version = "-";
+                        result = StatusCode.NoFPGAVersionFound;
+                    }
                 }
-            };
-
-            process.Start();
-
-            while (!process.StandardOutput.EndOfStream)
+            }
+            catch (Exception e)
             {
-                string line = process.StandardOutput.ReadLine();
-
-                if (logConsole)
-                    Console.WriteLine(line);
-
-                if (logLogger)
-                    Logger.Log($"[PROC:{app}] {line}");
+                Logger.Error("Core.GetFPGAVersion", e.ToString());
+                result = StatusCode.Error;
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.Close();
+                CloseConnections();
+                Session.Close();
             }
 
-            process.WaitForExit();
+            return result;
         }
-
-
     }
 }

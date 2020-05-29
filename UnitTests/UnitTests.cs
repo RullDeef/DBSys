@@ -12,7 +12,7 @@ namespace UnitTests
     [TestClass]
     public class DBSysCoreTests
     {
-        private Staff admin = new Staff()
+        private readonly Staff admin = new Staff()
         {
             surname = "Skulikov",
             firstName = "Aleksey",
@@ -22,7 +22,7 @@ namespace UnitTests
             login = "lexa88",
             password = "xerox"
         };
-        private Staff oper = new Staff()
+        private readonly Staff oper = new Staff()
         {
             surname = "Kit",
             firstName = "Tatyana",
@@ -32,7 +32,7 @@ namespace UnitTests
             login = "ledy0K",
             password = "gaga228"
         };
-        private Staff tester = new Staff()
+        private readonly Staff tester = new Staff()
         {
             surname = "Vlasov",
             firstName = "Anton",
@@ -48,6 +48,13 @@ namespace UnitTests
 
         private const string dumpFile_1 = "dump";
         private const string dumpFile_2 = "newdump";
+
+        public DBSysCoreTests()
+        {
+            admin.GenerateId();
+            oper.GenerateId();
+            tester.GenerateId();
+        }
 
         private void CheckFilesAccessory()
         {
@@ -221,6 +228,7 @@ namespace UnitTests
             catch (ArgumentNullException e)
             {
                 Assert.Fail("did not found users in users list");
+                Console.WriteLine(e.ToString());
             }
 
             CheckFilesAccessory();
@@ -302,7 +310,7 @@ namespace UnitTests
                 "CO Name",
                 "123",
                 "45",
-                "v1",
+                admin.id,
                 "CO Parent",
                 "Test Challenge #1",
                 "location",
@@ -328,7 +336,7 @@ namespace UnitTests
                 "CO Name",
                 "123",
                 "45",
-                "v1",
+                admin.id,
                 "CO Parent",
                 "Test Challenge #1",
                 "location",
@@ -412,7 +420,7 @@ namespace UnitTests
                 "CO Name",
                 "123",
                 "45",
-                "v1",
+                admin.id,
                 "CO Parent",
                 "Test Challenge #2",
                 "location",
@@ -590,6 +598,15 @@ namespace UnitTests
             
             tester.E01_CheckDump_1();
             tester.E02_CheckDump_2();
+        }
+
+        [TestMethod]
+        public void Status()
+        {
+            StatusCode status = Core.Status(out string statusString);
+            Assert.AreEqual(StatusCode.Ok, status);
+
+            Console.WriteLine(statusString);
         }
     }
 }

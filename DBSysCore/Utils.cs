@@ -83,6 +83,11 @@ namespace DBSysCore
          */
         public static int ExecuteNonQuery(string query, SQLiteConnection connection)
         {
+#if DEBUG
+            System.Diagnostics.Debug.Assert(connection.State == System.Data.ConnectionState.Open,
+                "connection must be opened");
+#endif
+
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             int result = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -98,6 +103,11 @@ namespace DBSysCore
          */
         public static SQLiteDataReader ExecuteReader(string query, SQLiteConnection connection)
         {
+#if DEBUG
+            System.Diagnostics.Debug.Assert(connection.State == System.Data.ConnectionState.Open,
+                "connection must be opened");
+#endif
+
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             SQLiteDataReader reader = cmd.ExecuteReader();
             cmd.Dispose();

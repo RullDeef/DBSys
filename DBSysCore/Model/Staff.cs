@@ -1,8 +1,7 @@
-﻿// #define DEBUG_STAFF
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Diagnostics;
 
 namespace DBSysCore.Model
 {
@@ -39,9 +38,15 @@ namespace DBSysCore.Model
 
         public Staff(int id)
         {
+#if DEBUG
+            Debug.Assert((Core.dumpConnection != null && Core.dumpConnection.State == System.Data.ConnectionState.Open) ||
+                (Core.usersConnection != null && Core.usersConnection.State == System.Data.ConnectionState.Open),
+                "either dump or user connection must be open");
+#endif
+
             string query = "SELECT [id], [surname], [first_name], [patronymic_name], "
                 + $"[post], [department], [login], [password] FROM [staff] WHERE [id] = {id}";
-            SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
+            SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection ?? Core.usersConnection);
 
             if (!reader.Read())
             {
@@ -70,16 +75,27 @@ namespace DBSysCore.Model
 
         public void SaveData(SQLiteConnection connection)
         {
+#if DEBUG
+            Debug.Assert(connection.State == System.Data.ConnectionState.Open,
+                "connection must be opened");
+#endif
+
             string query = "REPLACE INTO [staff] ([id], [surname], [first_name], [patronymic_name], [post], [department], [login], [password]) "
                 + $"VALUES ({id}, '{surname}', '{firstName}', '{patronymicName}', '{post}', '{department}', '{login}', '{password}')";
             Utils.ExecuteNonQuery(query, connection);
-#if DEBUG_STAFF
+#if DEBUG
             Console.WriteLine($"Staff.SaveData: {surname} saved into {connection.DataSource}");
 #endif
         }
 
         public static bool Exists(string surname, string firstName, string patronymicName)
         {
+#if DEBUG
+            Debug.Assert(Core.dumpConnection.State == System.Data.ConnectionState.Open,
+                "dump connection must be opened");
+#endif
+
+            // WARNING: checking only dump connection is not a perfect solution
             string query = $"SELECT * FROM [staff] WHERE [surname] = '{surname}' AND [first_name] = '{firstName}' "
                 + $"AND [patronymic_name] = '{patronymicName}'";
             SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
@@ -88,15 +104,35 @@ namespace DBSysCore.Model
             return res;
         }
 
+        public static Staff Get(string surname, string firstName, string patronymicName)
+        {
+#if DEBUG
+            Debug.Assert(Core.dumpConnection.State == System.Data.ConnectionState.Open,
+                "dump connection must be opened");
+#endif
+
+            // WARNING: checking only dump connection is not a perfect solution
+            Staff staff = null;
+            string query = $"SELECT [id] FROM [staff] WHERE [surname] = '{surname}' AND [first_name] = '{firstName}' "
+                   + $"AND [patronymic_name] = '{patronymicName}'";
+            SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
+            if (reader.HasRows)
+                staff = new Staff((int)reader[0]);
+            reader.Close();
+            return staff;
+        }
+
         public static List<Staff> ExtractAll(SQLiteConnection connection)
         {
-            List<Staff> result = new List<Staff>();
+#if DEBUG
+            Debug.Assert(connection.State == System.Data.ConnectionState.Open,
+                "connection must be opened");
 
-#if DEBUG_STAFF
             Console.WriteLine("Staff.ExtractAll: Preparing for extraction");
             Console.WriteLine($"Staff.ExtractAll: connection: {connection.DataSource}");
 #endif
 
+            List<Staff> result = new List<Staff>();
             string query = $"SELECT [id], [surname], [first_name], [patronymic_name], [post], [department], [login], [password] FROM [staff]";
             SQLiteDataReader reader = Utils.ExecuteReader(query, connection);
 

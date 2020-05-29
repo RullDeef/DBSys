@@ -1,6 +1,4 @@
-﻿// #define DEBUG_SESSION
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
@@ -103,13 +101,13 @@ namespace DBSysCore
         {
             if (opened)
             {
-#if DEBUG_SESSION
+#if DEBUG
                 Console.WriteLine("Session.Open: Session is already opened");
 #endif
                 return;
             }
 
-#if DEBUG_SESSION
+#if DEBUG
             Console.WriteLine("Session.Open: Openning sesison...");
 #endif
 
@@ -119,7 +117,7 @@ namespace DBSysCore
                 Stream stream = null;
                 try
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Open: Trying to read from existing file...");
 # endif
                     stream = new FileStream(Paths.sessionFilename, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -127,19 +125,20 @@ namespace DBSysCore
                 }
                 catch
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Open: Failed! Using Default data");
 # endif
                     sessionData = GenerateDefaultSessionData();
                 }
                 finally
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Open: Succeed!");
 # endif
                     if (stream != null)
                     {
-                        stream.Dispose();
+                        // WARNING: dispose commented
+                        // stream.Dispose();
                         stream.Close();
                     }
                 }
@@ -149,7 +148,7 @@ namespace DBSysCore
                 // FileStream stream = File.Create(filename);
                 // stream.Dispose();
                 // stream.Close();
-#if DEBUG_SESSION
+#if DEBUG
                 Console.WriteLine("Session.Open: No session file found. Use default data");
 # endif
                 sessionData = GenerateDefaultSessionData();
@@ -164,9 +163,12 @@ namespace DBSysCore
 
         public static string GetCurrentWorkingDumpFileName()
         {
+            Open();
+
             string fname = sessionData.filename;
             int i = fname.LastIndexOf('\\');
             fname = fname.Substring(i + 1, fname.Length - i - 4);
+
             return fname;
         }
 
@@ -179,15 +181,17 @@ namespace DBSysCore
          */
         public static string GetUserName()
         {
+            string userName = "unauthorized";
+
             Open();
 
-            if (sessionData.staff == null)
-                return "unauthorized";
-            else
+            if (sessionData.staff != null)
             {
                 Staff person = sessionData.staff;
-                return $"{person.surname} {person.firstName.Substring(0, 1)}.";
+                userName = $"{person.surname} {person.firstName.Substring(0, 1)}.";
             }
+
+            return userName;
         }
 
         /**
@@ -319,11 +323,14 @@ namespace DBSysCore
          */
         public static StatusCode Auth(string login, string password)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Session.Auth");
+
             Staff staff;
 
             Open();
 
-#if DEBUG_SESSION
+#if DEBUG
             Console.WriteLine($"Session.Auth: passed \"{login}\" \"{password}\"");
 # endif
 
@@ -352,14 +359,14 @@ namespace DBSysCore
             }
             else // find real user by login
             {
-#if DEBUG_SESSION
+#if DEBUG
                 Console.WriteLine("Session.Auth: Searching for real user...");
 # endif
                 List<Staff> staffList = Staff.ExtractAll(Core.usersConnection);
 
                 if (staffList.Count == 0)
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Auth: no registered users!");
 # endif
                     return StatusCode.LoginNoRegisteredUsers;
@@ -367,7 +374,7 @@ namespace DBSysCore
 
                 if (staffList.Where(s => s.login == login).Count() == 0)
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Auth: invalid login!");
 # endif
                     return StatusCode.LoginInvalidLogin;
@@ -377,7 +384,7 @@ namespace DBSysCore
 
                 if (!Utils.VerifyHash(password, staff.password))
                 {
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine("Session.Auth: Invalid password!");
 # endif
                     return StatusCode.LoginInvalidPass;
@@ -385,7 +392,7 @@ namespace DBSysCore
             }
 
             // ok.
-#if DEBUG_SESSION
+#if DEBUG
             Console.WriteLine("Session.Auth: Success!");
 # endif
             sessionData.staff = staff;
@@ -401,17 +408,22 @@ namespace DBSysCore
          */
         public static void Logout()
         {
+            Logger Logger = new Logger();
+            Logger.Func("Session.Logout");
+
             sessionData.staff = null;
             sessionData.programState = ProgramState.Idle;
             sessionData.activeChallenge = null;
             sessionData.activeTests.Clear();
-#if DEBUG_SESSION
+#if DEBUG
             Console.WriteLine("Session.Logout: state cleared!");
 # endif
         }
 
         public static void SwitchDumpFile(string filename)
         {
+            Logger.Func("Session.SwitchDumpFile");
+
             sessionData.filename = $"{Paths.dumpsDirectory}\\{filename}.db";
         }
 
@@ -426,6 +438,9 @@ namespace DBSysCore
          */
         public static StatusCode SaveCurrentChallenge(SQLiteConnection connection)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Session.SaveCurrentChallege");
+
             Open();
 
             StatusCode result = StatusCode.Ok;
@@ -447,7 +462,7 @@ namespace DBSysCore
                         test.endTime = sessionData.activeTests[i + 1].beginTime;
 
                     test.SaveData(connection);
-#if DEBUG_SESSION
+#if DEBUG
                     Console.WriteLine($"Session.SaveCurrentChallenge: saved test #{i} with id = {test.id}");
 # endif
                 }
@@ -470,8 +485,6 @@ namespace DBSysCore
 
         /**
          * Сохраняет данные текущей сессии в файл данных последней сессии.
-         * 
-         * Дополнительно закрывает Logger.
          */
         public static void Close()
         {

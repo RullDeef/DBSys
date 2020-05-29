@@ -3,34 +3,17 @@ using System.IO;
 
 namespace DBSysCore
 {
-    public static class Logger
+    public class Logger
     {
-        /**
-         * Текущий файл для логирования.
-         */
-        private static StreamWriter file = null;
+        private static string filename => $"{Paths.logDirectory}\\{DateTime.Now:yyyy_MM_dd_HH}.txt";
 
-        /**
-         * Открывает текущий файл логирования.
-         * 
-         * Изначально все файлы логгирования создаются в log/ директории.
-         * Создаёт директорию log\ если она не существует.
-         */
-        private static void EnsureOpen()
+        private static string GetMeta()
         {
-            if (file == null)
-            {
-                try
-                {
-                    string filename = $"{Paths.logDirectory}\\{DateTime.Now:yyyy_MM_dd}.txt";
-                    file = new StreamWriter(filename, true);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Error: unable to open logging file!");
-                    Console.WriteLine(e.ToString());
-                }
-            }
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            string dump = Session.GetCurrentWorkingDumpFileName();
+            string userName = Session.GetUserName();
+
+            return $"[{time}|{dump}|{userName}] ";
         }
 
         /**
@@ -41,22 +24,13 @@ namespace DBSysCore
          */
         public static void Log(string data)
         {
-            // unsure that logging file opened successfully
-            EnsureOpen();
+            using (StreamWriter file = File.AppendText(filename))
+            {
+                if (data.EndsWith("\n"))
+                    data = data.Substring(0, data.Length - 1);
 
-            string time = DateTime.Now.ToString("HH:mm:ss");
-            string dump = Session.GetCurrentWorkingDumpFileName();
-            string userName = Session.GetUserName();
-
-            string meta = $"[{time}|{dump}|{userName}] ";
-
-            if (data.EndsWith("\n"))
-                data = data.Substring(0, data.Length - 1);
-
-            file.WriteLine(meta + data);
-
-            // WARNING: bad solution. Find out more efficient one
-            Close();
+                file.WriteLine(GetMeta() + data);
+            }
         }
 
         /**
@@ -67,40 +41,20 @@ namespace DBSysCore
          */
         public static void Error(string where, string what)
         {
-            // unsure that logging file opened successfully
-            EnsureOpen();
-
-            string time = DateTime.Now.ToString("HH:mm:ss");
-            string dump = Session.GetCurrentWorkingDumpFileName();
-            string userName = Session.GetUserName();
-
-            string meta = $"[{time}|{dump}|{userName}] ";
-
-            file.WriteLine($"{meta} Error in {where}: {what}");
-
-            // WARNING: bad solution. Find out more efficient one
-            Close();
+            using (StreamWriter file = File.AppendText(filename))
+            {
+                file.WriteLine($"{GetMeta()} Error in {where}: {what}");
+            }
         }
 
-        /**
-         * Закрывает текущий файл логирования.
-         */
-        private static void Close()
+        public static void Func(string funcName)
         {
-            try
+#if DEBUG
+            using (StreamWriter file = File.AppendText(filename))
             {
-                if (file != null)
-                {
-                    // WARNING: comented line may cause some issues
-                    // file.Dispose();
-                    file.Close();
-                    file = null;
-                }
+                file.WriteLine($"  -> call {funcName}");
             }
-            catch(Exception e)
-            {
-                Console.WriteLine($"Error happened while closing logger! {e.Message}");
-            }
+#endif
         }
     }
 }

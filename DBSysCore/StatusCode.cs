@@ -9,6 +9,9 @@
         ConnectionInvalidOperation,
         ConnectionSQLError,
 
+        ConnectionDumpModelNotFound,
+        ConnectionUsersModelNotFound,
+
         GrantsUnathorized,
         GrantsInproper,
         GrantsVirtualAdminNotAllowed,
@@ -20,9 +23,17 @@
 
         ProgramStateInvalid,
 
+        LoadStaticTestsStaticTableNotFound,
+
+        BeginChallengeInvalidOTKStaffId,
+
+        DumpUseInvalidFilename,
+
         DumpMergeNoFiles,
 
         AddStaffPersonExists,
         AddStaffInvalidPersonId,
+
+        NoFPGAVersionFound,
     }
 }

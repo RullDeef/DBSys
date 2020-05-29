@@ -84,15 +84,18 @@ namespace DBSysCore.Model
 
             while (reader.Read())
             {
-                TestStatic test = new TestStatic();
-                test.id = (int)reader[0];
-                test.tsIndex = (string)reader[1];
-                test.mode = (string)reader[2];
+                TestStatic test = new TestStatic
+                {
+                    id = (int)reader[0],
+                    tsIndex = (string)reader[1],
+                    mode = (string)reader[2],
+                    unit = (string)reader[6],
+                    description = (string)reader[7]
+                };
+
                 moduleIds.Add((int)reader[3]);
                 methodologyIds.Add((int)reader[4]);
                 requirementsIds.Add((int)reader[5]);
-                test.unit = (string)reader[6];
-                test.description = (string)reader[7];
 
                 result.Add(test);
             }

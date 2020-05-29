@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.SQLite;
-
+using System.Diagnostics;
 
 namespace DBSysCore.Model
 {
@@ -37,6 +37,11 @@ namespace DBSysCore.Model
 
         public ControllObject(int id)
         {
+#if DEBUG
+            Debug.Assert(Core.dumpConnection.State == System.Data.ConnectionState.Open,
+                "dump connection must be opened");
+#endif
+
             string query = $"SELECT [id], [name], [serial_number], [decimal_number], [version], [parent], [product] FROM [controll_object] WHERE [id] = '{id}'";
             SQLiteDataReader reader = Utils.ExecuteReader(query, Core.dumpConnection);
 
@@ -61,6 +66,11 @@ namespace DBSysCore.Model
 
         public void SaveData(SQLiteConnection connection)
         {
+#if DEBUG
+            Debug.Assert(connection.State == System.Data.ConnectionState.Open,
+                "connection must be opened");
+#endif
+
             string query = "REPLACE INTO [controll_object] ([id], [name], [serial_number], "
                 + $"[decimal_number], [version], [parent], [product]) VALUES ({id}, '{name}', "
                 + $"'{serialNumber}', '{decimalNumber}', '{version}', '{parent}', '{product}')";

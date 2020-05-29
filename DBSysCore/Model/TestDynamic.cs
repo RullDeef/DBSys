@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 using System.Data.SQLite;
+using System.Diagnostics;
 
 namespace DBSysCore.Model
 {
@@ -16,10 +16,10 @@ namespace DBSysCore.Model
         public DateTime beginTime;
         public DateTime endTime;
 
-        public decimal? nominal;
-        public decimal? actualValue;
-        public decimal? delta;
-        public decimal? boundaryValue;
+        public decimal nominal;
+        public decimal actualValue;
+        public decimal delta;
+        public decimal boundaryValue;
 
         public bool status;
 
@@ -29,10 +29,10 @@ namespace DBSysCore.Model
                 Challenge challenge,
                 DateTime beginTime,
                 DateTime endTime,
-                decimal? nominal,
-                decimal? actualValue,
-                decimal? delta,
-                decimal? boundaryValue,
+                decimal nominal,
+                decimal actualValue,
+                decimal delta,
+                decimal boundaryValue,
                 bool status)
         {
             this.tsIndex = tsIndex;
@@ -85,9 +85,13 @@ namespace DBSysCore.Model
         {
             string query = "REPLACE INTO [test_dynamic] ([id], [ts_index], [challenge], "
                 + "[begin_time], [end_time], [nominal], [actual_value], [delta], [boundary_value], [status]) VALUES "
-                + $"({id}, '{tsIndex}', {challenge.id}, '{beginTime:yyyy-MM-dd hh:mmm:ss}', "
-                + $"'{endTime:yyyy-MM-dd hh:mmm:ss}', '{nominal}', '{actualValue}', " +
-                $"'{delta}', '{boundaryValue}', '{status}')";
+                + $"({id}, '{tsIndex}', {challenge.id}, '{beginTime:yyyy-MM-dd HH:mm:ss}', "
+                + $"'{endTime:yyyy-MM-dd HH:mm:ss}', " +
+                $"'{nominal.ToString(System.Globalization.CultureInfo.InvariantCulture)}', " +
+                $"'{actualValue.ToString(System.Globalization.CultureInfo.InvariantCulture)}', " +
+                $"'{delta.ToString(System.Globalization.CultureInfo.InvariantCulture)}', " +
+                $"'{boundaryValue.ToString(System.Globalization.CultureInfo.InvariantCulture)}', " +
+                $"'{status}')";
             Utils.ExecuteNonQuery(query, connection);
         }
 
@@ -113,14 +117,18 @@ namespace DBSysCore.Model
         {
             string query = "SELECT [id], [ts_index], [challenge], " +
                 "[begin_time], [end_time], [actual_value], [delta], [boundary_value], [status] " +
-                $"FROM [test_dynamic] WHERE [begin_time] >= '{beginDate:yyyy-MM-dd hh:mmm:ss}' " +
-                $"AND [begin_time] <= '{endDate:yyyy-MM-dd hh:mmm:ss}'";
+                $"FROM [test_dynamic] WHERE [begin_time] >= '{beginDate:yyyy-MM-dd HH:mm:ss}' " +
+                $"AND [begin_time] <= '{endDate:yyyy-MM-dd HH:mm:ss}'";
 
             return GetTestsByQuery(query);
         }
 
         private static List<TestDynamic> GetTestsByQuery(string query)
         {
+#if DEBUG
+            Debug.Assert(Core.dumpConnection != null && Core.dumpConnection.State == System.Data.ConnectionState.Open,
+                "dump connection must be opened");
+#endif
             List<TestDynamic> result = new List<TestDynamic>();
             List<int> challengesId = new List<int>();
 
@@ -135,11 +143,11 @@ namespace DBSysCore.Model
                     // challenge = new Challenge((int)reader[2]),
                     // beginTime = DateTime.Parse((string)reader[3]),
                     //endTime = DateTime.Parse((string)reader[4]),
-                    beginTime = (DateTime)reader[3],
+                    beginTime = reader.GetDateTime(3),
                     endTime = (DateTime)reader[4],
-                    actualValue = reader.IsDBNull(5) ? null : (decimal?)reader[5],
-                    delta = reader.IsDBNull(6) ? null : (decimal?)reader[6],
-                    boundaryValue = reader.IsDBNull(7) ? null : (decimal?)reader[7],
+                    actualValue = (decimal)reader[5],
+                    delta = (decimal)reader[6],
+                    boundaryValue = (decimal)reader[7],
                     status = (bool)reader[8]
                 };
                 challengesId.Add((int)reader[2]);

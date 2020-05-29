@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+
 using DBSysCore;
 using DBSysCore.Model;
 
@@ -17,6 +18,9 @@ namespace DBSysReport
         private Staff newStaff;
 
         private List<Challenge> allChallenges;
+
+        // DISIGN DATA
+
 
         public AppForm()
         {
@@ -30,7 +34,7 @@ namespace DBSysReport
                 surname = "+ добавить",
                 firstName = ".",
                 patronymicName = "",
-                post = "operator",
+                post = Session.GrantsString(UserGrants.Operator),
                 department = "",
                 login = "",
                 password = ""
@@ -40,25 +44,41 @@ namespace DBSysReport
         // setup post choises
         private void InitPostsItems()
         {
-            string[] posts = { "admin", "operator", "tester" };
-            postInput.Items.AddRange(posts);
+            foreach (UserGrants grants in Enum.GetValues(typeof(UserGrants)))
+                postInput.Items.Add(Session.GrantsString(grants));
         }
 
         // show existing users in user list
         private void UpdateUsersList()
         {
-            usersList.BeginUpdate();
+#if DEBUG
+            Debug.Assert(Session.RequireGrants(UserGrants.Admin),
+                "admin must be authorized to continue");
+#endif
 
-            usersList.Items.Clear();
+            StatusCode status = Core.GetAllUsers(out allStaff);
+            switch (status) // select all users from db
+            {
+                case StatusCode.Ok:
+                    usersList.BeginUpdate();
+                    usersList.Items.Clear();
+                    
+                    GenerateNewStaff(); // option for creating new user
+                    usersList.Items.Add(newStaff);
 
-            // select all users from db
-            Core.GetAllUsers(out allStaff);
-            // option for creating new user
-            GenerateNewStaff();
-            usersList.Items.Add(newStaff);
-            foreach (Staff staff in allStaff)
-                usersList.Items.Add(staff);
-            usersList.EndUpdate();
+                    foreach (Staff staff in allStaff)
+                        usersList.Items.Add(staff);
+
+                    usersList.EndUpdate();
+                    break;
+
+                default:
+                case StatusCode.Error:
+                    MessageBox.Show($"При попытке инициализации списка пользователей " +
+                        $"произошла ошибка.\n\nКод ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                    break;
+            }
+
         }
 
         private void AppForm_Load(object sender, EventArgs e)
@@ -87,9 +107,9 @@ namespace DBSysReport
             }
 
             // setup current dump file
-            Session.Open();
-            currentDumpFileInput.Text = Session.sessionData.filename;
-            Session.Close();
+            // Session.Open();
+            currentDumpFileInput.Text = Session.GetCurrentWorkingDumpFileName();
+            // Session.Close();
 
             // setup report panel
             InitReportPanel();
@@ -145,9 +165,7 @@ namespace DBSysReport
             if (MessageBox.Show("Действительно выйти из учётной записи?\nВы также выйдете из программы.",
                 "Выход", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Session.Open();
-                Session.Logout();
-                Session.Close();
+                Core.Logout();
                 Close();
             }
         }
@@ -155,7 +173,7 @@ namespace DBSysReport
         private void usersList_SelectedIndexChanged(object sender, EventArgs e)
         {
             // fill out data in form
-            Staff selectedStaff = (Staff)(usersList.SelectedItem);
+            Staff selectedStaff = (Staff)usersList.SelectedItem;
 
             // if new staff selected - fill special
             if (selectedStaff == newStaff)
@@ -164,7 +182,7 @@ namespace DBSysReport
                 nameInput.Text = "Имя";
                 patronymicNameInput.Text = "Отчество";
 
-                postInput.SelectedItem = "operator";
+                postInput.SelectedItem = Session.GrantsString(UserGrants.Operator);
                 departmentInput.Text = "отдел";
 
                 loginInput.Text = "логин";
@@ -194,7 +212,7 @@ namespace DBSysReport
 
         private void setEmployerDataButton_Click(object sender, EventArgs e)
         {
-            Staff selectedStaff = (Staff)(usersList.SelectedItem);
+            Staff selectedStaff = (Staff)usersList.SelectedItem;
 
             // check if all inputed dataa is valid (skip for now)
             // TODO: check input!
@@ -233,9 +251,9 @@ namespace DBSysReport
         {
             OpenFileDialog dialog = new OpenFileDialog
             {
-                InitialDirectory = Directory.GetCurrentDirectory(),
+                InitialDirectory = Paths.dumpsDirectory,
                 Filter = "dump files (*.db)|*.db",
-                RestoreDirectory = true
+                RestoreDirectory = false
             };
 
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -243,9 +261,11 @@ namespace DBSysReport
                 string filePath = dialog.FileName;
                 currentDumpFileInput.Text = filePath;
 
-                Session.Open();
-                Session.sessionData.filename = filePath;
-                Session.Close();
+                // Session.Open();
+                // Session.sessionData.filename = filePath;
+                // Session.Close();
+
+                Core.DumpUse(filePath);
             }
         }
 
@@ -320,6 +340,31 @@ namespace DBSysReport
         {
             if (allChallenges.Count != 0)
                 createReportButton.Enabled = true;
+
+            // show challenge data here
+            Challenge challenge = (Challenge)challengeDates.SelectedItem;
+            StatusCode result = Core.GetFPGAVersion(challenge, out string FPGAVersion);
+            ChallengeDataLabel.Text = $"- Серийный номер изделия:\n" +
+                $"{challenge.controllObject.product}\n\n" +
+                $"- Наименование объекта контроля:\n" +
+                $"{challenge.controllObject.name}\n\n" +
+                $"- Серийный номер объекта контроля:\n" +
+                $"{challenge.controllObject.version}\n\n" +
+                $"- Заводской номер объекта контроля:\n" +
+                $"{challenge.controllObject.serialNumber}\n\n" +
+                $"- В составе изделия:\n" +
+                $"{challenge.controllObject.parent}\n\n" +
+                $"- Вид испытания:\n" +
+                $"{challenge.challengeType.name}\n\n" +
+                $"- Место проведения испытания:\n" +
+                $"{challenge.location.name}\n\n" +
+                $"- Оператор:{challenge.staff}\n" +
+                $"- Представитель ОТК:{challenge.staffOTK}\n\n" +
+                $"- Описание:\n" +
+                $"{challenge.description}\n\n" +
+                $"- Версия ПЛИС: {FPGAVersion}";
+
+            ChallengeDataLabel.Visible = true;
         }
 
         private void createReportButton_Click(object sender, EventArgs e)
@@ -343,6 +388,7 @@ namespace DBSysReport
 
         private void ShowStatistics(object sender, EventArgs e)
         {
+            // TODO: fix dates with "within all period" option
             // setup labels
             DateTime beginDate = beginDateTimePicker.Value;
             DateTime endDate = endDateTimePicker.Value;
@@ -354,51 +400,65 @@ namespace DBSysReport
                 $"В модуле {moduleComboBox.SelectedItem}";
 
             // grab all nessesary data for tables and graphs
-            List<TestDynamic> testsList;
+            List<TestDynamic> testsDynamicList;
+            List<TestStatic> testsStaticList;
             StatusCode status;
 
             if (allTimeCheckBox.Checked)
-                status = Core.GetDynamicTests(out testsList);
+                status = Core.GetDynamicTests(out testsDynamicList);
             else
-                status = Core.GetDynamicTests(beginDate, endDate, out testsList);
+                status = Core.GetDynamicTests(beginDate, endDate, out testsDynamicList);
 
-            switch (status)
+            if (status != StatusCode.Ok)
             {
-                case StatusCode.Ok:
-                    break;
-
-                default:
-                case StatusCode.Error:
-                    MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\n" +
-                        $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
-                    return;
+                MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\n" +
+                    $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                return;
             }
 
             List<int> modulesFailsStats = Enumerable.Repeat(0, moduleComboBox.Items.Count).ToList();
             List<int> commandsFailsStats = Enumerable.Repeat(0, commandComboBox.Items.Count).ToList();
 
-            foreach (TestDynamic test in testsList)
+            status = Core.MapStaticTests(testsDynamicList, out testsStaticList);
+            if (status != StatusCode.Ok)
             {
-                if (test.status == false)
+                MessageBox.Show($"Произошла ошибка при попытке загрузить статические тесты.\n\n" +
+                    $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
+
+            for (int i = 0; i < testsDynamicList.Count; i++)
+            {
+                TestDynamic testDynamic = testsDynamicList[i];
+                TestStatic testStatic = testsStaticList[i];
+
+                if (testDynamic.status == false)
                 {
-                    TestStatic testStatic = test.GetTestStatic(); // не очень классная функция, надо заменить
                     modulesFailsStats[testStatic.module.id] += 1;
 
-                    int cmdIndex = commandComboBox.Items.IndexOf(testStatic);
+                    // int cmdIndex = commandComboBox.Items.IndexOf(testStatic);
+                    int cmdIndex = commandComboBox.Items.Cast<TestStatic>().ToList().
+                        FindIndex(test => test.tsIndex == testStatic.tsIndex);
                     commandsFailsStats[cmdIndex] += 1;
                 }
             }
 
             // FILL FAIL TESTS DATA WITH RANDOM NUMBERS JUST FOR TESTING PURPOSES
-            Random random = new Random();
-            for (int i = 0; i < modulesFailsStats.Count; i++)
-                modulesFailsStats[i] = random.Next(0, 10);
-            for (int i = 0; i < commandsFailsStats.Count; i++)
-                commandsFailsStats[i] = random.Next(0, 10);
+            // Random random = new Random();
+            // for (int i = 0; i < modulesFailsStats.Count; i++)
+            //     modulesFailsStats[i] = random.Next(0, 10);
+            // for (int i = 0; i < commandsFailsStats.Count; i++)
+            //     commandsFailsStats[i] = random.Next(0, 10);
 
-            // fill first table
+            // suspend all layouts for update
 
             statTable_Product.SuspendLayout();
+            productStatsChart.SuspendLayout();
+            statTable_Module.SuspendLayout();
+            moduleStatsChart.SuspendLayout();
+            statTable_Command.SuspendLayout();
+
+            // fill first table
 
             statTable_Product.RowCount = 1 + moduleComboBox.Items.Count;
             statTable_Product.RowStyles.Clear();
@@ -436,11 +496,7 @@ namespace DBSysReport
                 statTable_Product.Controls.Add(failsAmountLabel, 2, i + 1);
             }
 
-            statTable_Product.ResumeLayout();
-
             // setup product stats chart
-
-            productStatsChart.SuspendLayout();
 
             productStatsChart.Series.Clear();
             productStatsChart.Titles.Clear();
@@ -456,11 +512,7 @@ namespace DBSysReport
                 series.Points[i].AxisLabel = labelString;
             }
 
-            productStatsChart.ResumeLayout();
-
             // fill second table
-
-            statTable_Module.SuspendLayout();
 
             statTable_Module.RowCount = 1 + commandComboBox.Items.Count;
             statTable_Module.RowStyles.Clear();
@@ -506,11 +558,7 @@ namespace DBSysReport
                 statTable_Module.Controls.Add(failsAmountLabel, 3, i + 1);
             }
 
-            statTable_Module.ResumeLayout();
-
             // setup product stats chart
-
-            moduleStatsChart.SuspendLayout();
 
             moduleStatsChart.Series.Clear();
             moduleStatsChart.Titles.Clear();
@@ -553,12 +601,7 @@ namespace DBSysReport
                 }
             }
 
-
-            moduleStatsChart.ResumeLayout();
-
             // the last table
-
-            statTable_Command.SuspendLayout();
 
             statTable_Command.RowCount = 1;
             statTable_Command.RowStyles.Clear();
@@ -567,9 +610,12 @@ namespace DBSysReport
                 statTable_Command.Controls.RemoveAt(7);
 
             int testIndex = 1;
-            foreach (TestDynamic test in testsList)
+            for (int i = 0; i < testsDynamicList.Count; i++)
             {
-                if (commandComboBox.Items.Contains(test.GetTestStatic()))
+                TestDynamic testDynamic = testsDynamicList[i];
+                TestStatic testStatic = testsStaticList[i];
+
+                if (commandComboBox.Items.Cast<TestStatic>().ToList().Exists(test => test.tsIndex == testStatic.tsIndex))
                 {
                     Label indexLabel = new Label()
                     {
@@ -580,44 +626,44 @@ namespace DBSysReport
 
                     Label dateLabel = new Label()
                     {
-                        Text = test.beginTime.ToString("dd.MM.yyyy"),
+                        Text = testDynamic.beginTime.ToString("dd.MM.yyyy"),
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label serialNumberLabel = new Label()
                     {
-                        Text = test.challenge.controllObject.serialNumber,
+                        Text = testDynamic.challenge.controllObject.serialNumber,
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label nominalLabel = new Label()
                     {
-                        Text = test.nominal.HasValue ? test.nominal.ToString() : "-",
+                        Text = testStatic.unit == "null" ? testDynamic.nominal.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label boundaryLabel = new Label()
                     {
-                        Text = test.boundaryValue.HasValue ? test.boundaryValue.ToString() : "-",
+                        Text = testStatic.unit == "null" ? testDynamic.boundaryValue.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label valueLabel = new Label()
                     {
-                        Text = test.actualValue.HasValue ? test.actualValue.ToString() : "-",
+                        Text = testStatic.unit == "null" ? testDynamic.actualValue.ToString() : "-",
                         AutoSize = true,
                         Anchor = AnchorStyles.None
                     };
 
                     Label statusLabel = new Label()
                     {
-                        Text = test.status ? "Годен" : "Не годен",
+                        Text = testDynamic.status ? "Годен" : "Не годен",
                         AutoSize = true,
-                        ForeColor = test.status ? System.Drawing.Color.DarkGreen : System.Drawing.Color.DarkRed,
+                        ForeColor = testDynamic.status ? System.Drawing.Color.DarkGreen : System.Drawing.Color.DarkRed,
                         Anchor = AnchorStyles.None
                     };
 
@@ -636,7 +682,13 @@ namespace DBSysReport
                 }
             }
 
+            statTable_Product.ResumeLayout();
+            productStatsChart.ResumeLayout();
+            statTable_Module.ResumeLayout();
+            moduleStatsChart.ResumeLayout();
             statTable_Command.ResumeLayout();
+
+            statisticTable.Visible = true;
         }
 
         private void allTimeCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -719,6 +771,16 @@ namespace DBSysReport
         private void commandComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             showStatisticsButton.Enabled = true;
+        }
+
+        private void ShowHideDatabaseControllPanel(object sender, EventArgs e)
+        {
+            mainSplitContainer.Panel1Collapsed = !mainSplitContainer.Panel1Collapsed;
+        }
+
+        private void ShowHideReportControllPanel(object sender, EventArgs e)
+        {
+            mainSplitContainer.Panel2Collapsed = !mainSplitContainer.Panel2Collapsed;
         }
     }
 }

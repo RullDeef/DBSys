@@ -6,12 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBSysCore", "DBSysCore\DBSysCore.csproj", "{ACB96042-4747-4A32-AC09-6F45D58CEF0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSysReport", "DBSysReport\DBSysReport.csproj", "{AE7468D0-D899-4BED-9131-45100FC67C8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACB96042-4747-4A32-AC09-6F45D58CEF0A} = {ACB96042-4747-4A32-AC09-6F45D58CEF0A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBSysCmd", "DBSysCmd\DBSysCmd.csproj", "{81087A92-4C25-48E0-98DC-08A4DD638A41}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{5B73F8DE-55EA-4906-9EB2-B42B5C0C693A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{CDD8B211-2309-489D-AE7F-3B368635C84F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{CDD8B211-2309-489D-AE7F-3B368635C84F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

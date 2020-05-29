@@ -17,9 +17,14 @@ namespace DBSysCmd
          */
         private static int Main(string[] args)
         {
-            CommandLineApplication app = new CommandLineApplication();
-            app.Name = "DBSysCore";
-            app.Description = "desc.";
+            Logger Logger = new Logger();
+            Logger.Func("Program.Main");
+
+            CommandLineApplication app = new CommandLineApplication
+            {
+                Name = "DBSysCore",
+                Description = "desc."
+            };
             app.HelpOption("-?|-h|--help");
 
             app.Command("status", StatusCommand);
@@ -66,6 +71,9 @@ namespace DBSysCmd
          */
         private static void StatusCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.StatusCommand");
+
             command.Description = "Shows current state of the program.";
             command.HelpOption("-?|-h|--h");
 
@@ -85,6 +93,9 @@ namespace DBSysCmd
          */
         private static void LoginCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.LoginCommand");
+
             command.Description = "Login in to gain access to all other commands of this app.";
             command.HelpOption("-?|-h|--h");
 
@@ -135,6 +146,9 @@ namespace DBSysCmd
          */
         private static void LogoutCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.LogoutCommand");
+
             command.Description = "Command for logging out.";
             command.HelpOption("-?|-h|--h");
 
@@ -155,6 +169,9 @@ namespace DBSysCmd
          */
         private static void ChallengeCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.ChallengeCommand");
+
             command.Description = "Start processing tests sequence.";
             command.HelpOption("-?|-h|--help");
 
@@ -191,7 +208,7 @@ namespace DBSysCmd
                 {
                     // TODO: implement correctlly later
                     switch (Core.BeginChallenge(productOpt.Value(),
-                        "coName", "coSerialNumber", "coDecNumber", "coVersion", "coParent",
+                        "coName", "coSerialNumber", "coDecNumber", 0, "coParent",
                         challengeTypeOpt.Value(), locationOpt.Value(),
                         descriptionOpt.HasValue() ? descriptionOpt.Value() : ""))
                     {
@@ -244,6 +261,9 @@ namespace DBSysCmd
          */
         private static void TestCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.TestCommand");
+
             command.Description = "Process particular test.";
             command.HelpOption("-?|-h|--help");
 
@@ -320,6 +340,9 @@ namespace DBSysCmd
          */
         private static void DumpUseCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.DumpUseCommand");
+
             command.Description = "Switches to presented database file (creates if needed).";
             command.HelpOption("-?|-h|--help");
 
@@ -356,6 +379,9 @@ namespace DBSysCmd
          */
         private static void DumpMergeCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.DumpMergeCommand");
+
             command.Description = "Merges several dump files into one.";
             command.HelpOption("-?|-h|--help");
 
@@ -392,6 +418,9 @@ namespace DBSysCmd
          */
         private static void UpdateStaticCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.UpdateStaticCommand");
+
             command.Description = "Updates all static data in database from static.xls file.";
             command.HelpOption("-?|-h|--help");
             command.OnExecute(() =>
@@ -422,6 +451,9 @@ namespace DBSysCmd
          */
         private static void StaffAddCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.StaffAddCommand");
+
             command.Description = "Adds new staff into database. Returns personID.";
             command.HelpOption("-?|-h|--help");
             CommandArgument sname = command.Argument("<surname>", "staff surname");
@@ -471,6 +503,9 @@ namespace DBSysCmd
          */
         private static void SqlCommand(CommandLineApplication command)
         {
+            Logger Logger = new Logger();
+            Logger.Func("Program.SqlCommand");
+
             command.Description = "Executes given SQL-query using sqlite3.";
             command.HelpOption("-?|-h|--help");
 
