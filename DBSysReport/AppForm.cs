@@ -19,9 +19,6 @@ namespace DBSysReport
 
         private List<Challenge> allChallenges;
 
-        // DISIGN DATA
-
-
         public AppForm()
         {
             InitializeComponent();
@@ -107,15 +104,15 @@ namespace DBSysReport
             }
 
             // setup current dump file
-            // Session.Open();
-            currentDumpFileInput.Text = Session.GetCurrentWorkingDumpFileName();
-            // Session.Close();
+            currentDumpFileInput.Text = Session.GetCurrentWorkingDumpFileNameWithPath();
 
             // setup report panel
             InitReportPanel();
 
             // load available test types in statistics tab
             InitModuleNames();
+
+            groupBox2.Parent.Controls.Remove(groupBox2);
         }
 
         private void InitReportPanel()
@@ -252,18 +249,13 @@ namespace DBSysReport
             OpenFileDialog dialog = new OpenFileDialog
             {
                 InitialDirectory = Paths.dumpsDirectory,
-                Filter = "dump files (*.db)|*.db",
-                RestoreDirectory = false
+                Filter = "dump files (*.db)|*.db"
             };
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = dialog.FileName;
                 currentDumpFileInput.Text = filePath;
-
-                // Session.Open();
-                // Session.sessionData.filename = filePath;
-                // Session.Close();
 
                 Core.DumpUse(filePath);
             }
@@ -295,37 +287,22 @@ namespace DBSysReport
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                Session.Open();
-
-                // send sql statement
                 string query = sqlInput.Text;
-                query = query.Replace("\"", "'");
-                sqlInput.Text = "";
+                query = query.Replace('"', '\'');
+                StatusCode status = Core.ExecSQL(query, out string result);
 
-                Process process = new Process
+                switch (status)
                 {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = "sqlite3.exe",
-                        Arguments = $"{Session.sessionData.filename} \"{query}\"",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
-                        CreateNoWindow = true
-                    }
-                };
+                    case StatusCode.Ok:
+                        sqlOutput.Text += $"{result}\n";
+                        break;
 
-                process.Start();
-
-                while (!process.StandardOutput.EndOfStream)
-                {
-                    string line = process.StandardOutput.ReadLine();
-                    line = Utils.StdEncToUTF8(line);
-                    sqlOutput.Text += line + "\n";
+                    default:
+                        MessageBox.Show("Не удалось выполнить SQL запрос!\n" +
+                            $"Код ошибки: {status}",
+                            "Ошибка выполнения SQL запроса", MessageBoxButtons.OK);
+                        break;
                 }
-
-                process.WaitForExit();
-
-                Session.Close();
             }
         }
 
@@ -343,13 +320,13 @@ namespace DBSysReport
 
             // show challenge data here
             Challenge challenge = (Challenge)challengeDates.SelectedItem;
-            StatusCode result = Core.GetFPGAVersion(challenge, out string FPGAVersion);
+            Core.GetFPGAVersion(challenge, out string FPGAVersion);
             ChallengeDataLabel.Text = $"- Серийный номер изделия:\n" +
                 $"{challenge.controllObject.product}\n\n" +
                 $"- Наименование объекта контроля:\n" +
                 $"{challenge.controllObject.name}\n\n" +
                 $"- Серийный номер объекта контроля:\n" +
-                $"{challenge.controllObject.version}\n\n" +
+                $"{challenge.controllObject.decimalNumber}\n\n" +
                 $"- Заводской номер объекта контроля:\n" +
                 $"{challenge.controllObject.serialNumber}\n\n" +
                 $"- В составе изделия:\n" +
@@ -386,45 +363,36 @@ namespace DBSysReport
             }
         }
 
-        private void ShowStatistics(object sender, EventArgs e)
+        private bool GrabDataForStatistics(out List<TestDynamic> testsDynamicList, out List<TestStatic> testsStaticList, out List<int> modulesFailsStats, out List<int> commandsFailsStats)
         {
-            // TODO: fix dates with "within all period" option
-            // setup labels
-            DateTime beginDate = beginDateTimePicker.Value;
-            DateTime endDate = endDateTimePicker.Value;
-            periodLabel1.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}";
-            periodLabel2.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
-                $"В модуле {moduleComboBox.SelectedItem}";
-            periodLabel3.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
-                $"Команды \"{commandComboBox.SelectedItem}\"\n" +
-                $"В модуле {moduleComboBox.SelectedItem}";
-
-            // grab all nessesary data for tables and graphs
-            List<TestDynamic> testsDynamicList;
-            List<TestStatic> testsStaticList;
             StatusCode status;
+            
+            modulesFailsStats = Enumerable.Repeat(0, moduleComboBox.Items.Count).ToList();
+            commandsFailsStats = Enumerable.Repeat(0, commandComboBox.Items.Count).ToList();
+            testsStaticList = new List<TestStatic>();
 
             if (allTimeCheckBox.Checked)
                 status = Core.GetDynamicTests(out testsDynamicList);
             else
+            {
+                DateTime beginDate = beginDateTimePicker.Value;
+                DateTime endDate = endDateTimePicker.Value;
                 status = Core.GetDynamicTests(beginDate, endDate, out testsDynamicList);
+            }
 
             if (status != StatusCode.Ok)
             {
                 MessageBox.Show($"Произошла ошибка при попытке загрузить данные тестирования.\n\n" +
                     $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
-                return;
+                return false;
             }
-
-            List<int> modulesFailsStats = Enumerable.Repeat(0, moduleComboBox.Items.Count).ToList();
-            List<int> commandsFailsStats = Enumerable.Repeat(0, commandComboBox.Items.Count).ToList();
 
             status = Core.MapStaticTests(testsDynamicList, out testsStaticList);
             if (status != StatusCode.Ok)
             {
                 MessageBox.Show($"Произошла ошибка при попытке загрузить статические тесты.\n\n" +
                     $"Код ошибки: {status}", "Ошибка", MessageBoxButtons.OK);
-                return;
+                return false;
             }
 
             for (int i = 0; i < testsDynamicList.Count; i++)
@@ -443,12 +411,63 @@ namespace DBSysReport
                 }
             }
 
-            // FILL FAIL TESTS DATA WITH RANDOM NUMBERS JUST FOR TESTING PURPOSES
-            // Random random = new Random();
-            // for (int i = 0; i < modulesFailsStats.Count; i++)
-            //     modulesFailsStats[i] = random.Next(0, 10);
-            // for (int i = 0; i < commandsFailsStats.Count; i++)
-            //     commandsFailsStats[i] = random.Next(0, 10);
+            return true;
+        }
+
+        private void UpdateStatisticsDataLables()
+        {
+            if (allTimeCheckBox.Checked)
+            {
+                periodLabel1.Text = $"За весь период";
+                periodLabel2.Text = $"За весь период\n" +
+                    $"В модуле {moduleComboBox.SelectedItem}";
+                periodLabel3.Text = $"За весь период\n" +
+                    $"Команды \"{commandComboBox.SelectedItem}\"\n" +
+                    $"В модуле {moduleComboBox.SelectedItem}";
+            }
+            else
+            {
+                DateTime beginDate = beginDateTimePicker.Value;
+                DateTime endDate = endDateTimePicker.Value;
+                periodLabel1.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}";
+                periodLabel2.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
+                    $"В модуле {moduleComboBox.SelectedItem}";
+                periodLabel3.Text = $"В период с {beginDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}\n" +
+                    $"Команды \"{commandComboBox.SelectedItem}\"\n" +
+                    $"В модуле {moduleComboBox.SelectedItem}";
+            }
+        }
+
+        private Label CreateTableLabel(string text)
+        {
+            return new Label()
+            {
+                Text = text,
+                AutoSize = true,
+                Anchor = AnchorStyles.None
+            };
+        }
+
+        private void ClearTable(TableLayoutPanel table, int columnsCount, int itemsCount)
+        {
+            table.RowCount = 1; // + moduleComboBox.Items.Count;
+            table.RowStyles.Clear();
+            for (int i = 0; i < itemsCount; i++)
+                table.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            while (table.Controls.Count > columnsCount)
+                table.Controls.RemoveAt(columnsCount);
+        }
+
+        private void ShowStatistics(object sender, EventArgs e)
+        {
+            // grab all nessesary data for tables and graphs
+            if (!GrabDataForStatistics(out List<TestDynamic> testsDynamicList, out List<TestStatic> testsStaticList,
+                    out List<int> modulesFailsStats, out List<int> commandsFailsStats))
+                return;
+
+            // setup labels
+            UpdateStatisticsDataLables();
 
             // suspend all layouts for update
 
@@ -460,36 +479,13 @@ namespace DBSysReport
 
             // fill first table
 
-            statTable_Product.RowCount = 1 + moduleComboBox.Items.Count;
-            statTable_Product.RowStyles.Clear();
-            for (int i = 0; i < moduleComboBox.Items.Count; i++)
-                statTable_Product.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-
-            for (int i = 3; i < statTable_Product.Controls.Count; i++)
-                statTable_Product.Controls.RemoveAt(3);
+            ClearTable(statTable_Product, 3, moduleComboBox.Items.Count);
     
             for (int i = 0; i < moduleComboBox.Items.Count; i++)
             {
-                Label indexLabel = new Label()
-                {
-                    Text = (i + 1).ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
-
-                Label moduleName = new Label()
-                {
-                    Text = moduleComboBox.Items[i].ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
-
-                Label failsAmountLabel = new Label()
-                {
-                    Text = modulesFailsStats[i].ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
+                Label indexLabel = CreateTableLabel((i + 1).ToString());
+                Label moduleName = CreateTableLabel(moduleComboBox.Items[i].ToString());
+                Label failsAmountLabel = CreateTableLabel(modulesFailsStats[i].ToString());
 
                 statTable_Product.Controls.Add(indexLabel, 0, i + 1);
                 statTable_Product.Controls.Add(moduleName, 1, i + 1);
@@ -514,43 +510,14 @@ namespace DBSysReport
 
             // fill second table
 
-            statTable_Module.RowCount = 1 + commandComboBox.Items.Count;
-            statTable_Module.RowStyles.Clear();
-            for (int i = 0; i < commandComboBox.Items.Count; i++)
-                statTable_Module.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-
-            while (statTable_Module.Controls.Count > 4)
-                statTable_Module.Controls.RemoveAt(4);
+            ClearTable(statTable_Module, 4, commandComboBox.Items.Count);
 
             for (int i = 0; i < commandComboBox.Items.Count; i++)
             {
-                Label indexLabel = new Label()
-                {
-                    Text = (i + 1).ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
-
-                Label commandName = new Label()
-                {
-                    Text = commandComboBox.Items[i].ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
-
-                Label modeName = new Label()
-                {
-                    Text = ((TestStatic)commandComboBox.Items[i]).mode,
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
-
-                Label failsAmountLabel = new Label()
-                {
-                    Text = commandsFailsStats[i].ToString(),
-                    AutoSize = true,
-                    Anchor = AnchorStyles.None
-                };
+                Label indexLabel = CreateTableLabel((i + 1).ToString());
+                Label commandName = CreateTableLabel(commandComboBox.Items[i].ToString());
+                Label modeName = CreateTableLabel(((TestStatic)commandComboBox.Items[i]).mode);
+                Label failsAmountLabel = CreateTableLabel(commandsFailsStats[i].ToString());
 
                 statTable_Module.Controls.Add(indexLabel, 0, i + 1);
                 statTable_Module.Controls.Add(commandName, 1, i + 1);
@@ -603,11 +570,7 @@ namespace DBSysReport
 
             // the last table
 
-            statTable_Command.RowCount = 1;
-            statTable_Command.RowStyles.Clear();
-
-            while (statTable_Command.Controls.Count > 7)
-                statTable_Command.Controls.RemoveAt(7);
+            ClearTable(statTable_Command, 7, 0);
 
             int testIndex = 1;
             for (int i = 0; i < testsDynamicList.Count; i++)
@@ -615,57 +578,16 @@ namespace DBSysReport
                 TestDynamic testDynamic = testsDynamicList[i];
                 TestStatic testStatic = testsStaticList[i];
 
-                if (commandComboBox.Items.Cast<TestStatic>().ToList().Exists(test => test.tsIndex == testStatic.tsIndex))
+                // if (commandComboBox.Items.Cast<TestStatic>().ToList().Exists(test => test.tsIndex == testStatic.tsIndex))
+                if (((TestStatic)commandComboBox.SelectedItem).tsIndex == testStatic.tsIndex)
                 {
-                    Label indexLabel = new Label()
-                    {
-                        Text = testIndex.ToString(),
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label dateLabel = new Label()
-                    {
-                        Text = testDynamic.beginTime.ToString("dd.MM.yyyy"),
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label serialNumberLabel = new Label()
-                    {
-                        Text = testDynamic.challenge.controllObject.serialNumber,
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label nominalLabel = new Label()
-                    {
-                        Text = testStatic.unit == "null" ? testDynamic.nominal.ToString() : "-",
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label boundaryLabel = new Label()
-                    {
-                        Text = testStatic.unit == "null" ? testDynamic.boundaryValue.ToString() : "-",
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label valueLabel = new Label()
-                    {
-                        Text = testStatic.unit == "null" ? testDynamic.actualValue.ToString() : "-",
-                        AutoSize = true,
-                        Anchor = AnchorStyles.None
-                    };
-
-                    Label statusLabel = new Label()
-                    {
-                        Text = testDynamic.status ? "Годен" : "Не годен",
-                        AutoSize = true,
-                        ForeColor = testDynamic.status ? System.Drawing.Color.DarkGreen : System.Drawing.Color.DarkRed,
-                        Anchor = AnchorStyles.None
-                    };
+                    Label indexLabel = CreateTableLabel(testIndex.ToString());
+                    Label dateLabel = CreateTableLabel(testDynamic.beginTime.ToString("dd.MM.yyyy"));
+                    Label serialNumberLabel = CreateTableLabel(testDynamic.challenge.controllObject.serialNumber);
+                    Label nominalLabel = CreateTableLabel(testStatic.unit == "null" ? testDynamic.nominal.ToString() : "-");
+                    Label boundaryLabel = CreateTableLabel(testStatic.unit == "null" ? testDynamic.boundaryValue.ToString() : "-");
+                    Label valueLabel = CreateTableLabel(testStatic.unit == "null" ? testDynamic.actualValue.ToString() : "-");
+                    Label statusLabel = CreateTableLabel(testDynamic.status ? "Годен" : "Не годен");
 
                     statTable_Command.RowCount++;
                     statTable_Command.RowStyles.Add(new RowStyle(SizeType.AutoSize));
@@ -688,7 +610,9 @@ namespace DBSysReport
             moduleStatsChart.ResumeLayout();
             statTable_Command.ResumeLayout();
 
-            statisticTable.Visible = true;
+            statisticTableProduct.Visible = true;
+            statisticTableModule.Visible = true;
+            statisticTableCommand.Visible = true;
         }
 
         private void allTimeCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -773,14 +697,30 @@ namespace DBSysReport
             showStatisticsButton.Enabled = true;
         }
 
-        private void ShowHideDatabaseControllPanel(object sender, EventArgs e)
+        private void ShowDatabasePanel(object sender, EventArgs e)
         {
-            mainSplitContainer.Panel1Collapsed = !mainSplitContainer.Panel1Collapsed;
+            mainSplitContainer.Panel1Collapsed = false;
+            mainSplitContainer.Panel2Collapsed = true;
         }
 
-        private void ShowHideReportControllPanel(object sender, EventArgs e)
+        private void ShowReportPanel(object sender, EventArgs e)
         {
-            mainSplitContainer.Panel2Collapsed = !mainSplitContainer.Panel2Collapsed;
+            mainSplitContainer.Panel1Collapsed = true;
+            mainSplitContainer.Panel2Collapsed = false;
+        }
+
+        private void ShowBothPanels(object sender, EventArgs e)
+        {
+            mainSplitContainer.Panel1Collapsed = false;
+            mainSplitContainer.Panel2Collapsed = false;
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программное обеспечение DBSysReport © DSPLAB, 2020\n\n" +
+                "Используйте это ПО для визуализации результатов тестирования.\n\n" +
+                "При возникновении критических ошибок сообщите о них разработчику.\n" +
+                "Для обратной связи используйте электронный адрес klimenko0037@gmail.com", "О программе", MessageBoxButtons.OK);
         }
     }
 }

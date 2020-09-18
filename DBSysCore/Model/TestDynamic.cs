@@ -98,7 +98,7 @@ namespace DBSysCore.Model
         public static List<TestDynamic> GetTests()
         {
             string query = "SELECT [id], [ts_index], [challenge], " +
-                "[begin_time], [end_time], [actual_value], [delta], " +
+                "[begin_time], [end_time], [nominal], [actual_value], [delta], " +
                 "[boundary_value], [status] FROM [test_dynamic]";
 
             return GetTestsByQuery(query);
@@ -107,7 +107,7 @@ namespace DBSysCore.Model
         public static List<TestDynamic> GetTests(Challenge challenge)
         {
             string query = "SELECT [id], [ts_index], [challenge], " +
-                "[begin_time], [end_time], [actual_value], [delta], [boundary_value], [status] " +
+                "[begin_time], [end_time], [nominal], [actual_value], [delta], [boundary_value], [status] " +
                 $"FROM [test_dynamic] WHERE [challenge] = {challenge.id}";
 
             return GetTestsByQuery(query);
@@ -116,7 +116,7 @@ namespace DBSysCore.Model
         public static List<TestDynamic> GetTests(DateTime beginDate, DateTime endDate)
         {
             string query = "SELECT [id], [ts_index], [challenge], " +
-                "[begin_time], [end_time], [actual_value], [delta], [boundary_value], [status] " +
+                "[begin_time], [end_time], [nominal], [actual_value], [delta], [boundary_value], [status] " +
                 $"FROM [test_dynamic] WHERE [begin_time] >= '{beginDate:yyyy-MM-dd HH:mm:ss}' " +
                 $"AND [begin_time] <= '{endDate:yyyy-MM-dd HH:mm:ss}'";
 
@@ -141,14 +141,13 @@ namespace DBSysCore.Model
                     id = (int)reader[0],
                     tsIndex = (string)reader[1],
                     // challenge = new Challenge((int)reader[2]),
-                    // beginTime = DateTime.Parse((string)reader[3]),
-                    //endTime = DateTime.Parse((string)reader[4]),
                     beginTime = reader.GetDateTime(3),
                     endTime = (DateTime)reader[4],
-                    actualValue = (decimal)reader[5],
-                    delta = (decimal)reader[6],
-                    boundaryValue = (decimal)reader[7],
-                    status = (bool)reader[8]
+                    nominal = (decimal)reader[5],
+                    actualValue = (decimal)reader[6],
+                    delta = (decimal)reader[7],
+                    boundaryValue = (decimal)reader[8],
+                    status = (bool)reader[9]
                 };
                 challengesId.Add((int)reader[2]);
 

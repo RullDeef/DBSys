@@ -19,7 +19,8 @@ namespace DBSysCore
             get
             {
                 string folder = GetBaseFolder();
-                Directory.CreateDirectory(folder);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
                 return folder;
             }
         }
@@ -45,7 +46,8 @@ namespace DBSysCore
             get
             {
                 string folder = GetBaseFolder() + "\\dumps";
-                Directory.CreateDirectory(folder);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
                 return folder;
             }
         }
@@ -55,7 +57,8 @@ namespace DBSysCore
             get
             {
                 string folder = GetBaseFolder() + "\\log";
-                Directory.CreateDirectory(folder);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
                 return folder;
             }
         }
@@ -65,7 +68,8 @@ namespace DBSysCore
             get
             {
                 string folder = GetBaseFolder() + "\\reports";
-                Directory.CreateDirectory(folder);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
                 return folder;
             }
         }
@@ -75,7 +79,8 @@ namespace DBSysCore
             get
             {
                 string folder = GetBaseFolder() + "\\report_templates";
-                Directory.CreateDirectory(folder);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
                 return folder;
             }
         }

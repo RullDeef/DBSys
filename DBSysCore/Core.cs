@@ -18,8 +18,6 @@ namespace DBSysCore
      */
     public static class Core
     {
-        
-
         /**
          * Соединение для пользовательского файла.
          */
@@ -714,11 +712,9 @@ namespace DBSysCore
             string coSerialNumber, string coDecNumber, int staffOTKId, string coParent,
             string challengeTypeName, string locationName, string description = "")
         {
-            
             Logger.Func("Core.BeginChallenge");
 
             StatusCode result = StatusCode.Ok;
-            bool flag = false;
 
             try
             {
@@ -730,7 +726,7 @@ namespace DBSysCore
                     result = StatusCode.GrantsVirtualAdminNotAllowed;
                 else if (Session.sessionData.programState != ProgramState.Working)
                     result = StatusCode.ProgramStateInvalid;
-                else if ((result = HasOTKStaff(staffOTKId, out flag)) == StatusCode.Ok)
+                else if ((result = HasOTKStaff(staffOTKId, out bool flag)) == StatusCode.Ok)
                 {
                     if (!flag)
                         result = StatusCode.BeginChallengeInvalidOTKStaffId;
@@ -1128,7 +1124,7 @@ namespace DBSysCore
         /**
          * Метод для смены рабочего файла дампа.
          */
-        public static StatusCode DumpUse(string filename)
+        public static StatusCode DumpUse(string filepath)
         {
             Logger.Func("Core.DumpUse");
 
@@ -1139,8 +1135,8 @@ namespace DBSysCore
                     result = StatusCode.GrantsUnathorized;
                 else if (!Session.RequireGrants(UserGrants.Operator))
                     result = StatusCode.GrantsInproper;
-                else if (filename.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
-                    result = StatusCode.DumpUseInvalidFilename;
+                // else if (filepath.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
+                //    result = StatusCode.DumpUseInvalidFilename;
                 else
                 {
                     /*
@@ -1150,7 +1146,7 @@ namespace DBSysCore
                     */
 
                     CloseConnections();
-                    Session.SwitchDumpFile(filename);
+                    Session.SwitchDumpFile(filepath);
                     result = InitializeConnection();
                 }
             }
@@ -1263,9 +1259,13 @@ namespace DBSysCore
 
                     HtmlNode table = doc.DocumentNode.SelectNodes("//table")[0];
 
+                    bool challengeFailed = false;
+
                     foreach (TestDynamic testDynamic in TestDynamic.GetTests(challenge))
                     {
                         TestStatic testStatic = testDynamic.GetTestStatic();
+
+                        challengeFailed = challengeFailed || !testDynamic.status;
 
                         HtmlNode tr = HtmlNode.CreateNode("<tr></tr>");
                         HtmlNode td;
@@ -1288,22 +1288,22 @@ namespace DBSysCore
                         if (testStatic.unit == "null")
                             td = HtmlNode.CreateNode("<td></td>");
                         else
-                            td = HtmlNode.CreateNode($"<td>{testDynamic.nominal}</td>");
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.nominal:0.##}</td>");
                         tr.AppendChild(td);
 
                         if (testStatic.unit == "null")
                             td = HtmlNode.CreateNode("<td></td>");
                         else
-                            td = HtmlNode.CreateNode($"<td>{testDynamic.delta}</td>");
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.delta:0.##}</td>");
                         tr.AppendChild(td);
 
                         if (testStatic.unit == "null")
                             td = HtmlNode.CreateNode("<td></td>");
                         else
-                            td = HtmlNode.CreateNode($"<td>{testDynamic.boundaryValue}</td>");
+                            td = HtmlNode.CreateNode($"<td>{testDynamic.boundaryValue:0.##}</td>");
                         tr.AppendChild(td);
 
-                        td = HtmlNode.CreateNode($"<td>{testDynamic.actualValue}</td>");
+                        td = HtmlNode.CreateNode($"<td>{testDynamic.actualValue:0.##}</td>");
                         tr.AppendChild(td);
 
                         td = HtmlNode.CreateNode($"<td>{challenge.beginTime:dd/MM/yyyy}</td>");
@@ -1318,6 +1318,10 @@ namespace DBSysCore
 
                         table.AppendChild(tr);
                     }
+
+                    if (challengeFailed)
+                        foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='failed']"))
+                            node.InnerHtml = "не";
 
                     string htmlString = doc.DocumentNode.OuterHtml;
 
@@ -1456,13 +1460,13 @@ namespace DBSysCore
             cmd.Dispose();
         }
 
-        public static StatusCode ExecSQL(string query /*, out string output */)
+        public static StatusCode ExecSQL(string query, out string output)
         {
-            
             Logger.Func("Core.ExecSQL");
 
             StatusCode result = StatusCode.Ok;
-            // output = "";
+            SQLiteDataReader reader = null;
+            output = "";
             try
             {
                 if (!Session.IsLoggedIn())
@@ -1471,39 +1475,29 @@ namespace DBSysCore
                     result = StatusCode.GrantsInproper;
                 else if ((result = InitializeConnection()) == StatusCode.Ok)
                 {
-                    Process process = new Process
+                    reader = Utils.ExecuteReader(query, dumpConnection);
+
+                    while (reader.Read())
                     {
-                        StartInfo = new ProcessStartInfo
+                        for (int i = 0; i < reader.FieldCount; i++)
                         {
-                            FileName = "sqlite3.exe",
-                            Arguments = $"{Session.sessionData.filename} \"{query}\"",
-                            UseShellExecute = false,
-                            RedirectStandardOutput = true,
-                            CreateNoWindow = true
+                            object data = reader.GetValue(i);
+                            output += data.ToString() + "|";
                         }
-                    };
 
-                    process.Start();
-
-                    /*
-                    while (!process.StandardOutput.EndOfStream)
-                    {
-                        string line = process.StandardOutput.ReadLine();
-                        output += line;
+                        output += "\n";
                     }
-                    */
-
-                    process.WaitForExit();
                 }
             }
             catch (Exception e)
             {
                 Logger.Error("Core.ExecSQL", e.ToString());
                 result = StatusCode.Error;
-                // output = "[Internal error]\n";
             }
             finally
             {
+                if (reader != null)
+                    reader.Close();
                 CloseConnections();
                 Session.Close();
             }
@@ -1515,14 +1509,14 @@ namespace DBSysCore
          * Метод для объединения данных из файла с названием source по переданному соединению.
          */
         private static void MergeFiles(SQLiteConnection connection, string source)
-        {
-            
+        {   
             Logger.Func("Core.MergeFiles");
 
 #if DEBUG
             Debug.Assert(connection.State == ConnectionState.Open,
                 "connection must be opened");
 #endif
+
             string[] tables = new string[]
             {
                 "requirements",

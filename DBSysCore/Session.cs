@@ -172,6 +172,13 @@ namespace DBSysCore
             return fname;
         }
 
+        public static string GetCurrentWorkingDumpFileNameWithPath()
+        {
+            Open();
+
+            return sessionData.filename;
+        }
+
         /**
          * Возвращает форматированное имя текущего пользователя, или
          * "unatorized", если пользователь не авторизован.
@@ -424,7 +431,7 @@ namespace DBSysCore
         {
             Logger.Func("Session.SwitchDumpFile");
 
-            sessionData.filename = $"{Paths.dumpsDirectory}\\{filename}.db";
+            sessionData.filename = filename;
         }
 
         /**

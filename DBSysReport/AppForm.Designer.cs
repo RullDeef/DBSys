@@ -31,20 +31,21 @@ namespace DBSysReport
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.appMenu = new System.Windows.Forms.MenuStrip();
             this.exitMenuOption = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеБазойДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеОтчетамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.совмещённыйВидToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,8 +126,29 @@ namespace DBSysReport
             this.commandComboBox = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.modeComboBox = new System.Windows.Forms.ComboBox();
-            this.statisticTable = new System.Windows.Forms.TableLayoutPanel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.statisticTableProduct = new System.Windows.Forms.TableLayoutPanel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.periodLabel1 = new System.Windows.Forms.Label();
+            this.statTable_Product = new System.Windows.Forms.TableLayoutPanel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.productStatsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.statisticTableModule = new System.Windows.Forms.TableLayoutPanel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.periodLabel2 = new System.Windows.Forms.Label();
+            this.statTable_Module = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.moduleStatsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.statisticTableCommand = new System.Windows.Forms.TableLayoutPanel();
+            this.commandStatsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.statTable_Command = new System.Windows.Forms.TableLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -135,23 +157,8 @@ namespace DBSysReport
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.periodLabel2 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.periodLabel1 = new System.Windows.Forms.Label();
-            this.statTable_Product = new System.Windows.Forms.TableLayoutPanel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.productStatsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.periodLabel3 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.moduleStatsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.statTable_Module = new System.Windows.Forms.TableLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.appMenu.SuspendLayout();
             this.adminPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
@@ -191,13 +198,19 @@ namespace DBSysReport
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.statisticDateInputPanel.SuspendLayout();
-            this.statisticTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            this.statTable_Command.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.statisticTableProduct.SuspendLayout();
             this.statTable_Product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productStatsChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moduleStatsChart)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.statisticTableModule.SuspendLayout();
             this.statTable_Module.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moduleStatsChart)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.statisticTableCommand.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commandStatsChart)).BeginInit();
+            this.statTable_Command.SuspendLayout();
             this.SuspendLayout();
             // 
             // appMenu
@@ -224,7 +237,8 @@ namespace DBSysReport
             // 
             this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.управлениеБазойДанныхToolStripMenuItem,
-            this.управлениеОтчетамиToolStripMenuItem});
+            this.управлениеОтчетамиToolStripMenuItem,
+            this.совмещённыйВидToolStripMenuItem});
             this.видToolStripMenuItem.Name = "видToolStripMenuItem";
             this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.видToolStripMenuItem.Text = "Вид";
@@ -234,14 +248,21 @@ namespace DBSysReport
             this.управлениеБазойДанныхToolStripMenuItem.Name = "управлениеБазойДанныхToolStripMenuItem";
             this.управлениеБазойДанныхToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.управлениеБазойДанныхToolStripMenuItem.Text = "Управление базой данных";
-            this.управлениеБазойДанныхToolStripMenuItem.Click += new System.EventHandler(this.ShowHideDatabaseControllPanel);
+            this.управлениеБазойДанныхToolStripMenuItem.Click += new System.EventHandler(this.ShowDatabasePanel);
             // 
             // управлениеОтчетамиToolStripMenuItem
             // 
             this.управлениеОтчетамиToolStripMenuItem.Name = "управлениеОтчетамиToolStripMenuItem";
             this.управлениеОтчетамиToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.управлениеОтчетамиToolStripMenuItem.Text = "Управление отчетами";
-            this.управлениеОтчетамиToolStripMenuItem.Click += new System.EventHandler(this.ShowHideReportControllPanel);
+            this.управлениеОтчетамиToolStripMenuItem.Click += new System.EventHandler(this.ShowReportPanel);
+            // 
+            // совмещённыйВидToolStripMenuItem
+            // 
+            this.совмещённыйВидToolStripMenuItem.Name = "совмещённыйВидToolStripMenuItem";
+            this.совмещённыйВидToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.совмещённыйВидToolStripMenuItem.Text = "Совмещённый вид";
+            this.совмещённыйВидToolStripMenuItem.Click += new System.EventHandler(this.ShowBothPanels);
             // 
             // infoToolStripMenuItem1
             // 
@@ -256,6 +277,7 @@ namespace DBSysReport
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.aboutToolStripMenuItem1.Text = "О программе";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -785,6 +807,7 @@ namespace DBSysReport
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Объединение файлов дампов";
+            this.groupBox2.Visible = false;
             // 
             // tableLayoutPanel4
             // 
@@ -1024,7 +1047,7 @@ namespace DBSysReport
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.AutoScroll = true;
-            this.splitContainer3.Panel2.Controls.Add(this.statisticTable);
+            this.splitContainer3.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer3.Size = new System.Drawing.Size(704, 617);
             this.splitContainer3.SplitterDistance = 150;
             this.splitContainer3.TabIndex = 0;
@@ -1213,60 +1236,340 @@ namespace DBSysReport
             this.modeComboBox.TabIndex = 10;
             this.modeComboBox.SelectedIndexChanged += new System.EventHandler(this.modeComboBox_SelectedIndexChanged);
             // 
-            // statisticTable
+            // tabControl1
             // 
-            this.statisticTable.AutoSize = true;
-            this.statisticTable.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.statisticTable.ColumnCount = 1;
-            this.statisticTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.statisticTable.Controls.Add(this.chart2, 0, 11);
-            this.statisticTable.Controls.Add(this.statTable_Command, 0, 10);
-            this.statisticTable.Controls.Add(this.periodLabel2, 0, 5);
-            this.statisticTable.Controls.Add(this.label19, 0, 4);
-            this.statisticTable.Controls.Add(this.label17, 0, 0);
-            this.statisticTable.Controls.Add(this.periodLabel1, 0, 1);
-            this.statisticTable.Controls.Add(this.statTable_Product, 0, 2);
-            this.statisticTable.Controls.Add(this.productStatsChart, 0, 3);
-            this.statisticTable.Controls.Add(this.periodLabel3, 0, 9);
-            this.statisticTable.Controls.Add(this.label21, 0, 8);
-            this.statisticTable.Controls.Add(this.moduleStatsChart, 0, 7);
-            this.statisticTable.Controls.Add(this.statTable_Module, 0, 6);
-            this.statisticTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statisticTable.Location = new System.Drawing.Point(0, 0);
-            this.statisticTable.Name = "statisticTable";
-            this.statisticTable.RowCount = 12;
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statisticTable.Size = new System.Drawing.Size(533, 1119);
-            this.statisticTable.TabIndex = 1;
-            this.statisticTable.Visible = false;
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(550, 617);
+            this.tabControl1.TabIndex = 2;
             // 
-            // chart2
+            // tabPage3
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(3, 913);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(527, 203);
-            this.chart2.TabIndex = 14;
-            this.chart2.Text = "chart1";
+            this.tabPage3.AutoScroll = true;
+            this.tabPage3.Controls.Add(this.statisticTableProduct);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(542, 591);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Изделие";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // statisticTableProduct
+            // 
+            this.statisticTableProduct.AutoSize = true;
+            this.statisticTableProduct.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.statisticTableProduct.ColumnCount = 1;
+            this.statisticTableProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statisticTableProduct.Controls.Add(this.label17, 0, 0);
+            this.statisticTableProduct.Controls.Add(this.periodLabel1, 0, 1);
+            this.statisticTableProduct.Controls.Add(this.statTable_Product, 0, 2);
+            this.statisticTableProduct.Controls.Add(this.productStatsChart, 0, 3);
+            this.statisticTableProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statisticTableProduct.Location = new System.Drawing.Point(3, 3);
+            this.statisticTableProduct.Name = "statisticTableProduct";
+            this.statisticTableProduct.RowCount = 4;
+            this.statisticTableProduct.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableProduct.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableProduct.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableProduct.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableProduct.Size = new System.Drawing.Size(536, 321);
+            this.statisticTableProduct.TabIndex = 3;
+            this.statisticTableProduct.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(141, 0);
+            this.label17.Name = "label17";
+            this.label17.Padding = new System.Windows.Forms.Padding(10);
+            this.label17.Size = new System.Drawing.Size(253, 40);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Статистика отказов изделия";
+            // 
+            // periodLabel1
+            // 
+            this.periodLabel1.AutoSize = true;
+            this.periodLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.periodLabel1.Location = new System.Drawing.Point(3, 40);
+            this.periodLabel1.Name = "periodLabel1";
+            this.periodLabel1.Padding = new System.Windows.Forms.Padding(10);
+            this.periodLabel1.Size = new System.Drawing.Size(530, 33);
+            this.periodLabel1.TabIndex = 2;
+            this.periodLabel1.Text = "В период с __.__.____ по __.__.____";
+            // 
+            // statTable_Product
+            // 
+            this.statTable_Product.AutoSize = true;
+            this.statTable_Product.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.statTable_Product.ColumnCount = 3;
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.statTable_Product.Controls.Add(this.label26, 2, 0);
+            this.statTable_Product.Controls.Add(this.label25, 1, 0);
+            this.statTable_Product.Controls.Add(this.label24, 0, 0);
+            this.statTable_Product.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statTable_Product.Location = new System.Drawing.Point(3, 76);
+            this.statTable_Product.Name = "statTable_Product";
+            this.statTable_Product.RowCount = 1;
+            this.statTable_Product.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statTable_Product.Size = new System.Drawing.Size(530, 33);
+            this.statTable_Product.TabIndex = 9;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(388, 2);
+            this.label26.Name = "label26";
+            this.label26.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label26.Size = new System.Drawing.Size(110, 29);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Количество отказов";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(178, 2);
+            this.label25.Name = "label25";
+            this.label25.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label25.Size = new System.Drawing.Size(45, 29);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Модуль";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(13, 2);
+            this.label24.Name = "label24";
+            this.label24.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label24.Size = new System.Drawing.Size(18, 29);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "№";
+            // 
+            // productStatsChart
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.productStatsChart.ChartAreas.Add(chartArea4);
+            this.productStatsChart.Dock = System.Windows.Forms.DockStyle.Top;
+            legend4.Name = "Legend1";
+            this.productStatsChart.Legends.Add(legend4);
+            this.productStatsChart.Location = new System.Drawing.Point(3, 115);
+            this.productStatsChart.Name = "productStatsChart";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.productStatsChart.Series.Add(series4);
+            this.productStatsChart.Size = new System.Drawing.Size(530, 203);
+            this.productStatsChart.TabIndex = 5;
+            this.productStatsChart.Text = "chart1";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.Controls.Add(this.statisticTableModule);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(542, 591);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Модуль";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // statisticTableModule
+            // 
+            this.statisticTableModule.AutoSize = true;
+            this.statisticTableModule.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.statisticTableModule.ColumnCount = 1;
+            this.statisticTableModule.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statisticTableModule.Controls.Add(this.label19, 0, 0);
+            this.statisticTableModule.Controls.Add(this.periodLabel2, 0, 1);
+            this.statisticTableModule.Controls.Add(this.statTable_Module, 0, 2);
+            this.statisticTableModule.Controls.Add(this.moduleStatsChart, 0, 3);
+            this.statisticTableModule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statisticTableModule.Location = new System.Drawing.Point(3, 3);
+            this.statisticTableModule.Name = "statisticTableModule";
+            this.statisticTableModule.RowCount = 4;
+            this.statisticTableModule.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableModule.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableModule.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableModule.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableModule.Size = new System.Drawing.Size(536, 334);
+            this.statisticTableModule.TabIndex = 0;
+            this.statisticTableModule.Visible = false;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(117, 0);
+            this.label19.Name = "label19";
+            this.label19.Padding = new System.Windows.Forms.Padding(10);
+            this.label19.Size = new System.Drawing.Size(301, 40);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Статистика отказов внутри модуля";
+            // 
+            // periodLabel2
+            // 
+            this.periodLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.periodLabel2.AutoSize = true;
+            this.periodLabel2.Location = new System.Drawing.Point(3, 40);
+            this.periodLabel2.Name = "periodLabel2";
+            this.periodLabel2.Padding = new System.Windows.Forms.Padding(10);
+            this.periodLabel2.Size = new System.Drawing.Size(530, 46);
+            this.periodLabel2.TabIndex = 11;
+            this.periodLabel2.Text = "В период с __.__.____ по __.__.____\r\nВ модуле __________";
+            // 
+            // statTable_Module
+            // 
+            this.statTable_Module.AutoSize = true;
+            this.statTable_Module.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.statTable_Module.ColumnCount = 4;
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.statTable_Module.Controls.Add(this.label23, 3, 0);
+            this.statTable_Module.Controls.Add(this.label27, 1, 0);
+            this.statTable_Module.Controls.Add(this.label28, 0, 0);
+            this.statTable_Module.Controls.Add(this.label20, 2, 0);
+            this.statTable_Module.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statTable_Module.Location = new System.Drawing.Point(3, 89);
+            this.statTable_Module.Name = "statTable_Module";
+            this.statTable_Module.RowCount = 1;
+            this.statTable_Module.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statTable_Module.Size = new System.Drawing.Size(530, 33);
+            this.statTable_Module.TabIndex = 12;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(407, 2);
+            this.label23.Name = "label23";
+            this.label23.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label23.Size = new System.Drawing.Size(110, 29);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Количество отказов";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(105, 2);
+            this.label27.Name = "label27";
+            this.label27.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label27.Size = new System.Drawing.Size(52, 29);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Команда";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(13, 2);
+            this.label28.Name = "label28";
+            this.label28.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.label28.Size = new System.Drawing.Size(18, 29);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "№";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(286, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(42, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Режим";
+            // 
+            // moduleStatsChart
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.moduleStatsChart.ChartAreas.Add(chartArea5);
+            this.moduleStatsChart.Dock = System.Windows.Forms.DockStyle.Top;
+            legend5.Name = "Legend1";
+            this.moduleStatsChart.Legends.Add(legend5);
+            this.moduleStatsChart.Location = new System.Drawing.Point(3, 128);
+            this.moduleStatsChart.Name = "moduleStatsChart";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.moduleStatsChart.Series.Add(series5);
+            this.moduleStatsChart.Size = new System.Drawing.Size(530, 203);
+            this.moduleStatsChart.TabIndex = 0;
+            this.moduleStatsChart.Text = "chart1";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.AutoScroll = true;
+            this.tabPage5.Controls.Add(this.statisticTableCommand);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(542, 591);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Команда";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // statisticTableCommand
+            // 
+            this.statisticTableCommand.AutoSize = true;
+            this.statisticTableCommand.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.statisticTableCommand.ColumnCount = 1;
+            this.statisticTableCommand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.statisticTableCommand.Controls.Add(this.commandStatsChart, 0, 3);
+            this.statisticTableCommand.Controls.Add(this.statTable_Command, 0, 2);
+            this.statisticTableCommand.Controls.Add(this.periodLabel3, 0, 1);
+            this.statisticTableCommand.Controls.Add(this.label21, 0, 0);
+            this.statisticTableCommand.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statisticTableCommand.Location = new System.Drawing.Point(0, 0);
+            this.statisticTableCommand.Name = "statisticTableCommand";
+            this.statisticTableCommand.RowCount = 4;
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.statisticTableCommand.Size = new System.Drawing.Size(542, 464);
+            this.statisticTableCommand.TabIndex = 1;
+            this.statisticTableCommand.Visible = false;
+            // 
+            // commandStatsChart
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.commandStatsChart.ChartAreas.Add(chartArea6);
+            this.commandStatsChart.Dock = System.Windows.Forms.DockStyle.Top;
+            legend6.Name = "Legend1";
+            this.commandStatsChart.Legends.Add(legend6);
+            this.commandStatsChart.Location = new System.Drawing.Point(3, 258);
+            this.commandStatsChart.Name = "commandStatsChart";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.commandStatsChart.Series.Add(series6);
+            this.commandStatsChart.Size = new System.Drawing.Size(536, 203);
+            this.commandStatsChart.TabIndex = 14;
+            this.commandStatsChart.Text = "chart1";
             // 
             // statTable_Command
             // 
@@ -1288,18 +1591,18 @@ namespace DBSysReport
             this.statTable_Command.Controls.Add(this.label34, 5, 0);
             this.statTable_Command.Controls.Add(this.label35, 6, 0);
             this.statTable_Command.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statTable_Command.Location = new System.Drawing.Point(3, 757);
+            this.statTable_Command.Location = new System.Drawing.Point(3, 102);
             this.statTable_Command.Name = "statTable_Command";
             this.statTable_Command.RowCount = 1;
             this.statTable_Command.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.statTable_Command.Size = new System.Drawing.Size(527, 150);
+            this.statTable_Command.Size = new System.Drawing.Size(536, 150);
             this.statTable_Command.TabIndex = 13;
             // 
             // label29
             // 
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(134, 47);
+            this.label29.Location = new System.Drawing.Point(135, 47);
             this.label29.Name = "label29";
             this.label29.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label29.Size = new System.Drawing.Size(58, 55);
@@ -1311,7 +1614,7 @@ namespace DBSysReport
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(66, 60);
+            this.label30.Location = new System.Drawing.Point(67, 60);
             this.label30.Name = "label30";
             this.label30.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label30.Size = new System.Drawing.Size(33, 29);
@@ -1335,7 +1638,7 @@ namespace DBSysReport
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(216, 60);
+            this.label22.Location = new System.Drawing.Point(219, 60);
             this.label22.Name = "label22";
             this.label22.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label22.Size = new System.Drawing.Size(53, 29);
@@ -1347,7 +1650,7 @@ namespace DBSysReport
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(289, 60);
+            this.label33.Location = new System.Drawing.Point(292, 60);
             this.label33.Name = "label33";
             this.label33.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label33.Size = new System.Drawing.Size(68, 29);
@@ -1359,7 +1662,7 @@ namespace DBSysReport
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(372, 54);
+            this.label34.Location = new System.Drawing.Point(376, 54);
             this.label34.Name = "label34";
             this.label34.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label34.Size = new System.Drawing.Size(62, 42);
@@ -1371,7 +1674,7 @@ namespace DBSysReport
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(455, 60);
+            this.label35.Location = new System.Drawing.Point(462, 60);
             this.label35.Name = "label35";
             this.label35.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.label35.Size = new System.Drawing.Size(59, 29);
@@ -1379,129 +1682,14 @@ namespace DBSysReport
             this.label35.Text = "Результат";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // periodLabel2
-            // 
-            this.periodLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.periodLabel2.AutoSize = true;
-            this.periodLabel2.Location = new System.Drawing.Point(3, 361);
-            this.periodLabel2.Name = "periodLabel2";
-            this.periodLabel2.Padding = new System.Windows.Forms.Padding(10);
-            this.periodLabel2.Size = new System.Drawing.Size(527, 46);
-            this.periodLabel2.TabIndex = 11;
-            this.periodLabel2.Text = "В период с __.__.____ по __.__.____\r\nВ модуле __________";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(116, 321);
-            this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(10);
-            this.label19.Size = new System.Drawing.Size(301, 40);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Статистика отказов внутри модуля";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(140, 0);
-            this.label17.Name = "label17";
-            this.label17.Padding = new System.Windows.Forms.Padding(10);
-            this.label17.Size = new System.Drawing.Size(253, 40);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Статистика отказов изделия";
-            // 
-            // periodLabel1
-            // 
-            this.periodLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.periodLabel1.AutoSize = true;
-            this.periodLabel1.Location = new System.Drawing.Point(3, 40);
-            this.periodLabel1.Name = "periodLabel1";
-            this.periodLabel1.Padding = new System.Windows.Forms.Padding(10);
-            this.periodLabel1.Size = new System.Drawing.Size(527, 33);
-            this.periodLabel1.TabIndex = 2;
-            this.periodLabel1.Text = "В период с __.__.____ по __.__.____";
-            // 
-            // statTable_Product
-            // 
-            this.statTable_Product.AutoSize = true;
-            this.statTable_Product.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.statTable_Product.ColumnCount = 3;
-            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.statTable_Product.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.statTable_Product.Controls.Add(this.label26, 2, 0);
-            this.statTable_Product.Controls.Add(this.label25, 1, 0);
-            this.statTable_Product.Controls.Add(this.label24, 0, 0);
-            this.statTable_Product.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statTable_Product.Location = new System.Drawing.Point(3, 76);
-            this.statTable_Product.Name = "statTable_Product";
-            this.statTable_Product.RowCount = 1;
-            this.statTable_Product.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.statTable_Product.Size = new System.Drawing.Size(527, 33);
-            this.statTable_Product.TabIndex = 9;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(386, 2);
-            this.label26.Name = "label26";
-            this.label26.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label26.Size = new System.Drawing.Size(110, 29);
-            this.label26.TabIndex = 2;
-            this.label26.Text = "Количество отказов";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(177, 2);
-            this.label25.Name = "label25";
-            this.label25.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label25.Size = new System.Drawing.Size(45, 29);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Модуль";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(13, 2);
-            this.label24.Name = "label24";
-            this.label24.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label24.Size = new System.Drawing.Size(18, 29);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "№";
-            // 
-            // productStatsChart
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.productStatsChart.ChartAreas.Add(chartArea2);
-            this.productStatsChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.productStatsChart.Legends.Add(legend2);
-            this.productStatsChart.Location = new System.Drawing.Point(3, 115);
-            this.productStatsChart.Name = "productStatsChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.productStatsChart.Series.Add(series2);
-            this.productStatsChart.Size = new System.Drawing.Size(527, 203);
-            this.productStatsChart.TabIndex = 5;
-            this.productStatsChart.Text = "chart1";
-            // 
             // periodLabel3
             // 
             this.periodLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.periodLabel3.AutoSize = true;
-            this.periodLabel3.Location = new System.Drawing.Point(3, 695);
+            this.periodLabel3.Location = new System.Drawing.Point(3, 40);
             this.periodLabel3.Name = "periodLabel3";
             this.periodLabel3.Padding = new System.Windows.Forms.Padding(10);
-            this.periodLabel3.Size = new System.Drawing.Size(527, 59);
+            this.periodLabel3.Size = new System.Drawing.Size(536, 59);
             this.periodLabel3.TabIndex = 7;
             this.periodLabel3.Text = "В период с __.__.____ по __.__.____\r\nКоманды _________\r\nВ модуле _________";
             // 
@@ -1510,94 +1698,12 @@ namespace DBSysReport
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(138, 655);
+            this.label21.Location = new System.Drawing.Point(143, 0);
             this.label21.Name = "label21";
             this.label21.Padding = new System.Windows.Forms.Padding(10);
             this.label21.Size = new System.Drawing.Size(256, 40);
             this.label21.TabIndex = 6;
             this.label21.Text = "Статистика отказов команды";
-            // 
-            // moduleStatsChart
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.moduleStatsChart.ChartAreas.Add(chartArea3);
-            this.moduleStatsChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.moduleStatsChart.Legends.Add(legend3);
-            this.moduleStatsChart.Location = new System.Drawing.Point(3, 449);
-            this.moduleStatsChart.Name = "moduleStatsChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.moduleStatsChart.Series.Add(series3);
-            this.moduleStatsChart.Size = new System.Drawing.Size(527, 203);
-            this.moduleStatsChart.TabIndex = 0;
-            this.moduleStatsChart.Text = "chart1";
-            // 
-            // statTable_Module
-            // 
-            this.statTable_Module.AutoSize = true;
-            this.statTable_Module.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.statTable_Module.ColumnCount = 4;
-            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.statTable_Module.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.statTable_Module.Controls.Add(this.label23, 3, 0);
-            this.statTable_Module.Controls.Add(this.label27, 1, 0);
-            this.statTable_Module.Controls.Add(this.label28, 0, 0);
-            this.statTable_Module.Controls.Add(this.label20, 2, 0);
-            this.statTable_Module.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statTable_Module.Location = new System.Drawing.Point(3, 410);
-            this.statTable_Module.Name = "statTable_Module";
-            this.statTable_Module.RowCount = 1;
-            this.statTable_Module.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.statTable_Module.Size = new System.Drawing.Size(527, 33);
-            this.statTable_Module.TabIndex = 12;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(410, 2);
-            this.label23.Name = "label23";
-            this.label23.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label23.Size = new System.Drawing.Size(110, 29);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Количество отказов";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(137, 2);
-            this.label27.Name = "label27";
-            this.label27.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label27.Size = new System.Drawing.Size(52, 29);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Команда";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(13, 2);
-            this.label28.Name = "label28";
-            this.label28.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.label28.Size = new System.Drawing.Size(18, 29);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "№";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(322, 10);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 13);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Режим";
             // 
             // AppForm
             // 
@@ -1658,24 +1764,34 @@ namespace DBSysReport
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.statisticDateInputPanel.ResumeLayout(false);
             this.statisticDateInputPanel.PerformLayout();
-            this.statisticTable.ResumeLayout(false);
-            this.statisticTable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.statTable_Command.ResumeLayout(false);
-            this.statTable_Command.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.statisticTableProduct.ResumeLayout(false);
+            this.statisticTableProduct.PerformLayout();
             this.statTable_Product.ResumeLayout(false);
             this.statTable_Product.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productStatsChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moduleStatsChart)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.statisticTableModule.ResumeLayout(false);
+            this.statisticTableModule.PerformLayout();
             this.statTable_Module.ResumeLayout(false);
             this.statTable_Module.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moduleStatsChart)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.statisticTableCommand.ResumeLayout(false);
+            this.statisticTableCommand.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.commandStatsChart)).EndInit();
+            this.statTable_Command.ResumeLayout(false);
+            this.statTable_Command.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1756,7 +1872,7 @@ namespace DBSysReport
         private Label label16;
         private System.Windows.Forms.DataVisualization.Charting.Chart moduleStatsChart;
         private CheckBox allTimeCheckBox;
-        private TableLayoutPanel statisticTable;
+        private TableLayoutPanel statisticTableCommand;
         private System.Windows.Forms.DataVisualization.Charting.Chart productStatsChart;
         private Label label17;
         private Label periodLabel1;
@@ -1776,7 +1892,7 @@ namespace DBSysReport
         private Label label23;
         private Label label27;
         private Label label28;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart commandStatsChart;
         private Label label32;
         private ComboBox moduleComboBox;
         private ComboBox commandComboBox;
@@ -1795,5 +1911,12 @@ namespace DBSysReport
         private ToolStripMenuItem управлениеОтчетамиToolStripMenuItem;
         private Label label36;
         private Label ChallengeDataLabel;
+        private TabControl tabControl1;
+        private TabPage tabPage3;
+        private TableLayoutPanel statisticTableProduct;
+        private TabPage tabPage4;
+        private TableLayoutPanel statisticTableModule;
+        private TabPage tabPage5;
+        private ToolStripMenuItem совмещённыйВидToolStripMenuItem;
     }
 }
