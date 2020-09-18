@@ -21,26 +21,28 @@ namespace DBSysCore
         /**
          * Соединение для пользовательского файла.
          */
-        public static SQLiteConnection usersConnection;
+        public static SQLiteConnection usersConnection; // TODO: move to Session class
 
         /**
          * Соединение для текущего файла дампов.
          */
-        public static SQLiteConnection dumpConnection;
+        public static SQLiteConnection dumpConnection; // TODO: move to Session class
+
+        // TODO: add Session variable
 
         /**
          * Инициализирует соединение с текущим файлом дампа.
          * 
          * Возвращает false, если соединение прошло успешно.
          */
-        private static StatusCode InitializeConnection()
+        private static StatusCode InitializeConnection() // TODO: make use of constructor and destructor
         {
-            
             Logger.Func("Core.InitializeConnection");
 
             StatusCode result = StatusCode.Ok;
             try
             {
+                // TODO: refactor to a function in Session class
                 // Build Connection String
                 string fname = Session.sessionData.filename;
                 string queryString = $"URI=file:{fname};datetimekind=Utc;";
@@ -72,7 +74,7 @@ namespace DBSysCore
                     Utils.ExecuteNonQuery(modelString, dumpConnection);
                 }
             }
-            catch (FileNotFoundException e)
+            catch (FileNotFoundException e) // TODO: create multifunctional method for handling any type of exceptions
             {
                 Logger.Error("Core.InitializeConnection", e.ToString());
                 result = StatusCode.ConnectionDumpModelNotFound;

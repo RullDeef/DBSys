@@ -5,7 +5,7 @@ namespace DBSysCore
 {
     public static class Paths
     {
-        private static string GetBaseFolder()
+        private static string GetBaseFolder() // TODO: add program folder to PATH on installation (?)
         {
 #if DEBUG
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\DSPLAB\\DBSys_DEBUG";

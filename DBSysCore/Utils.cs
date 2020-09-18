@@ -103,7 +103,7 @@ namespace DBSysCore
          */
         public static SQLiteDataReader ExecuteReader(string query, SQLiteConnection connection)
         {
-#if DEBUG
+#if DEBUG // TODO: no need for derectives here. Debug.Assert is conditional function
             System.Diagnostics.Debug.Assert(connection.State == System.Data.ConnectionState.Open,
                 "connection must be opened");
 #endif

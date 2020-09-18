@@ -18,7 +18,7 @@ namespace DBSysCore
     {
         Idle = 0,
         Working = 1,
-        Testing = 2
+        Testing = 2 // TODO: redundant third state
     }
 
     [Serializable]
@@ -70,11 +70,11 @@ namespace DBSysCore
         /**
          * Данные текущей сессии.
          */
-        public static SessionData sessionData;
+        public static SessionData sessionData; // TODO: combine with current class
 
-        private static bool opened = false;
+        private static bool opened = false; // TODO: redundant variable
 
-        public static Staff virtualAdmin = new Staff()
+        public static Staff virtualAdmin = new Staff() // TODO: move to Staff class as static const one
         {
             id = 461672399,
             surname = "DSPLAB",
@@ -97,7 +97,7 @@ namespace DBSysCore
          *      - файл дампа - "dump.db"
          * 
          */
-        public static void Open()
+        public static void Open() // TODO: make private and put in constructor. (with Close() of course)
         {
             if (opened)
             {
@@ -161,7 +161,7 @@ namespace DBSysCore
             //    Core.CmdProccess("sqlite3.exe", $"{sessionData.filename} \".read model.sql\"", false);
         }
 
-        public static string GetCurrentWorkingDumpFileName()
+        public static string GetCurrentWorkingDumpFileName() // TODO: delegate to sessionData struct
         {
             Open();
 
@@ -195,7 +195,7 @@ namespace DBSysCore
             if (sessionData.staff != null)
             {
                 Staff person = sessionData.staff;
-                userName = $"{person.surname} {person.firstName.Substring(0, 1)}.";
+                userName = $"{person.surname} {person.firstName.Substring(0, 1)}."; // TODO: move to ToString method of class Staff
             }
 
             return userName;
@@ -208,7 +208,7 @@ namespace DBSysCore
          *      - состояние программы - авторизация
          *      - файл дампа - "dump.db"
          */
-        public static SessionData GenerateDefaultSessionData()
+        public static SessionData GenerateDefaultSessionData() // TODO: make private. Use whenever session file could not be found
         {
             return new SessionData
             {
@@ -266,7 +266,7 @@ namespace DBSysCore
          * 
          *      "admin" | "operator" | "tester" | "unauthorized"
          */
-        public static string GrantsString(UserGrants grants)
+        public static string GrantsString(UserGrants grants) // TODO: move in UserGrants class as ToString override
         {
             string result = "unauthorized";
             switch (grants)
@@ -328,7 +328,7 @@ namespace DBSysCore
          * 
          * Переводит текущее состояние программы в рабочее.
          */
-        public static StatusCode Auth(string login, string password)
+        public static StatusCode Auth(string login, string password) // TODO: use params in constructor
         {
             Logger Logger = new Logger();
             Logger.Func("Session.Auth");
@@ -413,7 +413,7 @@ namespace DBSysCore
          * 
          * Переводит текущее состояние программы в ожидание аутентификации.
          */
-        public static void Logout()
+        public static void Logout() // use every time on exit. Move in destructor ("unauthorized" is useless state anymore)
         {
             Logger Logger = new Logger();
             Logger.Func("Session.Logout");
@@ -443,9 +443,9 @@ namespace DBSysCore
          * 
          * Возвращает false, если запись прошла успешно.
          */
-        public static StatusCode SaveCurrentChallenge(SQLiteConnection connection)
+        public static StatusCode SaveCurrentChallenge(SQLiteConnection connection) // TODO: move all "connection" variables inside session class
         {
-            Logger Logger = new Logger();
+            Logger Logger = new Logger(); // TODO: initialize logger on session creation
             Logger.Func("Session.SaveCurrentChallege");
 
             Open();
@@ -459,7 +459,7 @@ namespace DBSysCore
                 Challenge challenge = sessionData.activeChallenge;
                 challenge.endTime = endTime;
 
-                for (int i = 0; i < sessionData.activeTests.Count; i++)
+                for (int i = 0; i < sessionData.activeTests.Count; i++) // TODO: refactor as funtion inside Challange class
                 {
                     TestDynamic test = sessionData.activeTests[i];
 
@@ -493,7 +493,7 @@ namespace DBSysCore
         /**
          * Сохраняет данные текущей сессии в файл данных последней сессии.
          */
-        public static void Close()
+        public static void Close() // TODO: make private. Use only in destructor
         {
             if (opened)
             {

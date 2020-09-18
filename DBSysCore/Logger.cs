@@ -3,7 +3,7 @@ using System.IO;
 
 namespace DBSysCore
 {
-    public class Logger
+    public class Logger // TODO: make use of OOP. Write in destructor only
     {
         private static string filename => $"{Paths.logDirectory}\\{DateTime.Now:yyyy_MM_dd_HH}.txt";
 
@@ -47,7 +47,7 @@ namespace DBSysCore
             }
         }
 
-        public static void Func(string funcName)
+        public static void Func(string funcName) // TODO: ???
         {
 #if DEBUG
             using (StreamWriter file = File.AppendText(filename))
