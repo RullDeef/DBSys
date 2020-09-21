@@ -195,7 +195,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="AxAcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
@@ -204,6 +204,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

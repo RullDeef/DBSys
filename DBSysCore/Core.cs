@@ -1247,17 +1247,34 @@ namespace DBSysCore
 
                     // doc.DocumentNode.SelectNodes("//*[@name='pnum']").First().InnerHtml = "1000"; // reportNumber;
 
-                    foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='module']"))
-                        node.InnerHtml = challenge.controllObject.name;
+                    {
+                        HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//*[@id='module']");
+                        if (nodes != null)
+                            foreach (HtmlNode node in nodes)
+                                node.InnerHtml = challenge.controllObject.name;
 
-                    foreach(HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='serial']"))
-                        node.InnerHtml = challenge.controllObject.serialNumber;
+                        nodes = doc.DocumentNode.SelectNodes("//*[@id='serial']");
+                        if (nodes != null)
+                            foreach (HtmlNode node in nodes)
+                                node.InnerHtml = challenge.controllObject.decimalNumber;
 
-                    doc.DocumentNode.SelectNodes("//*[@id='product']").First().InnerHtml = challenge.controllObject.product;
-                    doc.DocumentNode.SelectNodes("//*[@id='operator']").First().InnerHtml =
-                        $"{challenge.staff.surname} {challenge.staff.firstName[0]}. {challenge.staff.patronymicName[0]}.";
-                    doc.DocumentNode.SelectNodes("//*[@id='OTK']").First().InnerHtml =
-                        $"{challenge.staffOTK.surname} {challenge.staffOTK.firstName[0]}. {challenge.staffOTK.patronymicName[0]}.";
+                        nodes = doc.DocumentNode.SelectNodes("//*[@id='factory']");
+                        if (nodes != null)
+                            foreach (HtmlNode node in nodes)
+                                node.InnerHtml = challenge.controllObject.serialNumber;
+
+                        nodes = doc.DocumentNode.SelectNodes("//*[@id='product']");
+                        if (nodes != null)
+                            nodes.First().InnerHtml = challenge.controllObject.product;
+
+                        nodes = doc.DocumentNode.SelectNodes("//*[@id='operator']");
+                        if (nodes != null)
+                            nodes.First().InnerHtml = $"{challenge.staff.surname} {challenge.staff.firstName[0]}. {challenge.staff.patronymicName[0]}.";
+
+                        nodes = doc.DocumentNode.SelectNodes("//*[@id='OTK']");
+                        if (nodes != null)
+                            nodes.First().InnerHtml = $"{challenge.staffOTK.surname} {challenge.staffOTK.firstName[0]}. {challenge.staffOTK.patronymicName[0]}.";
+                    }
 
                     HtmlNode table = doc.DocumentNode.SelectNodes("//table")[0];
 
@@ -1321,9 +1338,12 @@ namespace DBSysCore
                         table.AppendChild(tr);
                     }
 
-                    if (challengeFailed)
-                        foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//*[@id='failed']"))
-                            node.InnerHtml = "не";
+                    {
+                        HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//*[@id='failed']");
+                        if (nodes != null)
+                            foreach (HtmlNode node in nodes)
+                                node.InnerHtml = challengeFailed ? "не" : "";
+                    }
 
                     string htmlString = doc.DocumentNode.OuterHtml;
 
@@ -1336,7 +1356,7 @@ namespace DBSysCore
             }
             catch (Exception e)
             {
-                Logger.Error("Core.GenerateReport", e.ToString());
+                Logger.Error("Core.GenerateReport", e.ToString() + e.StackTrace + e.Message);
                 result = StatusCode.Error;
             }
             finally
