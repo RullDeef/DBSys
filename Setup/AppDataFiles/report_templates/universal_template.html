@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+body {
+    text-align: center;
+    font-family: 'times';
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#first-table > * > * > td {
+     border: 1px solid black;
+}
+        </style>
+    </head>
+
+    <body>
+        <h1>ПРОТОКОЛ № __________</h1>
+        <p>приемосдаточных испытаний объекта блока управления (
+            <span id="product">ИБВТ.466226.002</span>
+            ) зав. № <span id="serial">001</span> изделия АПР-3М
+        </p>
+
+        <table id='first-table' align='center' cellspacing='0' cellpadding='8'>
+            <!-- header of the table -->
+            <tr>
+                <td rowspan=3>Виды испытаний<br>наименование параметров</td>
+                <td rowspan=3>Единицы<br>величины</td>
+                <td colspan=2>Обозначение документов</td>
+                <td rowspan=2 colspan=3>Требование к параметру</td>
+                <td rowspan=3>Данные<br>испытания<br>контроля</td>
+                <td rowspan=3>Дата<br>проведения<br>испытания</td>
+                <td rowspan=3>Подпись<br>представительства<br>заказчика</td>
+                <td rowspan=3>Примечание</td>
+            </tr>
+            <tr>
+                <td colspan=2>Номер пункта</td>
+            </tr>
+            <tr>
+                <td>Технических<br>требований</td>
+                <td>Методов<br>испытаний</td>
+                <td>Номинальное</td>
+                <td>Предельное<br>отклонение</td>
+                <td>Предельное<br>значение</td>
+            </tr>
+        </table>
+
+        <h1>ЗАКЛЮЧЕНИЕ</h1>
+
+        <p align=left style="margin:18px 12.5%">
+            Продукция (единица, партии, комплекты) <span id="module">блок управления</span>
+            <span id="product">ИБВТ.466226.002</span> зав. № <span id="serial">001</span> <span id="failed"></span> соответствует требованиям
+            <span id="product">ИБВТ.466226.002</span>ТУ и <span id="failed"></span> годна для использования по назначению
+            (эксплуатации).
+        </p>
+
+        <table style="width:75%">
+            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+            <tr>
+                <td>Представитель ОТК:</td>
+                <td><u id="OTK">Сидоров И.И.</u></td>
+                <td>____________________</td>
+                <td>____________________</td>
+                <td>_______________</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><sup>личная подпись</sup></td>
+                <td><sup>расшифровка</sup></td>
+                <td><sup>дата</sup></td>
+            </tr>
+            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+            <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+            <tr>
+                <td style="margin-top:25px">Оператор:</td>
+                <td><u id="operator">Иванов И.И.</u></td>
+                <td>____________________</td>
+                <td>____________________</td>
+                <td>_______________</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><sup>личная подпись</sup></td>
+                <td><sup>расшифровка</sup></td>
+                <td><sup>дата</sup></td>
+            </tr>
+        </table>
+    </body>
+</html>
