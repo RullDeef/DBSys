@@ -117,12 +117,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_11B21570C05648E3BB804785A61BD78C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_12615DAA04F6C171CEB163CC846FF296"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -357,6 +351,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_479750584F7B4DACA1D851A18F7CE935"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_49C8DB84CC3F4EAB817624D4CEF62E9A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -371,12 +371,6 @@
         {
         "MsmKey" = "8:_4CB650A4065A04E9C86B788DDE253327"
         "OwnerKey" = "8:_E4CD6708593CF49BDFC009D1921DE5FD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4E54EA1324DC4D918D2333196C87C125"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -455,6 +449,12 @@
         {
         "MsmKey" = "8:_644100FA2E8FAFC315294A791D8429B9"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6545C66AF4E94D6B9EA970BB336C84F7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -645,14 +645,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9910801180D147059D8CC873B4874F57"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_9A503D213C252A298B8D027E854AC7DB"
+        "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9A503D213C252A298B8D027E854AC7DB"
-        "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmKey" = "8:_9AFF47FC7A584BA4BBECD95477BB8CD0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -831,12 +831,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E3CB89F57F6A4D9EBC2C735E947910A2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E4CD6708593CF49BDFC009D1921DE5FD"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
         "MsmSig" = "8:_UNDEFINED"
@@ -935,6 +929,12 @@
         {
         "MsmKey" = "8:_F6B4C9A9652FE18E93062C1FE2EA6994"
         "OwnerKey" = "8:_A1FECB57F9FB44CBA817CEA28295BAB5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8773A18955A412D8FEFB04A1B0CFC4D"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2271,26 +2271,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_11B21570C05648E3BB804785A61BD78C"
-            {
-            "SourcePath" = "8:C:\\Users\\MSI_PC\\AppData\\Roaming\\DSPLAB\\DBSys_DEBUG\\model.sql"
-            "TargetName" = "8:model.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_12615DAA04F6C171CEB163CC846FF296"
             {
             "AssemblyRegister" = "3:1"
@@ -3241,6 +3221,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_479750584F7B4DACA1D851A18F7CE935"
+            {
+            "SourcePath" = "8:AppDataFiles\\static.xls"
+            "TargetName" = "8:static.xls"
+            "Tag" = "8:"
+            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_49C8DB84CC3F4EAB817624D4CEF62E9A"
             {
             "SourcePath" = "8:..\\DBSysReport\\bin\\Release\\x86\\SQLite.Interop.dll"
@@ -3290,26 +3290,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E54EA1324DC4D918D2333196C87C125"
-            {
-            "SourcePath" = "8:C:\\Users\\MSI_PC\\AppData\\Roaming\\DSPLAB\\DBSys_DEBUG\\static.xls"
-            "TargetName" = "8:static.xls"
-            "Tag" = "8:"
-            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4F3D66E9190521C500DFBB046249E7F1"
@@ -3682,6 +3662,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6545C66AF4E94D6B9EA970BB336C84F7"
+            {
+            "SourcePath" = "8:AppDataFiles\\model.sql"
+            "TargetName" = "8:model.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_677533AC68653985AA71984CB1513BBD"
@@ -4541,26 +4541,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9910801180D147059D8CC873B4874F57"
-            {
-            "SourcePath" = "8:C:\\Users\\MSI_PC\\AppData\\Roaming\\DSPLAB\\DBSys_DEBUG\\report_templates\\universal_template.html"
-            "TargetName" = "8:universal_template.html"
-            "Tag" = "8:"
-            "Folder" = "8:_D71D2DE9A13E4CB5A079D45B37560626"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9A503D213C252A298B8D027E854AC7DB"
             {
             "AssemblyRegister" = "3:1"
@@ -4590,6 +4570,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AFF47FC7A584BA4BBECD95477BB8CD0"
+            {
+            "SourcePath" = "8:AppDataFiles\\users.sql"
+            "TargetName" = "8:users.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A3DBAD8121D7444A6762A1BE81084A7B"
@@ -5418,26 +5418,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E3CB89F57F6A4D9EBC2C735E947910A2"
-            {
-            "SourcePath" = "8:C:\\Users\\MSI_PC\\AppData\\Roaming\\DSPLAB\\DBSys_DEBUG\\users.sql"
-            "TargetName" = "8:users.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_1F460571EF6D46798E7BCC6487B1057B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E4CD6708593CF49BDFC009D1921DE5FD"
             {
             "AssemblyRegister" = "3:1"
@@ -5861,6 +5841,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F8773A18955A412D8FEFB04A1B0CFC4D"
+            {
+            "SourcePath" = "8:AppDataFiles\\report_templates\\universal_template.html"
+            "TargetName" = "8:universal_template.html"
+            "Tag" = "8:"
+            "Folder" = "8:_D71D2DE9A13E4CB5A079D45B37560626"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F88D6E9032D904D42ED1CE87826D7F47"
             {
             "AssemblyRegister" = "3:1"
@@ -6119,7 +6119,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DBSysReport"
         "ProductCode" = "8:{C0E122A4-2C4B-42B9-B545-A50654CD84D7}"
-        "PackageCode" = "8:{90B67BBA-259A-41E6-AF75-32B21B0404C2}"
+        "PackageCode" = "8:{07E8A139-5F34-4D96-B151-A8FDD739A3B1}"
         "UpgradeCode" = "8:{2925EFBE-99BD-4951-8623-78A3079EB85A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

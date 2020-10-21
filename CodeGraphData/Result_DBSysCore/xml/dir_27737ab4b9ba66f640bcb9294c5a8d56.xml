@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_27737ab4b9ba66f640bcb9294c5a8d56" kind="dir">
+    <compoundname>D:/Dev/Work/DBSys</compoundname>
+    <innerdir refid="dir_65b3d33f9fce477670e671802c68c19a">D:/Dev/Work/DBSys/DBSysCore</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/"/>
+  </compounddef>
+</doxygen>

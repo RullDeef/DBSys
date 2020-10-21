@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_login_form" kind="class" prot="public">
+    <compoundname>DBSysReport::LoginForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1adebc68e3611a88bbcb2ea528e6a7f5ad" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer DBSysReport.LoginForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Обязательная переменная конструктора. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="8" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_login_form_1ac617f77c860b11738c1365751102b2ac" compoundref="_login_form_8_designer_8cs" startline="14" endline="21">DBSysReport.LoginForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1a76e2d1f22f7e7c720777b58f5b5525b9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label DBSysReport.LoginForm.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="110" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1abdcd797c6a4a5f65e6fb98957f7867bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label DBSysReport.LoginForm.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="111" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1a0ac96399c64143832c666798f985a34c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label DBSysReport.LoginForm.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="112" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1a9f3046846e4e5d678a202dece94a3691" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox DBSysReport.LoginForm.inputLogin</definition>
+        <argsstring></argsstring>
+        <name>inputLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="113" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1ae4e085a6578b946ac2e944e604855b75" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox DBSysReport.LoginForm.inputPass</definition>
+        <argsstring></argsstring>
+        <name>inputPass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="114" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_login_form_1a8a742c6d7232f74e6ada13b53a36b286" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button DBSysReport.LoginForm.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="115" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_login_form_1aa7a8f95ba55da8a0b56673c17feec4df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysReport.LoginForm.LoginForm</definition>
+        <argsstring>()</argsstring>
+        <name>LoginForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" bodystart="10" bodyend="14"/>
+        <references refid="class_d_b_sys_report_1_1_login_form_1a6286b01d99cc867a1981fe1d858e9a50" compoundref="_login_form_8_designer_8cs" startline="29" endline="106">DBSysReport.LoginForm.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_login_form_1acaab3879fe063fee407ea10cacd7863d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.LoginForm.tryAuth</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>tryAuth</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" bodystart="16" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_login_form_1a6286b01d99cc867a1981fe1d858e9a50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.LoginForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Требуемый метод для поддержки конструктора — не изменяйте содержимое этого метода с помощью редактора кода. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="29" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="29" bodyend="106"/>
+        <referencedby refid="class_d_b_sys_report_1_1_login_form_1aa7a8f95ba55da8a0b56673c17feec4df" compoundref="_login_form_8cs" startline="10" endline="14">DBSysReport.LoginForm.LoginForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_login_form_1ac617f77c860b11738c1365751102b2ac" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.LoginForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Освободить все используемые ресурсы. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>истинно, если управляемый ресурс должен быть удален; иначе ложно.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_d_b_sys_report_1_1_login_form_1adebc68e3611a88bbcb2ea528e6a7f5ad" compoundref="_login_form_8_designer_8cs" startline="8">DBSysReport.LoginForm.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="32">
+        <label>Form</label>
+      </node>
+      <node id="31">
+        <label>DBSysReport.LoginForm</label>
+        <link refid="class_d_b_sys_report_1_1_login_form"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>Form</label>
+      </node>
+      <node id="35">
+        <label>System</label>
+      </node>
+      <node id="33">
+        <label>DBSysReport.LoginForm</label>
+        <link refid="class_d_b_sys_report_1_1_login_form"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>inputLogin</edgelabel>
+          <edgelabel>label1</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>components</edgelabel>
+          <edgelabel>button1</edgelabel>
+          <edgelabel>inputPass</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/LoginForm.cs" bodystart="8" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_login_form_1a8a742c6d7232f74e6ada13b53a36b286" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>button1</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1adebc68e3611a88bbcb2ea528e6a7f5ad" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>components</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1ac617f77c860b11738c1365751102b2ac" prot="protected" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>Dispose</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1a6286b01d99cc867a1981fe1d858e9a50" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1a9f3046846e4e5d678a202dece94a3691" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>inputLogin</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1ae4e085a6578b946ac2e944e604855b75" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>inputPass</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1a76e2d1f22f7e7c720777b58f5b5525b9" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>label1</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1abdcd797c6a4a5f65e6fb98957f7867bc" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>label2</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1a0ac96399c64143832c666798f985a34c" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>label3</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1aa7a8f95ba55da8a0b56673c17feec4df" prot="public" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>LoginForm</name></member>
+      <member refid="class_d_b_sys_report_1_1_login_form_1acaab3879fe063fee407ea10cacd7863d" prot="private" virt="non-virtual"><scope>DBSysReport::LoginForm</scope><name>tryAuth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

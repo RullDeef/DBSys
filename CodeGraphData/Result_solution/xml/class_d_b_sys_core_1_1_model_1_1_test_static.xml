@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_test_static" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::TestStatic</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a833992c0da0297721c5744a6e22c4bee" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.TestStatic.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1ad9c221849242540e60444bb205efe2af" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.TestStatic.tsIndex</definition>
+        <argsstring></argsstring>
+        <name>tsIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.TestStatic.mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" compoundref="_app_form_8cs" startline="663" endline="693">DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" compoundref="_app_form_8cs" startline="632" endline="661">DBSysReport.AppForm.moduleComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1acfb5227aee447638ff9ba5d9c665a7a5" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_module" kindref="compound">Module</ref></type>
+        <definition>Module DBSysCore.Model.TestStatic.module</definition>
+        <argsstring></argsstring>
+        <name>module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" compoundref="_app_form_8cs" startline="663" endline="693">DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" compoundref="_app_form_8cs" startline="632" endline="661">DBSysReport.AppForm.moduleComboBox_SelectedIndexChanged</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1ac3c607f16b8b48eb4e839594d31ff4a0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology" kindref="compound">Methodology</ref></type>
+        <definition>Methodology DBSysCore.Model.TestStatic.methodology</definition>
+        <argsstring></argsstring>
+        <name>methodology</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1af96175259100ad7f9a458c345bfe3103" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_requirements" kindref="compound">Requirements</ref></type>
+        <definition>Requirements DBSysCore.Model.TestStatic.requirements</definition>
+        <argsstring></argsstring>
+        <name>requirements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a0edfa39bb8515e6aea71b121a8d08e20" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.TestStatic.unit</definition>
+        <argsstring></argsstring>
+        <name>unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_static_1ae0474afb3847fc84d2b79d85e6d91a3d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.TestStatic.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1afcb2c1438722a41c53adb6d7050e6138" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.TestStatic.TestStatic</definition>
+        <argsstring>()</argsstring>
+        <name>TestStatic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a583cc129afe17975c60261ca28f3f27d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.TestStatic.TestStatic</definition>
+        <argsstring>(int id, string tsIndex, string mode, Module module, Methodology methodology, Requirements requirements, string unit, string description=null)</argsstring>
+        <name>TestStatic</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tsIndex</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_module" kindref="compound">Module</ref></type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology" kindref="compound">Methodology</ref></type>
+          <declname>methodology</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_requirements" kindref="compound">Requirements</ref></type>
+          <declname>requirements</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>unit</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="22" bodyend="42"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a3c3b2d22614f46980ccce43a611a17cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.TestStatic.TestStatic</definition>
+        <argsstring>(string tsIndex)</argsstring>
+        <name>TestStatic</name>
+        <param>
+          <type>string</type>
+          <declname>tsIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="44" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="44" bodyend="67"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1abc8901aee530c950e7bdd14e30086bbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.TestStatic.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="116" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="116" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a7ad90cc6ffc2f68ee00bb781c69be1dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string DBSysCore.Model.TestStatic.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="129" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="129" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_static_1a0ac1e12c18e6cc3e1bc700ae9782bdc8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_static" kindref="compound">TestStatic</ref> &gt;</type>
+        <definition>static List&lt;TestStatic&gt; DBSysCore.Model.TestStatic.GetTests</definition>
+        <argsstring>()</argsstring>
+        <name>GetTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all static test data from dump connection. Connection must be opened! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="73" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="73" bodyend="114"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="82">
+        <label>DBSysCore.Model.Module</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_module"/>
+      </node>
+      <node id="81">
+        <label>DBSysCore.Model.Methodology</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_methodology"/>
+      </node>
+      <node id="79">
+        <label>DBSysCore.Model.TestStatic</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_test_static"/>
+        <childnode refid="80" relation="usage">
+          <edgelabel>requirements</edgelabel>
+        </childnode>
+        <childnode refid="81" relation="usage">
+          <edgelabel>methodology</edgelabel>
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>module</edgelabel>
+        </childnode>
+      </node>
+      <node id="80">
+        <label>DBSysCore.Model.Requirements</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_requirements"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestStatic.cs" bodystart="8" bodyend="133"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ae0474afb3847fc84d2b79d85e6d91a3d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>description</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0ac1e12c18e6cc3e1bc700ae9782bdc8" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>GetTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a833992c0da0297721c5744a6e22c4bee" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ac3c607f16b8b48eb4e839594d31ff4a0" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>methodology</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>mode</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1acfb5227aee447638ff9ba5d9c665a7a5" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>module</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1af96175259100ad7f9a458c345bfe3103" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>requirements</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1abc8901aee530c950e7bdd14e30086bbc" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>SaveData</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1afcb2c1438722a41c53adb6d7050e6138" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>TestStatic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a583cc129afe17975c60261ca28f3f27d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>TestStatic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a3c3b2d22614f46980ccce43a611a17cc" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>TestStatic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a7ad90cc6ffc2f68ee00bb781c69be1dd" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>ToString</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ad9c221849242540e60444bb205efe2af" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>tsIndex</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0edfa39bb8515e6aea71b121a8d08e20" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestStatic</scope><name>unit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

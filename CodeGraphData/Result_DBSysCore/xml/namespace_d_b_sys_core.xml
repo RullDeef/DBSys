@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_d_b_sys_core" kind="namespace">
+    <compoundname>DBSysCore</compoundname>
+    <innerclass refid="class_d_b_sys_core_1_1_core" prot="public">DBSysCore::Core</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_logger" prot="public">DBSysCore::Logger</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_paths" prot="public">DBSysCore::Paths</innerclass>
+    <innerclass refid="struct_d_b_sys_core_1_1_session_data" prot="public">DBSysCore::SessionData</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_session" prot="public">DBSysCore::Session</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_utils" prot="public">DBSysCore::Utils</innerclass>
+    <innernamespace refid="namespace_d_b_sys_core_1_1_model">DBSysCore::Model</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4" prot="public" static="no">
+        <name>ProgramState</name>
+        <enumvalue id="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4ae599161956d626eda4cb0a5ffb85271c" prot="public">
+          <name>Idle</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4a829eadc8e29caab50cc26bc6a451a1f1" prot="public">
+          <name>Working</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4afa6a5a3224d7da66d9e0bdec25f62cf0" prot="public">
+          <name>Testing</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Перечисление возможных состояний программы. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="17" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18" prot="public" static="no">
+        <name>UserGrants</name>
+        <enumvalue id="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18a3095c3e4f1465133e5e6be134eb2ebe2" prot="public">
+          <name>Tester</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18ae1b3ec89ead7f83a9245ed5c9cacfdbf" prot="public">
+          <name>Operator</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18ae3afed0047b08059d0fada10f400c1e5" prot="public">
+          <name>Admin</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Перечисление прав пользователей. От неавторизованного до администратора. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="61" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" prot="public" static="no">
+        <name>StatusCode</name>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa60852f204ed8028c1c58808b746d115" prot="public">
+          <name>Ok</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a902b0d55fddef6f8d651fe1035b7d4bd" prot="public">
+          <name>Error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a094a6f6b0868122a9dd008cb91c083e4" prot="public">
+          <name>ConnectionError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7f66456222aea4b2d8f47efa2a5a7354" prot="public">
+          <name>ConnectionInvalidOperation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ad9a07e4ee725707defe81d481f274a0d" prot="public">
+          <name>ConnectionSQLError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa100c0081cb491dd82e61f0ec7d8bd42" prot="public">
+          <name>ConnectionDumpModelNotFound</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ab13d7bf41da73006c90b8cf855cde0d5" prot="public">
+          <name>ConnectionUsersModelNotFound</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a3acacbdafeda52273ed477dcc51d4566" prot="public">
+          <name>GrantsUnathorized</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78afda75b86d7cb7a8e890c35ca79beb89f" prot="public">
+          <name>GrantsInproper</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aaacfc085cbfc714c227ef144cba7ce69" prot="public">
+          <name>GrantsVirtualAdminNotAllowed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78abc25f2296fe4f128ea66d16299433ec6" prot="public">
+          <name>LoginNoRegisteredUsers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a844fbcd906c9a633cee45676edd055d3" prot="public">
+          <name>LoginAlreadyAuthorized</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a0f1c59f80325f148d6d2fc2258026e75" prot="public">
+          <name>LoginInvalidLogin</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7704d465c0d4e5e4f3424df10f609824" prot="public">
+          <name>LoginInvalidPass</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a392d28d3e191051514caa439c8cc3dff" prot="public">
+          <name>ProgramStateInvalid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a40cc7e253ef13852979c24e84e0fadf6" prot="public">
+          <name>LoadStaticTestsStaticTableNotFound</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a35c03d8fb59fb16f31d27a7f6a5cf5e7" prot="public">
+          <name>BeginChallengeInvalidOTKStaffId</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a769c173a2e05e365c164d5521d8e53ef" prot="public">
+          <name>DumpUseInvalidFilename</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a9923176b65ffb193fcf6f4424acb527d" prot="public">
+          <name>DumpMergeNoFiles</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a6c1d203a0c3e2e63e411efc54316e67c" prot="public">
+          <name>AddStaffPersonExists</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa4c705f9e150e5932e1746b5931eb215" prot="public">
+          <name>AddStaffInvalidPersonId</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa5579fe0bddda95a2b709a73d1978ce4" prot="public">
+          <name>NoFPGAVersionFound</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/StatusCode.cs" line="4" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/StatusCode.cs" bodystart="3" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

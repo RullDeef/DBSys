@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::TestDynamic</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a7bf83b61205d93f2e38a70ea895aa2bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.TestDynamic.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa3053daeb6d9f697f0ae4afeea409372" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.TestDynamic.tsIndex</definition>
+        <argsstring></argsstring>
+        <name>tsIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a00bc044842c52c8382d39a33f83ddee2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+        <definition>Challenge DBSysCore.Model.TestDynamic.challenge</definition>
+        <argsstring></argsstring>
+        <name>challenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1ab9b34f66c6b7a619db5bac284b428981" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime DBSysCore.Model.TestDynamic.beginTime</definition>
+        <argsstring></argsstring>
+        <name>beginTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a8235c6eb0d7ebe93f271531effa056d3" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime DBSysCore.Model.TestDynamic.endTime</definition>
+        <argsstring></argsstring>
+        <name>endTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="17" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a732488717e1860c09b2427171a689e6a" prot="public" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal DBSysCore.Model.TestDynamic.nominal</definition>
+        <argsstring></argsstring>
+        <name>nominal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="19" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a66d628cdd03f4f997367f555c3248f9c" prot="public" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal DBSysCore.Model.TestDynamic.actualValue</definition>
+        <argsstring></argsstring>
+        <name>actualValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1afd8d3d16054570762e9e13fc154f258c" prot="public" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal DBSysCore.Model.TestDynamic.delta</definition>
+        <argsstring></argsstring>
+        <name>delta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="21" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa5b38d1d9b75a6c520e36bffcd260702" prot="public" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal DBSysCore.Model.TestDynamic.boundaryValue</definition>
+        <argsstring></argsstring>
+        <name>boundaryValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DBSysCore.Model.TestDynamic.status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="24" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a72e6e48164a82bce74c4ad48dc0d36e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.TestDynamic.TestDynamic</definition>
+        <argsstring>()</argsstring>
+        <name>TestDynamic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="26" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a93fecba7c2be8e34bf75a7caccef6b4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.TestDynamic.TestDynamic</definition>
+        <argsstring>(string tsIndex, Challenge challenge, DateTime beginTime, DateTime endTime, decimal nominal, decimal actualValue, decimal delta, decimal boundaryValue, bool status)</argsstring>
+        <name>TestDynamic</name>
+        <param>
+          <type>string</type>
+          <declname>tsIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>beginTime</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endTime</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>nominal</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>actualValue</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>boundaryValue</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="28" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="28" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a17be0cbda31d0735dbc99b5a8684aad2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_test_static" kindref="compound">TestStatic</ref></type>
+        <definition>TestStatic DBSysCore.Model.TestDynamic.GetTestStatic</definition>
+        <argsstring>()</argsstring>
+        <name>GetTestStatic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="51" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a5ee58c77bcf83c1247c8b3ac5f6e08bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.TestDynamic.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="78" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aae2652c3d18c07b5e3de02a5d338ea35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.TestDynamic.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="84" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="84" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a0747b33573ea530113e01908ad4e83b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+        <definition>static List&lt;TestDynamic&gt; DBSysCore.Model.TestDynamic.GetTests</definition>
+        <argsstring>()</argsstring>
+        <name>GetTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="98" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="98" bodyend="105"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a182ae2c66162232836e5be8a685084e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+        <definition>static List&lt;TestDynamic&gt; DBSysCore.Model.TestDynamic.GetTests</definition>
+        <argsstring>(Challenge challenge)</argsstring>
+        <name>GetTests</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="107" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="107" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1abcc861219db80c13957e9aa83403f9bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+        <definition>static List&lt;TestDynamic&gt; DBSysCore.Model.TestDynamic.GetTests</definition>
+        <argsstring>(DateTime beginDate, DateTime endDate)</argsstring>
+        <name>GetTests</name>
+        <param>
+          <type>DateTime</type>
+          <declname>beginDate</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endDate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="116" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="116" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a038427c0227fa6922e9b232193cb9174" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+        <definition>static List&lt;TestDynamic&gt; DBSysCore.Model.TestDynamic.GetTestsByQuery</definition>
+        <argsstring>(string query)</argsstring>
+        <name>GetTestsByQuery</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="126" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="126" bodyend="163"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>DBSysCore.Model.ChallengeType</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge_type"/>
+      </node>
+      <node id="43">
+        <label>DBSysCore.Model.Challenge</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>challengeType</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>controllObject</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>staff</edgelabel>
+          <edgelabel>staffOTK</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>DBSysCore.Model.Staff</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_staff"/>
+      </node>
+      <node id="45">
+        <label>DBSysCore.Model.ControllObject</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_controll_object"/>
+      </node>
+      <node id="42">
+        <label>DBSysCore.Model.TestDynamic</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>challenge</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>DBSysCore.Model.Location</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_location"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/TestDynamic.cs" bodystart="10" bodyend="164"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a66d628cdd03f4f997367f555c3248f9c" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>actualValue</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1ab9b34f66c6b7a619db5bac284b428981" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>beginTime</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa5b38d1d9b75a6c520e36bffcd260702" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>boundaryValue</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a00bc044842c52c8382d39a33f83ddee2" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>challenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1afd8d3d16054570762e9e13fc154f258c" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>delta</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a8235c6eb0d7ebe93f271531effa056d3" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>endTime</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a5ee58c77bcf83c1247c8b3ac5f6e08bb" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a0747b33573ea530113e01908ad4e83b3" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GetTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a182ae2c66162232836e5be8a685084e5" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GetTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1abcc861219db80c13957e9aa83403f9bc" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GetTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a038427c0227fa6922e9b232193cb9174" prot="private" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GetTestsByQuery</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a17be0cbda31d0735dbc99b5a8684aad2" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>GetTestStatic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a7bf83b61205d93f2e38a70ea895aa2bf" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a732488717e1860c09b2427171a689e6a" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>nominal</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aae2652c3d18c07b5e3de02a5d338ea35" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>SaveData</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>status</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a72e6e48164a82bce74c4ad48dc0d36e3" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>TestDynamic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a93fecba7c2be8e34bf75a7caccef6b4d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>TestDynamic</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa3053daeb6d9f697f0ae4afeea409372" prot="public" virt="non-virtual"><scope>DBSysCore::Model::TestDynamic</scope><name>tsIndex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

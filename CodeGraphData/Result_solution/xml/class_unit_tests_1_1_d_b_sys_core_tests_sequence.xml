@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_unit_tests_1_1_d_b_sys_core_tests_sequence" kind="class" prot="public">
+    <compoundname>UnitTests::DBSysCoreTestsSequence</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1a8625b79f7d9726e17d1531e7c1f364c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTestsSequence.CleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="559" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="559" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1a1e540e22c8947053dfd6ceb59239306e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTestsSequence.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="566" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="566" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1aaf9a622434f3497e8cc2039f54189c8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTestsSequence.Status</definition>
+        <argsstring>()</argsstring>
+        <name>Status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="604" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="604" bodyend="610"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="557" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="556" bodyend="611"/>
+    <listofallmembers>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1a8625b79f7d9726e17d1531e7c1f364c4" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTestsSequence</scope><name>CleanUp</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1a1e540e22c8947053dfd6ceb59239306e" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTestsSequence</scope><name>Main</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_sequence_1aaf9a622434f3497e8cc2039f54189c8b" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTestsSequence</scope><name>Status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

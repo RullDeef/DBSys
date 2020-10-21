@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_d_b_sys_report" kind="namespace">
+    <compoundname>DBSysReport</compoundname>
+    <innerclass refid="class_d_b_sys_report_1_1_app_form" prot="public">DBSysReport::AppForm</innerclass>
+    <innerclass refid="class_d_b_sys_report_1_1_installer_class" prot="public">DBSysReport::InstallerClass</innerclass>
+    <innerclass refid="class_d_b_sys_report_1_1_login_form" prot="public">DBSysReport::LoginForm</innerclass>
+    <innerclass refid="class_d_b_sys_report_1_1_program" prot="public">DBSysReport::Program</innerclass>
+    <innernamespace refid="namespace_d_b_sys_report_1_1_properties">DBSysReport::Properties</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="14" column="1"/>
+  </compounddef>
+</doxygen>

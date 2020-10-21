@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_cmd_1_1_program" kind="class" prot="public">
+    <compoundname>DBSysCmd::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int DBSysCmd.Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Точка входа программы.</para><para>Парсит переданные аргументы и выполняет найденные команды. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="18" bodyend="65"/>
+        <references refid="class_d_b_sys_cmd_1_1_program_1ac463f63b19259f66d94440b74e187acf" compoundref="_d_b_sys_cmd_2_program_8cs" startline="170" endline="257">DBSysCmd.Program.ChallengeCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a8e34c6447a3d4724cd755a0126c74925" compoundref="_d_b_sys_cmd_2_program_8cs" startline="380" endline="414">DBSysCmd.Program.DumpMergeCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1adf29bbac06302e0a82d2e20bd5790882" compoundref="_d_b_sys_cmd_2_program_8cs" startline="341" endline="375">DBSysCmd.Program.DumpUseCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a588d246499693c39f68e569960a329c6" compoundref="_d_b_sys_cmd_2_program_8cs" startline="94" endline="142">DBSysCmd.Program.LoginCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1af45f14a9519f27a0c22ce3430a4185b8" compoundref="_d_b_sys_cmd_2_program_8cs" startline="147" endline="160">DBSysCmd.Program.LogoutCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a2f2bc5f22ad47bb82c942ad216227dda" compoundref="_d_b_sys_cmd_2_program_8cs" startline="504" endline="538">DBSysCmd.Program.SqlCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a1ac1f7d1bcd4667188584caea0ae2868" compoundref="_d_b_sys_cmd_2_program_8cs" startline="452" endline="499">DBSysCmd.Program.StaffAddCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a1ffbd6efe87047ffed3219f96fda4743" compoundref="_d_b_sys_cmd_2_program_8cs" startline="72" endline="89">DBSysCmd.Program.StatusCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a4843d91343b24010884bfed1c8fa9755" compoundref="_d_b_sys_cmd_2_program_8cs" startline="262" endline="336">DBSysCmd.Program.TestCommand</references>
+        <references refid="class_d_b_sys_cmd_1_1_program_1a37e7b438419834307711faf4dee8bf67" compoundref="_d_b_sys_cmd_2_program_8cs" startline="419" endline="447">DBSysCmd.Program.UpdateStaticCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a1ffbd6efe87047ffed3219f96fda4743" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.StatusCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>StatusCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда проверки текущего состояния программы.</para><para>Аргументов и опций не требуется. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="72" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="72" bodyend="89"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a73c23bf45c3291a577f4046b69191aab" compoundref="_core_8cs" startline="538" endline="583">DBSysCore.Core.Status</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a588d246499693c39f68e569960a329c6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.LoginCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>LoginCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для аутентификации текущего пользователя. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="94" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="94" bodyend="142"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" compoundref="_core_8cs" startline="588" endline="659">DBSysCore.Core.Login</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1af45f14a9519f27a0c22ce3430a4185b8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.LogoutCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>LogoutCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Комадна для сброса текущей сессии. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="147" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="147" bodyend="160"/>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1ac463f63b19259f66d94440b74e187acf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.ChallengeCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>ChallengeCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для работы с активной последовательностью тестов.</para><para>Сигнатура комманды: <verbatim> challenge -b|--begin -p|--product=&quot;&quot; -c|--challenge-type=&quot;&quot; -l|--location=&quot;&quot; -d|--description=&quot;&quot;
+ challenge -e|--end</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="170" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="170" bodyend="257"/>
+        <references refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" compoundref="_core_8cs" startline="713" endline="787">DBSysCore.Core.BeginChallenge</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" compoundref="_core_8cs" startline="792" endline="828">DBSysCore.Core.EndChallenge</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a4843d91343b24010884bfed1c8fa9755" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.TestCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>TestCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Комадна для работы с активным тестом. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="262" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="262" bodyend="336"/>
+        <references refid="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" compoundref="_core_8cs" startline="833" endline="891">DBSysCore.Core.Test</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1adf29bbac06302e0a82d2e20bd5790882" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.DumpUseCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>DumpUseCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для смены текущего файла дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="341" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="341" bodyend="375"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" compoundref="_core_8cs" startline="1129" endline="1167">DBSysCore.Core.DumpUse</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a8e34c6447a3d4724cd755a0126c74925" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.DumpMergeCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>DumpMergeCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Коммадна для объединения нескольких файлов дампов в один. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="380" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="380" bodyend="414"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a1ab5e6615430d3536af008b087485de9" compoundref="_core_8cs" startline="1172" endline="1217">DBSysCore.Core.DumpMerge</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a37e7b438419834307711faf4dee8bf67" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.UpdateStaticCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>UpdateStaticCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для загрузки статических данных в текущий файл дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="419" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="419" bodyend="447"/>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a1ac1f7d1bcd4667188584caea0ae2868" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.StaffAddCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>StaffAddCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для добавления данных пользователей. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="452" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="452" bodyend="499"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a4b2b483c23cd22d7c8cc442f1d685491" compoundref="_core_8cs" startline="1357" endline="1412">DBSysCore.Core.AddStaff</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_cmd_1_1_program_1a2f2bc5f22ad47bb82c942ad216227dda" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCmd.Program.SqlCommand</definition>
+        <argsstring>(CommandLineApplication command)</argsstring>
+        <name>SqlCommand</name>
+        <param>
+          <type>CommandLineApplication</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Команда для исполнения SQL запросов над текущим файлом дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="504" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="504" bodyend="538"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a3415833be828014a373d60d361d49c16" compoundref="_core_8cs" startline="1465" endline="1508">DBSysCore.Core.ExecSQL</references>
+        <referencedby refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" compoundref="_d_b_sys_cmd_2_program_8cs" startline="18" endline="65">DBSysCmd.Program.Main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Главный статический класс программы. </para>    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" bodystart="11" bodyend="539"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_cmd_1_1_program_1ac463f63b19259f66d94440b74e187acf" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>ChallengeCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a8e34c6447a3d4724cd755a0126c74925" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>DumpMergeCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1adf29bbac06302e0a82d2e20bd5790882" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>DumpUseCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a588d246499693c39f68e569960a329c6" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>LoginCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1af45f14a9519f27a0c22ce3430a4185b8" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>LogoutCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1accd08c343492028031659891c5b3be0e" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>Main</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a2f2bc5f22ad47bb82c942ad216227dda" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>SqlCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a1ac1f7d1bcd4667188584caea0ae2868" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>StaffAddCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a1ffbd6efe87047ffed3219f96fda4743" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>StatusCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a4843d91343b24010884bfed1c8fa9755" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>TestCommand</name></member>
+      <member refid="class_d_b_sys_cmd_1_1_program_1a37e7b438419834307711faf4dee8bf67" prot="private" virt="non-virtual"><scope>DBSysCmd::Program</scope><name>UpdateStaticCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

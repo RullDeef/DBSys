@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_challenge" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::Challenge</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a12dec6a4daa45822888d55cabd37fdb7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Challenge.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a5032d004daf7fc60dac98a41299a1b60" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_controll_object" kindref="compound">ControllObject</ref></type>
+        <definition>ControllObject DBSysCore.Model.Challenge.controllObject</definition>
+        <argsstring></argsstring>
+        <name>controllObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a24f41d38e81bef0163e5d78cdd992877" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge_type" kindref="compound">ChallengeType</ref></type>
+        <definition>ChallengeType DBSysCore.Model.Challenge.challengeType</definition>
+        <argsstring></argsstring>
+        <name>challengeType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1aa152acd72519867948edd50603e05f6d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>Staff DBSysCore.Model.Challenge.staff</definition>
+        <argsstring></argsstring>
+        <name>staff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a7f82e20b3ee37e7bf0f88494e8cfeaad" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>Staff DBSysCore.Model.Challenge.staffOTK</definition>
+        <argsstring></argsstring>
+        <name>staffOTK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1ac9cf194c7aae81bce6d1c73d3a0fcf21" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_location" kindref="compound">Location</ref></type>
+        <definition>Location DBSysCore.Model.Challenge.location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1aaeb68fdf24668dcda5fa997f8dc6ae95" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime DBSysCore.Model.Challenge.beginTime</definition>
+        <argsstring></argsstring>
+        <name>beginTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1ac338039beb28170cb88e553b33b1bac3" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime DBSysCore.Model.Challenge.endTime</definition>
+        <argsstring></argsstring>
+        <name>endTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="19" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_1ad98b9c1082c9c7850b36a17b96c3af68" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Challenge.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a86247d13a07d735a5329a3a63f3e6c99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Challenge.Challenge</definition>
+        <argsstring>()</argsstring>
+        <name>Challenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a60ac77804dea9ebe8e4e894e6f135d9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Challenge.Challenge</definition>
+        <argsstring>(ControllObject controllObject, ChallengeType challengeType, Staff staff, Staff staffOTK, Location location, DateTime beginTime, DateTime endTime, string description=null)</argsstring>
+        <name>Challenge</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_controll_object" kindref="compound">ControllObject</ref></type>
+          <declname>controllObject</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge_type" kindref="compound">ChallengeType</ref></type>
+          <declname>challengeType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+          <declname>staff</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+          <declname>staffOTK</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_location" kindref="compound">Location</ref></type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>beginTime</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endTime</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="24" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="24" bodyend="44"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1ac1ab6dba6e345b6f924a6c43249d718e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Challenge.Challenge</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Challenge</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="46" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="46" bodyend="77"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a90189e12622e6a21530f68714d93269b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Challenge.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="79" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a855cd4489802cbb964f5bf7a898c2956" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.Challenge.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="86" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="86" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a5a67e4a070c7f61f053675e3109916b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string DBSysCore.Model.Challenge.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="130" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="130" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_1a3930787b1eced467dc43a438c5a80e85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref> &gt;</type>
+        <definition>static List&lt;Challenge&gt; DBSysCore.Model.Challenge.GetChallenges</definition>
+        <argsstring>()</argsstring>
+        <name>GetChallenges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="105" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="105" bodyend="128"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>DBSysCore.Model.ChallengeType</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge_type"/>
+      </node>
+      <node id="6">
+        <label>DBSysCore.Model.Challenge</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>challengeType</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>controllObject</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>staff</edgelabel>
+          <edgelabel>staffOTK</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DBSysCore.Model.Staff</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_staff"/>
+      </node>
+      <node id="8">
+        <label>DBSysCore.Model.ControllObject</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_controll_object"/>
+      </node>
+      <node id="9">
+        <label>DBSysCore.Model.Location</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_location"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" bodystart="9" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1aaeb68fdf24668dcda5fa997f8dc6ae95" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>beginTime</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a86247d13a07d735a5329a3a63f3e6c99" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>Challenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a60ac77804dea9ebe8e4e894e6f135d9b" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>Challenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac1ab6dba6e345b6f924a6c43249d718e" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>Challenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a24f41d38e81bef0163e5d78cdd992877" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>challengeType</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5032d004daf7fc60dac98a41299a1b60" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>controllObject</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ad98b9c1082c9c7850b36a17b96c3af68" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>description</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac338039beb28170cb88e553b33b1bac3" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>endTime</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a90189e12622e6a21530f68714d93269b" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a3930787b1eced467dc43a438c5a80e85" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>GetChallenges</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a12dec6a4daa45822888d55cabd37fdb7" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac9cf194c7aae81bce6d1c73d3a0fcf21" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>location</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a855cd4489802cbb964f5bf7a898c2956" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>SaveData</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1aa152acd72519867948edd50603e05f6d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>staff</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a7f82e20b3ee37e7bf0f88494e8cfeaad" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>staffOTK</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5a67e4a070c7f61f053675e3109916b1" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Challenge</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

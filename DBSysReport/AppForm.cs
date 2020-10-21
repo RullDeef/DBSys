@@ -407,7 +407,8 @@ namespace DBSysReport
                     // int cmdIndex = commandComboBox.Items.IndexOf(testStatic);
                     int cmdIndex = commandComboBox.Items.Cast<TestStatic>().ToList().
                         FindIndex(test => test.tsIndex == testStatic.tsIndex);
-                    commandsFailsStats[cmdIndex] += 1;
+                    if (cmdIndex >= 0)
+                        commandsFailsStats[cmdIndex] += 1;
                 }
             }
 

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_status_code_8cs" kind="file">
+    <compoundname>StatusCode.cs</compoundname>
+    <innernamespace refid="namespace_d_b_sys_core">DBSysCore</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DBSysCore</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa60852f204ed8028c1c58808b746d115" kindref="member">Ok</ref>,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref>,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a094a6f6b0868122a9dd008cb91c083e4" kindref="member">ConnectionError</ref>,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7f66456222aea4b2d8f47efa2a5a7354" kindref="member">ConnectionInvalidOperation</ref>,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ad9a07e4ee725707defe81d481f274a0d" kindref="member">ConnectionSQLError</ref>,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa100c0081cb491dd82e61f0ec7d8bd42" kindref="member">ConnectionDumpModelNotFound</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ab13d7bf41da73006c90b8cf855cde0d5" kindref="member">ConnectionUsersModelNotFound</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a3acacbdafeda52273ed477dcc51d4566" kindref="member">GrantsUnathorized</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78afda75b86d7cb7a8e890c35ca79beb89f" kindref="member">GrantsInproper</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aaacfc085cbfc714c227ef144cba7ce69" kindref="member">GrantsVirtualAdminNotAllowed</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78abc25f2296fe4f128ea66d16299433ec6" kindref="member">LoginNoRegisteredUsers</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a844fbcd906c9a633cee45676edd055d3" kindref="member">LoginAlreadyAuthorized</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a0f1c59f80325f148d6d2fc2258026e75" kindref="member">LoginInvalidLogin</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7704d465c0d4e5e4f3424df10f609824" kindref="member">LoginInvalidPass</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a392d28d3e191051514caa439c8cc3dff" kindref="member">ProgramStateInvalid</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a40cc7e253ef13852979c24e84e0fadf6" kindref="member">LoadStaticTestsStaticTableNotFound</ref>,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a35c03d8fb59fb16f31d27a7f6a5cf5e7" kindref="member">BeginChallengeInvalidOTKStaffId</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a769c173a2e05e365c164d5521d8e53ef" kindref="member">DumpUseInvalidFilename</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a9923176b65ffb193fcf6f4424acb527d" kindref="member">DumpMergeNoFiles</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a6c1d203a0c3e2e63e411efc54316e67c" kindref="member">AddStaffPersonExists</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa4c705f9e150e5932e1746b5931eb215" kindref="member">AddStaffInvalidPersonId</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa5579fe0bddda95a2b709a73d1978ce4" kindref="member">NoFPGAVersionFound</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/StatusCode.cs"/>
+  </compounddef>
+</doxygen>

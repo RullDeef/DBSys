@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_65b3d33f9fce477670e671802c68c19a" kind="dir">
+    <compoundname>D:/Dev/Work/DBSys/DBSysCore</compoundname>
+    <innerdir refid="dir_f06513a3d96febf9fe8e8853bb7debf2">D:/Dev/Work/DBSys/DBSysCore/Model</innerdir>
+    <innerfile refid="_core_8cs">Core.cs</innerfile>
+    <innerfile refid="_logger_8cs">Logger.cs</innerfile>
+    <innerfile refid="_paths_8cs">Paths.cs</innerfile>
+    <innerfile refid="_session_8cs">Session.cs</innerfile>
+    <innerfile refid="_status_code_8cs">StatusCode.cs</innerfile>
+    <innerfile refid="_utils_8cs">Utils.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/"/>
+  </compounddef>
+</doxygen>

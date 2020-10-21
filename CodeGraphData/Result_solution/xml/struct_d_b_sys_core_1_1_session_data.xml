@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_d_b_sys_core_1_1_session_data" kind="struct" prot="public">
+    <compoundname>DBSysCore::SessionData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_b_sys_core_1_1_session_data_1aa2a38587af11907217a5138717c5e486" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>Staff DBSysCore.SessionData.staff</definition>
+        <argsstring></argsstring>
+        <name>staff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Текущий пользователь. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="33" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1a04724ac609bafbad56c04fa91361fdcc" compoundref="_session_8cs" startline="245" endline="262">DBSysCore.Session.GetGrants</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1ad5b8096566015a5c431419b2ec4ae26a" compoundref="_session_8cs" startline="189" endline="202">DBSysCore.Session.GetUserName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4" kindref="member">ProgramState</ref></type>
+        <definition>ProgramState DBSysCore.SessionData.programState</definition>
+        <argsstring></argsstring>
+        <name>programState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Текущее состояние программы. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="38" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" compoundref="_core_8cs" startline="713" endline="787">DBSysCore.Core.BeginChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" compoundref="_core_8cs" startline="792" endline="828">DBSysCore.Core.EndChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" compoundref="_core_8cs" startline="340" endline="372">DBSysCore.Core.GetDynamicTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" compoundref="_core_8cs" startline="272" endline="304">DBSysCore.Core.GetModules</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" compoundref="_core_8cs" startline="306" endline="338">DBSysCore.Core.GetStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73c23bf45c3291a577f4046b69191aab" compoundref="_core_8cs" startline="538" endline="583">DBSysCore.Core.Status</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" compoundref="_core_8cs" startline="833" endline="891">DBSysCore.Core.Test</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ab8dc79e60d0c00889634dcb2ccbcd528" compoundref="_core_8cs" startline="1414" endline="1449">DBSysCore.Core.UpdateStaff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_b_sys_core_1_1_session_data_1afdec737d5da02efbe1dbe5b3a0c69dfe" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.SessionData.filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Название текущего файла дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="43" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" compoundref="_core_8cs" startline="154" endline="196">DBSysCore.Core.RetrieveAllUsers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_b_sys_core_1_1_session_data_1a82e58a83a2f0e3409ac6cabaf9fedecc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+        <definition>Challenge DBSysCore.SessionData.activeChallenge</definition>
+        <argsstring></argsstring>
+        <name>activeChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Текущая последовательность тестов. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="48" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_b_sys_core_1_1_session_data_1a9aff5bad6520f709d7eff12ccbf054d7" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+        <definition>List&lt;TestDynamic&gt; DBSysCore.SessionData.activeTests</definition>
+        <argsstring></argsstring>
+        <name>activeTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Список произведённых тестов. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="53" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1a17ff9e462a03bfe4f6d46527c88ec967" compoundref="_session_8cs" startline="446" endline="491">DBSysCore.Session.SaveCurrentChallenge</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Структура данных текущей сессии. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="61">
+        <label>DBSysCore.Model.ChallengeType</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge_type"/>
+      </node>
+      <node id="60">
+        <label>DBSysCore.Model.Challenge</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_challenge"/>
+        <childnode refid="61" relation="usage">
+          <edgelabel>challengeType</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>controllObject</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>staff</edgelabel>
+          <edgelabel>staffOTK</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>DBSysCore.SessionData</label>
+        <link refid="struct_d_b_sys_core_1_1_session_data"/>
+        <childnode refid="60" relation="usage">
+          <edgelabel>activeChallenge</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>staff</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>DBSysCore.Model.Staff</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_staff"/>
+      </node>
+      <node id="62">
+        <label>DBSysCore.Model.ControllObject</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_controll_object"/>
+      </node>
+      <node id="63">
+        <label>DBSysCore.Model.Location</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_location"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Session.cs" line="29" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Session.cs" bodystart="28" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_d_b_sys_core_1_1_session_data_1a82e58a83a2f0e3409ac6cabaf9fedecc" prot="public" virt="non-virtual"><scope>DBSysCore::SessionData</scope><name>activeChallenge</name></member>
+      <member refid="struct_d_b_sys_core_1_1_session_data_1a9aff5bad6520f709d7eff12ccbf054d7" prot="public" virt="non-virtual"><scope>DBSysCore::SessionData</scope><name>activeTests</name></member>
+      <member refid="struct_d_b_sys_core_1_1_session_data_1afdec737d5da02efbe1dbe5b3a0c69dfe" prot="public" virt="non-virtual"><scope>DBSysCore::SessionData</scope><name>filename</name></member>
+      <member refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" prot="public" virt="non-virtual"><scope>DBSysCore::SessionData</scope><name>programState</name></member>
+      <member refid="struct_d_b_sys_core_1_1_session_data_1aa2a38587af11907217a5138717c5e486" prot="public" virt="non-virtual"><scope>DBSysCore::SessionData</scope><name>staff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

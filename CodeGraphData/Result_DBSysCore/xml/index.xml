@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_challenge" kind="class"><name>DBSysCore::Model::Challenge</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a12dec6a4daa45822888d55cabd37fdb7" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5032d004daf7fc60dac98a41299a1b60" kind="variable"><name>controllObject</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a24f41d38e81bef0163e5d78cdd992877" kind="variable"><name>challengeType</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1aa152acd72519867948edd50603e05f6d" kind="variable"><name>staff</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a7f82e20b3ee37e7bf0f88494e8cfeaad" kind="variable"><name>staffOTK</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac9cf194c7aae81bce6d1c73d3a0fcf21" kind="variable"><name>location</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1aaeb68fdf24668dcda5fa997f8dc6ae95" kind="variable"><name>beginTime</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac338039beb28170cb88e553b33b1bac3" kind="variable"><name>endTime</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ad98b9c1082c9c7850b36a17b96c3af68" kind="variable"><name>description</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a86247d13a07d735a5329a3a63f3e6c99" kind="function"><name>Challenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a60ac77804dea9ebe8e4e894e6f135d9b" kind="function"><name>Challenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1ac1ab6dba6e345b6f924a6c43249d718e" kind="function"><name>Challenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a90189e12622e6a21530f68714d93269b" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a855cd4489802cbb964f5bf7a898c2956" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5a67e4a070c7f61f053675e3109916b1" kind="function"><name>ToString</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a3930787b1eced467dc43a438c5a80e85" kind="function"><name>GetChallenges</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_challenge_type" kind="class"><name>DBSysCore::Model::ChallengeType</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af8b562492230a0dc63b10bd59c821008" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a075af91dfbfaba527a0ccd6a4ad4194d" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af29366ca646e511ec488f6109f3bd2a8" kind="function"><name>ChallengeType</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a623679a5a05346c17da630212dbdddec" kind="function"><name>ChallengeType</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1ac85025dbe3bada0a8a6702ee9a314a24" kind="function"><name>ChallengeType</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1abbcf4a71796ff3238aa3b65efe343d19" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1adc4278ef1f82a81aef7fe52b4a142aab" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a741c33552d1dfa3d95d48dd071b51645" kind="function"><name>Exists</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_controll_object" kind="class"><name>DBSysCore::Model::ControllObject</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aeacab911162f150ab5a3bf16c14732b9" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa5601f3752e7174a901ab68a62dabb08" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a236ca28222050df82a15f397bc21099f" kind="variable"><name>serialNumber</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a4878f6a215680cd6b16931ae785c0590" kind="variable"><name>decimalNumber</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a395acb1b22ba15a934b6e71aa828bbee" kind="variable"><name>version</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a36578ae0a7c6e7263264cc1a5228d2cd" kind="variable"><name>parent</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1ab29b52bbc076b645c1b39bfb0d3d90a1" kind="variable"><name>product</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1ad5599048276f9587399b5a5310442956" kind="function"><name>ControllObject</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0dfe3575809851400318e0fcfd9b71cd" kind="function"><name>ControllObject</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a7bafdbd003c31ab01d7cb681802e8b54" kind="function"><name>ControllObject</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0c0c8e7e519ca1407cdd037d74e08f36" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa54e24c7fa693fe35613f2c9e7dee491" kind="function"><name>SaveData</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_core" kind="class"><name>DBSysCore::Core</name>
+    <member refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" kind="variable"><name>usersConnection</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" kind="variable"><name>dumpConnection</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" kind="function"><name>InitializeConnection</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" kind="function"><name>InitializeUserDataConnection</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" kind="function"><name>RetrieveAllUsers</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1aa33c30ca6dd0a118a076d5617e65b83e" kind="function"><name>SaveAllStaff</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" kind="function"><name>CloseConnections</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" kind="function"><name>HasOTKStaff</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ae972e71e9ebf5cb96844067dc167977b" kind="function"><name>GenerateReportFileName</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ae580580e034189e97f793f68cf4bdf37" kind="function"><name>_ExecSQL</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a3f1f83324b27140c6cc411aa64cb90ad" kind="function"><name>MergeFiles</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" kind="function"><name>GetAllUsers</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" kind="function"><name>GetAllChallenges</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" kind="function"><name>GetModules</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" kind="function"><name>GetStaticTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" kind="function"><name>GetDynamicTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a1a0dddd20b7b9a8faff96df84c75af00" kind="function"><name>GetDynamicTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a4c73ed637543fcbcfbf52ea093594c63" kind="function"><name>GetDynamicTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ab78f974beb1a738662da2521c9484e92" kind="function"><name>MapStaticTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a73c23bf45c3291a577f4046b69191aab" kind="function"><name>Status</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" kind="function"><name>Login</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a031c0b2a708702b33fed98366e58164e" kind="function"><name>Logout</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" kind="function"><name>BeginChallenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" kind="function"><name>EndChallenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" kind="function"><name>Test</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ae4c813394924b899cde1585334f9a3e8" kind="function"><name>Test</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" kind="function"><name>LoadStaticTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" kind="function"><name>DumpUse</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a1ab5e6615430d3536af008b087485de9" kind="function"><name>DumpMerge</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" kind="function"><name>GenerateReport</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a4b2b483c23cd22d7c8cc442f1d685491" kind="function"><name>AddStaff</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1ab8dc79e60d0c00889634dcb2ccbcd528" kind="function"><name>UpdateStaff</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1a3415833be828014a373d60d361d49c16" kind="function"><name>ExecSQL</name></member>
+    <member refid="class_d_b_sys_core_1_1_core_1aa3ba2b3de485c72880be144db779c7ac" kind="function"><name>GetFPGAVersion</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_location" kind="class"><name>DBSysCore::Model::Location</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a8e0cdcd302bf1f51b3f25127b94a085b" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a52fdb173101586f8cf6024c4ffa05fa4" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a6e045452ea3dc3b367decf950fdc31a0" kind="function"><name>Location</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a420ffd08677fe04a86cd1caf284f7e86" kind="function"><name>Location</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ac6dfcc67d5347895144f58578c7620e6" kind="function"><name>Location</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a965e1e537a4512a4bc00738f8d4ab87b" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ab395be2e1d65f398837db9b29a0aa699" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ab42f56ccbecf3b10055b08e9544eb418" kind="function"><name>Exists</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_logger" kind="class"><name>DBSysCore::Logger</name>
+    <member refid="class_d_b_sys_core_1_1_logger_1a2e4d514de093b2bd3c0b164ba68331bf" kind="variable"><name>filename</name></member>
+    <member refid="class_d_b_sys_core_1_1_logger_1afb9ef2f43e8b21e954d8738d649a3388" kind="function"><name>GetMeta</name></member>
+    <member refid="class_d_b_sys_core_1_1_logger_1a557a32a76ddf546495f3bcf0850b7fe0" kind="function"><name>Log</name></member>
+    <member refid="class_d_b_sys_core_1_1_logger_1a5e0b7bd6ad300ed2e1c32da8515cc6f8" kind="function"><name>Error</name></member>
+    <member refid="class_d_b_sys_core_1_1_logger_1af8017206b88736a8e7303f34c8493560" kind="function"><name>Func</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_methodology" kind="class"><name>DBSysCore::Model::Methodology</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a9d053bc54f6994511a3adf3291869461" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1ae16a0edea2580b2bb22eec3e1be94aa6" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1abfd44fbcfb5df82e7f3470969b32dcb4" kind="variable"><name>docNumber</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a47708d227062ef7ad33d38b1b17abd68" kind="function"><name>Methodology</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" kind="function"><name>Methodology</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa3b4d45fa132f3b9a1d63ff60a65ac56" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" kind="function"><name>Exists</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_module" kind="class"><name>DBSysCore::Model::Module</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a569afc057cb1483234a70b2cbee66882" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1afce569d2aa8606d2dc94e254c76a7e19" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1aa24e5154ae25aa3ed045bf95caf671ec" kind="function"><name>Module</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a2d6fe8e9b7bc9234e7dce5a1a8b7e186" kind="function"><name>Module</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1acca922feed53773b67d5090461b2b8f0" kind="function"><name>Module</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a2f0e108fffabac868a6b8d19f3ba788b" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a33765f6745ba106f61ef3e5f61316092" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a99a4a3c873a5b580ffbc7548fb6fb9b4" kind="function"><name>ToString</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a155d6ff079136693bfa4cf6255878cf5" kind="function"><name>Exists</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_module_1a11df2ae53feafa1e58a9a035e0cb9bfb" kind="function"><name>GetModules</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_paths" kind="class"><name>DBSysCore::Paths</name>
+    <member refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kind="property"><name>appFolder</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1ab1d28db8f36f9ec0284e25fa5a44f60e" kind="property"><name>dumpsDirectory</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a44578026e7bcfdc6115b1d2dc632d6b5" kind="property"><name>logDirectory</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a3b9d20ae485c82edf237a595a6a21135" kind="property"><name>reportDirectory</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1af4772c1559e796f86d64f2c1f0d91fd5" kind="property"><name>reportTemplateDirectory</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a68564fa82086ee0003f4ccba55e8c4c3" kind="variable"><name>sessionFilename</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" kind="variable"><name>usersFilename</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a96b914a727b64055e9c9eff74f2db140" kind="variable"><name>dumpModelFilename</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a5f959bfc7388caa655929f911a97ae35" kind="variable"><name>usersModelFilename</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a38c45eab9124a34dbd2fa1a26b186de4" kind="variable"><name>staticDataTable</name></member>
+    <member refid="class_d_b_sys_core_1_1_paths_1a4146a21020fd811a4d1af24ed852a7e9" kind="function"><name>GetBaseFolder</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_requirements" kind="class"><name>DBSysCore::Model::Requirements</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a0ad9725f80981f6ec649a08e734b8868" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a5497e566a38533e041d7fc105f72d469" kind="variable"><name>name</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a6269dfae9f70b5a97bf877e359dbc0eb" kind="variable"><name>docNumber</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1aa967c87fd4b844542630f8dc2e0caa57" kind="function"><name>Requirements</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a49b6381c859508f0263ac6e4edd9fea0" kind="function"><name>Requirements</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1af0ce2d9e68ff2106b017e483c314c34e" kind="function"><name>Requirements</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a61aea185e84bf3b098794b5f5dff7fc7" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a7d143fb3c6f375dd3149a195469b0962" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a6fca55af79d6c5d8a93ac918175a294f" kind="function"><name>Exists</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_session" kind="class"><name>DBSysCore::Session</name>
+    <member refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" kind="variable"><name>sessionData</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a6b1837fd65f7d0a33accc89fd9955394" kind="variable"><name>virtualAdmin</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a19de58203b33578e0f6cb2a428ce0fb2" kind="variable"><name>opened</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ab5f16b0f937823e3eb56806fbad9574b" kind="function"><name>Open</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a0a31daf7e683ad97eabee97fa9973c0b" kind="function"><name>GetCurrentWorkingDumpFileName</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ad50426d1993a3636c7fcbe08269e4fcb" kind="function"><name>GetCurrentWorkingDumpFileNameWithPath</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ad5b8096566015a5c431419b2ec4ae26a" kind="function"><name>GetUserName</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a231aca6cdf0e49964af55a77d78e6ddb" kind="function"><name>GenerateDefaultSessionData</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" kind="function"><name>IsLoggedIn</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a3a5420eceedaa2e2c0e3a25306085b28" kind="function"><name>IsLoggedInAsVirtualAdmin</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a04724ac609bafbad56c04fa91361fdcc" kind="function"><name>GetGrants</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a27926058fef3060397efde851a1ed06a" kind="function"><name>GrantsString</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" kind="function"><name>RequireGrants</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a0d80128bdc991f00cabd85df98318249" kind="function"><name>Auth</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ad086107abf50c5baddce966dd3306b9f" kind="function"><name>Logout</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1ac92a21f27a5d19c23ffae7b3b04fc0c2" kind="function"><name>SwitchDumpFile</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a17ff9e462a03bfe4f6d46527c88ec967" kind="function"><name>SaveCurrentChallenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_session_1a99b17c5d63cd6b9b4b4436fc9d20a9d7" kind="function"><name>Close</name></member>
+  </compound>
+  <compound refid="struct_d_b_sys_core_1_1_session_data" kind="struct"><name>DBSysCore::SessionData</name>
+    <member refid="struct_d_b_sys_core_1_1_session_data_1aa2a38587af11907217a5138717c5e486" kind="variable"><name>staff</name></member>
+    <member refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" kind="variable"><name>programState</name></member>
+    <member refid="struct_d_b_sys_core_1_1_session_data_1afdec737d5da02efbe1dbe5b3a0c69dfe" kind="variable"><name>filename</name></member>
+    <member refid="struct_d_b_sys_core_1_1_session_data_1a82e58a83a2f0e3409ac6cabaf9fedecc" kind="variable"><name>activeChallenge</name></member>
+    <member refid="struct_d_b_sys_core_1_1_session_data_1a9aff5bad6520f709d7eff12ccbf054d7" kind="variable"><name>activeTests</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_staff" kind="class"><name>DBSysCore::Model::Staff</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a6c45df23bdefd45a4b702725a1ec6535" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1ab6699880619fd34d054ae4879df9ac32" kind="variable"><name>surname</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a53cb0ca84cc97d70a569b1bb6c89fa77" kind="variable"><name>firstName</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a1dcd8b25f39da84cb5f64bbefed10dd1" kind="variable"><name>patronymicName</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a9d62ed2459db957c14c8b0f127cdd627" kind="variable"><name>post</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1aa086badb2d79eb44bc9aee39cf690784" kind="variable"><name>department</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1ae915eada3a35ea3b8d396c56ffd18020" kind="variable"><name>login</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a45dfeb880998aa99bdb46c5f88ea52ba" kind="variable"><name>password</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a7fc6128cada700463e5a9d43dd92c1c5" kind="function"><name>Staff</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a88bb25e470c41076f982f42575bb24be" kind="function"><name>Staff</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a5107a69e47bdbb0138da96fce46e2421" kind="function"><name>Staff</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a0b2caf43c83afdbc4f7440aced5f4867" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1adfcb5b1465cac230ccbe3a7f719ef5b6" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a9cbb4c0c49d3b689d83bbda132feadf4" kind="function"><name>ToString</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1aa3d01939a2c70d762ee1de6a001c00db" kind="function"><name>Exists</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a0d700f235d3b2b9b6b794661789515fb" kind="function"><name>Get</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1abeb43c7459cba7a32734e2397172888d" kind="function"><name>ExtractAll</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kind="class"><name>DBSysCore::Model::TestDynamic</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a7bf83b61205d93f2e38a70ea895aa2bf" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa3053daeb6d9f697f0ae4afeea409372" kind="variable"><name>tsIndex</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a00bc044842c52c8382d39a33f83ddee2" kind="variable"><name>challenge</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1ab9b34f66c6b7a619db5bac284b428981" kind="variable"><name>beginTime</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a8235c6eb0d7ebe93f271531effa056d3" kind="variable"><name>endTime</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a732488717e1860c09b2427171a689e6a" kind="variable"><name>nominal</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a66d628cdd03f4f997367f555c3248f9c" kind="variable"><name>actualValue</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1afd8d3d16054570762e9e13fc154f258c" kind="variable"><name>delta</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa5b38d1d9b75a6c520e36bffcd260702" kind="variable"><name>boundaryValue</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" kind="variable"><name>status</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a72e6e48164a82bce74c4ad48dc0d36e3" kind="function"><name>TestDynamic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a93fecba7c2be8e34bf75a7caccef6b4d" kind="function"><name>TestDynamic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a17be0cbda31d0735dbc99b5a8684aad2" kind="function"><name>GetTestStatic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a5ee58c77bcf83c1247c8b3ac5f6e08bb" kind="function"><name>GenerateId</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aae2652c3d18c07b5e3de02a5d338ea35" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a0747b33573ea530113e01908ad4e83b3" kind="function"><name>GetTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a182ae2c66162232836e5be8a685084e5" kind="function"><name>GetTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1abcc861219db80c13957e9aa83403f9bc" kind="function"><name>GetTests</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a038427c0227fa6922e9b232193cb9174" kind="function"><name>GetTestsByQuery</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_model_1_1_test_static" kind="class"><name>DBSysCore::Model::TestStatic</name>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a833992c0da0297721c5744a6e22c4bee" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ad9c221849242540e60444bb205efe2af" kind="variable"><name>tsIndex</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" kind="variable"><name>mode</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1acfb5227aee447638ff9ba5d9c665a7a5" kind="variable"><name>module</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ac3c607f16b8b48eb4e839594d31ff4a0" kind="variable"><name>methodology</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1af96175259100ad7f9a458c345bfe3103" kind="variable"><name>requirements</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0edfa39bb8515e6aea71b121a8d08e20" kind="variable"><name>unit</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ae0474afb3847fc84d2b79d85e6d91a3d" kind="variable"><name>description</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1afcb2c1438722a41c53adb6d7050e6138" kind="function"><name>TestStatic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a583cc129afe17975c60261ca28f3f27d" kind="function"><name>TestStatic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a3c3b2d22614f46980ccce43a611a17cc" kind="function"><name>TestStatic</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1abc8901aee530c950e7bdd14e30086bbc" kind="function"><name>SaveData</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a7ad90cc6ffc2f68ee00bb781c69be1dd" kind="function"><name>ToString</name></member>
+    <member refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0ac1e12c18e6cc3e1bc700ae9782bdc8" kind="function"><name>GetTests</name></member>
+  </compound>
+  <compound refid="class_d_b_sys_core_1_1_utils" kind="class"><name>DBSysCore::Utils</name>
+    <member refid="class_d_b_sys_core_1_1_utils_1acafafbe94816d3ccc6a212dd349bc326" kind="variable"><name>sha256</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1af678fb693bad9c653038ac6670a48289" kind="function"><name>Hash</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1afe3df9a978a1fd164e412a4eea17e543" kind="function"><name>GetHash</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1a68e19b5981280b759632f7e035dbfdc1" kind="function"><name>VerifyHash</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1a0197345722545d4933c8d5de18adc5a7" kind="function"><name>StdEncToUTF8</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1a42dac624b18ce6f12ad2fec958411d34" kind="function"><name>ExecuteNonQuery</name></member>
+    <member refid="class_d_b_sys_core_1_1_utils_1a45148424192c91b25737a14e59b202ad" kind="function"><name>ExecuteReader</name></member>
+  </compound>
+  <compound refid="namespace_d_b_sys_core" kind="namespace"><name>DBSysCore</name>
+    <member refid="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4" kind="enum"><name>ProgramState</name></member>
+    <member refid="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4ae599161956d626eda4cb0a5ffb85271c" kind="enumvalue"><name>Idle</name></member>
+    <member refid="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4a829eadc8e29caab50cc26bc6a451a1f1" kind="enumvalue"><name>Working</name></member>
+    <member refid="namespace_d_b_sys_core_1aa9671405dc979ae3c845f465b0cc64a4afa6a5a3224d7da66d9e0bdec25f62cf0" kind="enumvalue"><name>Testing</name></member>
+    <member refid="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18" kind="enum"><name>UserGrants</name></member>
+    <member refid="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18a6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18a3095c3e4f1465133e5e6be134eb2ebe2" kind="enumvalue"><name>Tester</name></member>
+    <member refid="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18ae1b3ec89ead7f83a9245ed5c9cacfdbf" kind="enumvalue"><name>Operator</name></member>
+    <member refid="namespace_d_b_sys_core_1acaf7f3e7f236764457e7962fb5ee2a18ae3afed0047b08059d0fada10f400c1e5" kind="enumvalue"><name>Admin</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kind="enum"><name>StatusCode</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa60852f204ed8028c1c58808b746d115" kind="enumvalue"><name>Ok</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a902b0d55fddef6f8d651fe1035b7d4bd" kind="enumvalue"><name>Error</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a094a6f6b0868122a9dd008cb91c083e4" kind="enumvalue"><name>ConnectionError</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7f66456222aea4b2d8f47efa2a5a7354" kind="enumvalue"><name>ConnectionInvalidOperation</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ad9a07e4ee725707defe81d481f274a0d" kind="enumvalue"><name>ConnectionSQLError</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa100c0081cb491dd82e61f0ec7d8bd42" kind="enumvalue"><name>ConnectionDumpModelNotFound</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78ab13d7bf41da73006c90b8cf855cde0d5" kind="enumvalue"><name>ConnectionUsersModelNotFound</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a3acacbdafeda52273ed477dcc51d4566" kind="enumvalue"><name>GrantsUnathorized</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78afda75b86d7cb7a8e890c35ca79beb89f" kind="enumvalue"><name>GrantsInproper</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aaacfc085cbfc714c227ef144cba7ce69" kind="enumvalue"><name>GrantsVirtualAdminNotAllowed</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78abc25f2296fe4f128ea66d16299433ec6" kind="enumvalue"><name>LoginNoRegisteredUsers</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a844fbcd906c9a633cee45676edd055d3" kind="enumvalue"><name>LoginAlreadyAuthorized</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a0f1c59f80325f148d6d2fc2258026e75" kind="enumvalue"><name>LoginInvalidLogin</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a7704d465c0d4e5e4f3424df10f609824" kind="enumvalue"><name>LoginInvalidPass</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a392d28d3e191051514caa439c8cc3dff" kind="enumvalue"><name>ProgramStateInvalid</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a40cc7e253ef13852979c24e84e0fadf6" kind="enumvalue"><name>LoadStaticTestsStaticTableNotFound</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a35c03d8fb59fb16f31d27a7f6a5cf5e7" kind="enumvalue"><name>BeginChallengeInvalidOTKStaffId</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a769c173a2e05e365c164d5521d8e53ef" kind="enumvalue"><name>DumpUseInvalidFilename</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a9923176b65ffb193fcf6f4424acb527d" kind="enumvalue"><name>DumpMergeNoFiles</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78a6c1d203a0c3e2e63e411efc54316e67c" kind="enumvalue"><name>AddStaffPersonExists</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa4c705f9e150e5932e1746b5931eb215" kind="enumvalue"><name>AddStaffInvalidPersonId</name></member>
+    <member refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78aa5579fe0bddda95a2b709a73d1978ce4" kind="enumvalue"><name>NoFPGAVersionFound</name></member>
+  </compound>
+  <compound refid="namespace_d_b_sys_core_1_1_model" kind="namespace"><name>DBSysCore::Model</name>
+  </compound>
+  <compound refid="namespace_excel_data_reader" kind="namespace"><name>ExcelDataReader</name>
+  </compound>
+  <compound refid="namespace_html_agility_pack" kind="namespace"><name>HtmlAgilityPack</name>
+  </compound>
+  <compound refid="namespace_open_html_to_pdf" kind="namespace"><name>OpenHtmlToPdf</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data_1_1_s_q_lite" kind="namespace"><name>System::Data::SQLite</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_serialization_1_1_formatters_1_1_binary" kind="namespace"><name>System::Runtime::Serialization::Formatters::Binary</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="_core_8cs" kind="file"><name>Core.cs</name>
+  </compound>
+  <compound refid="_logger_8cs" kind="file"><name>Logger.cs</name>
+  </compound>
+  <compound refid="_challenge_8cs" kind="file"><name>Challenge.cs</name>
+  </compound>
+  <compound refid="_challenge_type_8cs" kind="file"><name>ChallengeType.cs</name>
+  </compound>
+  <compound refid="_controll_object_8cs" kind="file"><name>ControllObject.cs</name>
+  </compound>
+  <compound refid="_location_8cs" kind="file"><name>Location.cs</name>
+  </compound>
+  <compound refid="_methodology_8cs" kind="file"><name>Methodology.cs</name>
+  </compound>
+  <compound refid="_module_8cs" kind="file"><name>Module.cs</name>
+  </compound>
+  <compound refid="_requirements_8cs" kind="file"><name>Requirements.cs</name>
+  </compound>
+  <compound refid="_staff_8cs" kind="file"><name>Staff.cs</name>
+  </compound>
+  <compound refid="_test_dynamic_8cs" kind="file"><name>TestDynamic.cs</name>
+  </compound>
+  <compound refid="_test_static_8cs" kind="file"><name>TestStatic.cs</name>
+  </compound>
+  <compound refid="_paths_8cs" kind="file"><name>Paths.cs</name>
+  </compound>
+  <compound refid="_session_8cs" kind="file"><name>Session.cs</name>
+  </compound>
+  <compound refid="_status_code_8cs" kind="file"><name>StatusCode.cs</name>
+  </compound>
+  <compound refid="_utils_8cs" kind="file"><name>Utils.cs</name>
+  </compound>
+  <compound refid="dir_275089585c7fc1b5fd5d7d42c69cb1da" kind="dir"><name>D:</name>
+  </compound>
+  <compound refid="dir_27737ab4b9ba66f640bcb9294c5a8d56" kind="dir"><name>D:/Dev/Work/DBSys</name>
+  </compound>
+  <compound refid="dir_65b3d33f9fce477670e671802c68c19a" kind="dir"><name>D:/Dev/Work/DBSys/DBSysCore</name>
+  </compound>
+  <compound refid="dir_748cc00279dc9cdc61e77c006225b985" kind="dir"><name>D:/Dev</name>
+  </compound>
+  <compound refid="dir_f06513a3d96febf9fe8e8853bb7debf2" kind="dir"><name>D:/Dev/Work/DBSys/DBSysCore/Model</name>
+  </compound>
+  <compound refid="dir_9c1990f54e0f9aa1fcb4e8e881789a4b" kind="dir"><name>D:/Dev/Work</name>
+  </compound>
+</doxygenindex>

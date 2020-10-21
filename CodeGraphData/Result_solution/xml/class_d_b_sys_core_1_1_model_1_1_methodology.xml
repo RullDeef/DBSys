@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_methodology" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::Methodology</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_methodology_1a9d053bc54f6994511a3adf3291869461" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Methodology.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_methodology_1ae16a0edea2580b2bb22eec3e1be94aa6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Methodology.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_methodology_1abfd44fbcfb5df82e7f3470969b32dcb4" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Methodology.docNumber</definition>
+        <argsstring></argsstring>
+        <name>docNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_methodology_1a47708d227062ef7ad33d38b1b17abd68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Methodology.Methodology</definition>
+        <argsstring>()</argsstring>
+        <name>Methodology</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Methodology.Methodology</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Methodology</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="16" bodyend="28"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_methodology_1aa3b4d45fa132f3b9a1d63ff60a65ac56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.Methodology.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="30" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="30" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool DBSysCore.Model.Methodology.Exists</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="38" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="38" bodyend="45"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs" bodystart="8" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1abfd44fbcfb5df82e7f3470969b32dcb4" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>docNumber</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>Exists</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a9d053bc54f6994511a3adf3291869461" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a47708d227062ef7ad33d38b1b17abd68" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>Methodology</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>Methodology</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1ae16a0edea2580b2bb22eec3e1be94aa6" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>name</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa3b4d45fa132f3b9a1d63ff60a65ac56" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Methodology</scope><name>SaveData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

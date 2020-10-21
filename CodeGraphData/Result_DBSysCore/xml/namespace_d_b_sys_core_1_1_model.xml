@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_d_b_sys_core_1_1_model" kind="namespace">
+    <compoundname>DBSysCore::Model</compoundname>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_challenge" prot="public">DBSysCore::Model::Challenge</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_challenge_type" prot="public">DBSysCore::Model::ChallengeType</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_controll_object" prot="public">DBSysCore::Model::ControllObject</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_location" prot="public">DBSysCore::Model::Location</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_methodology" prot="public">DBSysCore::Model::Methodology</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_module" prot="public">DBSysCore::Model::Module</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_requirements" prot="public">DBSysCore::Model::Requirements</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_staff" prot="public">DBSysCore::Model::Staff</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" prot="public">DBSysCore::Model::TestDynamic</innerclass>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_test_static" prot="public">DBSysCore::Model::TestStatic</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Challenge.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

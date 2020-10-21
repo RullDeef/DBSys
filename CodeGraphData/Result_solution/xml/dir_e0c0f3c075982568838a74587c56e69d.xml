@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_e0c0f3c075982568838a74587c56e69d" kind="dir">
+    <compoundname>D:/Dev/Work/DBSys/DBSysReport</compoundname>
+    <innerdir refid="dir_5ab2b04e08d1fb42ab0a740499a108e6">D:/Dev/Work/DBSys/DBSysReport/Properties</innerdir>
+    <innerfile refid="_app_form_8cs">AppForm.cs</innerfile>
+    <innerfile refid="_app_form_8_designer_8cs">AppForm.Designer.cs</innerfile>
+    <innerfile refid="_installer_class_8cs">InstallerClass.cs</innerfile>
+    <innerfile refid="_installer_class_8_designer_8cs">InstallerClass.Designer.cs</innerfile>
+    <innerfile refid="_login_form_8cs">LoginForm.cs</innerfile>
+    <innerfile refid="_login_form_8_designer_8cs">LoginForm.Designer.cs</innerfile>
+    <innerfile refid="_d_b_sys_report_2_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/"/>
+  </compounddef>
+</doxygen>

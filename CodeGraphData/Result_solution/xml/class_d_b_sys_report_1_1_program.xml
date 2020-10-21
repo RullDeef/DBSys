@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_program" kind="class" prot="public">
+    <compoundname>DBSysReport::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_program_1a3c8684820ac9e680eb554090957d3258" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysReport.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Главная точка входа для приложения. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Program.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Program.cs" bodystart="15" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/Program.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Program.cs" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_program_1a3c8684820ac9e680eb554090957d3258" prot="private" virt="non-virtual"><scope>DBSysReport::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

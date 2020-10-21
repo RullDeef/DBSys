@@ -1,0 +1,2545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_app_form" kind="class" prot="public">
+    <compoundname>DBSysReport::AppForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ae35741be22b79d3f045834bc0cfa66d4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref> &gt;</type>
+        <definition>List&lt;Staff&gt; DBSysReport.AppForm.allStaff</definition>
+        <argsstring></argsstring>
+        <name>allStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="17" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" compoundref="_app_form_8cs" startline="49" endline="79">DBSysReport.AppForm.UpdateUsersList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>Staff DBSysReport.AppForm.newStaff</definition>
+        <argsstring></argsstring>
+        <name>newStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad10ca9e92664603c9ed1515999879b8f" compoundref="_app_form_8cs" startline="27" endline="39">DBSysReport.AppForm.GenerateNewStaff</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" compoundref="_app_form_8cs" startline="49" endline="79">DBSysReport.AppForm.UpdateUsersList</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a26ee6a1ff66acebe6e2a7e205fad5eca" compoundref="_app_form_8cs" startline="170" endline="208">DBSysReport.AppForm.usersList_SelectedIndexChanged</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aba859449827b9cf8dc725438f921548f" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref> &gt;</type>
+        <definition>List&lt;Challenge&gt; DBSysReport.AppForm.allChallenges</definition>
+        <argsstring></argsstring>
+        <name>allChallenges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a74c2f15905cd207e4b541ed45d54cac7" compoundref="_app_form_8cs" startline="316" endline="345">DBSysReport.AppForm.challengeDates_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a47ff2779ddb6fd5212571e8a52dadbb9" compoundref="_app_form_8cs" startline="118" endline="137">DBSysReport.AppForm.InitReportPanel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ad39b80daf73fbe45359362e79544915e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer DBSysReport.AppForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a433800aaab82f4d64bfd5cd2853f6495" compoundref="_app_form_8_designer_8cs" startline="16" endline="23">DBSysReport.AppForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a436ec0d862673522e0bb61a178feca34" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.MenuStrip</type>
+        <definition>System.Windows.Forms.MenuStrip DBSysReport.AppForm.appMenu</definition>
+        <argsstring></argsstring>
+        <name>appMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1802" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1802" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8d3fb122e80b0182b693f7b6ce2ddcb9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem DBSysReport.AppForm.exitMenuOption</definition>
+        <argsstring></argsstring>
+        <name>exitMenuOption</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1803" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1803" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a9a1270122164912846206088e9dbf8a0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem DBSysReport.AppForm.infoToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>infoToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1804" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1804" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a19cbccaae976d0d56834ba6ec749fffc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem DBSysReport.AppForm.aboutMenuOption</definition>
+        <argsstring></argsstring>
+        <name>aboutMenuOption</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1805" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1805" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8e733c59b8659c0551a366f9fbb2a1a1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem DBSysReport.AppForm.infoToolStripMenuItem1</definition>
+        <argsstring></argsstring>
+        <name>infoToolStripMenuItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1806" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1806" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1acd0f7fe1b35664e998c089cd1b9df299" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem DBSysReport.AppForm.aboutToolStripMenuItem1</definition>
+        <argsstring></argsstring>
+        <name>aboutToolStripMenuItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1807" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a669b8a34ab520bc593f876d37f692e7e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel DBSysReport.AppForm.userPanel</definition>
+        <argsstring></argsstring>
+        <name>userPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1808" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a0429bea3b3516fd7022dffc9b32df0e5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox DBSysReport.AppForm.usersList</definition>
+        <argsstring></argsstring>
+        <name>usersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1809" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1809" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a26ee6a1ff66acebe6e2a7e205fad5eca" compoundref="_app_form_8cs" startline="170" endline="208">DBSysReport.AppForm.usersList_SelectedIndexChanged</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a12dc12f55850269b8484444019cf5457" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel DBSysReport.AppForm.adminPanel</definition>
+        <argsstring></argsstring>
+        <name>adminPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1810" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1810" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a3c33853eb063ed967ce2d1a7699dedec" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.usersPanelBox</definition>
+        <argsstring></argsstring>
+        <name>usersPanelBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1811" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1811" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6e60499f2d62abe45b00f1e438bcc537" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.dumpFilePanelBox</definition>
+        <argsstring></argsstring>
+        <name>dumpFilePanelBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1812" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a56afa0593e2cad9a2e6926dec2e43088" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel3</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1813" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1813" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1abecc730eddbd3e28214eac8a808198fd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label DBSysReport.AppForm.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1814" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1814" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ae953c8ddf8450587c7251b292190558e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label DBSysReport.AppForm.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1815" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1815" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a33a683f185d5ebdf36a461209ab0f390" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1816" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1816" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" compoundref="_app_form_8cs" startline="81" endline="116">DBSysReport.AppForm.AppForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ad310c1643d8dee2df38a688988c084e7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel4</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1817" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8fecabedaf18743bb14017e5c7bdaa6c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox DBSysReport.AppForm.currentDumpFileInput</definition>
+        <argsstring></argsstring>
+        <name>currentDumpFileInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1818" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1818" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a3d267749f1ca6727d958896282174de4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox DBSysReport.AppForm.staticDataFileInput</definition>
+        <argsstring></argsstring>
+        <name>staticDataFileInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1819" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1819" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ad16641f096f02d28e7c2e6de683bbf77" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.SplitContainer</type>
+        <definition>System.Windows.Forms.SplitContainer DBSysReport.AppForm.splitContainer1</definition>
+        <argsstring></argsstring>
+        <name>splitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1820" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1820" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8b3b028c3b71155139b78b908322dad4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.groupBox4</definition>
+        <argsstring></argsstring>
+        <name>groupBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1821" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1821" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a9f01b2185c4d3a5d594000e2a0e7aa80" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.sqlPanelBox</definition>
+        <argsstring></argsstring>
+        <name>sqlPanelBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1822" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1822" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a740a896408a402d1a1e29b5686b4e01f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox DBSysReport.AppForm.reportPanelBox</definition>
+        <argsstring></argsstring>
+        <name>reportPanelBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1823" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1823" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a087e0a1dd68015480ba09d753e73666d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabControl</type>
+        <definition>System.Windows.Forms.TabControl DBSysReport.AppForm.reportTabControl</definition>
+        <argsstring></argsstring>
+        <name>reportTabControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1824" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a3d717579859a40129c81e867199f76a1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage DBSysReport.AppForm.tabPage1</definition>
+        <argsstring></argsstring>
+        <name>tabPage1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1825" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1af74a98b65afc59af569447ca311c1f40" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage DBSysReport.AppForm.tabPage2</definition>
+        <argsstring></argsstring>
+        <name>tabPage2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1826" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a961f952181f830d3cf78afa7d264fc5a" prot="private" static="no" mutable="no">
+        <type>GroupBox</type>
+        <definition>GroupBox DBSysReport.AppForm.groupBox5</definition>
+        <argsstring></argsstring>
+        <name>groupBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1827" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1827" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a062dbc0e0806471fd744c89baa6bd956" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel7</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1828" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a9a108ba9081bad8a06844081bdf55945" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.passwordInput</definition>
+        <argsstring></argsstring>
+        <name>passwordInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1829" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1829" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a366407794c9893ffc634db302f907b2a" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1830" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8a366229c9ece3f1fc52d106bd906b50" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.loginInput</definition>
+        <argsstring></argsstring>
+        <name>loginInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1831" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a546df89298a9b62e15fcca461532dd52" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1832" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1adc9f2384bff5d526a1a1fbfd3ac8ba7c" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.departmentInput</definition>
+        <argsstring></argsstring>
+        <name>departmentInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1833" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a4aa7bc9da089752bd67051a9f1992211" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.patronymicNameInput</definition>
+        <argsstring></argsstring>
+        <name>patronymicNameInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1834" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1834" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a5fc09a4610b408197088abaa033cab18" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.nameInput</definition>
+        <argsstring></argsstring>
+        <name>nameInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1835" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1835" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a393c4205e86ab953edea8b9a6c5444cd" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.surnameInput</definition>
+        <argsstring></argsstring>
+        <name>surnameInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1836" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1836" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8268776c89960edd19dd51254291052e" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1837" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1837" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a0f4069e9b4c5409e8e0b48ddbde18edf" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1838" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6ee3540ce2656d15869cdce462a5cda8" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox DBSysReport.AppForm.postInput</definition>
+        <argsstring></argsstring>
+        <name>postInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1839" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1839" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1aa65f3795c752cb08e54522eb96797a1f" compoundref="_app_form_8cs" startline="42" endline="46">DBSysReport.AppForm.InitPostsItems</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aa3321d072e0f48967ef93c1ead4b7e77" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1840" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a27761a02344160409a2809402b9cc3ee" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1841" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ac497ae2ed16c3a96f3798e8f77506c0d" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1842" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1842" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ab64e5c541148b3bd8aa39ed6498277e5" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.setEmployerDataButton</definition>
+        <argsstring></argsstring>
+        <name>setEmployerDataButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1843" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1843" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aafaee1d467308d7375a1f68926f59b33" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.selectDumpFileButton</definition>
+        <argsstring></argsstring>
+        <name>selectDumpFileButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1844" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8d7e9cff0f2fd00dc1d0f1201cebd11b" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.selectStaticDataFileButton</definition>
+        <argsstring></argsstring>
+        <name>selectStaticDataFileButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1845" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a248a25d5487a72aaa40aa64b8b8f07a4" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.mergeButton</definition>
+        <argsstring></argsstring>
+        <name>mergeButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1846" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a1679e3578a300780f52bfade35cec8fe" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.selectSourceButton</definition>
+        <argsstring></argsstring>
+        <name>selectSourceButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1847" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1847" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1adf9c15b76c8008321c01aae36c945fd9" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1848" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ae33f54f8fa77cc40231e6da94fa3d790" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.sourceDumpFileInput</definition>
+        <argsstring></argsstring>
+        <name>sourceDumpFileInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1849" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1849" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1afdcb96401ab4b844173121041285d466" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1850" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1850" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a20e3dbdc8009c1aaca0695271665db5e" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.sqlOutput</definition>
+        <argsstring></argsstring>
+        <name>sqlOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1851" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a91382031c4591cc1c18aa6bc815d40b8" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox DBSysReport.AppForm.sqlInput</definition>
+        <argsstring></argsstring>
+        <name>sqlInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1852" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1852" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a520f31f4115500b64f59362c8bfc4764" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1853" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1853" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a8498605fcb380bc94c855021200e650a" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.addEmployerDataButton</definition>
+        <argsstring></argsstring>
+        <name>addEmployerDataButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1854" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1854" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ae919964a45e6f716617cdb6e48d891a7" prot="private" static="no" mutable="no">
+        <type>SplitContainer</type>
+        <definition>SplitContainer DBSysReport.AppForm.splitContainer2</definition>
+        <argsstring></argsstring>
+        <name>splitContainer2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1855" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1855" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a7c5d384c79c9037ce606d1f3d1a5be1b" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel6</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1856" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a865827b7026ffd5fed6575321643fdad" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1857" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1af86a2f923517932251cedd414a076eef" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.createReportButton</definition>
+        <argsstring></argsstring>
+        <name>createReportButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1858" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a93b55f4d9cb806c228dd4246d1cb0d8f" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1859" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a20d7d6e737005781c23a0a19cb9c431a" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox DBSysReport.AppForm.reportTypeComboBox</definition>
+        <argsstring></argsstring>
+        <name>reportTypeComboBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1860" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1af24ac6561e7811a03e2e0f171b4ea744" prot="private" static="no" mutable="no">
+        <type>ListBox</type>
+        <definition>ListBox DBSysReport.AppForm.challengeDates</definition>
+        <argsstring></argsstring>
+        <name>challengeDates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1861" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1861" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a74c2f15905cd207e4b541ed45d54cac7" compoundref="_app_form_8cs" startline="316" endline="345">DBSysReport.AppForm.challengeDates_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a25e79efa535331b0a5d073bf9d55710f" compoundref="_app_form_8cs" startline="347" endline="364">DBSysReport.AppForm.createReportButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a412c7dda3764e16f5d9181717459e22e" prot="private" static="no" mutable="no">
+        <type>SplitContainer</type>
+        <definition>SplitContainer DBSysReport.AppForm.splitContainer3</definition>
+        <argsstring></argsstring>
+        <name>splitContainer3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1862" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1862" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a9047a12d272cecf7c34d87eacb7826f2" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel8</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1863" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aee002d9a28ed28cae2334e5b4733c51a" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1864" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1864" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a013fb02f498c8692b5be1ac1e20a1f1b" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button DBSysReport.AppForm.showStatisticsButton</definition>
+        <argsstring></argsstring>
+        <name>showStatisticsButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1865" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1865" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aab2461a5e17a969473b8e5fd3b85b98b" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statisticDateInputPanel</definition>
+        <argsstring></argsstring>
+        <name>statisticDateInputPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1866" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ad58a60a954c642bc00c5f1c8bc9366e6" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label14</definition>
+        <argsstring></argsstring>
+        <name>label14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1867" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1867" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a69fe86ef384a885743bbe7edfeb7afd8" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label15</definition>
+        <argsstring></argsstring>
+        <name>label15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1868" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1868" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a54b8a1d65d0eab90218db0646d936e26" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker DBSysReport.AppForm.beginDateTimePicker</definition>
+        <argsstring></argsstring>
+        <name>beginDateTimePicker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1869" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a248ec8d470911747e585e5c6afe55360" prot="private" static="no" mutable="no">
+        <type>DateTimePicker</type>
+        <definition>DateTimePicker DBSysReport.AppForm.endDateTimePicker</definition>
+        <argsstring></argsstring>
+        <name>endDateTimePicker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1870" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1870" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ab56142f6c1fc03475bd79ecea9f2b747" prot="private" static="no" mutable="no">
+        <type>AxAcroPDFLib.AxAcroPDF</type>
+        <definition>AxAcroPDFLib.AxAcroPDF DBSysReport.AppForm.pdfViewer</definition>
+        <argsstring></argsstring>
+        <name>pdfViewer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1871" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1871" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a882534930a9d1a017c886dc204b1e7ee" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label16</definition>
+        <argsstring></argsstring>
+        <name>label16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1872" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ac11e506c2f53b49fffcb59a04e3d4776" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart DBSysReport.AppForm.moduleStatsChart</definition>
+        <argsstring></argsstring>
+        <name>moduleStatsChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1873" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1873" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a94fb828c8577a475c59a5a72e481f974" prot="private" static="no" mutable="no">
+        <type>CheckBox</type>
+        <definition>CheckBox DBSysReport.AppForm.allTimeCheckBox</definition>
+        <argsstring></argsstring>
+        <name>allTimeCheckBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1874" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1874" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a70ab084f6d2d53ec5989288a4f9b5a25" compoundref="_app_form_8cs" startline="618" endline="630">DBSysReport.AppForm.allTimeCheckBox_CheckedChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ae458a3ad732b1c4c539a9c8e33a4d98c" compoundref="_app_form_8cs" startline="366" endline="415">DBSysReport.AppForm.GrabDataForStatistics</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1aa98bbc299c1d9ff83eb66680192e820a" compoundref="_app_form_8cs" startline="417" endline="439">DBSysReport.AppForm.UpdateStatisticsDataLables</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1adac00cccb62d71a0407041e5ef75e575" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statisticTableCommand</definition>
+        <argsstring></argsstring>
+        <name>statisticTableCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1875" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1875" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a3420c838289f3bdd3f1de5f95b94d6ef" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart DBSysReport.AppForm.productStatsChart</definition>
+        <argsstring></argsstring>
+        <name>productStatsChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1876" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1876" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6d7d9dd8db1b1729478a5484e3fe834b" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label17</definition>
+        <argsstring></argsstring>
+        <name>label17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1877" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ad6075c7d0701f24dcb8de1dac12cdf32" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.periodLabel1</definition>
+        <argsstring></argsstring>
+        <name>periodLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1878" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1878" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a5e7f3209409df0eb8414521c38ed2beb" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label21</definition>
+        <argsstring></argsstring>
+        <name>label21</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1879" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1879" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ac0d805c3f13573498eadbf112312091a" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.periodLabel3</definition>
+        <argsstring></argsstring>
+        <name>periodLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1880" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a1202f9352c9f9d94585746b80b05f485" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.periodLabel2</definition>
+        <argsstring></argsstring>
+        <name>periodLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1881" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1881" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aad109b72282e91882eb5d03211fa6965" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label19</definition>
+        <argsstring></argsstring>
+        <name>label19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1882" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1882" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a495316e97c251bcbace6714c6d290f27" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statTable_Product</definition>
+        <argsstring></argsstring>
+        <name>statTable_Product</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1883" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1883" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a855865ceb47b294805f971bdb0c3de67" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label26</definition>
+        <argsstring></argsstring>
+        <name>label26</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1884" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1884" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a00d2b719fc6796b492c82f29486a63ad" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label25</definition>
+        <argsstring></argsstring>
+        <name>label25</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1885" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1885" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1acdc10a469cdc481af22a201d0a476fe9" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label24</definition>
+        <argsstring></argsstring>
+        <name>label24</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1886" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1886" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a10d27985616227fc24d11f46becbe274" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statTable_Command</definition>
+        <argsstring></argsstring>
+        <name>statTable_Command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1887" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1887" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a58a67cd6ef97940afe046ddb8e40830b" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label29</definition>
+        <argsstring></argsstring>
+        <name>label29</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1888" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1888" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1af8a6dd704c5e43e4dc142a97635bc458" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label30</definition>
+        <argsstring></argsstring>
+        <name>label30</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1889" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1889" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1abbf44db516dd0a3f797d9a176260378b" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label31</definition>
+        <argsstring></argsstring>
+        <name>label31</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1890" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1890" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ac0b2e3e735428f4767a06e97113e3fa2" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statTable_Module</definition>
+        <argsstring></argsstring>
+        <name>statTable_Module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1891" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1891" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a57413bd1f6e5bacf7a4b30a8af9ab387" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label23</definition>
+        <argsstring></argsstring>
+        <name>label23</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1892" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1892" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a64021a46d6c8df27e90a07e5e4224d1e" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label27</definition>
+        <argsstring></argsstring>
+        <name>label27</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1893" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ab3087a54380ae3e611d3901e1ea1fb3a" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label28</definition>
+        <argsstring></argsstring>
+        <name>label28</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1894" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a1f7b4104d03f41c2f2fbeedab0f11dfc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart DBSysReport.AppForm.commandStatsChart</definition>
+        <argsstring></argsstring>
+        <name>commandStatsChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1895" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1895" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1afaedc8c25f32be0c87651a025e0043fa" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label32</definition>
+        <argsstring></argsstring>
+        <name>label32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1896" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1896" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a26e9877aed4d646eceaea85cc5bbb999" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox DBSysReport.AppForm.moduleComboBox</definition>
+        <argsstring></argsstring>
+        <name>moduleComboBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1897" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1897" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" compoundref="_app_form_8cs" startline="663" endline="693">DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" compoundref="_app_form_8cs" startline="632" endline="661">DBSysReport.AppForm.moduleComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6da0f3ddb16c810f68cd82fb7192dbfc" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox DBSysReport.AppForm.commandComboBox</definition>
+        <argsstring></argsstring>
+        <name>commandComboBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1898" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1898" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" compoundref="_app_form_8cs" startline="663" endline="693">DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6876831aa9780b201e2b94862b6cb9f0" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label18</definition>
+        <argsstring></argsstring>
+        <name>label18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1899" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1899" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a314e821638e20a2e5398fb67259d812d" prot="private" static="no" mutable="no">
+        <type>ComboBox</type>
+        <definition>ComboBox DBSysReport.AppForm.modeComboBox</definition>
+        <argsstring></argsstring>
+        <name>modeComboBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1900" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1900" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" compoundref="_app_form_8cs" startline="663" endline="693">DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" compoundref="_app_form_8cs" startline="632" endline="661">DBSysReport.AppForm.moduleComboBox_SelectedIndexChanged</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1aeb4a2914379707fdd87269f3948e998b" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label20</definition>
+        <argsstring></argsstring>
+        <name>label20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1901" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1901" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a4ec5c7ce51c70a005958fe583820559e" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label22</definition>
+        <argsstring></argsstring>
+        <name>label22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1902" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1902" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a2c556608c1e07aca06eb1d037ec7d045" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label33</definition>
+        <argsstring></argsstring>
+        <name>label33</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1903" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1903" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a4590e477ca5a836c206c1339dd9163c1" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label34</definition>
+        <argsstring></argsstring>
+        <name>label34</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1904" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1904" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a2aa18f665751a942f14d0c3d8e23d2ea" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label35</definition>
+        <argsstring></argsstring>
+        <name>label35</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1905" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1905" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a2dd084a750c45311e2d64f57a5041803" prot="private" static="no" mutable="no">
+        <type>SplitContainer</type>
+        <definition>SplitContainer DBSysReport.AppForm.mainSplitContainer</definition>
+        <argsstring></argsstring>
+        <name>mainSplitContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1906" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1906" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a099d7f2380540d213cfe65ec3e082f2f" prot="private" static="no" mutable="no">
+        <type>GroupBox</type>
+        <definition>GroupBox DBSysReport.AppForm.databaseControllPanel</definition>
+        <argsstring></argsstring>
+        <name>databaseControllPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1907" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1907" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a88c0a567d79f57f77cc2d904e188c242" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.tableLayoutPanel10</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1908" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1908" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1acb25eec854a2c3fc88977006f071bb54" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem DBSysReport.AppForm.видToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>видToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1909" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1909" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a6c5aed78bbccada0977c4a7b4df9aac1" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem DBSysReport.AppForm.управлениеБазойДанныхToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>управлениеБазойДанныхToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1910" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a152caa7ca9e2e5b32445b9df5bb5b0e0" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem DBSysReport.AppForm.управлениеОтчетамиToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>управлениеОтчетамиToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1911" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1911" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a62010fc83e7d265cc4428e30f40a2c99" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.label36</definition>
+        <argsstring></argsstring>
+        <name>label36</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1912" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ace3e34fcc5cd0583f3d234004572b8f2" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.ChallengeDataLabel</definition>
+        <argsstring></argsstring>
+        <name>ChallengeDataLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1913" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1913" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a3da754ced2c98887a5ec33a04d796b51" prot="private" static="no" mutable="no">
+        <type>TabControl</type>
+        <definition>TabControl DBSysReport.AppForm.tabControl1</definition>
+        <argsstring></argsstring>
+        <name>tabControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1914" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1914" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a27164916516f98258489e90c61f1dfda" prot="private" static="no" mutable="no">
+        <type>TabPage</type>
+        <definition>TabPage DBSysReport.AppForm.tabPage3</definition>
+        <argsstring></argsstring>
+        <name>tabPage3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1915" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1915" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1ab01994d763dce70a5be711a83f34069e" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statisticTableProduct</definition>
+        <argsstring></argsstring>
+        <name>statisticTableProduct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1916" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1916" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a305899bf735f97a9ea3edbf5b71565f7" prot="private" static="no" mutable="no">
+        <type>TabPage</type>
+        <definition>TabPage DBSysReport.AppForm.tabPage4</definition>
+        <argsstring></argsstring>
+        <name>tabPage4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1917" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1917" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a5618d0e102d7045eeb977832245e41e0" prot="private" static="no" mutable="no">
+        <type>TableLayoutPanel</type>
+        <definition>TableLayoutPanel DBSysReport.AppForm.statisticTableModule</definition>
+        <argsstring></argsstring>
+        <name>statisticTableModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1918" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1918" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1a97955690aec91553f73884b695ddd5a9" prot="private" static="no" mutable="no">
+        <type>TabPage</type>
+        <definition>TabPage DBSysReport.AppForm.tabPage5</definition>
+        <argsstring></argsstring>
+        <name>tabPage5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1919" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1919" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_app_form_1af1cc4a9c5aa183967dd107797990319b" prot="private" static="no" mutable="no">
+        <type>ToolStripMenuItem</type>
+        <definition>ToolStripMenuItem DBSysReport.AppForm.совмещённыйВидToolStripMenuItem</definition>
+        <argsstring></argsstring>
+        <name>совмещённыйВидToolStripMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="1920" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="1920" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1af8e894cc7f00aaccb067489328ca6341" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysReport.AppForm.AppForm</definition>
+        <argsstring>()</argsstring>
+        <name>AppForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="22" bodyend="25"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" compoundref="_app_form_8_designer_8cs" startline="31" endline="1798">DBSysReport.AppForm.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ad10ca9e92664603c9ed1515999879b8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.GenerateNewStaff</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateNewStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="27" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="27" bodyend="39"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" compoundref="_app_form_8cs" startline="18">DBSysReport.AppForm.newStaff</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" compoundref="_app_form_8cs" startline="49" endline="79">DBSysReport.AppForm.UpdateUsersList</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1aa65f3795c752cb08e54522eb96797a1f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.InitPostsItems</definition>
+        <argsstring>()</argsstring>
+        <name>InitPostsItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="42" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="42" bodyend="46"/>
+        <references refid="class_d_b_sys_core_1_1_session_1a27926058fef3060397efde851a1ed06a" compoundref="_session_8cs" startline="269" endline="292">DBSysCore.Session.GrantsString</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a6ee3540ce2656d15869cdce462a5cda8" compoundref="_app_form_8_designer_8cs" startline="1839">DBSysReport.AppForm.postInput</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" compoundref="_app_form_8cs" startline="81" endline="116">DBSysReport.AppForm.AppForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.UpdateUsersList</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateUsersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="49" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="49" bodyend="79"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ae35741be22b79d3f045834bc0cfa66d4" compoundref="_app_form_8cs" startline="17">DBSysReport.AppForm.allStaff</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ad10ca9e92664603c9ed1515999879b8f" compoundref="_app_form_8cs" startline="27" endline="39">DBSysReport.AppForm.GenerateNewStaff</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" compoundref="_app_form_8cs" startline="18">DBSysReport.AppForm.newStaff</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1af8bbb6ab207a70ff66c3d6192164cfeb" compoundref="_app_form_8cs" startline="309" endline="314">DBSysReport.AppForm.addEmployerDataButton_Click</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" compoundref="_app_form_8cs" startline="81" endline="116">DBSysReport.AppForm.AppForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.AppForm_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AppForm_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="81" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="81" bodyend="116"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a33a683f185d5ebdf36a461209ab0f390" compoundref="_app_form_8_designer_8cs" startline="1816">DBSysReport.AppForm.groupBox2</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a45021879e8739cc434ec5261ca23c317" compoundref="_app_form_8cs" startline="139" endline="158">DBSysReport.AppForm.InitModuleNames</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1aa65f3795c752cb08e54522eb96797a1f" compoundref="_app_form_8cs" startline="42" endline="46">DBSysReport.AppForm.InitPostsItems</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a47ff2779ddb6fd5212571e8a52dadbb9" compoundref="_app_form_8cs" startline="118" endline="137">DBSysReport.AppForm.InitReportPanel</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" compoundref="_app_form_8cs" startline="49" endline="79">DBSysReport.AppForm.UpdateUsersList</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a47ff2779ddb6fd5212571e8a52dadbb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.InitReportPanel</definition>
+        <argsstring>()</argsstring>
+        <name>InitReportPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="118" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="118" bodyend="137"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1aba859449827b9cf8dc725438f921548f" compoundref="_app_form_8cs" startline="20">DBSysReport.AppForm.allChallenges</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" compoundref="_app_form_8cs" startline="81" endline="116">DBSysReport.AppForm.AppForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a45021879e8739cc434ec5261ca23c317" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.InitModuleNames</definition>
+        <argsstring>()</argsstring>
+        <name>InitModuleNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="139" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="139" bodyend="158"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" compoundref="_app_form_8cs" startline="81" endline="116">DBSysReport.AppForm.AppForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ace772ed6f36920064a40a71c40eebdc6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.LogoutAndExit</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>LogoutAndExit</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="160" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="160" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a26ee6a1ff66acebe6e2a7e205fad5eca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.usersList_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>usersList_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="170" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="170" bodyend="208"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" compoundref="_app_form_8cs" startline="18">DBSysReport.AppForm.newStaff</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a0429bea3b3516fd7022dffc9b32df0e5" compoundref="_app_form_8_designer_8cs" startline="1809">DBSysReport.AppForm.usersList</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.setEmployerDataButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>setEmployerDataButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="210" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="210" bodyend="245"/>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_staff_1a53cb0ca84cc97d70a569b1bb6c89fa77" compoundref="_staff_8cs" startline="13">DBSysCore.Model.Staff.firstName</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a5fc09a4610b408197088abaa033cab18" compoundref="_app_form_8_designer_8cs" startline="1835">DBSysReport.AppForm.nameInput</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" compoundref="_app_form_8cs" startline="18">DBSysReport.AppForm.newStaff</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a9a108ba9081bad8a06844081bdf55945" compoundref="_app_form_8_designer_8cs" startline="1829">DBSysReport.AppForm.passwordInput</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_staff_1a1dcd8b25f39da84cb5f64bbefed10dd1" compoundref="_staff_8cs" startline="14">DBSysCore.Model.Staff.patronymicName</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a4aa7bc9da089752bd67051a9f1992211" compoundref="_app_form_8_designer_8cs" startline="1834">DBSysReport.AppForm.patronymicNameInput</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_staff_1a9d62ed2459db957c14c8b0f127cdd627" compoundref="_staff_8cs" startline="15">DBSysCore.Model.Staff.post</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_staff_1ab6699880619fd34d054ae4879df9ac32" compoundref="_staff_8cs" startline="12">DBSysCore.Model.Staff.surname</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a393c4205e86ab953edea8b9a6c5444cd" compoundref="_app_form_8_designer_8cs" startline="1836">DBSysReport.AppForm.surnameInput</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a0429bea3b3516fd7022dffc9b32df0e5" compoundref="_app_form_8_designer_8cs" startline="1809">DBSysReport.AppForm.usersList</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1af8bbb6ab207a70ff66c3d6192164cfeb" compoundref="_app_form_8cs" startline="309" endline="314">DBSysReport.AppForm.addEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a9a19d5d9a7d914cb44898011b4607c6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.selectDumpFileButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>selectDumpFileButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="247" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="247" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ae0d9d2255270da287f09ab01f2c545e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.LoadStaticTests</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>LoadStaticTests</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="264" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="264" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a6789623601f5a9a579757be5300cd19f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.InputSQLCommand</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>InputSQLCommand</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="286" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="286" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1af8bbb6ab207a70ff66c3d6192164cfeb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.addEmployerDataButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>addEmployerDataButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="309" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="309" bodyend="314"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" compoundref="_app_form_8cs" startline="49" endline="79">DBSysReport.AppForm.UpdateUsersList</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a74c2f15905cd207e4b541ed45d54cac7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.challengeDates_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>challengeDates_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="316" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="316" bodyend="345"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1aba859449827b9cf8dc725438f921548f" compoundref="_app_form_8cs" startline="20">DBSysReport.AppForm.allChallenges</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1af24ac6561e7811a03e2e0f171b4ea744" compoundref="_app_form_8_designer_8cs" startline="1861">DBSysReport.AppForm.challengeDates</references>
+        <references refid="class_d_b_sys_core_1_1_core_1aa3ba2b3de485c72880be144db779c7ac" compoundref="_core_8cs" startline="1550" endline="1589">DBSysCore.Core.GetFPGAVersion</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a25e79efa535331b0a5d073bf9d55710f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.createReportButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>createReportButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="347" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="347" bodyend="364"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1af24ac6561e7811a03e2e0f171b4ea744" compoundref="_app_form_8_designer_8cs" startline="1861">DBSysReport.AppForm.challengeDates</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ae458a3ad732b1c4c539a9c8e33a4d98c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DBSysReport.AppForm.GrabDataForStatistics</definition>
+        <argsstring>(out List&lt; TestDynamic &gt; testsDynamicList, out List&lt; TestStatic &gt; testsStaticList, out List&lt; int &gt; modulesFailsStats, out List&lt; int &gt; commandsFailsStats)</argsstring>
+        <name>GrabDataForStatistics</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+          <declname>testsDynamicList</declname>
+        </param>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_static" kindref="compound">TestStatic</ref> &gt;</type>
+          <declname>testsStaticList</declname>
+        </param>
+        <param>
+          <type>out List&lt; int &gt;</type>
+          <declname>modulesFailsStats</declname>
+        </param>
+        <param>
+          <type>out List&lt; int &gt;</type>
+          <declname>commandsFailsStats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="366" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="366" bodyend="415"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a94fb828c8577a475c59a5a72e481f974" compoundref="_app_form_8_designer_8cs" startline="1874">DBSysReport.AppForm.allTimeCheckBox</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" compoundref="_test_dynamic_8cs" startline="24">DBSysCore.Model.TestDynamic.status</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1aa98bbc299c1d9ff83eb66680192e820a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.UpdateStatisticsDataLables</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStatisticsDataLables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="417" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="417" bodyend="439"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a94fb828c8577a475c59a5a72e481f974" compoundref="_app_form_8_designer_8cs" startline="1874">DBSysReport.AppForm.allTimeCheckBox</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ababe38eed71a9d0f5da160ac7173310d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Label</type>
+        <definition>Label DBSysReport.AppForm.CreateTableLabel</definition>
+        <argsstring>(string text)</argsstring>
+        <name>CreateTableLabel</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="441" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="441" bodyend="449"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ae80fc98d5a1d936fa54e5437b045e0aa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.ClearTable</definition>
+        <argsstring>(TableLayoutPanel table, int columnsCount, int itemsCount)</argsstring>
+        <name>ClearTable</name>
+        <param>
+          <type>TableLayoutPanel</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>columnsCount</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>itemsCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="451" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="451" bodyend="460"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.ShowStatistics</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ShowStatistics</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="462" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="462" bodyend="616"/>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a66d628cdd03f4f997367f555c3248f9c" compoundref="_test_dynamic_8cs" startline="20">DBSysCore.Model.TestDynamic.actualValue</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1ab9b34f66c6b7a619db5bac284b428981" compoundref="_test_dynamic_8cs" startline="16">DBSysCore.Model.TestDynamic.beginTime</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1aa5b38d1d9b75a6c520e36bffcd260702" compoundref="_test_dynamic_8cs" startline="22">DBSysCore.Model.TestDynamic.boundaryValue</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a00bc044842c52c8382d39a33f83ddee2" compoundref="_test_dynamic_8cs" startline="14">DBSysCore.Model.TestDynamic.challenge</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ae80fc98d5a1d936fa54e5437b045e0aa" compoundref="_app_form_8cs" startline="451" endline="460">DBSysReport.AppForm.ClearTable</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a6da0f3ddb16c810f68cd82fb7192dbfc" compoundref="_app_form_8_designer_8cs" startline="1898">DBSysReport.AppForm.commandComboBox</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5032d004daf7fc60dac98a41299a1b60" compoundref="_challenge_8cs" startline="12">DBSysCore.Model.Challenge.controllObject</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ababe38eed71a9d0f5da160ac7173310d" compoundref="_app_form_8cs" startline="441" endline="449">DBSysReport.AppForm.CreateTableLabel</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ae458a3ad732b1c4c539a9c8e33a4d98c" compoundref="_app_form_8cs" startline="366" endline="415">DBSysReport.AppForm.GrabDataForStatistics</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" compoundref="_test_static_8cs" startline="12">DBSysCore.Model.TestStatic.mode</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a314e821638e20a2e5398fb67259d812d" compoundref="_app_form_8_designer_8cs" startline="1900">DBSysReport.AppForm.modeComboBox</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a26e9877aed4d646eceaea85cc5bbb999" compoundref="_app_form_8_designer_8cs" startline="1897">DBSysReport.AppForm.moduleComboBox</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a732488717e1860c09b2427171a689e6a" compoundref="_test_dynamic_8cs" startline="19">DBSysCore.Model.TestDynamic.nominal</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a236ca28222050df82a15f397bc21099f" compoundref="_controll_object_8cs" startline="12">DBSysCore.Model.ControllObject.serialNumber</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a10d27985616227fc24d11f46becbe274" compoundref="_app_form_8_designer_8cs" startline="1887">DBSysReport.AppForm.statTable_Command</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ac0b2e3e735428f4767a06e97113e3fa2" compoundref="_app_form_8_designer_8cs" startline="1891">DBSysReport.AppForm.statTable_Module</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a495316e97c251bcbace6714c6d290f27" compoundref="_app_form_8_designer_8cs" startline="1883">DBSysReport.AppForm.statTable_Product</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" compoundref="_test_dynamic_8cs" startline="24">DBSysCore.Model.TestDynamic.status</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1ad9c221849242540e60444bb205efe2af" compoundref="_test_static_8cs" startline="11">DBSysCore.Model.TestStatic.tsIndex</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0edfa39bb8515e6aea71b121a8d08e20" compoundref="_test_static_8cs" startline="16">DBSysCore.Model.TestStatic.unit</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1aa98bbc299c1d9ff83eb66680192e820a" compoundref="_app_form_8cs" startline="417" endline="439">DBSysReport.AppForm.UpdateStatisticsDataLables</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a70ab084f6d2d53ec5989288a4f9b5a25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.allTimeCheckBox_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>allTimeCheckBox_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="618" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="618" bodyend="630"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a94fb828c8577a475c59a5a72e481f974" compoundref="_app_form_8_designer_8cs" startline="1874">DBSysReport.AppForm.allTimeCheckBox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.moduleComboBox_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>moduleComboBox_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="632" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="632" bodyend="661"/>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_module_1a569afc057cb1483234a70b2cbee66882" compoundref="_module_8cs" startline="11">DBSysCore.Model.Module.id</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" compoundref="_test_static_8cs" startline="12">DBSysCore.Model.TestStatic.mode</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a314e821638e20a2e5398fb67259d812d" compoundref="_app_form_8_designer_8cs" startline="1900">DBSysReport.AppForm.modeComboBox</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1acfb5227aee447638ff9ba5d9c665a7a5" compoundref="_test_static_8cs" startline="13">DBSysCore.Model.TestStatic.module</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a26e9877aed4d646eceaea85cc5bbb999" compoundref="_app_form_8_designer_8cs" startline="1897">DBSysReport.AppForm.moduleComboBox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.modeComboBox_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>modeComboBox_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="663" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="663" bodyend="693"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a6da0f3ddb16c810f68cd82fb7192dbfc" compoundref="_app_form_8_designer_8cs" startline="1898">DBSysReport.AppForm.commandComboBox</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" compoundref="_core_8cs" startline="306" endline="338">DBSysCore.Core.GetStaticTests</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_module_1a569afc057cb1483234a70b2cbee66882" compoundref="_module_8cs" startline="11">DBSysCore.Model.Module.id</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a9c092f0ebe584dc72ef1487f6d002175" compoundref="_test_static_8cs" startline="12">DBSysCore.Model.TestStatic.mode</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a314e821638e20a2e5398fb67259d812d" compoundref="_app_form_8_designer_8cs" startline="1900">DBSysReport.AppForm.modeComboBox</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1acfb5227aee447638ff9ba5d9c665a7a5" compoundref="_test_static_8cs" startline="13">DBSysCore.Model.TestStatic.module</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a26e9877aed4d646eceaea85cc5bbb999" compoundref="_app_form_8_designer_8cs" startline="1897">DBSysReport.AppForm.moduleComboBox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1aff63f13f2b24a1bdf7e4c9ec1dfa8b0a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.commandComboBox_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>commandComboBox_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="695" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="695" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a06cd1debee0cbb6802559b4f2f04bfa6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.ShowDatabasePanel</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ShowDatabasePanel</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="700" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="700" bodyend="704"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a68297d6f3b0e04cdf45d4e0a53ad1053" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.ShowReportPanel</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ShowReportPanel</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="706" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="706" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a2e4a077d29c1371e89a81fb9643d3cfe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.ShowBothPanels</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ShowBothPanels</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="712" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="712" bodyend="716"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a2fa5e2568376b4d96785a511fa97eb83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.aboutToolStripMenuItem1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>aboutToolStripMenuItem1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="718" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="718" bodyend="724"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.AppForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="31" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="31" bodyend="1798"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a1f7b4104d03f41c2f2fbeedab0f11dfc" compoundref="_app_form_8_designer_8cs" startline="1895">DBSysReport.AppForm.commandStatsChart</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a2dd084a750c45311e2d64f57a5041803" compoundref="_app_form_8_designer_8cs" startline="1906">DBSysReport.AppForm.mainSplitContainer</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ac11e506c2f53b49fffcb59a04e3d4776" compoundref="_app_form_8_designer_8cs" startline="1873">DBSysReport.AppForm.moduleStatsChart</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ab56142f6c1fc03475bd79ecea9f2b747" compoundref="_app_form_8_designer_8cs" startline="1871">DBSysReport.AppForm.pdfViewer</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a3420c838289f3bdd3f1de5f95b94d6ef" compoundref="_app_form_8_designer_8cs" startline="1876">DBSysReport.AppForm.productStatsChart</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ad16641f096f02d28e7c2e6de683bbf77" compoundref="_app_form_8_designer_8cs" startline="1820">DBSysReport.AppForm.splitContainer1</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ae919964a45e6f716617cdb6e48d891a7" compoundref="_app_form_8_designer_8cs" startline="1855">DBSysReport.AppForm.splitContainer2</references>
+        <references refid="class_d_b_sys_report_1_1_app_form_1a412c7dda3764e16f5d9181717459e22e" compoundref="_app_form_8_designer_8cs" startline="1862">DBSysReport.AppForm.splitContainer3</references>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1af8e894cc7f00aaccb067489328ca6341" compoundref="_app_form_8cs" startline="22" endline="25">DBSysReport.AppForm.AppForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_app_form_1a433800aaab82f4d64bfd5cd2853f6495" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.AppForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.Designer.cs" bodystart="16" bodyend="23"/>
+        <references refid="class_d_b_sys_report_1_1_app_form_1ad39b80daf73fbe45359362e79544915e" compoundref="_app_form_8_designer_8cs" startline="10">DBSysReport.AppForm.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Form</label>
+      </node>
+      <node id="0">
+        <label>DBSysReport.AppForm</label>
+        <link refid="class_d_b_sys_report_1_1_app_form"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Form</label>
+      </node>
+      <node id="2">
+        <label>DBSysReport.AppForm</label>
+        <link refid="class_d_b_sys_report_1_1_app_form"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>sqlPanelBox</edgelabel>
+          <edgelabel>tableLayoutPanel4</edgelabel>
+          <edgelabel>usersPanelBox</edgelabel>
+          <edgelabel>appMenu</edgelabel>
+          <edgelabel>usersList</edgelabel>
+          <edgelabel>productStatsChart</edgelabel>
+          <edgelabel>reportPanelBox</edgelabel>
+          <edgelabel>label10</edgelabel>
+          <edgelabel>infoToolStripMenuItem</edgelabel>
+          <edgelabel>moduleStatsChart</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/AppForm.cs" bodystart="15" bodyend="725"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a19cbccaae976d0d56834ba6ec749fffc" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>aboutMenuOption</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1acd0f7fe1b35664e998c089cd1b9df299" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>aboutToolStripMenuItem1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2fa5e2568376b4d96785a511fa97eb83" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>aboutToolStripMenuItem1_Click</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8498605fcb380bc94c855021200e650a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>addEmployerDataButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af8bbb6ab207a70ff66c3d6192164cfeb" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>addEmployerDataButton_Click</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a12dc12f55850269b8484444019cf5457" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>adminPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aba859449827b9cf8dc725438f921548f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>allChallenges</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae35741be22b79d3f045834bc0cfa66d4" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>allStaff</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a94fb828c8577a475c59a5a72e481f974" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>allTimeCheckBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a70ab084f6d2d53ec5989288a4f9b5a25" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>allTimeCheckBox_CheckedChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af8e894cc7f00aaccb067489328ca6341" prot="public" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>AppForm</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a43f32586e33938c9ad96777a450389d8" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>AppForm_Load</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a436ec0d862673522e0bb61a178feca34" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>appMenu</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a54b8a1d65d0eab90218db0646d936e26" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>beginDateTimePicker</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1adf9c15b76c8008321c01aae36c945fd9" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>button1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ace3e34fcc5cd0583f3d234004572b8f2" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ChallengeDataLabel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af24ac6561e7811a03e2e0f171b4ea744" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>challengeDates</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a74c2f15905cd207e4b541ed45d54cac7" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>challengeDates_SelectedIndexChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae80fc98d5a1d936fa54e5437b045e0aa" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ClearTable</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6da0f3ddb16c810f68cd82fb7192dbfc" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>commandComboBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aff63f13f2b24a1bdf7e4c9ec1dfa8b0a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>commandComboBox_SelectedIndexChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a1f7b4104d03f41c2f2fbeedab0f11dfc" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>commandStatsChart</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad39b80daf73fbe45359362e79544915e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>components</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af86a2f923517932251cedd414a076eef" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>createReportButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a25e79efa535331b0a5d073bf9d55710f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>createReportButton_Click</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ababe38eed71a9d0f5da160ac7173310d" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>CreateTableLabel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8fecabedaf18743bb14017e5c7bdaa6c" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>currentDumpFileInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a099d7f2380540d213cfe65ec3e082f2f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>databaseControllPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1adc9f2384bff5d526a1a1fbfd3ac8ba7c" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>departmentInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a433800aaab82f4d64bfd5cd2853f6495" prot="protected" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>Dispose</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6e60499f2d62abe45b00f1e438bcc537" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>dumpFilePanelBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a248ec8d470911747e585e5c6afe55360" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>endDateTimePicker</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8d3fb122e80b0182b693f7b6ce2ddcb9" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>exitMenuOption</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad10ca9e92664603c9ed1515999879b8f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>GenerateNewStaff</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae458a3ad732b1c4c539a9c8e33a4d98c" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>GrabDataForStatistics</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a33a683f185d5ebdf36a461209ab0f390" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>groupBox2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8b3b028c3b71155139b78b908322dad4" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>groupBox4</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a961f952181f830d3cf78afa7d264fc5a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>groupBox5</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9a1270122164912846206088e9dbf8a0" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>infoToolStripMenuItem</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8e733c59b8659c0551a366f9fbb2a1a1" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>infoToolStripMenuItem1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9f1a6be502a2c0d8031935b3fe7748dd" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a45021879e8739cc434ec5261ca23c317" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>InitModuleNames</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aa65f3795c752cb08e54522eb96797a1f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>InitPostsItems</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a47ff2779ddb6fd5212571e8a52dadbb9" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>InitReportPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6789623601f5a9a579757be5300cd19f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>InputSQLCommand</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a865827b7026ffd5fed6575321643fdad" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae953c8ddf8450587c7251b292190558e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label10</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a93b55f4d9cb806c228dd4246d1cb0d8f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label11</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aee002d9a28ed28cae2334e5b4733c51a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label13</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad58a60a954c642bc00c5f1c8bc9366e6" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label14</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a69fe86ef384a885743bbe7edfeb7afd8" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label15</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a882534930a9d1a017c886dc204b1e7ee" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label16</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6d7d9dd8db1b1729478a5484e3fe834b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label17</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6876831aa9780b201e2b94862b6cb9f0" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label18</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aad109b72282e91882eb5d03211fa6965" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label19</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ac497ae2ed16c3a96f3798e8f77506c0d" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aeb4a2914379707fdd87269f3948e998b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label20</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a5e7f3209409df0eb8414521c38ed2beb" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label21</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a4ec5c7ce51c70a005958fe583820559e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label22</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a57413bd1f6e5bacf7a4b30a8af9ab387" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label23</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1acdc10a469cdc481af22a201d0a476fe9" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label24</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a00d2b719fc6796b492c82f29486a63ad" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label25</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a855865ceb47b294805f971bdb0c3de67" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label26</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a64021a46d6c8df27e90a07e5e4224d1e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label27</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ab3087a54380ae3e611d3901e1ea1fb3a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label28</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a58a67cd6ef97940afe046ddb8e40830b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label29</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a366407794c9893ffc634db302f907b2a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label3</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af8a6dd704c5e43e4dc142a97635bc458" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label30</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1abbf44db516dd0a3f797d9a176260378b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label31</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1afaedc8c25f32be0c87651a025e0043fa" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label32</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2c556608c1e07aca06eb1d037ec7d045" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label33</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a4590e477ca5a836c206c1339dd9163c1" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label34</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2aa18f665751a942f14d0c3d8e23d2ea" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label35</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a62010fc83e7d265cc4428e30f40a2c99" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label36</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aa3321d072e0f48967ef93c1ead4b7e77" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label4</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a0f4069e9b4c5409e8e0b48ddbde18edf" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label5</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8268776c89960edd19dd51254291052e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label6</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a27761a02344160409a2809402b9cc3ee" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label7</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a546df89298a9b62e15fcca461532dd52" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label8</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1abecc730eddbd3e28214eac8a808198fd" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>label9</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae0d9d2255270da287f09ab01f2c545e5" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>LoadStaticTests</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8a366229c9ece3f1fc52d106bd906b50" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>loginInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ace772ed6f36920064a40a71c40eebdc6" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>LogoutAndExit</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2dd084a750c45311e2d64f57a5041803" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>mainSplitContainer</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a248a25d5487a72aaa40aa64b8b8f07a4" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>mergeButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a314e821638e20a2e5398fb67259d812d" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>modeComboBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a1fd0296a8d0785bdd58fbfa88b2e1245" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>modeComboBox_SelectedIndexChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a26e9877aed4d646eceaea85cc5bbb999" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>moduleComboBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ab45b7bf3e5cc0cf138f65986a1e52d16" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>moduleComboBox_SelectedIndexChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ac11e506c2f53b49fffcb59a04e3d4776" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>moduleStatsChart</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a5fc09a4610b408197088abaa033cab18" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>nameInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8c58916567c4a91d4b526fe3aff56646" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>newStaff</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9a108ba9081bad8a06844081bdf55945" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>passwordInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a4aa7bc9da089752bd67051a9f1992211" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>patronymicNameInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ab56142f6c1fc03475bd79ecea9f2b747" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>pdfViewer</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad6075c7d0701f24dcb8de1dac12cdf32" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>periodLabel1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a1202f9352c9f9d94585746b80b05f485" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>periodLabel2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ac0d805c3f13573498eadbf112312091a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>periodLabel3</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6ee3540ce2656d15869cdce462a5cda8" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>postInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a3420c838289f3bdd3f1de5f95b94d6ef" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>productStatsChart</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a740a896408a402d1a1e29b5686b4e01f" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>reportPanelBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a087e0a1dd68015480ba09d753e73666d" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>reportTabControl</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a20d7d6e737005781c23a0a19cb9c431a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>reportTypeComboBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aafaee1d467308d7375a1f68926f59b33" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>selectDumpFileButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9a19d5d9a7d914cb44898011b4607c6a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>selectDumpFileButton_Click</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a1679e3578a300780f52bfade35cec8fe" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>selectSourceButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a8d7e9cff0f2fd00dc1d0f1201cebd11b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>selectStaticDataFileButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ab64e5c541148b3bd8aa39ed6498277e5" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>setEmployerDataButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>setEmployerDataButton_Click</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a2e4a077d29c1371e89a81fb9643d3cfe" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ShowBothPanels</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a06cd1debee0cbb6802559b4f2f04bfa6" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ShowDatabasePanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a68297d6f3b0e04cdf45d4e0a53ad1053" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ShowReportPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>ShowStatistics</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a013fb02f498c8692b5be1ac1e20a1f1b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>showStatisticsButton</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae33f54f8fa77cc40231e6da94fa3d790" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>sourceDumpFileInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad16641f096f02d28e7c2e6de683bbf77" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>splitContainer1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ae919964a45e6f716617cdb6e48d891a7" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>splitContainer2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a412c7dda3764e16f5d9181717459e22e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>splitContainer3</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a91382031c4591cc1c18aa6bc815d40b8" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>sqlInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a20e3dbdc8009c1aaca0695271665db5e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>sqlOutput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9f01b2185c4d3a5d594000e2a0e7aa80" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>sqlPanelBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a3d267749f1ca6727d958896282174de4" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>staticDataFileInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aab2461a5e17a969473b8e5fd3b85b98b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statisticDateInputPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1adac00cccb62d71a0407041e5ef75e575" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statisticTableCommand</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a5618d0e102d7045eeb977832245e41e0" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statisticTableModule</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ab01994d763dce70a5be711a83f34069e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statisticTableProduct</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a10d27985616227fc24d11f46becbe274" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statTable_Command</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ac0b2e3e735428f4767a06e97113e3fa2" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statTable_Module</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a495316e97c251bcbace6714c6d290f27" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>statTable_Product</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a393c4205e86ab953edea8b9a6c5444cd" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>surnameInput</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a3da754ced2c98887a5ec33a04d796b51" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabControl1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1afdcb96401ab4b844173121041285d466" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a88c0a567d79f57f77cc2d904e188c242" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel10</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a520f31f4115500b64f59362c8bfc4764" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a56afa0593e2cad9a2e6926dec2e43088" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel3</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1ad310c1643d8dee2df38a688988c084e7" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel4</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a7c5d384c79c9037ce606d1f3d1a5be1b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel6</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a062dbc0e0806471fd744c89baa6bd956" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel7</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a9047a12d272cecf7c34d87eacb7826f2" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tableLayoutPanel8</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a3d717579859a40129c81e867199f76a1" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabPage1</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af74a98b65afc59af569447ca311c1f40" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabPage2</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a27164916516f98258489e90c61f1dfda" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabPage3</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a305899bf735f97a9ea3edbf5b71565f7" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabPage4</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a97955690aec91553f73884b695ddd5a9" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>tabPage5</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1aa98bbc299c1d9ff83eb66680192e820a" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>UpdateStatisticsDataLables</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a910511ad7e0fff87402af0cc92101e8e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>UpdateUsersList</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a669b8a34ab520bc593f876d37f692e7e" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>userPanel</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a0429bea3b3516fd7022dffc9b32df0e5" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>usersList</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a26ee6a1ff66acebe6e2a7e205fad5eca" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>usersList_SelectedIndexChanged</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a3c33853eb063ed967ce2d1a7699dedec" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>usersPanelBox</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1acb25eec854a2c3fc88977006f071bb54" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>видToolStripMenuItem</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1af1cc4a9c5aa183967dd107797990319b" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>совмещённыйВидToolStripMenuItem</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a6c5aed78bbccada0977c4a7b4df9aac1" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>управлениеБазойДанныхToolStripMenuItem</name></member>
+      <member refid="class_d_b_sys_report_1_1_app_form_1a152caa7ca9e2e5b32445b9df5bb5b0e0" prot="private" virt="non-virtual"><scope>DBSysReport::AppForm</scope><name>управлениеОтчетамиToolStripMenuItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

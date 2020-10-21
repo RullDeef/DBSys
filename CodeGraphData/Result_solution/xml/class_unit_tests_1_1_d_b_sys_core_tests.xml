@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_unit_tests_1_1_d_b_sys_core_tests" kind="class" prot="public">
+    <compoundname>UnitTests::DBSysCoreTests</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1ae8fda7c05088fae7f6c584bd2141cca7" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>readonly Staff UnitTests.DBSysCoreTests.admin</definition>
+        <argsstring></argsstring>
+        <name>admin</name>
+        <initializer>= new <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref>()
+        {
+            surname = &quot;Skulikov&quot;,
+            firstName = &quot;Aleksey&quot;,
+            patronymicName = &quot;Vasilievich&quot;,
+            post = &quot;admin&quot;,
+            department = &quot;department&quot;,
+            login = &quot;lexa88&quot;,
+            password = &quot;xerox&quot;
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1a9ca32ee77ae2e4702888cc51fcd68546" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>readonly Staff UnitTests.DBSysCoreTests.oper</definition>
+        <argsstring></argsstring>
+        <name>oper</name>
+        <initializer>= new <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref>()
+        {
+            surname = &quot;Kit&quot;,
+            firstName = &quot;Tatyana&quot;,
+            patronymicName = &quot;Sergeevna&quot;,
+            post = &quot;operator&quot;,
+            department = &quot;department&quot;,
+            login = &quot;ledy0K&quot;,
+            password = &quot;gaga228&quot;
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="25" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1a6e9cd10f5cd336871e48194ef7081307" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>readonly Staff UnitTests.DBSysCoreTests.tester</definition>
+        <argsstring></argsstring>
+        <name>tester</name>
+        <initializer>= new <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref>()
+        {
+            surname = &quot;Vlasov&quot;,
+            firstName = &quot;Anton&quot;,
+            patronymicName = &quot;Pavlovich&quot;,
+            post = &quot;tester&quot;,
+            department = &quot;department&quot;,
+            login = &quot;toha1221&quot;,
+            password = &quot;1221ahota&quot;
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="35" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1a39dc121b4088b2273b87caa030c8f3b4" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string UnitTests.DBSysCoreTests.statusTestID</definition>
+        <argsstring></argsstring>
+        <name>statusTestID</name>
+        <initializer>= &quot;ID#:4+NZdu5A6RGEphDwBdl4TB&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="46" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a34635e20ceaee6acb59a1b12e5396424" compoundref="_unit_tests_8cs" startline="351" endline="369">UnitTests.DBSysCoreTests.C02_DoTests</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1acaedb1d8a97d38504595dce69a4160d2" compoundref="_unit_tests_8cs" startline="440" endline="470">UnitTests.DBSysCoreTests.D02_DoTests</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1a509ae3cb259ca1139f607d811387f24e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string UnitTests.DBSysCoreTests.nominalTestID</definition>
+        <argsstring></argsstring>
+        <name>nominalTestID</name>
+        <initializer>= &quot;ID#:GYGggZRj6RGDKcA4lmuzNA&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="47" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a34635e20ceaee6acb59a1b12e5396424" compoundref="_unit_tests_8cs" startline="351" endline="369">UnitTests.DBSysCoreTests.C02_DoTests</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1acaedb1d8a97d38504595dce69a4160d2" compoundref="_unit_tests_8cs" startline="440" endline="470">UnitTests.DBSysCoreTests.D02_DoTests</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1afa4ec2e082cbe26bcb7ffaafcd4772f2" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string UnitTests.DBSysCoreTests.dumpFile_1</definition>
+        <argsstring></argsstring>
+        <name>dumpFile_1</name>
+        <initializer>= &quot;dump&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="49" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a9d6cc9f55529184c6a0234adf867da48" compoundref="_unit_tests_8cs" startline="238" endline="263">UnitTests.DBSysCoreTests.A06_SwitchDumpFile</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a7507db33f96a0d1ae30d3632f5f7bb84" compoundref="_unit_tests_8cs" startline="497" endline="523">UnitTests.DBSysCoreTests.E01_CheckDump_1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_unit_tests_1_1_d_b_sys_core_tests_1a0a83926a475a7f92f91b696a0c935231" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string UnitTests.DBSysCoreTests.dumpFile_2</definition>
+        <argsstring></argsstring>
+        <name>dumpFile_2</name>
+        <initializer>= &quot;newdump&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="50" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a9d6cc9f55529184c6a0234adf867da48" compoundref="_unit_tests_8cs" startline="238" endline="263">UnitTests.DBSysCoreTests.A06_SwitchDumpFile</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1ae46866cb41a179d6ff17e92636598636" compoundref="_unit_tests_8cs" startline="391" endline="437">UnitTests.DBSysCoreTests.D01_BeginChallenge</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a249b8a0360fd6fd3f519c1b1a819c2d2" compoundref="_unit_tests_8cs" startline="526" endline="552">UnitTests.DBSysCoreTests.E02_CheckDump_2</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a39a8352a3d7c7634f948e2ca9ac09050" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>UnitTests.DBSysCoreTests.DBSysCoreTests</definition>
+        <argsstring>()</argsstring>
+        <name>DBSysCoreTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="52" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1ab9b3860b7e08554a5382f39dbe2a9e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A00_CleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>A00_CleanUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="81" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a8696b7a5fce2426c190c39606676f0f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A01_SimpleLoginLogout</definition>
+        <argsstring>()</argsstring>
+        <name>A01_SimpleLoginLogout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="90" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="90" bodyend="113"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1aa41f4e43f1991d0ef5078755f6a2a73e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A02_AddStaff_Admin</definition>
+        <argsstring>()</argsstring>
+        <name>A02_AddStaff_Admin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="116" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="116" bodyend="149"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1ab88f74ba56df750885bc04ce2b85dd4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A03_AddStaff_Operator</definition>
+        <argsstring>()</argsstring>
+        <name>A03_AddStaff_Operator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="152" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="152" bodyend="178"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1ab5d6957522617c0f94f6229ea74b8397" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A04_AddStaff_Tester</definition>
+        <argsstring>()</argsstring>
+        <name>A04_AddStaff_Tester</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="181" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="181" bodyend="207"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a0b10d54158901eb8507abd5b7206a151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A05_CheckUsersList</definition>
+        <argsstring>()</argsstring>
+        <name>A05_CheckUsersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="210" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="210" bodyend="235"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a9d6cc9f55529184c6a0234adf867da48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.A06_SwitchDumpFile</definition>
+        <argsstring>()</argsstring>
+        <name>A06_SwitchDumpFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="238" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="238" bodyend="263"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1afa4ec2e082cbe26bcb7ffaafcd4772f2" compoundref="_unit_tests_8cs" startline="49">UnitTests.DBSysCoreTests.dumpFile_1</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0a83926a475a7f92f91b696a0c935231" compoundref="_unit_tests_8cs" startline="50">UnitTests.DBSysCoreTests.dumpFile_2</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a1ab3a26edab93b7e51d83a02a0d902de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.B01_LoadStaticTests</definition>
+        <argsstring>()</argsstring>
+        <name>B01_LoadStaticTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="266" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="266" bodyend="292"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a5dff9dc0cdd5dc6ac4547a3fc64df9e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.C01_BeginChallenge</definition>
+        <argsstring>()</argsstring>
+        <name>C01_BeginChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="296" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="296" bodyend="348"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a34635e20ceaee6acb59a1b12e5396424" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.C02_DoTests</definition>
+        <argsstring>()</argsstring>
+        <name>C02_DoTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="351" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="351" bodyend="369"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a509ae3cb259ca1139f607d811387f24e" compoundref="_unit_tests_8cs" startline="47">UnitTests.DBSysCoreTests.nominalTestID</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a39dc121b4088b2273b87caa030c8f3b4" compoundref="_unit_tests_8cs" startline="46">UnitTests.DBSysCoreTests.statusTestID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1aa6ebcf31b62e0634d71c5d641b1edb58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.C03_EndChallenge</definition>
+        <argsstring>()</argsstring>
+        <name>C03_EndChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="372" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="372" bodyend="387"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1ae46866cb41a179d6ff17e92636598636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.D01_BeginChallenge</definition>
+        <argsstring>()</argsstring>
+        <name>D01_BeginChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="391" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="391" bodyend="437"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0a83926a475a7f92f91b696a0c935231" compoundref="_unit_tests_8cs" startline="50">UnitTests.DBSysCoreTests.dumpFile_2</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1acaedb1d8a97d38504595dce69a4160d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.D02_DoTests</definition>
+        <argsstring>()</argsstring>
+        <name>D02_DoTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="440" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="440" bodyend="470"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a509ae3cb259ca1139f607d811387f24e" compoundref="_unit_tests_8cs" startline="47">UnitTests.DBSysCoreTests.nominalTestID</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a39dc121b4088b2273b87caa030c8f3b4" compoundref="_unit_tests_8cs" startline="46">UnitTests.DBSysCoreTests.statusTestID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1abfd7dd73933e6c19f74c803013b5043b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.D03_EndChallenge</definition>
+        <argsstring>()</argsstring>
+        <name>D03_EndChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="473" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="473" bodyend="493"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a7507db33f96a0d1ae30d3632f5f7bb84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.E01_CheckDump_1</definition>
+        <argsstring>()</argsstring>
+        <name>E01_CheckDump_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="497" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="497" bodyend="523"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1afa4ec2e082cbe26bcb7ffaafcd4772f2" compoundref="_unit_tests_8cs" startline="49">UnitTests.DBSysCoreTests.dumpFile_1</references>
+      </memberdef>
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1a249b8a0360fd6fd3f519c1b1a819c2d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.E02_CheckDump_2</definition>
+        <argsstring>()</argsstring>
+        <name>E02_CheckDump_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="526" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="526" bodyend="552"/>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</references>
+        <references refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0a83926a475a7f92f91b696a0c935231" compoundref="_unit_tests_8cs" startline="50">UnitTests.DBSysCoreTests.dumpFile_2</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTests.DBSysCoreTests.CheckFilesAccessory</definition>
+        <argsstring>()</argsstring>
+        <name>CheckFilesAccessory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="59" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="59" bodyend="78"/>
+        <references refid="class_d_b_sys_core_1_1_paths_1a68564fa82086ee0003f4ccba55e8c4c3" compoundref="_paths_8cs" startline="31">DBSysCore.Paths.sessionFilename</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" compoundref="_paths_8cs" startline="39">DBSysCore.Paths.usersFilename</references>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a8696b7a5fce2426c190c39606676f0f4" compoundref="_unit_tests_8cs" startline="90" endline="113">UnitTests.DBSysCoreTests.A01_SimpleLoginLogout</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa41f4e43f1991d0ef5078755f6a2a73e" compoundref="_unit_tests_8cs" startline="116" endline="149">UnitTests.DBSysCoreTests.A02_AddStaff_Admin</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1ab88f74ba56df750885bc04ce2b85dd4d" compoundref="_unit_tests_8cs" startline="152" endline="178">UnitTests.DBSysCoreTests.A03_AddStaff_Operator</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1ab5d6957522617c0f94f6229ea74b8397" compoundref="_unit_tests_8cs" startline="181" endline="207">UnitTests.DBSysCoreTests.A04_AddStaff_Tester</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0b10d54158901eb8507abd5b7206a151" compoundref="_unit_tests_8cs" startline="210" endline="235">UnitTests.DBSysCoreTests.A05_CheckUsersList</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a9d6cc9f55529184c6a0234adf867da48" compoundref="_unit_tests_8cs" startline="238" endline="263">UnitTests.DBSysCoreTests.A06_SwitchDumpFile</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a1ab3a26edab93b7e51d83a02a0d902de" compoundref="_unit_tests_8cs" startline="266" endline="292">UnitTests.DBSysCoreTests.B01_LoadStaticTests</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a5dff9dc0cdd5dc6ac4547a3fc64df9e0" compoundref="_unit_tests_8cs" startline="296" endline="348">UnitTests.DBSysCoreTests.C01_BeginChallenge</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a34635e20ceaee6acb59a1b12e5396424" compoundref="_unit_tests_8cs" startline="351" endline="369">UnitTests.DBSysCoreTests.C02_DoTests</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa6ebcf31b62e0634d71c5d641b1edb58" compoundref="_unit_tests_8cs" startline="372" endline="387">UnitTests.DBSysCoreTests.C03_EndChallenge</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1ae46866cb41a179d6ff17e92636598636" compoundref="_unit_tests_8cs" startline="391" endline="437">UnitTests.DBSysCoreTests.D01_BeginChallenge</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1acaedb1d8a97d38504595dce69a4160d2" compoundref="_unit_tests_8cs" startline="440" endline="470">UnitTests.DBSysCoreTests.D02_DoTests</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1abfd7dd73933e6c19f74c803013b5043b" compoundref="_unit_tests_8cs" startline="473" endline="493">UnitTests.DBSysCoreTests.D03_EndChallenge</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a7507db33f96a0d1ae30d3632f5f7bb84" compoundref="_unit_tests_8cs" startline="497" endline="523">UnitTests.DBSysCoreTests.E01_CheckDump_1</referencedby>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1a249b8a0360fd6fd3f519c1b1a819c2d2" compoundref="_unit_tests_8cs" startline="526" endline="552">UnitTests.DBSysCoreTests.E02_CheckDump_2</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="18">
+        <label>UnitTests.DBSysCoreTests</label>
+        <link refid="class_unit_tests_1_1_d_b_sys_core_tests"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>admin</edgelabel>
+          <edgelabel>oper</edgelabel>
+          <edgelabel>tester</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>DBSysCore.Model.Staff</label>
+        <link refid="class_d_b_sys_core_1_1_model_1_1_staff"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/UnitTests/UnitTests.cs" bodystart="13" bodyend="553"/>
+    <listofallmembers>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1ab9b3860b7e08554a5382f39dbe2a9e0e" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A00_CleanUp</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a8696b7a5fce2426c190c39606676f0f4" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A01_SimpleLoginLogout</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa41f4e43f1991d0ef5078755f6a2a73e" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A02_AddStaff_Admin</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1ab88f74ba56df750885bc04ce2b85dd4d" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A03_AddStaff_Operator</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1ab5d6957522617c0f94f6229ea74b8397" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A04_AddStaff_Tester</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0b10d54158901eb8507abd5b7206a151" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A05_CheckUsersList</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a9d6cc9f55529184c6a0234adf867da48" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>A06_SwitchDumpFile</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1ae8fda7c05088fae7f6c584bd2141cca7" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>admin</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a1ab3a26edab93b7e51d83a02a0d902de" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>B01_LoadStaticTests</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a5dff9dc0cdd5dc6ac4547a3fc64df9e0" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>C01_BeginChallenge</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a34635e20ceaee6acb59a1b12e5396424" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>C02_DoTests</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa6ebcf31b62e0634d71c5d641b1edb58" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>C03_EndChallenge</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>CheckFilesAccessory</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1ae46866cb41a179d6ff17e92636598636" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>D01_BeginChallenge</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1acaedb1d8a97d38504595dce69a4160d2" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>D02_DoTests</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1abfd7dd73933e6c19f74c803013b5043b" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>D03_EndChallenge</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a39a8352a3d7c7634f948e2ca9ac09050" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>DBSysCoreTests</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1afa4ec2e082cbe26bcb7ffaafcd4772f2" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>dumpFile_1</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a0a83926a475a7f92f91b696a0c935231" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>dumpFile_2</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a7507db33f96a0d1ae30d3632f5f7bb84" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>E01_CheckDump_1</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a249b8a0360fd6fd3f519c1b1a819c2d2" prot="public" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>E02_CheckDump_2</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a509ae3cb259ca1139f607d811387f24e" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>nominalTestID</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a9ca32ee77ae2e4702888cc51fcd68546" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>oper</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a39dc121b4088b2273b87caa030c8f3b4" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>statusTestID</name></member>
+      <member refid="class_unit_tests_1_1_d_b_sys_core_tests_1a6e9cd10f5cd336871e48194ef7081307" prot="private" virt="non-virtual"><scope>UnitTests::DBSysCoreTests</scope><name>tester</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

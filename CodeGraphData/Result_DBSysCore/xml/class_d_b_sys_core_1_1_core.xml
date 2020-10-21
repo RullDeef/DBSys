@@ -1,0 +1,906 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_core" kind="class" prot="public">
+    <compoundname>DBSysCore::Core</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" prot="public" static="yes" mutable="no">
+        <type>SQLiteConnection</type>
+        <definition>SQLiteConnection DBSysCore.Core.usersConnection</definition>
+        <argsstring></argsstring>
+        <name>usersConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Соединение для пользовательского файла. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="24" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1a0d80128bdc991f00cabd85df98318249" compoundref="_session_8cs" startline="331" endline="408">DBSysCore.Session.Auth</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" compoundref="_core_8cs" startline="202" endline="237">DBSysCore.Core.GetAllUsers</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1aa33c30ca6dd0a118a076d5617e65b83e" compoundref="_core_8cs" startline="478" endline="512">DBSysCore.Core.SaveAllStaff</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_staff_1a5107a69e47bdbb0138da96fce46e2421" compoundref="_staff_8cs" startline="39" endline="68">DBSysCore.Model.Staff.Staff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" prot="public" static="yes" mutable="no">
+        <type>SQLiteConnection</type>
+        <definition>SQLiteConnection DBSysCore.Core.dumpConnection</definition>
+        <argsstring></argsstring>
+        <name>dumpConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Соединение для текущего файла дампов. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="29" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a60ac77804dea9ebe8e4e894e6f135d9b" compoundref="_challenge_8cs" startline="24" endline="44">DBSysCore.Model.Challenge.Challenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a623679a5a05346c17da630212dbdddec" compoundref="_challenge_type_8cs" startline="15" endline="21">DBSysCore.Model.ChallengeType.ChallengeType</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0dfe3575809851400318e0fcfd9b71cd" compoundref="_controll_object_8cs" startline="20" endline="36">DBSysCore.Model.ControllObject.ControllObject</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" compoundref="_core_8cs" startline="792" endline="828">DBSysCore.Core.EndChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" compoundref="_methodology_8cs" startline="38" endline="45">DBSysCore.Model.Methodology.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_module_1a155d6ff079136693bfa4cf6255878cf5" compoundref="_module_8cs" startline="51" endline="58">DBSysCore.Model.Module.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a6fca55af79d6c5d8a93ac918175a294f" compoundref="_requirements_8cs" startline="51" endline="58">DBSysCore.Model.Requirements.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_location_1ab42f56ccbecf3b10055b08e9544eb418" compoundref="_location_8cs" startline="58" endline="70">DBSysCore.Model.Location.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a741c33552d1dfa3d95d48dd071b51645" compoundref="_challenge_type_8cs" startline="60" endline="72">DBSysCore.Model.ChallengeType.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_staff_1aa3d01939a2c70d762ee1de6a001c00db" compoundref="_staff_8cs" startline="91" endline="105">DBSysCore.Model.Staff.Exists</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_staff_1a0d700f235d3b2b9b6b794661789515fb" compoundref="_staff_8cs" startline="107" endline="123">DBSysCore.Model.Staff.Get</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a3930787b1eced467dc43a438c5a80e85" compoundref="_challenge_8cs" startline="105" endline="128">DBSysCore.Model.Challenge.GetChallenges</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_module_1a11df2ae53feafa1e58a9a035e0cb9bfb" compoundref="_module_8cs" startline="60" endline="78">DBSysCore.Model.Module.GetModules</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0ac1e12c18e6cc3e1bc700ae9782bdc8" compoundref="_test_static_8cs" startline="73" endline="114">DBSysCore.Model.TestStatic.GetTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a038427c0227fa6922e9b232193cb9174" compoundref="_test_dynamic_8cs" startline="126" endline="163">DBSysCore.Model.TestDynamic.GetTestsByQuery</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_location_1a420ffd08677fe04a86cd1caf284f7e86" compoundref="_location_8cs" startline="15" endline="21">DBSysCore.Model.Location.Location</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" compoundref="_methodology_8cs" startline="16" endline="28">DBSysCore.Model.Methodology.Methodology</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_module_1a2d6fe8e9b7bc9234e7dce5a1a8b7e186" compoundref="_module_8cs" startline="16" endline="22">DBSysCore.Model.Module.Module</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_requirements_1a49b6381c859508f0263ac6e4edd9fea0" compoundref="_requirements_8cs" startline="15" endline="22">DBSysCore.Model.Requirements.Requirements</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" compoundref="_core_8cs" startline="154" endline="196">DBSysCore.Core.RetrieveAllUsers</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_staff_1a88bb25e470c41076f982f42575bb24be" compoundref="_staff_8cs" startline="22" endline="37">DBSysCore.Model.Staff.Staff</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a583cc129afe17975c60261ca28f3f27d" compoundref="_test_static_8cs" startline="22" endline="42">DBSysCore.Model.TestStatic.TestStatic</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.InitializeConnection</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Инициализирует соединение с текущим файлом дампа.</para><para>Возвращает false, если соединение прошло успешно. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="38" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="38" bodyend="99"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a96b914a727b64055e9c9eff74f2db140" compoundref="_paths_8cs" startline="40">DBSysCore.Paths.dumpModelFilename</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" compoundref="_core_8cs" startline="1129" endline="1167">DBSysCore.Core.DumpUse</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" compoundref="_core_8cs" startline="792" endline="828">DBSysCore.Core.EndChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" compoundref="_core_8cs" startline="239" endline="270">DBSysCore.Core.GetAllChallenges</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" compoundref="_core_8cs" startline="202" endline="237">DBSysCore.Core.GetAllUsers</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" compoundref="_core_8cs" startline="340" endline="372">DBSysCore.Core.GetDynamicTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" compoundref="_core_8cs" startline="272" endline="304">DBSysCore.Core.GetModules</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" compoundref="_core_8cs" startline="306" endline="338">DBSysCore.Core.GetStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ab78f974beb1a738662da2521c9484e92" compoundref="_core_8cs" startline="445" endline="472">DBSysCore.Core.MapStaticTests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.InitializeUserDataConnection</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeUserDataConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Инициализирует соединение с файлом пользовательких данных.</para><para>Если файл пользовательских данных не существует - создаёт новый, при этом собирает данные обо всех пользователях из всех возможных источников - файлов дампов, находящихся в папке с программой. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="108" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="108" bodyend="148"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" compoundref="_core_8cs" startline="154" endline="196">DBSysCore.Core.RetrieveAllUsers</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" compoundref="_core_8cs" startline="24">DBSysCore.Core.usersConnection</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" compoundref="_paths_8cs" startline="39">DBSysCore.Paths.usersFilename</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a5f959bfc7388caa655929f911a97ae35" compoundref="_paths_8cs" startline="41">DBSysCore.Paths.usersModelFilename</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" compoundref="_core_8cs" startline="713" endline="787">DBSysCore.Core.BeginChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" compoundref="_core_8cs" startline="239" endline="270">DBSysCore.Core.GetAllChallenges</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" compoundref="_core_8cs" startline="202" endline="237">DBSysCore.Core.GetAllUsers</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" compoundref="_core_8cs" startline="340" endline="372">DBSysCore.Core.GetDynamicTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" compoundref="_core_8cs" startline="588" endline="659">DBSysCore.Core.Login</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCore.Core.RetrieveAllUsers</definition>
+        <argsstring>()</argsstring>
+        <name>RetrieveAllUsers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для сбора данных обо всех пользователях из всех файлов дампов в [папке с программой?]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="154" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="154" bodyend="196"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1ab1d28db8f36f9ec0284e25fa5a44f60e" compoundref="_paths_8cs" startline="45">DBSysCore.Paths.dumpsDirectory</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1afdec737d5da02efbe1dbe5b3a0c69dfe" compoundref="_session_8cs" startline="43">DBSysCore.SessionData.filename</references>
+        <references refid="class_d_b_sys_core_1_1_core_1aa33c30ca6dd0a118a076d5617e65b83e" compoundref="_core_8cs" startline="478" endline="512">DBSysCore.Core.SaveAllStaff</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1aa33c30ca6dd0a118a076d5617e65b83e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCore.Core.SaveAllStaff</definition>
+        <argsstring>(List&lt; Staff &gt; staffList)</argsstring>
+        <name>SaveAllStaff</name>
+        <param>
+          <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref> &gt;</type>
+          <declname>staffList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Производит запись информации обо всех предоставленных пользователях в пользовательский файл. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="478" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="478" bodyend="512"/>
+        <references refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" compoundref="_core_8cs" startline="24">DBSysCore.Core.usersConnection</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" compoundref="_core_8cs" startline="154" endline="196">DBSysCore.Core.RetrieveAllUsers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCore.Core.CloseConnections</definition>
+        <argsstring>()</argsstring>
+        <name>CloseConnections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Закрывает все открытые соединения. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="517" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="517" bodyend="533"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" compoundref="_core_8cs" startline="24">DBSysCore.Core.usersConnection</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" compoundref="_core_8cs" startline="713" endline="787">DBSysCore.Core.BeginChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" compoundref="_core_8cs" startline="1129" endline="1167">DBSysCore.Core.DumpUse</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" compoundref="_core_8cs" startline="792" endline="828">DBSysCore.Core.EndChallenge</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" compoundref="_core_8cs" startline="239" endline="270">DBSysCore.Core.GetAllChallenges</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" compoundref="_core_8cs" startline="202" endline="237">DBSysCore.Core.GetAllUsers</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" compoundref="_core_8cs" startline="340" endline="372">DBSysCore.Core.GetDynamicTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" compoundref="_core_8cs" startline="272" endline="304">DBSysCore.Core.GetModules</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" compoundref="_core_8cs" startline="306" endline="338">DBSysCore.Core.GetStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" compoundref="_core_8cs" startline="588" endline="659">DBSysCore.Core.Login</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ab78f974beb1a738662da2521c9484e92" compoundref="_core_8cs" startline="445" endline="472">DBSysCore.Core.MapStaticTests</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" compoundref="_core_8cs" startline="833" endline="891">DBSysCore.Core.Test</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.HasOTKStaff</definition>
+        <argsstring>(int id, out bool flag)</argsstring>
+        <name>HasOTKStaff</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>out bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="688" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="688" bodyend="708"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" compoundref="_core_8cs" startline="202" endline="237">DBSysCore.Core.GetAllUsers</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_staff_1a6c45df23bdefd45a4b702725a1ec6535" compoundref="_staff_8cs" startline="11">DBSysCore.Model.Staff.id</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" compoundref="_core_8cs" startline="713" endline="787">DBSysCore.Core.BeginChallenge</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ae972e71e9ebf5cb96844067dc167977b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string DBSysCore.Core.GenerateReportFileName</definition>
+        <argsstring>(Challenge challenge)</argsstring>
+        <name>GenerateReportFileName</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1219" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1219" bodyend="1223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ae580580e034189e97f793f68cf4bdf37" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCore.Core._ExecSQL</definition>
+        <argsstring>(string query)</argsstring>
+        <name>_ExecSQL</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1451" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1451" bodyend="1463"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a3f1f83324b27140c6cc411aa64cb90ad" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DBSysCore.Core.MergeFiles</definition>
+        <argsstring>(SQLiteConnection connection, string source)</argsstring>
+        <name>MergeFiles</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для объединения данных из файла с названием source по переданному соединению. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1513" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1513" bodyend="1548"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a1ab5e6615430d3536af008b087485de9" compoundref="_core_8cs" startline="1172" endline="1217">DBSysCore.Core.DumpMerge</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetAllUsers</definition>
+        <argsstring>(out List&lt; Staff &gt; staffList)</argsstring>
+        <name>GetAllUsers</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref> &gt;</type>
+          <declname>staffList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Выделяет всех сохранённых пользователей из [пользовательской?] базы данных. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="202" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="202" bodyend="237"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" compoundref="_core_8cs" startline="24">DBSysCore.Core.usersConnection</references>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" compoundref="_core_8cs" startline="688" endline="708">DBSysCore.Core.HasOTKStaff</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetAllChallenges</definition>
+        <argsstring>(out List&lt; Challenge &gt; challengeList)</argsstring>
+        <name>GetAllChallenges</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref> &gt;</type>
+          <declname>challengeList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="239" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="239" bodyend="270"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetModules</definition>
+        <argsstring>(out List&lt; Module &gt; modulesList)</argsstring>
+        <name>GetModules</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_module" kindref="compound">Module</ref> &gt;</type>
+          <declname>modulesList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="272" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="272" bodyend="304"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetStaticTests</definition>
+        <argsstring>(out List&lt; TestStatic &gt; testsList)</argsstring>
+        <name>GetStaticTests</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_static" kindref="compound">TestStatic</ref> &gt;</type>
+          <declname>testsList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="306" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="306" bodyend="338"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetDynamicTests</definition>
+        <argsstring>(out List&lt; TestDynamic &gt; testsList)</argsstring>
+        <name>GetDynamicTests</name>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+          <declname>testsList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="340" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="340" bodyend="372"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a1a0dddd20b7b9a8faff96df84c75af00" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetDynamicTests</definition>
+        <argsstring>(Challenge challenge, out List&lt; TestDynamic &gt; testsList)</argsstring>
+        <name>GetDynamicTests</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+          <declname>testsList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="374" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="374" bodyend="406"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a4c73ed637543fcbcfbf52ea093594c63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetDynamicTests</definition>
+        <argsstring>(DateTime beginDate, DateTime endDate, out List&lt; TestDynamic &gt; testsList)</argsstring>
+        <name>GetDynamicTests</name>
+        <param>
+          <type>DateTime</type>
+          <declname>beginDate</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endDate</declname>
+        </param>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+          <declname>testsList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="408" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="408" bodyend="443"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ab78f974beb1a738662da2521c9484e92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.MapStaticTests</definition>
+        <argsstring>(List&lt; TestDynamic &gt; testsDynamicList, out List&lt; TestStatic &gt; testsStaticList)</argsstring>
+        <name>MapStaticTests</name>
+        <param>
+          <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic" kindref="compound">TestDynamic</ref> &gt;</type>
+          <declname>testsDynamicList</declname>
+        </param>
+        <param>
+          <type>out List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_test_static" kindref="compound">TestStatic</ref> &gt;</type>
+          <declname>testsStaticList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="445" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="445" bodyend="472"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a73c23bf45c3291a577f4046b69191aab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.Status</definition>
+        <argsstring>(out string status)</argsstring>
+        <name>Status</name>
+        <param>
+          <type>out string</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Передает данные состояния программы в строку status. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="538" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="538" bodyend="583"/>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.Login</definition>
+        <argsstring>(string login, string password)</argsstring>
+        <name>Login</name>
+        <param>
+          <type>string</type>
+          <declname>login</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Производит авторизацию пользователя по введённому логину и паролю. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="588" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="588" bodyend="659"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" compoundref="_paths_8cs" startline="39">DBSysCore.Paths.usersFilename</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a031c0b2a708702b33fed98366e58164e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.Logout</definition>
+        <argsstring>()</argsstring>
+        <name>Logout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Производит сброс текущего авторизорованного пользователя. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="664" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="664" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.BeginChallenge</definition>
+        <argsstring>(string productName, string coName, string coSerialNumber, string coDecNumber, int staffOTKId, string coParent, string challengeTypeName, string locationName, string description=&quot;&quot;)</argsstring>
+        <name>BeginChallenge</name>
+        <param>
+          <type>string</type>
+          <declname>productName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>coName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>coSerialNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>coDecNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>staffOTKId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>coParent</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>challengeTypeName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>locationName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Иниализирует новое испытание. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="713" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="713" bodyend="787"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" compoundref="_core_8cs" startline="688" endline="708">DBSysCore.Core.HasOTKStaff</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1a3a5420eceedaa2e2c0e3a25306085b28" compoundref="_session_8cs" startline="234" endline="239">DBSysCore.Session.IsLoggedInAsVirtualAdmin</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.EndChallenge</definition>
+        <argsstring>()</argsstring>
+        <name>EndChallenge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Завершает и сохраняет текущее испытание. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="792" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="792" bodyend="828"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.Test</definition>
+        <argsstring>(string tsIndex, bool status, decimal nominal, decimal actualValue, decimal delta, decimal boundaryValue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>string</type>
+          <declname>tsIndex</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>nominal</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>actualValue</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>boundaryValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Иниализирует новый тест. (test_dynamic) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="833" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="833" bodyend="891"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ae4c813394924b899cde1585334f9a3e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.Test</definition>
+        <argsstring>(string tsIndex, bool status)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>string</type>
+          <declname>tsIndex</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="893" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="893" bodyend="950"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.LoadStaticTests</definition>
+        <argsstring>()</argsstring>
+        <name>LoadStaticTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Загружает статические данные в текущий файл дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="955" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="955" bodyend="1124"/>
+        <references refid="class_d_b_sys_core_1_1_core_1ae580580e034189e97f793f68cf4bdf37" compoundref="_core_8cs" startline="1451" endline="1463">DBSysCore.Core._ExecSQL</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+        <references refid="class_d_b_sys_core_1_1_paths_1a38c45eab9124a34dbd2fa1a26b186de4" compoundref="_paths_8cs" startline="42">DBSysCore.Paths.staticDataTable</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.DumpUse</definition>
+        <argsstring>(string filepath)</argsstring>
+        <name>DumpUse</name>
+        <param>
+          <type>string</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для смены рабочего файла дампа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1129" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1129" bodyend="1167"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" compoundref="_core_8cs" startline="517" endline="533">DBSysCore.Core.CloseConnections</references>
+        <references refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a1ab5e6615430d3536af008b087485de9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.DumpMerge</definition>
+        <argsstring>(string dest, string[] src)</argsstring>
+        <name>DumpMerge</name>
+        <param>
+          <type>string</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для объединения нескольких файлов дампов в один. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1172" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1172" bodyend="1217"/>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_core_1a3f1f83324b27140c6cc411aa64cb90ad" compoundref="_core_8cs" startline="1513" endline="1548">DBSysCore.Core.MergeFiles</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GenerateReport</definition>
+        <argsstring>(Challenge challenge, out string resultFileName)</argsstring>
+        <name>GenerateReport</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <param>
+          <type>out string</type>
+          <declname>resultFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1225" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1225" bodyend="1349"/>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_challenge_1a5032d004daf7fc60dac98a41299a1b60" compoundref="_challenge_8cs" startline="12">DBSysCore.Model.Challenge.controllObject</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a0747b33573ea530113e01908ad4e83b3" compoundref="_test_dynamic_8cs" startline="98" endline="105">DBSysCore.Model.TestDynamic.GetTests</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa5601f3752e7174a901ab68a62dabb08" compoundref="_controll_object_8cs" startline="11">DBSysCore.Model.ControllObject.name</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1ab29b52bbc076b645c1b39bfb0d3d90a1" compoundref="_controll_object_8cs" startline="16">DBSysCore.Model.ControllObject.product</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a236ca28222050df82a15f397bc21099f" compoundref="_controll_object_8cs" startline="12">DBSysCore.Model.ControllObject.serialNumber</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_dynamic_1a114525bd4c60a1ef6428537e1ab9a08f" compoundref="_test_dynamic_8cs" startline="24">DBSysCore.Model.TestDynamic.status</references>
+        <references refid="class_d_b_sys_core_1_1_model_1_1_test_static_1a0edfa39bb8515e6aea71b121a8d08e20" compoundref="_test_static_8cs" startline="16">DBSysCore.Model.TestStatic.unit</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a4b2b483c23cd22d7c8cc442f1d685491" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.AddStaff</definition>
+        <argsstring>(string surname, string firstName, string patronymicName, string postName, string departmentName, string login, string password)</argsstring>
+        <name>AddStaff</name>
+        <param>
+          <type>string</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>firstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>patronymicName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>postName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>departmentName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>login</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для добавления учётной записи для пользователя.</para><para>При попытке создать пользователя с существующими фамилией, именем и отчеством то происходит смена логина и пароля. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1357" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1357" bodyend="1412"/>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1ab8dc79e60d0c00889634dcb2ccbcd528" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.UpdateStaff</definition>
+        <argsstring>(Staff staff)</argsstring>
+        <name>UpdateStaff</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+          <declname>staff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1414" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1414" bodyend="1449"/>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="struct_d_b_sys_core_1_1_session_data_1a6aa6a487152e5be698784492832b3bbe" compoundref="_session_8cs" startline="38">DBSysCore.SessionData.programState</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+        <references refid="class_d_b_sys_core_1_1_session_1adda8b5b02e37bb2fb36dc87df5854d88" compoundref="_session_8cs" startline="73">DBSysCore.Session.sessionData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1a3415833be828014a373d60d361d49c16" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.ExecSQL</definition>
+        <argsstring>(string query, out string output)</argsstring>
+        <name>ExecSQL</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>out string</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1465" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1465" bodyend="1508"/>
+        <references refid="class_d_b_sys_core_1_1_session_1ad58b41ea914c25ce743b0e10f6684736" compoundref="_session_8cs" startline="227" endline="232">DBSysCore.Session.IsLoggedIn</references>
+        <references refid="class_d_b_sys_core_1_1_session_1ab686bed8645c58bae2494872466b57ac" compoundref="_session_8cs" startline="298" endline="315">DBSysCore.Session.RequireGrants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_core_1aa3ba2b3de485c72880be144db779c7ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_d_b_sys_core_1ae8e296d82fa14290551467cf7c2b1a78" kindref="member">StatusCode</ref></type>
+        <definition>static StatusCode DBSysCore.Core.GetFPGAVersion</definition>
+        <argsstring>(Challenge challenge, out string version)</argsstring>
+        <name>GetFPGAVersion</name>
+        <param>
+          <type><ref refid="class_d_b_sys_core_1_1_model_1_1_challenge" kindref="compound">Challenge</ref></type>
+          <declname>challenge</declname>
+        </param>
+        <param>
+          <type>out string</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="1550" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="1550" bodyend="1589"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Класс реализующий все базовые операции над БД, в том числе администрирование пользователей. </para>    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Core.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Core.cs" bodystart="19" bodyend="1590"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_core_1ae580580e034189e97f793f68cf4bdf37" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>_ExecSQL</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a4b2b483c23cd22d7c8cc442f1d685491" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>AddStaff</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1abf072fed699527a91dec2a3567ce5fc6" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>BeginChallenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a50d0df309dad655632243b7f6587c00a" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>CloseConnections</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>dumpConnection</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a1ab5e6615430d3536af008b087485de9" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>DumpMerge</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a73c09bbbfc9bbfdf38cf27cfcc6d221b" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>DumpUse</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a9ae790207e3291ddab2ed842129f67a6" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>EndChallenge</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a3415833be828014a373d60d361d49c16" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>ExecSQL</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GenerateReport</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ae972e71e9ebf5cb96844067dc167977b" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GenerateReportFileName</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1af50529fa281029b3bffac47186821a1d" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetAllChallenges</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a7eec89e032dd9916dad3b4cf47c4a69d" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetAllUsers</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a59d27c48cee5d2ea58298f3882e058cf" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetDynamicTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a1a0dddd20b7b9a8faff96df84c75af00" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetDynamicTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a4c73ed637543fcbcfbf52ea093594c63" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetDynamicTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1aa3ba2b3de485c72880be144db779c7ac" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetFPGAVersion</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a56f9dbead05356a2c1e49a6b28b898f0" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetModules</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a4d7978cf8bc92a0ebe589f50a1f18b82" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>GetStaticTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>HasOTKStaff</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>InitializeConnection</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>InitializeUserDataConnection</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>LoadStaticTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>Login</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a031c0b2a708702b33fed98366e58164e" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>Logout</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ab78f974beb1a738662da2521c9484e92" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>MapStaticTests</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a3f1f83324b27140c6cc411aa64cb90ad" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>MergeFiles</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>RetrieveAllUsers</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1aa33c30ca6dd0a118a076d5617e65b83e" prot="private" virt="non-virtual"><scope>DBSysCore::Core</scope><name>SaveAllStaff</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1a73c23bf45c3291a577f4046b69191aab" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>Status</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ae6d3194c41a6b8d4f39b7501db4b6412" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>Test</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ae4c813394924b899cde1585334f9a3e8" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>Test</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ab8dc79e60d0c00889634dcb2ccbcd528" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>UpdateStaff</name></member>
+      <member refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" prot="public" virt="non-virtual"><scope>DBSysCore::Core</scope><name>usersConnection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

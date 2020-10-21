@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_properties_1_1_resources" kind="class" prot="package">
+    <compoundname>DBSysReport::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_properties_1_1_resources_1a622213762172da0408143aedf7a54404" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager DBSysReport.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="28" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_properties_1_1_resources_1ad8cb3525c21ec5f5a6ec8a17aee50428" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo DBSysReport.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="30" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_d_b_sys_report_1_1_properties_1_1_resources_1aa77a365ec4831b9254d15093b0cc387a" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager DBSysReport.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Возврат кэшированного экземпляра ResourceManager, используемого этим классом. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="41" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_d_b_sys_report_1_1_properties_1_1_resources_1acae8b8d482d27743d65f118d57783929" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo DBSysReport.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Переопределяет свойство CurrentUICulture текущего потока для всех подстановки ресурсов с помощью этого класса ресурсов со строгим типом. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="59" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_properties_1_1_resources_1a6d441082b17cb5280cb2e2feacb2b220" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysReport.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="33" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="33" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Класс ресурсов со строгим типом для поиска локализованных строк и пр. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="49">
+        <label>DBSysReport.Properties.Resources</label>
+        <link refid="class_d_b_sys_report_1_1_properties_1_1_resources"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" line="26" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Resources.Designer.cs" bodystart="25" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_resources_1acae8b8d482d27743d65f118d57783929" prot="package" virt="non-virtual"><scope>DBSysReport::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_resources_1ad8cb3525c21ec5f5a6ec8a17aee50428" prot="private" virt="non-virtual"><scope>DBSysReport::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_resources_1a622213762172da0408143aedf7a54404" prot="private" virt="non-virtual"><scope>DBSysReport::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_resources_1aa77a365ec4831b9254d15093b0cc387a" prot="package" virt="non-virtual"><scope>DBSysReport::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_resources_1a6d441082b17cb5280cb2e2feacb2b220" prot="package" virt="non-virtual"><scope>DBSysReport::Properties::Resources</scope><name>Resources</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

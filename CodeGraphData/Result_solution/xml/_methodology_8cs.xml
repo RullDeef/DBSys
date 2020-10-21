@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_methodology_8cs" kind="file">
+    <compoundname>Methodology.cs</compoundname>
+    <innerclass refid="class_d_b_sys_core_1_1_model_1_1_methodology" prot="public">DBSysCore::Model::Methodology</innerclass>
+    <innernamespace refid="namespace_d_b_sys_core_1_1_model">DBSysCore::Model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Data.SQLite;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DBSysCore.Model</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable]</highlight></codeline>
+<codeline lineno="8" refid="class_d_b_sys_core_1_1_model_1_1_methodology" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology" kindref="compound">Methodology</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a9d053bc54f6994511a3adf3291869461" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a9d053bc54f6994511a3adf3291869461" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="11" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1ae16a0edea2580b2bb22eec3e1be94aa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1ae16a0edea2580b2bb22eec3e1be94aa6" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="12" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1abfd44fbcfb5df82e7f3470969b32dcb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1abfd44fbcfb5df82e7f3470969b32dcb4" kindref="member">docNumber</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a47708d227062ef7ad33d38b1b17abd68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a47708d227062ef7ad33d38b1b17abd68" kindref="member">Methodology</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa9a71cea457a11d3bc8ad95215bf730a" kindref="member">Methodology</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query<sp/>=<sp/>$</highlight><highlight class="stringliteral">&quot;SELECT<sp/>[id],<sp/>[name],<sp/>[doc_number]<sp/>FROM<sp/>[methodology]<sp/>WHERE<sp/>[id]<sp/>=<sp/>&apos;{id}&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SQLiteDataReader<sp/>reader<sp/>=<sp/>Utils.ExecuteReader(query,<sp/><ref refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" kindref="member">Core.dumpConnection</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reader.Read();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.id<sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>=<sp/>(string)reader[1];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>docNumber<sp/>=<sp/>(string)reader[2];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reader.Close();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa3b4d45fa132f3b9a1d63ff60a65ac56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1aa3b4d45fa132f3b9a1d63ff60a65ac56" kindref="member">SaveData</ref>(SQLiteConnection<sp/>connection)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query<sp/>=<sp/>$</highlight><highlight class="stringliteral">&quot;REPLACE<sp/>INTO<sp/>[methodology]<sp/>([id],<sp/>[name],<sp/>[doc_number])<sp/>VALUES<sp/>({id},<sp/>&apos;{name}&apos;,<sp/>&apos;{docNumber}&apos;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SQLiteCommand<sp/>cmd<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SQLiteCommand(query,<sp/>connection);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmd.ExecuteNonQuery();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmd.Dispose();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_d_b_sys_core_1_1_model_1_1_methodology_1a72e99290df877aa3e4cdd6f5450209fc" kindref="member">Exists</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query<sp/>=<sp/>$</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>[methodology]<sp/>WHERE<sp/>[name]<sp/>=<sp/>&apos;{name}&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SQLiteDataReader<sp/>reader<sp/>=<sp/>Utils.ExecuteReader(query,<sp/><ref refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" kindref="member">Core.dumpConnection</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>reader.HasRows;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reader.Close();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Methodology.cs"/>
+  </compounddef>
+</doxygen>

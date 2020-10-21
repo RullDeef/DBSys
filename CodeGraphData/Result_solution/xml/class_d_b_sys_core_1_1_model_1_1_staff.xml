@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_staff" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::Staff</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1a6c45df23bdefd45a4b702725a1ec6535" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Staff.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a827adf033d3b0e3eb131e76806e59cc0" compoundref="_core_8cs" startline="688" endline="708">DBSysCore.Core.HasOTKStaff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1ab6699880619fd34d054ae4879df9ac32" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.surname</definition>
+        <argsstring></argsstring>
+        <name>surname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1a53cb0ca84cc97d70a569b1bb6c89fa77" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.firstName</definition>
+        <argsstring></argsstring>
+        <name>firstName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1a1dcd8b25f39da84cb5f64bbefed10dd1" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.patronymicName</definition>
+        <argsstring></argsstring>
+        <name>patronymicName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1a9d62ed2459db957c14c8b0f127cdd627" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.post</definition>
+        <argsstring></argsstring>
+        <name>post</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1a2f4a3946cb677b2349fcd088e309fb21" compoundref="_app_form_8cs" startline="210" endline="245">DBSysReport.AppForm.setEmployerDataButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1aa086badb2d79eb44bc9aee39cf690784" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.department</definition>
+        <argsstring></argsstring>
+        <name>department</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1ae915eada3a35ea3b8d396c56ffd18020" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.login</definition>
+        <argsstring></argsstring>
+        <name>login</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="17" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_staff_1a45dfeb880998aa99bdb46c5f88ea52ba" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Staff.password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a7fc6128cada700463e5a9d43dd92c1c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Staff.Staff</definition>
+        <argsstring>()</argsstring>
+        <name>Staff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a88bb25e470c41076f982f42575bb24be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Staff.Staff</definition>
+        <argsstring>(string surname, string firstName, string patronymicName, string post, string department, string login, string password)</argsstring>
+        <name>Staff</name>
+        <param>
+          <type>string</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>firstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>patronymicName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>post</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>department</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>login</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="22" bodyend="37"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a5107a69e47bdbb0138da96fce46e2421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Staff.Staff</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Staff</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="39" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="39" bodyend="68"/>
+        <references refid="class_d_b_sys_core_1_1_core_1ac242ad85c63f2ca8f585b0a5ec2b7083" compoundref="_core_8cs" startline="24">DBSysCore.Core.usersConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a0b2caf43c83afdbc4f7440aced5f4867" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Staff.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="70" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1adfcb5b1465cac230ccbe3a7f719ef5b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.Staff.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="76" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="76" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a9cbb4c0c49d3b689d83bbda132feadf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string DBSysCore.Model.Staff.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="158" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="158" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1aa3d01939a2c70d762ee1de6a001c00db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool DBSysCore.Model.Staff.Exists</definition>
+        <argsstring>(string surname, string firstName, string patronymicName)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>string</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>firstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>patronymicName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="91" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="91" bodyend="105"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1a0d700f235d3b2b9b6b794661789515fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref></type>
+        <definition>static Staff DBSysCore.Model.Staff.Get</definition>
+        <argsstring>(string surname, string firstName, string patronymicName)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>string</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>firstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>patronymicName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="107" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="107" bodyend="123"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_staff_1abeb43c7459cba7a32734e2397172888d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_d_b_sys_core_1_1_model_1_1_staff" kindref="compound">Staff</ref> &gt;</type>
+        <definition>static List&lt;Staff&gt; DBSysCore.Model.Staff.ExtractAll</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>ExtractAll</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="125" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="125" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Staff.cs" bodystart="9" bodyend="162"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1aa086badb2d79eb44bc9aee39cf690784" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>department</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1aa3d01939a2c70d762ee1de6a001c00db" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>Exists</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1abeb43c7459cba7a32734e2397172888d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>ExtractAll</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a53cb0ca84cc97d70a569b1bb6c89fa77" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>firstName</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a0b2caf43c83afdbc4f7440aced5f4867" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a0d700f235d3b2b9b6b794661789515fb" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>Get</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a6c45df23bdefd45a4b702725a1ec6535" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1ae915eada3a35ea3b8d396c56ffd18020" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>login</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a45dfeb880998aa99bdb46c5f88ea52ba" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>password</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a1dcd8b25f39da84cb5f64bbefed10dd1" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>patronymicName</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a9d62ed2459db957c14c8b0f127cdd627" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>post</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1adfcb5b1465cac230ccbe3a7f719ef5b6" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>SaveData</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a7fc6128cada700463e5a9d43dd92c1c5" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>Staff</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a88bb25e470c41076f982f42575bb24be" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>Staff</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a5107a69e47bdbb0138da96fce46e2421" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>Staff</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1ab6699880619fd34d054ae4879df9ac32" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>surname</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_staff_1a9cbb4c0c49d3b689d83bbda132feadf4" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Staff</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

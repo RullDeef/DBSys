@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_utils" kind="class" prot="public">
+    <compoundname>DBSysCore::Utils</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_utils_1acafafbe94816d3ccc6a212dd349bc326" prot="private" static="yes" mutable="no">
+        <type>readonly SHA256</type>
+        <definition>readonly SHA256 DBSysCore.Utils.sha256</definition>
+        <argsstring></argsstring>
+        <name>sha256</name>
+        <initializer>= SHA256.Create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Объект для создания хэш сумм. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1af678fb693bad9c653038ac6670a48289" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int DBSysCore.Utils.Hash</definition>
+        <argsstring>(string data)</argsstring>
+        <name>Hash</name>
+        <param>
+          <type>string</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Создает числовой хэш код для переданной строки.</para><para>Числовой хэш код всегда неотрицателен. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="23" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1afe3df9a978a1fd164e412a4eea17e543" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string DBSysCore.Utils.GetHash</definition>
+        <argsstring>(string input)</argsstring>
+        <name>GetHash</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Возвращает строковый хэш код для переданной строки.</para><para>Строковый хэш код всегда имеет длину 64 символа. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="36" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="36" bodyend="52"/>
+        <referencedby refid="class_d_b_sys_core_1_1_utils_1a68e19b5981280b759632f7e035dbfdc1" compoundref="_utils_8cs" startline="59" endline="65">DBSysCore.Utils.VerifyHash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1a68e19b5981280b759632f7e035dbfdc1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool DBSysCore.Utils.VerifyHash</definition>
+        <argsstring>(string input, string hash)</argsstring>
+        <name>VerifyHash</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Производит проверку переданной строки и её хэш кода.</para><para>Возвращает true, если проверка пройдена успешно. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="59" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="59" bodyend="65"/>
+        <references refid="class_d_b_sys_core_1_1_utils_1afe3df9a978a1fd164e412a4eea17e543" compoundref="_utils_8cs" startline="36" endline="52">DBSysCore.Utils.GetHash</references>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1a0d80128bdc991f00cabd85df98318249" compoundref="_session_8cs" startline="331" endline="408">DBSysCore.Session.Auth</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1a0197345722545d4933c8d5de18adc5a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string DBSysCore.Utils.StdEncToUTF8</definition>
+        <argsstring>(string source)</argsstring>
+        <name>StdEncToUTF8</name>
+        <param>
+          <type>string</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="67" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1a42dac624b18ce6f12ad2fec958411d34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int DBSysCore.Utils.ExecuteNonQuery</definition>
+        <argsstring>(string query, SQLiteConnection connection)</argsstring>
+        <name>ExecuteNonQuery</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для исполнения переданного запроса для данного соединения.</para><para>Соединение должно быть открыто.</para><para>Возвращает количество модифицированных записей. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="84" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="84" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_utils_1a45148424192c91b25737a14e59b202ad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteDataReader</type>
+        <definition>static SQLiteDataReader DBSysCore.Utils.ExecuteReader</definition>
+        <argsstring>(string query, SQLiteConnection connection)</argsstring>
+        <name>ExecuteReader</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Метод для исполнения переданного запроса для данного соединения.</para><para>Соединение должно быть открыто.</para><para>Возвращает объект SQLiteDataReader для дальнейшего чтения данных. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="104" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="104" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Класс для работы с хэш ключами и SQLite соединениями. </para>    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Utils.cs" bodystart="11" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_utils_1a42dac624b18ce6f12ad2fec958411d34" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>ExecuteNonQuery</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1a45148424192c91b25737a14e59b202ad" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>ExecuteReader</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1afe3df9a978a1fd164e412a4eea17e543" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>GetHash</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1af678fb693bad9c653038ac6670a48289" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>Hash</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1acafafbe94816d3ccc6a212dd349bc326" prot="private" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>sha256</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1a0197345722545d4933c8d5de18adc5a7" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>StdEncToUTF8</name></member>
+      <member refid="class_d_b_sys_core_1_1_utils_1a68e19b5981280b759632f7e035dbfdc1" prot="public" virt="non-virtual"><scope>DBSysCore::Utils</scope><name>VerifyHash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

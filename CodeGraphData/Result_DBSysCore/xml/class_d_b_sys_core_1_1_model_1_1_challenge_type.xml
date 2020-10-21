@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_challenge_type" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::ChallengeType</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af8b562492230a0dc63b10bd59c821008" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.ChallengeType.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a075af91dfbfaba527a0ccd6a4ad4194d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ChallengeType.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af29366ca646e511ec488f6109f3bd2a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ChallengeType.ChallengeType</definition>
+        <argsstring>()</argsstring>
+        <name>ChallengeType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a623679a5a05346c17da630212dbdddec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ChallengeType.ChallengeType</definition>
+        <argsstring>(string name)</argsstring>
+        <name>ChallengeType</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="15" bodyend="21"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1ac85025dbe3bada0a8a6702ee9a314a24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ChallengeType.ChallengeType</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ChallengeType</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="23" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="23" bodyend="39"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1abbcf4a71796ff3238aa3b65efe343d19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.ChallengeType.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="41" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1adc4278ef1f82a81aef7fe52b4a142aab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.ChallengeType.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="47" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="47" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a741c33552d1dfa3d95d48dd071b51645" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool DBSysCore.Model.ChallengeType.Exists</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="60" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="60" bodyend="72"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ChallengeType.cs" bodystart="8" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af29366ca646e511ec488f6109f3bd2a8" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>ChallengeType</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a623679a5a05346c17da630212dbdddec" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>ChallengeType</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1ac85025dbe3bada0a8a6702ee9a314a24" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>ChallengeType</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a741c33552d1dfa3d95d48dd071b51645" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>Exists</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1abbcf4a71796ff3238aa3b65efe343d19" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1af8b562492230a0dc63b10bd59c821008" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1a075af91dfbfaba527a0ccd6a4ad4194d" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>name</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_challenge_type_1adc4278ef1f82a81aef7fe52b4a142aab" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ChallengeType</scope><name>SaveData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

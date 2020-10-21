@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_paths" kind="class" prot="public">
+    <compoundname>DBSysCore::Paths</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.appFolder</definition>
+        <argsstring></argsstring>
+        <name>appFolder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="17" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_d_b_sys_core_1_1_paths_1ab1d28db8f36f9ec0284e25fa5a44f60e" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.dumpsDirectory</definition>
+        <argsstring></argsstring>
+        <name>dumpsDirectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="44" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a73e7c50cdce9ecaf6db1cbbb7d98c14e" compoundref="_core_8cs" startline="154" endline="196">DBSysCore.Core.RetrieveAllUsers</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_d_b_sys_core_1_1_paths_1a44578026e7bcfdc6115b1d2dc632d6b5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.logDirectory</definition>
+        <argsstring></argsstring>
+        <name>logDirectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="55" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_d_b_sys_core_1_1_paths_1a3b9d20ae485c82edf237a595a6a21135" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.reportDirectory</definition>
+        <argsstring></argsstring>
+        <name>reportDirectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="66" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_d_b_sys_core_1_1_paths_1af4772c1559e796f86d64f2c1f0d91fd5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.reportTemplateDirectory</definition>
+        <argsstring></argsstring>
+        <name>reportTemplateDirectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="77" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_paths_1a68564fa82086ee0003f4ccba55e8c4c3" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.sessionFilename</definition>
+        <argsstring></argsstring>
+        <name>sessionFilename</name>
+        <initializer>=&gt; <ref refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kindref="member">appFolder</ref> + &quot;\\.session&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Название файла сессии. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="31" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1a99b17c5d63cd6b9b4b4436fc9d20a9d7" compoundref="_session_8cs" startline="496" endline="507">DBSysCore.Session.Close</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_session_1ab5f16b0f937823e3eb56806fbad9574b" compoundref="_session_8cs" startline="100" endline="162">DBSysCore.Session.Open</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.usersFilename</definition>
+        <argsstring></argsstring>
+        <name>usersFilename</name>
+        <initializer>=&gt; <ref refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kindref="member">appFolder</ref> + &quot;\\.users&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Название файла, используемого для хранения данных о пользователях независимо от обычных файлов дампов.</para><para>В дальнейшем - пользовательский файл. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="39" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_unit_tests_1_1_d_b_sys_core_tests_1aa851930416616f9123b26d0b2f47b248" compoundref="_unit_tests_8cs" startline="59" endline="78">UnitTests.DBSysCoreTests.CheckFilesAccessory</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</referencedby>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a32d89edeebbe756b89136e6b5dab39cb" compoundref="_core_8cs" startline="588" endline="659">DBSysCore.Core.Login</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_paths_1a96b914a727b64055e9c9eff74f2db140" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.dumpModelFilename</definition>
+        <argsstring></argsstring>
+        <name>dumpModelFilename</name>
+        <initializer>=&gt; <ref refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kindref="member">appFolder</ref> + &quot;\\model.sql&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="40" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ae5e65ad285a61bef1b2b99fac782c17b" compoundref="_core_8cs" startline="38" endline="99">DBSysCore.Core.InitializeConnection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_paths_1a5f959bfc7388caa655929f911a97ae35" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.usersModelFilename</definition>
+        <argsstring></argsstring>
+        <name>usersModelFilename</name>
+        <initializer>=&gt; <ref refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kindref="member">appFolder</ref> + &quot;\\users.sql&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="41" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ad0ba99c892600cd02871b1e11d589c62" compoundref="_core_8cs" startline="108" endline="148">DBSysCore.Core.InitializeUserDataConnection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_paths_1a38c45eab9124a34dbd2fa1a26b186de4" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Paths.staticDataTable</definition>
+        <argsstring></argsstring>
+        <name>staticDataTable</name>
+        <initializer>=&gt; <ref refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" kindref="member">appFolder</ref> + &quot;\\static.xls&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="42" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1ac6b1c563504a4d658ac20cdb12defbfd" compoundref="_core_8cs" startline="955" endline="1124">DBSysCore.Core.LoadStaticTests</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_paths_1a4146a21020fd811a4d1af24ed852a7e9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string DBSysCore.Paths.GetBaseFolder</definition>
+        <argsstring>()</argsstring>
+        <name>GetBaseFolder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="8" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="8" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" line="7" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Paths.cs" bodystart="6" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_paths_1a470a73b14ff6c6e56120adea8a2e68e5" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>appFolder</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a96b914a727b64055e9c9eff74f2db140" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>dumpModelFilename</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1ab1d28db8f36f9ec0284e25fa5a44f60e" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>dumpsDirectory</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a4146a21020fd811a4d1af24ed852a7e9" prot="private" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>GetBaseFolder</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a44578026e7bcfdc6115b1d2dc632d6b5" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>logDirectory</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a3b9d20ae485c82edf237a595a6a21135" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>reportDirectory</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1af4772c1559e796f86d64f2c1f0d91fd5" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>reportTemplateDirectory</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a68564fa82086ee0003f4ccba55e8c4c3" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>sessionFilename</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a38c45eab9124a34dbd2fa1a26b186de4" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>staticDataTable</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a96545802b3c2cd8a0ed122551a3cd1ee" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>usersFilename</name></member>
+      <member refid="class_d_b_sys_core_1_1_paths_1a5f959bfc7388caa655929f911a97ae35" prot="public" virt="non-virtual"><scope>DBSysCore::Paths</scope><name>usersModelFilename</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

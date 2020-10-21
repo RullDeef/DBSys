@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_installer_class" kind="class" prot="public">
+    <compoundname>DBSysReport::InstallerClass</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Installer</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_installer_class_1a9918b9c4a383f052034fd8e43a1eeea6" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DBSysReport.InstallerClass.environmentKey</definition>
+        <argsstring></argsstring>
+        <name>environmentKey</name>
+        <initializer>= @&quot;SYSTEM\CurrentControlSet\Control\Session Manager\Environment&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_installer_class_1a92076af3b99a6bc59aebbe01d4db0831" compoundref="_installer_class_8cs" startline="25" endline="43">DBSysReport.InstallerClass.Commit</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_installer_class_1a8ed5a3bbdf67b2c1d78a003552fa47ef" compoundref="_installer_class_8cs" startline="52" endline="74">DBSysReport.InstallerClass.Uninstall</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_installer_class_1afafba0b8a24eb657868c0dd402743eda" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer DBSysReport.InstallerClass.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Обязательная переменная конструктора. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" line="8" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_report_1_1_installer_class_1afa5b9be636096dc4d7e59c68fee74c0b" compoundref="_installer_class_8_designer_8cs" startline="14" endline="21">DBSysReport.InstallerClass.Dispose</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_installer_class_1ac76b6b1e0842ea59aaafffd3c99da5ec" compoundref="_installer_class_8_designer_8cs" startline="29" endline="32">DBSysReport.InstallerClass.InitializeComponent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1a1594640b12fc62c4088387caddee7438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysReport.InstallerClass.InstallerClass</definition>
+        <argsstring>()</argsstring>
+        <name>InstallerClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="13" bodyend="16"/>
+        <references refid="class_d_b_sys_report_1_1_installer_class_1ac76b6b1e0842ea59aaafffd3c99da5ec" compoundref="_installer_class_8_designer_8cs" startline="29" endline="32">DBSysReport.InstallerClass.InitializeComponent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1ad5f1c10e7abdb35904eb949e8b4c8130" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.InstallerClass.Install</definition>
+        <argsstring>(IDictionary stateSaver)</argsstring>
+        <name>Install</name>
+        <param>
+          <type>IDictionary</type>
+          <declname>stateSaver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="19" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1a92076af3b99a6bc59aebbe01d4db0831" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.InstallerClass.Commit</definition>
+        <argsstring>(IDictionary savedState)</argsstring>
+        <name>Commit</name>
+        <param>
+          <type>IDictionary</type>
+          <declname>savedState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="25" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="25" bodyend="43"/>
+        <references refid="class_d_b_sys_report_1_1_installer_class_1a9918b9c4a383f052034fd8e43a1eeea6" compoundref="_installer_class_8cs" startline="11">DBSysReport.InstallerClass.environmentKey</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1ab720719869c63a15692328da135f3f62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.InstallerClass.Rollback</definition>
+        <argsstring>(IDictionary savedState)</argsstring>
+        <name>Rollback</name>
+        <param>
+          <type>IDictionary</type>
+          <declname>savedState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="46" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1a8ed5a3bbdf67b2c1d78a003552fa47ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.InstallerClass.Uninstall</definition>
+        <argsstring>(IDictionary savedState)</argsstring>
+        <name>Uninstall</name>
+        <param>
+          <type>IDictionary</type>
+          <declname>savedState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="52" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="52" bodyend="74"/>
+        <references refid="class_d_b_sys_report_1_1_installer_class_1a9918b9c4a383f052034fd8e43a1eeea6" compoundref="_installer_class_8cs" startline="11">DBSysReport.InstallerClass.environmentKey</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1afa5b9be636096dc4d7e59c68fee74c0b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DBSysReport.InstallerClass.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Освободить все используемые ресурсы. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>истинно, если управляемый ресурс должен быть удален; иначе ложно.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_d_b_sys_report_1_1_installer_class_1afafba0b8a24eb657868c0dd402743eda" compoundref="_installer_class_8_designer_8cs" startline="8">DBSysReport.InstallerClass.components</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_d_b_sys_report_1_1_installer_class_1ac76b6b1e0842ea59aaafffd3c99da5ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysReport.InstallerClass.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Требуемый метод для поддержки конструктора — не изменяйте содержимое этого метода с помощью редактора кода. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" line="29" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.Designer.cs" bodystart="29" bodyend="32"/>
+        <references refid="class_d_b_sys_report_1_1_installer_class_1afafba0b8a24eb657868c0dd402743eda" compoundref="_installer_class_8_designer_8cs" startline="8">DBSysReport.InstallerClass.components</references>
+        <referencedby refid="class_d_b_sys_report_1_1_installer_class_1a1594640b12fc62c4088387caddee7438" compoundref="_installer_class_8cs" startline="13" endline="16">DBSysReport.InstallerClass.InstallerClass</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="23">
+        <label>System::Configuration::Install::Installer</label>
+      </node>
+      <node id="22">
+        <label>DBSysReport.InstallerClass</label>
+        <link refid="class_d_b_sys_report_1_1_installer_class"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="25">
+        <label>System::Configuration::Install::Installer</label>
+      </node>
+      <node id="26">
+        <label>System</label>
+      </node>
+      <node id="24">
+        <label>DBSysReport.InstallerClass</label>
+        <link refid="class_d_b_sys_report_1_1_installer_class"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/InstallerClass.cs" bodystart="9" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1a92076af3b99a6bc59aebbe01d4db0831" prot="public" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>Commit</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1afafba0b8a24eb657868c0dd402743eda" prot="private" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>components</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1afa5b9be636096dc4d7e59c68fee74c0b" prot="protected" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>Dispose</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1a9918b9c4a383f052034fd8e43a1eeea6" prot="private" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>environmentKey</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1ac76b6b1e0842ea59aaafffd3c99da5ec" prot="private" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>InitializeComponent</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1ad5f1c10e7abdb35904eb949e8b4c8130" prot="public" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>Install</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1a1594640b12fc62c4088387caddee7438" prot="public" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>InstallerClass</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1ab720719869c63a15692328da135f3f62" prot="public" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>Rollback</name></member>
+      <member refid="class_d_b_sys_report_1_1_installer_class_1a8ed5a3bbdf67b2c1d78a003552fa47ef" prot="public" virt="non-virtual"><scope>DBSysReport::InstallerClass</scope><name>Uninstall</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

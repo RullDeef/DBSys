@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_d_b_sys_cmd" kind="namespace">
+    <compoundname>DBSysCmd</compoundname>
+    <innerclass refid="class_d_b_sys_cmd_1_1_program" prot="public">DBSysCmd::Program</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCmd/Program.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_controll_object" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::ControllObject</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1aeacab911162f150ab5a3bf16c14732b9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.ControllObject.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa5601f3752e7174a901ab68a62dabb08" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a236ca28222050df82a15f397bc21099f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.serialNumber</definition>
+        <argsstring></argsstring>
+        <name>serialNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="12" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+        <referencedby refid="class_d_b_sys_report_1_1_app_form_1ad09d778496b264948056a3aaca658a7b" compoundref="_app_form_8cs" startline="462" endline="616">DBSysReport.AppForm.ShowStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a4878f6a215680cd6b16931ae785c0590" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.decimalNumber</definition>
+        <argsstring></argsstring>
+        <name>decimalNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a395acb1b22ba15a934b6e71aa828bbee" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="14" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a36578ae0a7c6e7263264cc1a5228d2cd" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1ab29b52bbc076b645c1b39bfb0d3d90a1" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.ControllObject.product</definition>
+        <argsstring></argsstring>
+        <name>product</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="16" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_d_b_sys_core_1_1_core_1a2a04a233db36aaae91ef839739f112fd" compoundref="_core_8cs" startline="1225" endline="1349">DBSysCore.Core.GenerateReport</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1ad5599048276f9587399b5a5310442956" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ControllObject.ControllObject</definition>
+        <argsstring>()</argsstring>
+        <name>ControllObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0dfe3575809851400318e0fcfd9b71cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ControllObject.ControllObject</definition>
+        <argsstring>(string name, string serialNumber, string decimalNumber, string version, string parent, string product)</argsstring>
+        <name>ControllObject</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>serialNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>decimalNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="20" bodyend="36"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a7bafdbd003c31ab01d7cb681802e8b54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.ControllObject.ControllObject</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ControllObject</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="38" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="38" bodyend="59"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0c0c8e7e519ca1407cdd037d74e08f36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.ControllObject.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="61" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa54e24c7fa693fe35613f2c9e7dee491" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.ControllObject.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="67" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="67" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/ControllObject.cs" bodystart="8" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1ad5599048276f9587399b5a5310442956" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>ControllObject</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0dfe3575809851400318e0fcfd9b71cd" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>ControllObject</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a7bafdbd003c31ab01d7cb681802e8b54" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>ControllObject</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a4878f6a215680cd6b16931ae785c0590" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>decimalNumber</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a0c0c8e7e519ca1407cdd037d74e08f36" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aeacab911162f150ab5a3bf16c14732b9" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa5601f3752e7174a901ab68a62dabb08" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>name</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a36578ae0a7c6e7263264cc1a5228d2cd" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>parent</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1ab29b52bbc076b645c1b39bfb0d3d90a1" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>product</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1aa54e24c7fa693fe35613f2c9e7dee491" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>SaveData</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a236ca28222050df82a15f397bc21099f" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>serialNumber</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_controll_object_1a395acb1b22ba15a934b6e71aa828bbee" prot="public" virt="non-virtual"><scope>DBSysCore::Model::ControllObject</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

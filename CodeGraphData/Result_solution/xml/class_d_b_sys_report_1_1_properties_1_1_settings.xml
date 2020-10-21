@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_report_1_1_properties_1_1_settings" kind="class" prot="package">
+    <compoundname>DBSysReport::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_report_1_1_properties_1_1_settings_1a5adefbfcba889ced2cc216ace0f489a1" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_d_b_sys_report_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings DBSysReport.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((<ref refid="class_d_b_sys_report_1_1_properties_1_1_settings" kindref="compound">Settings</ref>)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new <ref refid="class_d_b_sys_report_1_1_properties_1_1_settings" kindref="compound">Settings</ref>())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" line="20" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_d_b_sys_report_1_1_properties_1_1_settings_1a72ef4d9d61642ca3e46f68d9e7ea43c6" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_d_b_sys_report_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings DBSysReport.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" line="22" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="65">
+        <label>DBSysReport.Properties.Settings</label>
+        <link refid="class_d_b_sys_report_1_1_properties_1_1_settings"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="68">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="67">
+        <label>DBSysReport.Properties.Settings</label>
+        <link refid="class_d_b_sys_report_1_1_properties_1_1_settings"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>defaultInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" line="18" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysReport/Properties/Settings.Designer.cs" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_settings_1a72ef4d9d61642ca3e46f68d9e7ea43c6" prot="public" virt="non-virtual"><scope>DBSysReport::Properties::Settings</scope><name>Default</name></member>
+      <member refid="class_d_b_sys_report_1_1_properties_1_1_settings_1a5adefbfcba889ced2cc216ace0f489a1" prot="private" virt="non-virtual"><scope>DBSysReport::Properties::Settings</scope><name>defaultInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

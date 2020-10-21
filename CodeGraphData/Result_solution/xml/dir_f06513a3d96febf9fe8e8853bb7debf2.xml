@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_f06513a3d96febf9fe8e8853bb7debf2" kind="dir">
+    <compoundname>D:/Dev/Work/DBSys/DBSysCore/Model</compoundname>
+    <innerfile refid="_challenge_8cs">Challenge.cs</innerfile>
+    <innerfile refid="_challenge_type_8cs">ChallengeType.cs</innerfile>
+    <innerfile refid="_controll_object_8cs">ControllObject.cs</innerfile>
+    <innerfile refid="_location_8cs">Location.cs</innerfile>
+    <innerfile refid="_methodology_8cs">Methodology.cs</innerfile>
+    <innerfile refid="_module_8cs">Module.cs</innerfile>
+    <innerfile refid="_requirements_8cs">Requirements.cs</innerfile>
+    <innerfile refid="_staff_8cs">Staff.cs</innerfile>
+    <innerfile refid="_test_dynamic_8cs">TestDynamic.cs</innerfile>
+    <innerfile refid="_test_static_8cs">TestStatic.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_sys_core_1_1_model_1_1_location" kind="class" prot="public">
+    <compoundname>DBSysCore::Model::Location</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_location_1a8e0cdcd302bf1f51b3f25127b94a085b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Location.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="10" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_sys_core_1_1_model_1_1_location_1a52fdb173101586f8cf6024c4ffa05fa4" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DBSysCore.Model.Location.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="11" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1a6e045452ea3dc3b367decf950fdc31a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Location.Location</definition>
+        <argsstring>()</argsstring>
+        <name>Location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="13" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1a420ffd08677fe04a86cd1caf284f7e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Location.Location</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="15" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="15" bodyend="21"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1ac6dfcc67d5347895144f58578c7620e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DBSysCore.Model.Location.Location</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Location</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="23" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="23" bodyend="39"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1a965e1e537a4512a4bc00738f8d4ab87b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DBSysCore.Model.Location.GenerateId</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="41" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1ab395be2e1d65f398837db9b29a0aa699" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBSysCore.Model.Location.SaveData</definition>
+        <argsstring>(SQLiteConnection connection)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>SQLiteConnection</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="47" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="47" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_d_b_sys_core_1_1_model_1_1_location_1ab42f56ccbecf3b10055b08e9544eb418" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool DBSysCore.Model.Location.Exists</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="58" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="58" bodyend="70"/>
+        <references refid="class_d_b_sys_core_1_1_core_1a34c362baedd0af9a3910c28388d6aec9" compoundref="_core_8cs" startline="29">DBSysCore.Core.dumpConnection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" line="9" column="1" bodyfile="D:/Dev/Work/DBSys/DBSysCore/Model/Location.cs" bodystart="8" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ab42f56ccbecf3b10055b08e9544eb418" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>Exists</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a965e1e537a4512a4bc00738f8d4ab87b" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>GenerateId</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a8e0cdcd302bf1f51b3f25127b94a085b" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>id</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a6e045452ea3dc3b367decf950fdc31a0" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>Location</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a420ffd08677fe04a86cd1caf284f7e86" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>Location</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ac6dfcc67d5347895144f58578c7620e6" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>Location</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1a52fdb173101586f8cf6024c4ffa05fa4" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>name</name></member>
+      <member refid="class_d_b_sys_core_1_1_model_1_1_location_1ab395be2e1d65f398837db9b29a0aa699" prot="public" virt="non-virtual"><scope>DBSysCore::Model::Location</scope><name>SaveData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
